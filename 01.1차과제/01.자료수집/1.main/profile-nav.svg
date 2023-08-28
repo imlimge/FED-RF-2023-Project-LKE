@@ -1,0 +1,15 @@
+
+<svg width="26px" height="27px" viewBox="0 0 26 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Header-XL" transform="translate(-1582.000000, -24.000000)">
+            <rect x="0" y="0" width="1920" height="1080"></rect>
+            <g id="Group-8" transform="translate(1580.000000, 23.000000)">
+                <g id="Icon/Menu/User">
+                    <polygon id="Path" fill-rule="nonzero" points="0 0 30 0 30 30 0 30"></polygon>
+                    <path d="M21.5625,9.375 C21.5625,13.034 18.5965,16 14.9375,16 C11.2785,16 8.3125,13.034 8.3125,9.375 C8.3125,5.716 11.2785,2.75 14.9375,2.75 C18.5965,2.75 21.5625,5.716 21.5625,9.375 Z" id="Stroke-1" stroke-opacity="0.4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M20.9727,17.8584 C19.4327,19.4124 17.2977,20.3754 14.9377,20.3754 C12.5767,20.3754 10.4427,19.4124 8.9027,17.8584 C5.8067,19.7034 3.7497,22.9184 3.7497,26.5854 C3.7497,26.7244 3.7667,26.8614 3.7727,27.0004 L26.1027,27.0004 C26.1087,26.8614 26.1247,26.7244 26.1247,26.5854 C26.1247,22.9184 24.0687,19.7034 20.9727,17.8584 Z" id="Stroke-3" stroke-opacity="0.4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

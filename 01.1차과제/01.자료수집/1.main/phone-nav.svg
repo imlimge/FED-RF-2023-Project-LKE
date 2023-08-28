@@ -1,0 +1,17 @@
+
+<svg width="16px" height="26px" viewBox="0 0 16 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Header-XL" transform="translate(-1244.000000, -25.000000)">
+            <rect x="0" y="0" width="1920" height="1080"></rect>
+            <g id="Group-7" transform="translate(1237.000000, 23.000000)" opacity="0.400000006" stroke="#FFFFFF" stroke-linejoin="round">
+                <g id="Icon/Menu/App">
+                    <g id="Group" transform="translate(7.000000, 2.999409)">
+                        <path d="M13,0.0114998334 C11.4702451,0.0125720114 10.3869118,0.0125720114 9.75,0.0114998334 C8.30157124,0.00906154701 7.15396091,0.00157688168 6.25,0.000590742507 C5.52798138,-0.000196914169 4.44464805,-0.000196914169 3,0.000590742507 C1.9,0.000590742507 1,0.982408924 1,2.18240892 L1,21.8187726 C1,23.0187726 1.9,24.0005907 3,24.0005907 L13,24.0005907 C14.1,24.0005907 15,23.0187726 15,21.8187726 L15,2.18240892 C15,0.982408924 14.1,0.0114998334 13,0.0114998334 Z" id="Path" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M0,3.50059074 L16,3.50059074" id="Path-3" stroke-width="2"></path>
+                        <path d="M0,20.5005907 L16,20.5005907" id="Path-3" stroke-width="2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

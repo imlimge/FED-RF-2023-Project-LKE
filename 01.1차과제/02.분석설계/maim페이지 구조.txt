@@ -1,0 +1,131 @@
+--------------------------------------------------
+헤더 id = header
+--------------------------------------------------
+1. 네비게이션 [nav .gnb-box]
+(ul .gnb)
+ =li
+  ==a
+(a .nav-logo)
+
+
+
+
+
+--------------------------------------------------
+메인 id = main
+--------------------------------------------------
+2. 배너 [section #banner]
+
+(.banner)
+ =.banner-back
+  ==img
+
+
+(.banner-burgerImg)
+ =img
+
+
+
+3. 슬라이드 광고파트 [section #ad-slide]
+(.slide)
+ =.silde-img
+  ==img
+  ==img
+  ==img
+ =.scroll
+
+
+4. 치킨버거 메뉴 광고 파트 & 버튼 [section #ad-chicken]
+(.bg-txt)
+
+(.ad-outbox) >>전체박스
+ =.ad-inbox >>안에2등분해주는 박스
+  ==.video 
+  ==.content
+   ===.sub-title
+   ===h2 .title
+   ===.article-box
+    ====p .article
+    ====button .view-button
+
+
+
+5. 앱광고파트 [section #ad-app]
+(.app-outbox)
+ =.app-inbox
+  ==shake-img
+  ==.content
+   ===.sub-title
+   ===h2 .title
+   ===.article-box
+    ====p .article
+    ====button .view-button
+
+
+6. SNS 파트 [section #sns]
+(.sns-outbox)
+ =.sns-outbox
+  ==.sns-youtube
+   === a
+   ==== img
+   === p
+  ==.sns-facebook
+   === a
+   ==== img
+   === p
+  ==.sns-instagram
+   === a
+   ==== img
+   === p
+7. 와퍼 메뉴 광고 파트 & 버튼 파트 [section #ad-whopper]
+(.bg-txt)
+
+(.ad-outbox) >>전체박스
+ =.ad-inbox >>안에2등분해주는 박스
+  ==.video 
+  ==.content
+   ===.sub-title
+   ===h2 .title
+   ===.article-box
+    ====p .article
+    ====button .view-button
+
+8. 버거킹앱&딜리버리 이용방법 [section #use]
+(.use-outbox)
+
+ =.use-inbox01
+  ==use-content
+   ===img 
+   ===p
+   ===button
+
+ =.use-inbox02
+  ==use-content
+   ===img 
+   ===p
+   ===button
+
+--------------------------------------------------
+푸터 id = footer
+--------------------------------------------------
+(.footer-outbox)
+ =.footer-menu
+  ==ul
+   ===li
+   ===li
+   ===li
+
+ =.copytright
+  ==h2
+   ===img
+  ==p
+  ==p
+  ==p
+
+ =.sns
+  ==a
+  ==a
+
+
+
+
