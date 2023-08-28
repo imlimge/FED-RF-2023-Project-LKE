@@ -1,0 +1,478 @@
+@charset "utf-8";
+/* 버거킹 : 메인페이지 CSS - main.css */
+
+
+@import url(./reset.css);
+@import url(./common.css);
+@import url(./core.css);
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@300;500;900&display=swap');
+
+
+
+/*********************** 네비게이션************************/
+.gnb-box{
+  position: sticky;
+  top: 40px;
+  max-width: 80%;
+  margin: 47px auto;
+
+ z-index: 10;
+
+}
+
+.gnb{
+ 
+  display: flex;
+  height: 52px;
+  box-shadow: 3px 3px 7px #35262680;
+}
+
+.gnb a{
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  font-size: 0.9rem;
+  display:block;
+}
+
+
+.gnb-box li{
+display: inline-block;
+flex: 1;
+background-color: #d0021b;
+text-align: center;
+line-height: 52px;
+
+
+}
+
+.gnb-box li:hover{
+background-color: #bb0a1f;
+transition: background-color .2s ease-in ;
+}
+
+.gnb-box li:nth-child(4){
+
+flex: .6;
+
+}
+
+.nav-logo {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80px;
+height: 80px;
+background-color: #d0021b;
+text-align: center;
+border-radius: 10px;
+box-shadow: 3px 3px 7px #35262680;
+/* transition: .5s;  >> 내려갈때도 주고싶은데 트랜스폼 위치때문에.. */
+}
+
+
+.nav-logo:hover {
+transition: .3s ease-in-out;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(1.2);
+
+
+}
+
+
+.nav-logo img{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 60px;
+
+}
+
+
+/*********************** 배너************************/
+
+/* 배너 배경 색 >> 네비 뒤에 색을 주기위해 따로 빼둔 배너컬러 */
+.banner-back-color{
+  position: absolute;
+  top: 0;
+  background-color: #bb0a1f ;
+  height: 1100px;
+  width: 100%;
+ 
+}
+
+
+/* 배너 파트 : 부모 */
+.banner{
+ position: relative;
+ width: 80vw;
+ height: 600px;
+ margin: 0 auto;
+
+
+}
+
+/* 배너 글자 이미지 : 자식*/
+.banner-back{
+  position: absolute;
+  width: 80vw;
+  margin: 0 auto;
+  top: 50%;
+  
+}
+
+
+
+.banner-back img{
+  width: 80vw;
+  
+  transition: top 3s ease-in;
+
+  
+}
+
+/* 배너 버거 이미지 : 자식 */
+.banner-burgerImg{
+  position: absolute;
+  margin: 0 auto;
+  width:80vw;  
+  height: 400px;
+  top: 27%;
+
+  
+}
+
+
+.banner-burgerImg img{
+ position: relative;
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+
+
+.banner-burgerImg img:nth-child(9){
+  top: -130%;
+   
+}
+
+.banner-burgerImg img:nth-child(8){
+  top: -85.7%;
+
+}
+.banner-burgerImg img:nth-child(7){
+  top: -67.7%;
+}
+.banner-burgerImg img:nth-child(6){
+  top: -47.7%;
+}
+.banner-burgerImg img:nth-child(5){
+  top: -26.7%;
+}
+.banner-burgerImg img:nth-child(4){
+  top: -0.3%;
+}
+.banner-burgerImg img:nth-child(3){
+  top: 24.3%;
+}
+.banner-burgerImg img:nth-child(2){
+  top: 57.3%;
+}
+.banner-burgerImg img:nth-child(1){
+  top: 94.3%;
+}
+
+
+/*********************** 슬라이드 광고 ************************/
+
+.slide-wrap{
+  position: relative;
+  top: 32%;
+
+  
+}
+
+.slide-part1{
+  position: absolute;
+  right: 0;
+  height: 320px;
+  width: 80%;
+  overflow: hidden;
+
+}
+
+.slide-img{
+   height: 100%;
+  display: flex;
+  
+}
+
+
+.slide-part2{
+  position: absolute;
+  right: 0;
+  height: 320px;
+  width: 80%;
+
+
+}
+
+.slide-wrap .scroll{
+  position: absolute;
+  background-color: #d3d3d3;
+  width: 323px;
+  height: 10px;
+  top: 348px;
+  border-radius: 10px;
+}
+
+
+
+/*********************** 광고박스 공통 ************************/
+
+.ad-outbox{
+  position: absolute;
+  height: 800px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-txt{
+  position: absolute;
+  font-size: 17rem;
+
+  top: 100px;
+  right: 0;
+  color: #f7f7f7;
+  text-align: right;
+  font-family: Black Han Sans;
+  
+}
+
+
+
+.ad-inbox{
+  position: absolute;
+  height: 800px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+ flex-wrap: nowrap;
+}
+
+.video{
+  position: absolute;
+  height: 800px;
+  width: 650px;
+  overflow: hidden;
+  margin: auto 0;
+
+flex-shrink: 0;
+  
+}
+
+
+
+.content{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  padding: 80px 100px 80px 0;
+  box-sizing: border-box;
+
+flex-shrink: 0;
+}
+
+
+.sub-title{
+font-size: 2rem;
+margin-bottom: 20px;
+}
+
+.title{
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.article{
+  padding: 80px 80px 80px 0;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.view-button{
+color: #fff;
+text-align: center;
+background-image:url(../images/00.common/button-red.svg) ;
+display: inline-block;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-position: top left;
+min-width: 258px;
+width: auto;
+overflow: hidden;
+padding: 0.9em;
+font-size: 22px;
+line-height: 1.55em;
+}
+
+
+
+
+/* 
+.banner{
+  position: relative;
+  top: -150px;
+  height: 85vh;
+  width: 100%;
+  background-color: #bb0a1f ;
+
+   overflow: hidden;
+}
+
+
+.banner-back img{
+  position: absolute;
+  width: 600px;
+  margin: 0 auto;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.banner-burgerImg{
+
+  width: 600px;
+  height: 600px;
+ 
+
+}
+
+.burger-sticky{
+
+  position: sticky;
+  top: 0;
+  text-align: center;
+  margin-top: 300px;
+}
+
+
+
+.banner-burgerImg img{
+
+
+}
+
+
+
+
+.burger-sticky:nth-child(9){
+  top:104px
+}
+.burger-sticky:nth-child(8){
+  top: calc(104px*2)
+}
+.burger-sticky:nth-child(7){
+  top: calc(104px*3)
+}
+.burger-sticky:nth-child(6){
+  top: calc(104px*3)
+}
+.burger-sticky:nth-child(5){
+  top: calc(104px*3)
+}
+.burger-sticky:nth-child(4){
+  top: calc(104px*3)
+}
+.burger-sticky:nth-child(3){
+  top: calc(104px*3)
+}
+.burger-sticky:nth-child(2){
+  top: calc(104px*3)
+}
+.burger-sticky:nth-child(1){
+  top: calc(104px*3)
+}
+
+
+
+
+
+.banner{
+  position: absolute;
+  top: 0;
+  height: 80vh;
+  width: 100%;
+  background-color: #bb0a1f ;
+
+ 
+}
+
+
+.banner-back img{
+  position: absolute;
+  width: 600px;
+  margin: 0 auto;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.banner-burgerImg{
+  position: absolute;
+  width: 600px;  
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-burgerImg img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+.banner-burgerImg img:nth-child(9){
+  transform: translateY(-80%);
+}
+.banner-burgerImg img:nth-child(8){
+  transform: translateY(-35%);
+}
+.banner-burgerImg img:nth-child(7){
+  transform: translateY(-15%);
+}
+.banner-burgerImg img:nth-child(6){
+  transform: translateY(35%);
+}
+.banner-burgerImg img:nth-child(5){
+  transform: translateY(5%);
+}
+.banner-burgerImg img:nth-child(4){
+  transform: translateY(65%);
+}
+.banner-burgerImg img:nth-child(3){
+  transform: translateY(65%);
+}
+.banner-burgerImg img:nth-child(2){
+  transform: translateY(135%);
+}
+.banner-burgerImg img:nth-child(1){
+  transform: translateY(145%);
+}
+ */
