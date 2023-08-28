@@ -2,6 +2,108 @@
 /* 버거킹 : 메인페이지 CSS - core.css */
 
 
+
+
+/* 
+
+[영어]로보토
+컨텐트 박스 소제목
+- roboto bold 700
+
+컨텐트 박스 내용 (? 노토산스랑 비교)
+-roboto regular 400
+
+font-family: 'Roboto Condensed', sans-serif;
+ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+
+
+/* 
+[한국 인데 영문으로 쓰기] Rix이누아리두리네
+-컨텐트박스 큰 타이틀
+
+*/
+@font-face {
+  font-family: 'RixInooAriDuriR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* 
+[한국]카페24 서라운드 - 동그란 느낌
+-메뉴
+ */
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 
+[한국]검은고딕- 닥닥한느낌
+-메뉴
+font-family: 'Black Han Sans', sans-serif; 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+
+
+/*
+[한국]노토산스KR 400 700 900--본문
+font-family: 'Noto Sans KR', sans-serif; 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+
+
+
+/* -------------폰트셋팅 --------------- 
+
+
+:root{
+  --sub-title:1.2rem;
+
+}
+
+
+
+서브타이틀 
+@font-face{
+  font-family: 'content-sub-title';
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+}
+
+타이틀 
+@font-face{
+  font-family: 'content-title';
+  src: url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+
+}
+
+본문 
+@font-face{
+  font-family: 'p';
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+  
+}*/
+
+
+
+
+/* --------------- 섹션 공통 ----------------- */
+
+
 .section{
   position: static;
   height: 800px;
