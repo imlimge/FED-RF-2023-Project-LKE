@@ -23,15 +23,15 @@
 .gnb{
  
   display: flex;
-  height: 52px;
+  height: 70px;
   box-shadow: 3px 3px 7px #35262680;
 }
 
 .gnb a{
   color: #fff;
   font-weight: bold;
-  font-size: 1rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  
   display:block;
 }
 
@@ -41,14 +41,15 @@ display: inline-block;
 flex: 1;
 background-color: #d0021b;
 text-align: center;
-line-height: 52px;
-
+line-height: 77px;
+font-family: 'Cafe24Ssurround';
 
 }
 
 .gnb-box li:hover{
 background-color: #bb0a1f;
-transition: background-color .2s ease-in ;
+transition:
+ background-color .2s ease-in;
 }
 
 .gnb-box li:nth-child(4){
@@ -62,8 +63,8 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-width: 80px;
-height: 80px;
+width: 90px;
+height: 90px;
 background-color: #d0021b;
 text-align: center;
 border-radius: 10px;
@@ -193,7 +194,7 @@ transform: translate(-50%, -50%) scale(1.2);
 .slide-wrap{
   position: relative;
   top: 32%;
-
+  
   
 }
 
@@ -209,6 +210,7 @@ transform: translate(-50%, -50%) scale(1.2);
 .slide-img{
    height: 100%;
   display: flex;
+ 
   
 }
 
@@ -262,32 +264,34 @@ transform: translate(-50%, -50%) scale(1.2);
   width: 100%;
 
   display: flex;
-  flex-direction: column;
- flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
 }
 
 .video{
-  position: absolute;
+  
   height: 800px;
-  width: 650px;
+  width: 50vmax;
   overflow: hidden;
   margin: auto 0;
+  flex: 1 0 1;
 
-flex-shrink: 0;
   
 }
 
 
 
 .content{
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  right: 0;
-  padding: 80px 100px 80px 0;
-  box-sizing: border-box;
 
-  flex-shrink: 0;
+  height: 100%;
+  width:50%;
+  right: 0;
+  padding: 80px 100px 80px 5%;
+  box-sizing: border-box;
+  flex: 1;
+  
 }
 
 
@@ -301,9 +305,9 @@ flex-shrink: 0;
 }
 
 .title{
-  font-family: 'RixInooAriDuriR';
-
-  font-size: 5rem;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
   line-height: 6rem;
 
 }
@@ -331,6 +335,24 @@ padding: 0.9em;
 font-size: 22px;
 line-height: 1.55em;
 }
+
+
+/*********************** 앱박스 공통 ************************/
+#add-app {
+  position: relative;
+  top: 0;
+  right: 0;
+
+}
+
+.app-outbox{
+position: absolute; 
+  background: #d0021b;
+
+
+}
+
+
 
 
 
