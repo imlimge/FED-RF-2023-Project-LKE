@@ -28,13 +28,16 @@
 }
 
 .gnb a{
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   font-size: 1.2rem;
   
   display:block;
 }
 
+.gnb a:hover{
+  color: rgba(255, 255, 255, 0.874);
+}
 
 .gnb-box li{
 display: inline-block;
@@ -48,36 +51,46 @@ font-family: 'Cafe24Ssurround';
 
 .gnb-box li:hover{
 background-color: #bb0a1f;
-transition:
- background-color .2s ease-in;
+
+transition:.2s ease-in;
 }
 
+
+.gnb-box li:nth-child(3){
+
+flex: 1.3;
+
+}
 .gnb-box li:nth-child(4){
 
-flex: .6;
+flex: .2;
+
+}
+.gnb-box li:nth-child(5){
+
+flex: 1.3;
 
 }
 
 .nav-logo {
 position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+top: calc(50% -  90px/2);
+left: calc(50% - 90px/2);
 width: 90px;
 height: 90px;
 background-color: #d0021b;
 text-align: center;
 border-radius: 10px;
 box-shadow: 3px 3px 7px #35262680;
-/* transition: .5s;  >> 내려갈때도 주고싶은데 트랜스폼 위치때문에.. */
+transition: .5s; 
+
 }
 
 
 .nav-logo:hover {
 transition: .3s ease-in-out;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%) scale(1.2);
+
+transform: scale(1.2);
 
 
 }
@@ -88,7 +101,7 @@ transform: translate(-50%, -50%) scale(1.2);
   top: 50%;
   transform: translateY(-50%);
 
-  width: 60px;
+  width: 80%
 
 }
 
@@ -241,12 +254,16 @@ transform: translate(-50%, -50%) scale(1.2);
 
 /*********************** 광고박스 공통 ************************/
 
-.ad-outbox{
+
+/* 위치 및 배경 텍스트 넣기 위한 공간 */
+.ad-outbox{    
   position: absolute;
   height: 800px;
   width: 100%;
   overflow: hidden;
 }
+
+
 
 .bg-txt{
   position: absolute;
@@ -261,7 +278,7 @@ transform: translate(-50%, -50%) scale(1.2);
 }
 
 
-
+/* 비디오랑 컨텐트를 나란히 하기위해 플렉스 넣은 박스 */
 .ad-inbox{
   position: absolute;
   height: 800px;
@@ -269,17 +286,17 @@ transform: translate(-50%, -50%) scale(1.2);
 
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
 
 }
 
 
-
+/* 왼쪽 1/2 */
 .video {
   
-
- height: 600px;
+  position: relative;
+  height: 600px;
   width: 50vmax;
   overflow: hidden;
   margin: auto 0;
@@ -295,14 +312,15 @@ transform: translate(-50%, -50%) scale(1.2);
 }
 
 
-.content{
 
+/* 오른쪽 1/2 */
+ .content{
+  position: relative;
   height: 100%;
   width:50%;
-  right: 0;
   padding: 80px 100px 80px 5%;
   box-sizing: border-box;
-  flex: 1;
+
   
 }
 
@@ -434,8 +452,7 @@ line-height: 1.55em;
 position: relative; 
 width: 80vw;
 height: 100%;
-top: 0;
-right: 0;
+margin: 200px 0 200px 300px;
 
 background: #d0021b;
 
