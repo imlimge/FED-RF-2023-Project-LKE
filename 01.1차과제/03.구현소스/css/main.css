@@ -338,7 +338,7 @@ transform: scale(1.2);
   font-family: 'Black Han Sans', sans-serif;
   font-weight: bold;
   font-size: 4rem;
-  line-height: 6rem;
+  line-height: 5rem;
 
   color: #222;
 
@@ -346,10 +346,14 @@ transform: scale(1.2);
 
 .article{
   font-family: 'Roboto Condensed', sans-serif;
-  padding: 80px 80px 80px 0;
+  padding: 80px 0 80px 0;
   font-weight: 400;
   font-size: 1.5rem;
-  line-height: 2.5rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  text-align: justify;
+  /* word-break: break-all; */
+
 }
 
 .view-button{
@@ -442,35 +446,83 @@ line-height: 1.55em;
 
 
 /*********************** 앱박스 공통 ************************/
-#add-app {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  
 
-}
-
+/* 흔들려야 하는 배경박스 나중에 오른쪽에서 왼쪽으로 이동함 */
 .app-outbox{
 position: relative; 
 width: 80vw;
 height: 100%;
-margin: 200px 0 200px 300px;
+margin: 200px 0 200px 20%;
 
 background: #d0021b;
-
-
 }
 
 
 
-/*  */
+/* 컨텐트랑 이미지 나란히 하기위해 부모 플렉스 박스 */
+.app-inbox{ 
+  position: absolute;
+  height: 800px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+
+/* 왼쪽 1/2 */
+.content-02{
+
+  position: relative;
+  height: 600px;
+  width: 50%;
+  margin: auto 0;
+  padding: 0 5% 0 9%;
+}
+ 
 
 
 
 
 
 
+/* 오른쪽 1/2 */
+.shake-img{
+  position: relative;
+  height: 600px;
+  width: 50vmax;
+  margin: auto 0;
 
+  background-color: peru;
+}
+
+
+
+#ad-app .title{
+color: #fff;
+}
+
+
+#ad-app .sub-title{
+  color: #222;
+}
+
+#ad-app .article{
+  color: #fff;
+}
+
+
+#ad-app .h-underline-last-line{
+    
+  border-bottom: 10px solid #ffffff;
+  width: 100%;
+}
+
+
+#ad-app .view-button{
+  background-image:url(../images/00.common/button-black.svg) ;
+}
 
 
 
