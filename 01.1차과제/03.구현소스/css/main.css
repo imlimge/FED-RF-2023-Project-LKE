@@ -215,6 +215,10 @@ transform: translate(-50%, -50%) scale(1.2);
 }
 
 
+.slide-img img{
+  cursor: pointer;
+}
+
 .slide-part2{
   position: absolute;
   right: 0;
@@ -338,6 +342,75 @@ font-weight: bold;
 font-size: 22px;
 line-height: 1.55em;
 }
+
+
+
+
+
+.h-underline{
+  display: block;
+
+}
+
+
+
+.h-underline-last-line{
+  position: relative;
+  display: inline-block;
+  
+  width: 100%;
+  border-bottom: solid 3px #ea2129;
+}
+
+/*     
+
+실패한 h2타이틀에 언더라인넣기 ㅠ
+
+
+<span class="h-underline ani in-viewport">
+<span class="h-underline-last-line"> CHICKEN. </span> </span></h2>
+
+.h-underline{
+  display: block;
+  width: 100%;
+}
+
+.h-underline-last-line{
+  position: relative;
+  display: inline-block;
+}
+
+
+.letter-underline::after{
+  content: '';
+  position: absolute;
+  bottom: -0.125em;
+  left: 0;
+  width: 0;
+  height: 0.125em;
+  background: #000;
+  -webkit-transition: width .7s;
+  transition: width .7s;
+}
+
+.ani{
+  -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.in-viewport{
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+}
+
+ */
+
+
 
 
 /*********************** 앱박스 공통 ************************/
