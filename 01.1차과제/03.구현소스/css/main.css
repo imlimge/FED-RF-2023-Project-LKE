@@ -274,17 +274,25 @@ transform: translate(-50%, -50%) scale(1.2);
 
 }
 
-.video{
+
+
+.video {
   
-  height: 800px;
+
+ height: 600px;
   width: 50vmax;
   overflow: hidden;
   margin: auto 0;
-  flex: 1 0 1;
+ 
 
   
 }
 
+.video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 
 .content{
@@ -357,7 +365,7 @@ line-height: 1.55em;
 .h-underline-last-line{
   position: relative;
   display: inline-block;
-  
+
   width: 100%;
   border-bottom: solid 3px #ea2129;
 }

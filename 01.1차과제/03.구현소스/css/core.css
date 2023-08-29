@@ -114,6 +114,7 @@ font-family: 'Noto Sans KR', sans-serif;
 
 .section{
   position: static;
+  /* height: 100vh; */
   height: 800px;
   top: 0;
   left: 0;
