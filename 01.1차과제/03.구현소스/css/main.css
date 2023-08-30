@@ -17,7 +17,9 @@
   margin: 47px auto;
 
  z-index: 10;
+animation:  gnb-box-ani 1s ease-in-out forwards;
 
+ 
 }
 
 .gnb{
@@ -54,9 +56,48 @@ display: inline-block;
 flex: 1;
 background-color: #d0021b;
 text-align: center;
-line-height: 77px;
+line-height: 72.7px;
 font-family: 'Cafe24Ssurround';
 }
+
+
+/* 
+메뉴사이 선을 만들었는데 위치 고정 어려움
+
+왼쪽 메뉴 사이 선
+.gnb>li:nth-child(n+1):nth-child(-n+2)::after{
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 67px;
+  border-left: 1px solid #ffffff3d;
+  left: 83.7px;
+  top: -71.9px;
+
+}
+
+오른쪽 메뉴 사이 선
+.gnb>li:nth-child(n+6):nth-child(-n+7)::after{
+  content: '';
+  position: relative;
+  display: inline-block;
+  height: 67px;
+  border-left: 1px solid #ffffff3d;
+  left: -83.7px;
+  top: -71.9px;
+}
+
+ */
+
+
+/* 메뉴 3번째 5번째 여백 */
+.gnb>li:nth-child(3) a{
+  margin-right: 30px;
+}
+.gnb>li:nth-child(5) a{
+  margin-left: 30px;
+}
+
 
 
 /* 메뉴 호버 시 배경색 변경 */
@@ -123,6 +164,8 @@ flex: 1.3;
 
 }
 
+
+
 .nav-logo {
 position: absolute;
 top: calc(50% -  90px/2);
@@ -163,15 +206,54 @@ transform: scale(1.2);
 
 /*********************** 배너************************/
 
-/* 배너 배경 색 >> 네비 뒤에 색을 주기위해 따로 빼둔 배너컬러 */
+/* 배너 배경 색 >> 네비 뒤에 색을 주기위해 따로 빼둔 배너컬러 
 .banner-back-color{
   position: absolute;
   top: 0;
+
   background-color: #bb0a1f ;
-  height: 1100px;
+  height: 900px;
   width: 100%;
- 
+} */
+
+
+
+
+.banner-mv{
+position: absolute;
+width: 100%;
+height: 900px;
+top: 0;
+
+overflow: hidden;
+margin: 0px auto;
+opacity: 100%;
+background-color: #bb0a1f ;
+
+z-index: -1;
+
 }
+
+
+video {
+  height: 900px;
+  width: 100%;
+  object-fit: cover; 
+  z-index: -2;
+}
+
+
+.banner-back-color{
+  position: absolute;
+  top: 0;
+
+  background-color: #bb0a1f ;
+  height: 900px;
+  width: 100%;
+  opacity: 90%;
+}
+
+
 
 
 /* 배너 파트 : 부모 */
@@ -187,7 +269,7 @@ transform: scale(1.2);
 /* 배너 글자 이미지 : 자식*/
 .banner-back{
   position: absolute;
-  top: 50%;
+  top: 30%;
 
 
 }
@@ -201,8 +283,9 @@ transform: scale(1.2);
   width: 80vw;
   margin: 0 auto;
   transition: .5s ease-in;
-  animation: banner-back-ani 1s cubic-bezier(0.1, 0.75, 0.57, 0.99) forwards;
+  animation: banner-back-ani 2s cubic-bezier(0.1, 0.75, 0.57, 0.99) forwards;
  
+  
 }
 
 
@@ -214,7 +297,7 @@ transform: scale(1.2);
   margin: 0 auto;
   width:80vw;  
   height: 400px;
-  top: 27%;
+  top: -2%;
 
 }
 
@@ -234,22 +317,17 @@ transform: scale(1.2);
 
 /**************** 배너 호버 *******************/
 
-
-/* 배너 호버시 글자이미지 조금 움직이기 */
-.banner:hover .banner-back img{
-
-  margin: -1% auto;
-  transition: .5s ease-in;
+/* .banner:hover img{
+  margin: -0.3% auto;
+  transition: .3s ease-in;
 
 }
+ */
 
+/* 배너 버거 개별 이미지 호버시 개별 이미지 조금 더 움직이기 */
+.banner-burgerImg:hover img{
 
-
-
-/* 배너 버거 이미지 호버시 개별 이미지 조금 더 움직이기 */
-.banner-burgerImg>img:nth-child(n+1):hover{
-
-  margin: -5% auto;
+  margin: -0.6% auto;
   transition: .5s ease-in;
 
 }
@@ -260,7 +338,7 @@ transform: scale(1.2);
 
 .banner-burgerImg>img:nth-child(n+1):hover{
 
-  margin: -5% auto;
+  margin: -3% auto;
   transition: .5s ease-in;
 
 }
@@ -304,19 +382,22 @@ transform: scale(1.2);
     animation: banner-burgerImg-to-up 2s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
 }
 .banner-burgerImg img:nth-child(1){
-  top: 94.3%;
-  animation: banner-burgerImg-opacity 6s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
+  top: 100%;
+  animation: banner-burgerImg-opacity s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
    
 }
 
 
 /*********************** 슬라이드 광고 ************************/
 
+section#ad-slide {
+  height: 500px;
+}
+
+
 .slide-wrap{
   position: relative;
-  top: 32%;
-  
-  
+
 }
 
 .slide-part1{
