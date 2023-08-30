@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* 버거킹 : 애니메이션 CSS - ani.css */
+
+
+
+
+@keyframes banner-back-ani{
+  
+  0%{
+    transform: translateY(-100vh) ;
+   
+    }
+
+  100%{
+   
+  }
+
+}
+
+
+@keyframes banner-back-ani-opacity{
+  
+  0%{
+    opacity: 0 ;
+}
+100%{
+    opacity: 100%;
+}
+
+}
+
+
+
+
+
+/* 버거 아래에서 위로 이동 */
+@keyframes banner-burgerImg-to-up{
+  0%{
+       transform: translateY(100vh) ;
+  }
+ 
+}
+
+
+/* 버거 위에서 아래로 이동 */
+@keyframes banner-burgerImg-to-down{
+  0%{
+       transform: translateY(-100vh) ;
+  }
+ 
+}
+
+
+/* 그림자 천천히 생김 */
+@keyframes banner-burgerImg-opacity{
+  0%{
+      opacity: 0 ;
+  }
+  0%{
+      opacity: 100%;
+  }
+ 
+}
+
+
+
+
+
+
+/* 시도하려고 하는 개별 애니 */
+
+
+@keyframes banner-burgerImg-09{
+  0%{
+    transform: translateY(50%) ;
+  }
+ 
+}
+@keyframes banner-burgerImg-08{
+  0%{
+    transform: translateY(-50%) ;
+  }
+ 
+}
+@keyframes banner-burgerImg-07{
+  0%{
+    transform: translateY(-50%) ;
+  }
+ 
+}
+@keyframes banner-burgerImg-06{
+  0%{
+    transform: translateY(-50%) ;
+  }
+ 
+}
+@keyframes banner-burgerImg-05{
+  0%{
+    transform: translateY(-50%) ;
+  }
+ 
+}
+@keyframes banner-burgerImg-04{
+  0%{
+    transform: translateY(-50%) ;
+  }
+ 
+}
+@keyframes banner-burgerImg-03{
+  0%{
+    transform: translateY(-50%) ;
+  }
+ 
+}
+@keyframes banner-burgerImg-02{
+  0%{
+    transform: translateY(-50%) ;
+  }
+ 
+}
+@keyframes banner-burgerImg-01{
+  0%{
+    transform: translateY(-50%) ;
+  }
+ 
+}
