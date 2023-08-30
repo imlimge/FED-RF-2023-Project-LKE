@@ -29,6 +29,20 @@ font-family: 'Arial', sans-serif;
 @import url('https://fonts.cdnfonts.com/css/arial-2');
 
 
+/* 
+[한국]검은고딕- 딱딱한느낌
+-메뉴
+font-family: 'Black Han Sans', sans-serif; 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+
 
 /* 
 [한국 인데 영문으로 쓰기] Rix이누아리두리네
@@ -54,14 +68,6 @@ font-family: 'Arial', sans-serif;
     font-style: normal;
 }
 
-/* 
-[한국]검은고딕- 딱딱한느낌
--메뉴
-font-family: 'Black Han Sans', sans-serif; 
-*/
-
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
-@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
 
 
 /*
@@ -69,6 +75,8 @@ font-family: 'Black Han Sans', sans-serif;
 font-family: 'Noto Sans KR', sans-serif; 
 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+
 
 
 
@@ -118,6 +126,6 @@ font-family: 'Noto Sans KR', sans-serif;
   height: 800px;
   top: 0;
   left: 0;
-  
+
 }
 

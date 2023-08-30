@@ -32,6 +32,7 @@
 
 }
 
+
 .gnb a{
   color: #ffffff;
   font-weight: bold;
@@ -41,9 +42,12 @@
 
 }
 
+/* 메뉴 호버 시 글자색 변경 */
 .gnb a:hover{
-  color: rgba(255, 255, 255, 0.874);
+  color:rgba(255, 255, 255, 0.882);
+
 }
+
 
 .gnb-box li{
 display: inline-block;
@@ -54,11 +58,38 @@ line-height: 77px;
 font-family: 'Cafe24Ssurround';
 }
 
+
+/* 메뉴 호버 시 배경색 변경 */
 .gnb-box li:hover{
-background-color: #bb0a1f;
+background-color:#b10215;
 
 transition:.2s ease-in;
 }
+
+
+/* 메뉴 딜리버리 왼쪽 움직이는 아이콘 */
+.gnb>li:last-child>a::before{
+  content: '';
+    position: absolute;
+    top: 24%;
+    right: 10.5%;
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/01.top-navigation/online-ordering-animation.gif);
+ 
+}
+
+
+
+/* 메뉴 딜리버리 왼쪽 움직이는 아이콘 호버시 이미지 변경 */
+.gnb>li:last-child:hover>a::before{
+  background-image: url(../images/01.top-navigation/online-ordering-animation-hover.gif);
+  transition: all .3s;
+}
+
+
 
 
 .gnb-box li:first-child{
@@ -126,19 +157,8 @@ transform: scale(1.2);
 }
 
 
-.gnb-box>li a:last-child::before{
-  content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../images/01.top-navigation/online-ordering-animation.gif);
 
 
-}
 
 
 /*********************** 배너************************/
@@ -167,21 +187,26 @@ transform: scale(1.2);
 /* 배너 글자 이미지 : 자식*/
 .banner-back{
   position: absolute;
-  width: 80vw;
-  margin: 0 auto;
   top: 50%;
- 
+
+
 }
+ /*  left: calc(50% - 80vw/2); 
+ transform-origin: center, center;  
+ >> 창 확대축소 할 때 왜 왼쪽 위에서부터 크기가 변경?*/
 
 
 
 .banner-back img{
   width: 80vw;
-  
-  transition: top 3s ease-in;
-
-  animation: banner-back-ani 1s ease-in forwards;
+  margin: 0 auto;
+  transition: .5s ease-in;
+  animation: banner-back-ani 1s cubic-bezier(0.1, 0.75, 0.57, 0.99) forwards;
+ 
 }
+
+
+
 
 /* 배너 버거 이미지 : 자식 */
 .banner-burgerImg{
@@ -191,56 +216,96 @@ transform: scale(1.2);
   height: 400px;
   top: 27%;
 
- 
 }
 
 
+
+
+/* 배너 버거 이미지 개별 위치 속성 및 트랜지션 */
 .banner-burgerImg img{
  position: relative;
   display: block;
   margin: 0 auto;
- 
+  transition: .5s ease-in;
+
+}
+
+
+
+/**************** 배너 호버 *******************/
+
+
+/* 배너 호버시 글자이미지 조금 움직이기 */
+.banner:hover .banner-back img{
+
+  margin: -1% auto;
+  transition: .5s ease-in;
+
 }
 
 
 
 
+/* 배너 버거 이미지 호버시 개별 이미지 조금 더 움직이기 */
+.banner-burgerImg>img:nth-child(n+1):hover{
+
+  margin: -5% auto;
+  transition: .5s ease-in;
+
+}
+
+
+/* 배너 버거 이미지 호버시 개별 이미지 조금 더 움직이기
+ >> 마지막 그림자(html상으로 첫번째 있어서 n+1 (1번을 제외하고 hover를 준건데 왜 안될까)
+
+.banner-burgerImg>img:nth-child(n+1):hover{
+
+  margin: -5% auto;
+  transition: .5s ease-in;
+
+}
+*/
+
+
+
+/****************배너 애니메이션 *******************/
+
 .banner-burgerImg img:nth-child(9){
   top: -130%;
-  animation: banner-burgerImg-to-up .3s ease-in;
+  animation: banner-burgerImg-to-up .3s cubic-bezier(0.24, 0.96, 0.5, 1.24);
 }
 
 .banner-burgerImg img:nth-child(8){
   top: -85.7%;
-  animation: banner-burgerImg-to-up .5s ease-in ;
+  animation: banner-burgerImg-to-up .5s cubic-bezier(0.24, 0.96, 0.5, 1.24) ;
 }
 .banner-burgerImg img:nth-child(7){
   top: -67.7%;
-  animation: banner-burgerImg-to-up .8s ease-in ;
+  animation: banner-burgerImg-to-up .8s cubic-bezier(0.14, 0.82, 0.4, 1.11) ;
 }
 .banner-burgerImg img:nth-child(6){
   top: -47.7%;
-  animation: banner-burgerImg-to-up 1.1s ease-in;
+  animation: banner-burgerImg-to-up 1s cubic-bezier(0.14, 0.82, 0.4, 1.11);
 }
 .banner-burgerImg img:nth-child(5){
   top: -26.7%;
-    animation: banner-burgerImg-to-up 1.6s ease-in ;
+    animation: banner-burgerImg-to-up 1.3s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
 }
 .banner-burgerImg img:nth-child(4){
   top: -0.3%;
-    animation: banner-burgerImg-to-up 2s ease-in ;
+    animation: banner-burgerImg-to-up 1.5s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
 }
 .banner-burgerImg img:nth-child(3){
   top: 24.3%;
-    animation: banner-burgerImg-to-up 2.4s ease-in ;
+    animation: banner-burgerImg-to-up 1.8s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
 }
 .banner-burgerImg img:nth-child(2){
   top: 57.3%;
-    animation: banner-burgerImg-to-up 2.8s ease-in ;
+    animation: banner-burgerImg-to-up 2s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
 }
 .banner-burgerImg img:nth-child(1){
   top: 94.3%;
-  animation: banner-burgerImg-opacity 6s ease-in ;
+  animation: banner-burgerImg-opacity 6s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
    
 }
 
@@ -381,7 +446,7 @@ transform: scale(1.2);
 }
 
 .title{
-  font-family: 'Black Han Sans', sans-serif;
+  font-family: 'Black Han Sans', sans-serif; 
   font-weight: bold;
   font-size: 4rem;
   line-height: 5rem;
@@ -403,10 +468,9 @@ transform: scale(1.2);
 
 }
 
-.content .view-button{
+.view-button{
 position: relative;
 bottom: 0;
-
 
 color: #fff;
 text-align: center;
@@ -423,30 +487,22 @@ font-family: 'Roboto Condensed', sans-serif;
 font-weight: bold;
 font-size: 22px;
 line-height: 1.55em;
+
+z-index: 9;
+
 }
 
+.view-button>a{
+  color: #fff;
+  padding: 20px 80px;
 
-.content-02 .view-button{
-position: relative;
-bottom: 0;
-
-
-color: #fff;
-text-align: center;
-background-image:url(../images/00.common/button-red.svg) ;
-display: inline-block;
-background-size: 100% 100%;
-background-repeat: no-repeat;
-background-position: top left;
-min-width: 258px;
-overflow: hidden;
-padding: 0.9em;
-
-font-family: 'Roboto Condensed', sans-serif;
-font-weight: bold;
-font-size: 22px;
-line-height: 1.55em;
 }
+
+.view-button>a:hover .view-button{
+transform: scale(1.1);
+transition: .1s;
+}
+
 
 
 
@@ -599,14 +655,15 @@ color: #fff;
 }
 
 
-#ad-app .view-button{
-  background-image:url(../images/00.common/button-black.svg) ;
-
-}
-
 
 #ad-app .bg-txt{
   right:20%;
+}
+
+
+#ad-app .view-button{
+  background-image:url(../images/00.common/button-black.svg) ;
+ 
 }
 
 .shake-img{
@@ -626,7 +683,16 @@ color: #fff;
   object-fit: contain;
 
 }
+
+
 .shake-img img:nth-child(1){
+  top: -113px;
+  left: 331px;
+  width: 70%;
+}
+
+
+.shake-img img:nth-child(2){
   top: -113px;
   left: 331px;
   width: 70%;
