@@ -223,10 +223,11 @@ transform: scale(1.2);
 .banner{
   position: relative;
   width: 100%;
-  min-height: 900px;
-  margin: 0 auto;
+  min-height: 61vh;    /* 슬라이드 광고이미지 -> top:0 겹치기*/
+  margin: 0 auto 9%;
  
- 
+
+
  }
 
 
@@ -234,7 +235,7 @@ transform: scale(1.2);
 .banner-mv{
 position: absolute;
 width: 100%;
-height: 100%;
+height: 110%;
 top: 0;
 
 overflow: hidden;
@@ -247,7 +248,7 @@ z-index: -1;
 }
 
 
-video {
+.banner-mv>video {
   min-height:100%;
   min-width: 100%;
   object-fit: cover; 
@@ -277,8 +278,10 @@ video {
   top: 30%;
   left: calc(50% - 80vw/2);
 
+
 }
- /*  left: calc(50% - 80vw/2); 
+ /*  
+ left: calc(50% - 80vw/2); 
  transform-origin: center, center;  
  >> 창 확대축소 할 때 왜 왼쪽 위에서부터 크기가 변경?*/
 
@@ -286,7 +289,7 @@ video {
 
 .banner-back img{
   width: 80vw;
-  margin: 0 auto;
+  margin: 10% auto;
   transition: .5s ease-in;
   animation: banner-back-ani 2s cubic-bezier(0.1, 0.75, 0.57, 0.99) forwards;
  
@@ -301,12 +304,12 @@ video {
   position: absolute;
   margin: 0 auto;
 
-
+top: 10vh;
   width:80vw;  
   left: calc(50% - 80vw/2);
 
   height: 400px;
-  top: calc(50% - 700px/2);
+
 }
 
 
@@ -343,14 +346,16 @@ video {
 
 /* 배너 버거 이미지 호버시 개별 이미지 조금 더 움직이기
  >> 마지막 그림자(html상으로 첫번째 있어서 n+1 (1번을 제외하고 hover를 준건데 왜 안될까)
+ */
 
-.banner-burgerImg>img:nth-child(n+1):hover{
+ 
+/* .banner-burgerImg>img:nth-child(n+1):hover{
 
   margin: -3% auto;
   transition: .5s ease-in;
 
 }
-*/
+ */
 
 
 
@@ -405,14 +410,17 @@ section#ad-slide {
 
 .slide-wrap{
   position: relative;
-  top: -15vh;
+  top: 0;
+  
 }
 
 .slide-part1{
   position: absolute;
   right: 0;
-  height: 320px;
+ 
   width: 80%;
+  height: 300px;
+
   overflow: hidden;
 
 }
@@ -432,7 +440,7 @@ section#ad-slide {
 .slide-part2{
   position: absolute;
   right: 0;
-  height: 320px;
+  height: 350px;
   width: 80%;
 
 
@@ -443,11 +451,19 @@ section#ad-slide {
   background-color: #d3d3d3;
   width: 323px;
   height: 10px;
-  top: 348px;
+  bottom: 0;
   border-radius: 10px;
 }
 
 
+.slide-wrap .scroll-percent{
+  position: absolute;
+  background-color: #d0021b;
+  width: 70%;
+  height: 10px;
+  bottom: 0;
+  border-radius: 10px;
+}
 
 /*********************** 광고박스 공통 ************************/
 
@@ -497,38 +513,45 @@ section#ad-slide {
 .video {
   
   position: relative;
-  height: 800px;
+  height:700px;
   width: 50vmax;
   overflow: hidden;
   margin: auto 0;
- 
+  padding: 10% 0;
 
   
 }
 
 .video video{
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
 }
 
 
 /* 광고 비디오 커버 - 덮었다가 올라감 */
 .ad-video-cover{
-
+position: absolute;
+background-color: #d0021b;
+height:700px;
+width: 50vmax;
+top: 0;
+animation: video-cover-ani 1s ease-in forwards;
 }
+
 
 
 
 /* 오른쪽 1/2 */
  .content{
   position: relative;
-  height: 800px;
+  height:700px;
   width:50%;
-  padding: 0 100px 0 5%;
-
+  padding: 10% 15% 0 5%;
+  
 
 }
+
 
 
 .sub-title{
@@ -538,6 +561,8 @@ section#ad-slide {
 
   font-weight: bold;
   font-size: 2rem;
+
+
 }
 
 .title{
@@ -554,18 +579,18 @@ section#ad-slide {
 .article{
   font-family: 'Roboto Condensed', sans-serif;
   padding: 80px 0 80px 0;
+
   font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  letter-spacing: 1px;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+ 
   text-align: justify;
   /* word-break: break-all; */
 
 }
 
 .view-button{
-position: relative;
-bottom: 0;
+position: relative;   /* 일단 위에서 밀어서 버튼이 내려가려고 */
 
 color: #fff;
 text-align: center;
@@ -575,7 +600,7 @@ background-size: 100% 100%;
 background-repeat: no-repeat;
 background-position: top left;
 min-width: 258px;
-overflow: hidden;
+
 padding: 0.9em;
 
 font-family: 'Roboto Condensed', sans-serif;
@@ -583,19 +608,23 @@ font-weight: bold;
 font-size: 22px;
 line-height: 1.55em;
 
+
 z-index: 9;
+transition: .4s;
 
 }
+
 
 .view-button>a{
   color: #fff;
-  padding: 20px 80px;
 
 }
 
-.view-button>a:hover .view-button{
+
+.view-button:hover{
+
 transform: scale(1.1);
-transition: .1s;
+transition: .4s;
 }
 
 
@@ -688,6 +717,7 @@ margin: 200px 0 200px 20%;
 
 background: #d0021b;
 
+padding: 100px 0;
 
 }
 
@@ -788,9 +818,21 @@ color: #fff;
 
 
 .shake-img img:nth-child(2){
-  top: -113px;
-  left: 331px;
-  width: 70%;
+  top: 79px;
+  left: 153px;
+  width: 100%;
+}
+
+.shake-img img:nth-child(3){
+  top: -164px;
+  left: -40px;
+  width: 83%;
+}
+
+.shake-img img:nth-child(4){
+  top: 124px;
+  left: -84px;
+  width: 80%;
 }
 
 
