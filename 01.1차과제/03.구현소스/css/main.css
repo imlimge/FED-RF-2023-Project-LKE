@@ -111,9 +111,12 @@ transition:.2s ease-in;
 /* 메뉴 딜리버리 왼쪽 움직이는 아이콘 */
 .gnb>li:last-child>a::before{
   content: '';
-    position: absolute;
-    top: 24%;
-    right: 10.5%;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    bottom: -10px;
+
+ 
     width: 35px;
     height: 35px;
     background-size: cover;
@@ -425,17 +428,20 @@ section#ad-slide {
 
 }
 
+
 .slide-img{
    height: 100%;
   display: flex;
- 
-  
+
 }
 
+.slide-image-item img{
+  position: relative;
+  aspect-ratio:1440/480;
+  height: 300px;
 
-.slide-img img{
-  cursor: pointer;
 }
+
 
 .slide-part2{
   position: absolute;
@@ -625,6 +631,7 @@ transition: .4s;
 
 transform: scale(1.1);
 transition: .4s;
+cursor: pointer;
 }
 
 
