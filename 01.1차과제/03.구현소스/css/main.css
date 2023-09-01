@@ -291,6 +291,9 @@ z-index: -1;
 
 
 .banner-back img{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80vw;
   margin: 10% auto;
   transition: .5s ease-in;
