@@ -511,39 +511,48 @@ section#ad-slide {
   width: 100%;
 
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-
+  flex-direction: column;
+  flex-wrap: wrap;
 
 }
 
 
 /* 왼쪽 1/2 */
-.video {
-  
-  position: relative;
-  height:700px;
-  width: 50vmax;
-  overflow: hidden;
-  margin: auto 0;
-  padding: 10% 0;
 
+.video-box{
+  width: 50%;
+  height: 700px;
+  }
   
-}
 
-.video video{
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-}
+  .video {
+      position: relative;
+      /* height: 700px; */
+      width: 100%;
+      /* overflow: hidden; */
+      /* margin: auto 0; */
+      /* padding: 0 0; */
+      padding-top: 100%;
+  }
+
+
+  .video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  
 
 
 /* 광고 비디오 커버 - 덮었다가 올라감 */
 .ad-video-cover{
 position: absolute;
 background-color: #d0021b;
-height:700px;
-width: 50vmax;
+height: 100%;
+width: 100%;
 top: 0;
 animation: video-cover-ani 1s ease-in forwards;
 }
@@ -556,10 +565,11 @@ animation: video-cover-ani 1s ease-in forwards;
   position: relative;
   height:700px;
   width:50%;
-  padding: 10% 15% 0 5%;
+  padding: 0vw 9vw 3vw 5vw;
+  box-sizing: border-box;;
   
 
-}
+} 
 
 
 

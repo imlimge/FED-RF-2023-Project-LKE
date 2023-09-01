@@ -19,9 +19,8 @@
 @keyframes banner-back-ani{
   
   0%{
-    transform: translateY(-100vh) scale(2) ;
-   
-    }
+    transform: translate(-50%, -100vh) scale(2) ;
+       }
 
  }
 
