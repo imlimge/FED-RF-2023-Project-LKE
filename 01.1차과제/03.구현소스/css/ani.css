@@ -44,17 +44,6 @@
 }
 
 
-/* 그림자 천천히 생김 */
-@keyframes banner-burgerImg-opacity{
-  0%{
-      opacity: 0 ;
-  }
-  0%{
-      opacity: 100%;
-  }
- 
-}
-
 
 
 /* 시도하려고 하는 개별 애니 */
