@@ -38,8 +38,9 @@ animation:  gnb-box-ani 1s ease-in-out forwards;
 .gnb a{
   color: #ffffff;
   font-weight: bold;
-  font-size: 1.2rem;
-  
+  font-size: min(1.2rem,1.4vw);
+  /* font-size: 1.2rem; */
+  white-space : nowrap;
   display:block;
 
 }
@@ -525,13 +526,9 @@ section#ad-slide {
   
 
   .video {
-      position: relative;
-      /* height: 700px; */
-      width: 100%;
-      /* overflow: hidden; */
-      /* margin: auto 0; */
-      /* padding: 0 0; */
-      padding-top: 100%;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
   }
 
 
@@ -576,7 +573,7 @@ animation: video-cover-ani 1s ease-in forwards;
   margin-bottom: 20px;
 
   font-weight: bold;
-  font-size: 2rem;
+  font-size: min(2rem,4vw);
 
 
 }
@@ -584,8 +581,8 @@ animation: video-cover-ani 1s ease-in forwards;
 .title{
   font-family: 'Black Han Sans', sans-serif; 
   font-weight: bold;
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: min(4rem,6vw);
+  line-height: min(5rem,6vw);
 
   color: #222;
   padding: 0 30% 0 0;
@@ -594,7 +591,8 @@ animation: video-cover-ani 1s ease-in forwards;
 
 .article{
   font-family: 'Roboto Condensed', sans-serif;
-  padding: 80px 0 80px 0;
+  padding: 4vw 0;
+
 
   font-weight: 400;
   font-size: 1.2rem;
@@ -727,28 +725,46 @@ cursor: pointer;
 
 /* 흔들려야 하는 배경박스 나중에 오른쪽에서 왼쪽으로 이동함 */
 .app-outbox{
-position: absolute; 
-width: 80vw;
-height: 100%;
-margin: 200px 0 200px 20%;
-
-background: #d0021b;
-
-padding: 100px 0;
+  position: absolute;
+  width: 80vw;
+  margin: 30vh 0;
+  background: #d0021b;
+  padding: 5vh 0 8vh 0;
+  right: 0;
 
 }
 
 
+.app-outbox:before{ 
+  content: ' shake';
+  position: absolute;
+  font-size: 17rem;
+  line-height: 16rem;
+  top: 21%;
+  left: 10px;
+ 
+  color: #000;
+  text-align: right;
+  font-family: 'Black Han Sans', sans-serif; 
+  opacity: .04;
+ 
+ 
+ }
+ 
+ 
+
 
 /* 컨텐트랑 이미지 나란히 하기위해 부모 플렉스 박스 */
 .app-inbox{ 
-  position: absolute;
-  height: 800px;
+  position: relative;
+ 
   width: 100%;
 
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  
+  
 
 }
 
@@ -757,21 +773,23 @@ padding: 100px 0;
 /* 왼쪽 1/2 */
 .content-02{
 
+  height:700px;
+  padding: 3vw 9vw 3vw 5vw;
+  box-sizing: border-box;;
+
+/* 
   position: relative;
-  height: 600px;
-  width: 50%;
+ 
+ 
   margin: auto 0;
-  padding: 0 5% 0 9%;
+  padding: 0 5% 0 9%; */
 }
  
 
 
 /* 오른쪽 1/2 */
 .shake-img-box{
-  position: relative;
-  height: 600px;
-  width: 50vmax;
-  margin: auto 0;
+ 
 }
 
 
@@ -809,13 +827,12 @@ color: #fff;
 }
 
 .shake-img{
-  position: absolute;
-  
+  position: relative;
   top: calc(50% - 500px/2);
   left: calc(50% - 500px/2);
+  /* width: 26vw; */
+  height: 50vw;
 
-  width: 500px;
-  height: 500px;
 }
 
 .shake-img img{
@@ -828,28 +845,28 @@ color: #fff;
 
 
 .shake-img img:nth-child(1){
-  top: -113px;
-  left: 331px;
-  width: 70%;
+  left: 25vh;
+  height: 42vw;
+  top: -4vh;
 }
 
 
 .shake-img img:nth-child(2){
-  top: 79px;
-  left: 153px;
-  width: 100%;
+  left: 15.1vh;
+  top: 13.9vh;
+  width: 60vh;
 }
 
 .shake-img img:nth-child(3){
-  top: -164px;
-  left: -40px;
-  width: 83%;
+  left: -8vw;
+  height: 33vw;
+  top: -10vh;
 }
 
 .shake-img img:nth-child(4){
-  top: 124px;
-  left: -84px;
-  width: 80%;
+  width: 35vw;
+  left: -4vh;
+  height: 62vw;
 }
 
 
