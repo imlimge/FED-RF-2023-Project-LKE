@@ -424,7 +424,7 @@ section#ad-slide {
   position: absolute;
   right: 0;
  
-  width: 80%;
+
   height: 300px;
 
   overflow: hidden;
@@ -450,7 +450,7 @@ section#ad-slide {
   position: absolute;
   right: 0;
   height: 350px;
-  width: 80%;
+ 
 
 
 }
@@ -506,12 +506,12 @@ section#ad-slide {
 
 /* 비디오랑 컨텐트를 나란히 하기위해 플렉스 넣은 박스 */
 .ad-inbox{
-  position: absolute;
-  height: 800px;
+  position: relative;
+ 
   width: 100%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 
 }
@@ -520,8 +520,7 @@ section#ad-slide {
 /* 왼쪽 1/2 */
 
 .video-box{
-  width: 50%;
-  height: 700px;
+
   }
   
 
@@ -562,10 +561,8 @@ animation: video-cover-ani 1s ease-in forwards;
 
 /* 오른쪽 1/2 */
  .content{
-  position: relative;
-  height:700px;
-  width:50%;
-  padding: 0vw 9vw 3vw 5vw;
+ height:700px;
+  padding: 3vw 9vw 3vw 5vw;
   box-sizing: border-box;;
   
 

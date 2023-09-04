@@ -91,7 +91,7 @@ font-family: 'Noto Sans KR', sans-serif;
 .section{
   position: relative;
   /* height: 100vh; */
-  height: 800px;
+  min-height: 80vh;
   top: 0;
   left: 0;
 
@@ -126,18 +126,23 @@ font-family: 'Noto Sans KR', sans-serif;
 
 
 /* 숨길 박스 */
-   .col2-none{display: none;}
+   .col1-none{display: none;}
 
 /* 보일 박스 */
-   .col2-block{display: block;}
+   .col1-block{display: block;}
 
 
 
 
-/* --------------- 박스 그리드 ----------------- */
-@media screen and (max-width:1250px){
 
 
+
+
+
+/* --------------- 박스 그리드 850px ----------------- */
+@media screen and (max-width:850px){
+
+  
   .col2-1 {width: 8.33%;}
   .col2-2 {width: 16.66%;}
   .col2-3 {width: 25%;}
@@ -156,7 +161,7 @@ font-family: 'Noto Sans KR', sans-serif;
      .col2-none{display: none;}
   
      /* 보일 박스 */
-     .col2-block{display: block;}
+     .co23-block{display: block;}
   
   
   }
