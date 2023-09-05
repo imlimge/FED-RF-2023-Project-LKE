@@ -27,3 +27,7 @@ a{
   text-decoration: none;
 }
 
+
+nav{
+  display: block;
+}

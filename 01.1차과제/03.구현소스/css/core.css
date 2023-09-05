@@ -90,8 +90,8 @@ font-family: 'Noto Sans KR', sans-serif;
 
 .section{
   position: relative;
-  /* height: 100vh; */
-  min-height: 80vh;
+  height: 100vh;
+  /* min-height: 80vh; */
   top: 0;
   left: 0;
   
@@ -162,7 +162,7 @@ font-family: 'Noto Sans KR', sans-serif;
      .col2-none{display: none;}
   
      /* 보일 박스 */
-     .co23-block{display: block;}
+     .col2-block{display: block;}
   
         
   

@@ -110,12 +110,12 @@ transition:.2s ease-in;
 
 
 /* 메뉴 딜리버리 왼쪽 움직이는 아이콘 */
-.gnb>li:last-child>a::before{
+.gnb>li:last-child>a::after{
   content: '';
     position: relative;
     display: inline-block;
-    left: 0;
-    bottom: -10px;
+    right: 0;
+    bottom: -13px;
 
  
     width: 35px;
@@ -129,7 +129,7 @@ transition:.2s ease-in;
 
 
 /* 메뉴 딜리버리 왼쪽 움직이는 아이콘 호버시 이미지 변경 */
-.gnb>li:last-child:hover>a::before{
+.gnb>li:last-child:hover>a::after{
   background-image: url(../images/01.top-navigation/online-ordering-animation-hover.gif);
   transition: all .3s;
 }
@@ -204,11 +204,144 @@ transform: scale(1.2);
 }
 
 
+/***************** 모바일 네비게이션 ***********************/
+
+.m-gnb-box{
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #d0021b;
+  z-index: 10;
+}
+
+.m-hamburger{
+  position: absolute;
+  top: calc(50% - 25px/2);
+  left: 3%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  background: url(../images/01.top-navigation/m-hamburger.png) no-repeat center/cover;
+  
+}
+
+.m-delivery{
+  position: absolute;
+  top: calc(50% - 36px/2);
+  right: 2%;
+  width: 100px;
+  height: 36px;
+  text-align: center;
+
+
+}
+
+.m-delivery a{
+  display: inline-block;
+  font-family: 'Cafe24Ssurround';
+  color: #fff;
+  font-size: 1rem;
+  margin-top: -11.2px;
+}
+  
+
+
+/* 메뉴 딜리버리 왼쪽 움직이는 아이콘 */
+.m-delivery>a:after{
+  content: '';
+    position: relative;
+    display: inline-block;
+    right: 0;
+    bottom: -12px;
+
+ 
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/01.top-navigation/online-ordering-animation.gif);
+ 
+}
 
 
 
+
+
+
+
+.m-nav-logo{
+position: absolute;
+top: calc(50% - 50px/2);
+left: calc(50% - 50px/2);
+width: 50px;
+height: 50px;
+text-align: center;
+
+}
+
+.m-nav-logo img{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%
+
+}
 
 /*********************** 배너************************/
+/* 배너에 마우스 따라다니는 무버 */
+.mover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #d0021b;
+
+  pointer-events: none;
+  mix-blend-mode: difference;
+  /* opacity: 0; */
+
+  transition: 0.4s ease-out;
+ z-index: 999;
+}
+
+.mover span{
+  opacity: 0;
+}
+
+.mover span:nth-child(1){
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+
+
+
+  top: 23%;
+  left: calc(50% - 160px/2);
+  width: 160px;
+
+}
+
+.mover span:nth-child(2){
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-size: .8rem;
+
+
+
+  top: 52%;
+  left: calc(50% - 160px/2);
+  width: 160px;
+
+}
+
+
 
 /* 배너 배경 색 >> 네비 뒤에 색을 주기위해 따로 빼둔 배너컬러 
 .banner-back-color{
@@ -728,7 +861,7 @@ cursor: pointer;
 /* 흔들려야 하는 배경박스 나중에 오른쪽에서 왼쪽으로 이동함 */
 .app-outbox{
   position: absolute;
-  margin: 30vh 0;
+  margin: 43vh 0;
   background: #d0021b;
   padding: 5vh 0 8vh 0;
   right: 0;
@@ -825,7 +958,7 @@ color: #fff;
 /* 오른쪽 1/2 */
 .shake-img-box{
  position: relative;
- 
+ height:700px;
  
 }
 
@@ -852,8 +985,6 @@ height: 100%;
 
 /* 고정 이미지- 핸드폰 */
 .static-image{
-  transform: scale(0.9);
-
 
 }  
 
