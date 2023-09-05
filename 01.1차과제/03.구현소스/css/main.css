@@ -559,6 +559,7 @@ animation: video-cover-ani 1s ease-in forwards;
 /* 오른쪽 1/2 */
  .content{
  height:700px;
+
   padding: 3vw 9vw 3vw 5vw;
   box-sizing: border-box;;
   
@@ -591,13 +592,12 @@ animation: video-cover-ani 1s ease-in forwards;
 }
 
 .article{
-  font-family: 'Cafe24Ssurround';
+  font-family: 'Noto Sans KR', sans-serif; 
   padding: 4vw 0;
-
-
+ 
   font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
  
   text-align: justify;
   /* word-break: break-all; */
@@ -831,31 +831,44 @@ color: #fff;
 
 /* 고정이미지&팝업이미지 묶음 */
 .shake-img{
-
+height: 100%;
 }
+
+
 
 
 /* 이미지 전체 사이즈 & 위치 조정 */
 .shake-img img{
   position: absolute;
-  width: 40vh;
+  width: 25vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+ 
 
 }
 
 /* 고정 이미지- 핸드폰 */
 .static-image{
-
+  transform: scale(0.9);
 
 
 }  
 
+/* 모바일 버전일때 크기 */
+/* .static-image{
+  transform: translateY(-13vh) scale(0.6);
+
+
+}  
+ */
 
 
 
 .static-img>img:nth-child(1){
- 
-  position: absolute;
-  width: 37vh;
+
 }
 
 
@@ -868,19 +881,23 @@ color: #fff;
 
 
 .pop-images img:nth-child(1){
-
+  transform: translate(195px, -103px) ;
+  width: min(81.7vw,401px);
 }
 
 .pop-images img:nth-child(2){
-
+  transform: translate(98px, 28px);
+  width: min(99.7vw,567.5px);
 
 }
 
 .pop-images img:nth-child(3){
- 
+  transform: translate(10.3px, -162px);
+  width: min(81.7vw,401px);
 }
 .pop-images img:nth-child(4){
-
+  transform: translate(-42.2px, 108px);
+  width: min(81.7vw,401px);
 }
 
 

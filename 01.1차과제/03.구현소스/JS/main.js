@@ -7,24 +7,6 @@ const qs = (x) => document.querySelector(x);
 const qsa = (x) => document.querySelectorAll(x);
 
 
-            
-/******************************** 
-    추가기능: banner에 마우스무브시
-    이미지 포인터 따라다니기
-                
-********************************/
-                //1.대상선정
-                //1-1.이벤트 대상: .wrap
-                const wrap = qs(".wrap");
-                //1-2.변경대상
-                const moving = qs(".flying-poster");
-
-                console.log("추가대상:", wrap, moving);
-
-                //2.이벤트 함수 구현하기
-                //2-1. .wrap박스 위에 마우스무브시 따라오기
-                //이벤트 : mousemove
-                wrap.onmousemove = (e) => {
 
 
 
@@ -34,6 +16,19 @@ const qsa = (x) => document.querySelectorAll(x);
 
 
 
+
+
+/* 
+                    var docWidth = document.documentElement.offsetWidth;
+
+                    [].forEach.call(
+                      document.querySelectorAll('*'),
+                      function(el) {
+                        if (el.offsetWidth > docWidth) {
+                          console.log(el);
+                        }
+                      }
+                    ); */
 
 
 
