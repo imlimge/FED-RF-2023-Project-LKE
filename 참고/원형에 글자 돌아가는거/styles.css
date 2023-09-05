@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap");
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.circle-word {
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
+.circle-word:nth-child(odd) p {
+  animation: rotateTextAnti 100s infinite linear;
+}
+.circle-word:nth-child(even) p {
+  animation: rotateTextClock 100s infinite linear;
+}
+.circle-word p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: "Sen", sans-serif;
+}
+.circle-word span {
+  position: absolute;
+  left: 50%;
+  animation: fadeIn 1s linear;
+}
+
+.circle-one {
+  width: 500px;
+  height: 500px;
+}
+.circle-one span {
+  font-size: 2.2em;
+  transform-origin: 0 250px;
+}
+
+.circle-two {
+  width: 650px;
+  height: 650px;
+}
+.circle-two span {
+  font-size: 1.2em;
+  transform-origin: 0 325px;
+}
+
+@keyframes rotateTextAnti {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes rotateTextClock {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

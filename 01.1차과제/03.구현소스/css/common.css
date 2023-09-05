@@ -8,7 +8,7 @@
 
 
 body *{
-  /* outline: 1px dashed #999; */
+  outline: 1px dashed #999;
 }
 
 
@@ -26,3 +26,30 @@ h1,h2,h3,h4,h5,h5{
 body{
   height: 3000px;
 }
+
+
+#ad-chicken, #ad-app, #sns, #ad-whopper, #use{
+position: relative;
+/* height: 100vh; */
+top: 0;
+margin:10vh 0;
+box-sizing: border-box;
+}
+
+
+
+/* --------------- 섹션 ----------------- */
+
+
+.section{
+  position: relative;
+  /* height: 100vh; */
+ 
+  top: 0;
+  left: 0;
+
+}
+
+
+/* 섹션 높이갚이 오토여야 아래를 밀어주는듯 > 수정? */
+

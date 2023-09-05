@@ -28,6 +28,6 @@ a{
 }
 
 
-nav{
-  display: block;
+main {
+  overflow-y: hidden;
 }

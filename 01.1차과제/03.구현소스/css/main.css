@@ -297,10 +297,10 @@ text-align: center;
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background-color: #d0021b;
+  outline: 1px solid #fff;
 
   pointer-events: none;
-  mix-blend-mode: difference;
+
   /* opacity: 0; */
 
   transition: 0.4s ease-out;
@@ -308,7 +308,8 @@ text-align: center;
 }
 
 .mover span{
-  opacity: 0;
+  /* opacity: 0; */
+  transition: 0.4s ease-out;
 }
 
 .mover span:nth-child(1){
@@ -610,6 +611,14 @@ section#ad-slide {
 
 /*********************** 광고박스 공통 ************************/
 
+#ad-chicken{
+  position: relative;
+  height: 100%;
+  top: 0;
+  margin:10vh 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
 /* 위치 및 배경 텍스트 넣기 위한 공간 */
 .bgbox{    
@@ -694,7 +703,7 @@ animation: video-cover-ani 1s ease-in forwards;
  height:700px;
 
   padding: 3vw 9vw 3vw 5vw;
-  box-sizing: border-box;;
+  box-sizing: border-box;
   
 
 } 
@@ -729,7 +738,7 @@ animation: video-cover-ani 1s ease-in forwards;
   padding: 4vw 0;
  
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
  
   text-align: justify;
@@ -855,7 +864,14 @@ cursor: pointer;
 
 /*********************** 앱박스 공통 ************************/
 
-
+#ad-app{
+  position: relative;
+  height: 100%;
+  top: 0;
+  margin:10vh 0;
+  box-sizing: border-box;
+ 
+}
 
 
 /* 흔들려야 하는 배경박스 나중에 오른쪽에서 왼쪽으로 이동함 */
@@ -865,7 +881,7 @@ cursor: pointer;
   background: #d0021b;
   padding: 5vh 0 8vh 0;
   right: 0;
-
+  overflow: hidden;
 }
 
 
@@ -1036,10 +1052,26 @@ height: 100%;
 
 
 
+/*********************** SNS박스  ************************/
+
+#sns{
+  position: relative;
+  height: 100%;
+  top: 0;
+  margin:10vh 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+.sns-outbox {
+  position: relative;
+  height: 30vh;
+  background-color: #d0021b;
+  top: 0;
+  left: 0;
 
 
-
-
+}
 
 
 

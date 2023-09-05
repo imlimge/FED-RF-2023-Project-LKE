@@ -35,8 +35,13 @@ function loadFn(){
 
 
   // 이벤트 구역을 들어올때만 보이기 / 나가면 숨기기
-  banner.onmouseenter = () =>{mover.style.opacity = 1;}; /// mouseenter////
-  banner.onmouseleave = () =>{mover.style.opacity = 0;}; /// mouseleave////
+  banner.onmouseenter = () =>{
+    mover.style.opacity = 1;
+    
+  }; 
+  banner.onmouseleave = () =>{
+    mover.style.opacity = 0;
+  }; 
 
 
 

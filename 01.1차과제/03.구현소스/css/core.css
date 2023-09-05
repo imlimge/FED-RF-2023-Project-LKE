@@ -85,28 +85,6 @@ font-family: 'Noto Sans KR', sans-serif;
 
 
 
-/* --------------- 섹션 ----------------- */
-
-
-.section{
-  position: relative;
-  height: 100vh;
-  /* min-height: 80vh; */
-  top: 0;
-  left: 0;
-  
-
-
-
-
-}
-
-
-/* 섹션 높이갚이 오토여야 아래를 밀어주는듯 > 수정? */
-
-
-
-
 
 /* --------------- 그리드 ----------------- */
 
