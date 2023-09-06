@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>버거킹 test</title>
+        <title>버거킹</title>
         <!-- 메인 CSS  -->
         <link rel="stylesheet" href="./CSS/main.css" />
         <!-- 외부 JS  -->
@@ -82,7 +82,7 @@
 
 
             <!--  2. 배너 파트  -->
-            <section id="banner">
+            <div id="banner">
             <!-- 배너배경 칼라 (내비 밑으로 가기위한 배경 설정)-->
             <div class=" banner-mv core-box"> 
                 
@@ -122,7 +122,7 @@
                 </a>
                   
             </div> 
-            <div class="mover"> 
+            <div class="mover col2-none"> 
                 <span>
                 click!
             </span>
@@ -130,13 +130,13 @@
                 버거킹 광고보기!
             </span>
             </div>
-        </section><!-- 배너 파트닫기 -->
+        </div><!-- 배너 파트닫기 -->
 
       
 
 
      <!--  3. 슬라이드 광고파트  -->
-     <section id="ad-slide" >
+     <div id="ad-slide" >
         <div class="slide-wrap core-box ">
 
             <div class="slide-part2 col-10 col2-12"> 
@@ -150,13 +150,13 @@
                 <div class="slide-img">
                     <div class="slide-image-item">
                         <a href="">
-                            <img src="./images/03.main/02.slide/banner01.png" alt="슬라이드 광고이미지 01">
+                            <img src="./images/03.main/02.slide/silde01.png" alt="슬라이드 광고이미지 01">
                         </a>
                     </div>
-                    <div class="slide-image-item"><a href=""><img src="./images/03.main/02.slide/banner02.png" alt="슬라이드 광고이미지 02"></a></div>
-                    <div class="slide-image-item"><a href=""><img src="./images/03.main/02.slide/banner03.png" alt="슬라이드 광고이미지 03"></a></div>
-                    <div class="slide-image-item"><a href=""><img src="./images/03.main/02.slide/banner04.png" alt="슬라이드 광고이미지 04"></a></div>
-                    <div class="slide-image-item"><a href=""><img src="./images/03.main/02.slide/banner05.png" alt="슬라이드 광고이미지 05"></a></div>
+                    <div class="slide-image-item"><a href=""><img src="./images/03.main/02.slide/silde02.png" alt="슬라이드 광고이미지 02"></a></div>
+                    <div class="slide-image-item"><a href=""><img src="./images/03.main/02.slide/silde03.png" alt="슬라이드 광고이미지 03"></a></div>
+                    <div class="slide-image-item"><a href=""><img src="./images/03.main/02.slide/silde04.png" alt="슬라이드 광고이미지 04"></a></div>
+                    <div class="slide-image-item"><a href=""><img src="./images/03.main/02.slide/silde05.png" alt="슬라이드 광고이미지 05"></a></div>
                     
                 </div>
             </div>
@@ -164,7 +164,7 @@
       
         </div>
     </div>
-    </section>
+</div>
 
     <!--  4. 치킨버거 메뉴 광고 파트 & 버튼  -->
     <section id="ad-chicken" class="section">
@@ -199,16 +199,11 @@
                 <h2 class="title">BITE INTO BETTER
                         <span class="h-underline-last-line"> CHICKEN. </span></h2>
 
-                    <!-- 
-                        실패한 버거킹 따라하기
-                        <span class="h-underline ani in-viewport">
-                  <span class="h-underline-last-line"> CHICKEN. </span> 
-                </span></h2> 
-            -->
-<!-- 3.내용 -->
+                   
+                <!-- 3.내용 -->
       <!--        <p class="article">Satisfry your cravings and try our NEW Jack's Fried Chicken range, which is 40% bigger than other fried chicken burgers, with a Big, Thick, Crunchy, Juicy whole muscle chicken breast that delivers an epic eating experience with every bite.</p> -->
              
-             <p class="article">&nbsp다른 프라이드 치킨 버거보다 40% 더 큰 버거킹 제품군을 맛보세요. 한입 한입마다 멋진 먹방 경험을 선사하는 버거킹입니다. &nbsp통 닭가슴살의 치킨패티는 크고 두껍고 바삭하며 육즙이 풍부합니다! </p>
+             <p class="article">&nbsp다른 프라이드 치킨 버거보다 40% 더 큰 버거킹 제품군을 맛보세요. 한입 한입마다 멋진 먹방 경험을 선사하는 버거킹입니다. 통 닭가슴살의 치킨패티는 크고 두껍고 바삭하며 육즙이 풍부합니다! </p>
              
              <!-- 4.버튼 -->
              <div class="view-button">
@@ -288,69 +283,141 @@
 
     <!--  6. SNS 파트  -->
     <section id="sns" class="section">
-        <div class="sns-outbox col-12">
-            <div class="sns-youtube">
-                <a href="">
-                <img src="" alt="">
-                </a>
-                <p></p>
-            </div>
-            <div class="sns-facebook">
-                <a href="">
-                <img src="" alt="">
-                </a>
-                <p></p>
-            </div>
-            <div class="sns-instagram">
-                <a href="">
-                <img src="" alt="">
-                </a>
-                <p></p>
-            </div>
-        </div>
+        <div class="sns-outbox "> <!-- sns 위치 아웃박스 -->
+            <!-- <div class="sns-item sns-youtube"> -->
 
+
+                <div class="sns-inbox col-8"><!-- sns 인박스 -->
+                    
+                    <ul class="sns-list"><!-- 아이템 플렉스 -->
+                        
+                        <!-- 아이템 유투브 -->
+                        <li class="sns-item sns-youtube">
+                            <!-- 왼쪽 로고 -->
+                            <div class="sns-img">
+                            <img src="./images/03.main/05.sns/ico_home_sns_youtube01.png" alt="youtube로고">   
+                            </div>
+                            <!-- 오른쪽문단 -->
+                            <div class="cont"> 
+                                <h3 class="sns-tit">YOUTUBE</h3>
+                                <h4 class="status">구독 4.9만</h4>
+                                <a href="https://www.youtube.com/channel/UCEKRI0fipK4LEgV98nI2CQA/featured" target="_blank">
+                                </a>
+                            </div><!-- 오른쪽문단 -->
+                        </li>
+
+                       <!-- 아이템 페이스북 -->
+                        <li class="sns-item sns-facebook">
+                            <!-- 왼쪽 로고 -->
+                            <div class="sns-img">
+                            <img src="./images/03.main/05.sns/ico_home_sns_face01.png" alt="facebook로고">
+                            </div>
+                            <!-- 오른쪽문단 -->
+                            <div class="cont"> 
+                                <h3 class="sns-tit">FACEBOOK</h3>
+                                <h4 class="status">좋아요 47.8만</h4>
+                                <a href="https://www.facebook.com/burgerkingkorea" target="_blank">
+                                </a>
+                            </div><!-- 오른쪽문단 -->
+                        </li>
+
+                       <!-- 아이템 인스타 -->
+                            <!-- 왼쪽 로고 -->
+                            <li class="sns-item sns-insta">
+                            <div class="sns-img">
+                            <img src="./images/03.main/05.sns/ico_home_sns_inst01.png" alt="instagram로고">
+                            </div>
+                            <!-- 오른쪽문단 -->
+                            <div class="cont"> 
+                                <h3 class="sns-tit">INSTAGRAM</h3>
+                                <h4 class="status">팔로워 74.9K</h4>
+                                <a href="https://www.instagram.com/burgerkingkorea" target="_blank">
+                                </a>
+                            </div><!-- 오른쪽문단 -->
+                        </li>
+                    </ul>
+
+
+
+                </div><!-- sns 인박스 -->
+
+     
+        </div><!-- sns 위치 아웃박스 -->
+      
     </section>
 
     <!--  7. 와퍼 메뉴 광고 파트 & 버튼 파트  -->
     <section id="ad-whopper" class="section">
-        <div class="ad-outbox"></div>
-        <div class="bg-txt"> <!-- 배경글자 -->
-        </div>
-
-        <div class="ad-inbox">
-            
-            <div class="video02">
+        <div class="bgbox"><!-- 배경글자박스 -->
+            <div class="bg-txt"> <!-- 배경글자 -->
+            BETTER
+            <br>
+            FOOD
             </div>
+        </div><!-- 배경글자박스 -->
 
-            <div class="content">
-                <div class="sub-title"></div>
-                <h2 class="title"></h2>
-                <div class="article-box">
-                    <p class="article"></p>
-                    <div class="view-button"><a href="#">VIEW MENU</a></div>
+        <div class="ad-inbox"> <!-- 부모박스 인박스 -->
+            
+            <div class="video-box col-6 col2-12"> <!-- 클래스 비디오 박스 왼 1/2 -->
+                <div class="video">
+                    <video autoplay="true" muted="true" loop="true">
+                        <source src="./images/03.main/06.whopper/beef_video.mp4" type="video/mp4">
+                    </video>   
+                    <div class="ad-video-cover"></div> <!-- 비디오 커버 -->
                 </div>
-            </div>
+            </div> <!-- 클래스 비디오 박스 왼 1/2 -->
+
+            <div class="content col-6 col2-12"> <!-- 클래스 콘텐트 오 1/2 -->
+                 <!-- 1. 서브타이틀 -->
+                 <div class="sub-title">ONLY THE BEST..</div>
+                 <!-- 2.타이틀 -->
+                 <h2 class="title">BETTER FOOD MADE
+                         <span class="h-underline-last-line"> FRESH </span></h2>
+               
+                    <p class="article">&nbsp훌륭한 버거들은 훌륭한 재료들이 필요합니다. 버거킹은 100% 호주산 쇠고기로 만들어졌습니다! <br>&nbsp 거부할 수 없고 연기가 많이 나는 BBQ 불꽃구이 소고기와 갓 자른 큼지막한 샐러드, 두툼한 핫칩과 선정적인 소스들을 제공합니다.버거킹의 모든 버거들은 여러분이 좋아하는 방식으로 주문하기에 신선합니다.</p>
+                    <div class="view-button"><a href="#">VIEW MENU</a></div>
+               
+            </div><!-- 클래스 콘텐트 오 1/2 -->
             
-        </div>
+        </div> <!-- 부모박스 인박스 -->
 
 
     </section>
 
     <!--   8. 버거킹앱&딜리버리 이용방법  -->
     <section id="use" class="section">
-        <div class="use-outbox">
-            <div class="use-inbox01">
-                <img src="" alt="">
-                <p></p>
+        <div class="use-outbox"> <!-- 사용방법 겉박스 -->
+
+            <div class="use-inbox"><!-- 사용방법 인박스 - 플렉스 -->
+
+            <!-- 사용방법 왼쪽 1/2 -->
+            <div class="use-box use-box01 col-6 col2-12">
+               
+                <div class="use-cont">
+                    <div class="use-img">
+                      <img src="" alt="">
+                    </div>
+                <p>Bite into better burgers and better deals with the Hungry Jack's App. Gain access to exclusive rewards & vouchers, play Shake & Win and win prizes daily, and more!</p>
+                </div>
+
                 <div class="view-button"><a href="#">VIEW MENU</a></div>
-            </div>
-            <div class="use-inbox02">
-                <img src="" alt="">
-                <p></p>
+            </div> <!-- 사용방법 왼쪽 1/2 -->
+
+            <!-- 사용방법 오른쪽 1/2 -->
+            <div class="use-box use-box02 col-6 col2-12">
+              
+                <div class="use-cont">
+                    <div class="use-img">
+                        <img src="" alt="">
+                      </div>
+                <p>Want to work for us? If you’re a team player who performs well in fun, high-energy environments a job at Hungry Jack’s could satisfy more than your hunger.</p>
+                </div>
+
                 <div class="view-button"><a href="#">VIEW MENU</a></div>
-            </div>
-          
-        </div>
+            </div><!-- 사용방법 오른쪽 1/2 -->
+        </div><!-- 사용방법 인박스 - 플렉스 -->
+        
+    </div><!-- 사용방법 겉박스 -->
     </section>
 </main>
 

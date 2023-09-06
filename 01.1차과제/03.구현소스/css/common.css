@@ -28,25 +28,14 @@ body{
 }
 
 
-#ad-chicken, #ad-app, #sns, #ad-whopper, #use{
-position: relative;
-/* height: 100vh; */
-top: 0;
-margin:10vh 0;
-box-sizing: border-box;
-}
-
 
 
 /* --------------- 섹션 ----------------- */
 
 
 .section{
-  position: relative;
-  /* height: 100vh; */
- 
-  top: 0;
-  left: 0;
+
+  height: 100vh;
 
 }
 

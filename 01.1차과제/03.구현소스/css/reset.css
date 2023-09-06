@@ -29,5 +29,6 @@ a{
 
 
 main {
+  z-index: -5;
   overflow-y: hidden;
 }

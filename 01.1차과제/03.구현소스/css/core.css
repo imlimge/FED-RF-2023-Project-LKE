@@ -10,7 +10,7 @@
 /* --------------- 폰트 ----------------- */
 /* 
 
-[영어]로보토
+[영어]로보토     *****sub-title
 컨텐트 박스 소제목
 - roboto bold 700
 
@@ -49,12 +49,13 @@ font-family: 'Black Han Sans', sans-serif;
 
 
 /* 
-[한국 인데 영문으로 쓰기] Rix이누아리두리네
+  font-family: 'RixInooAriDuriR'; *****title
+[한국 인데 영문으로 쓰기] Rix이누아리두리네 
 -컨텐트박스 큰 타이틀
 
 */
 @font-face {
-  font-family: 'RixInooAriDuriR';
+  font-family: 'RixInooAriDuriR'; 
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -62,7 +63,7 @@ font-family: 'Black Han Sans', sans-serif;
 
 
 /* 
-[한국]카페24 서라운드 - 동그란 느낌
+[한국]카페24 서라운드 - 동그란 느낌  ******view-button
 -메뉴
  */
 @font-face {
@@ -82,6 +83,27 @@ font-family: 'Noto Sans KR', sans-serif;
 
 
 
+/* 
+[한국]조선굴림체 - 본문 /둥글 납작  *****article
+*/
+@font-face {
+  font-family: 'ChosunGu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*  
+[한국] 나눔스퀘어 라운드 - 본문 /둥글 일반
+
+*/
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
