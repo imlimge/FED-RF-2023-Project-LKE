@@ -9,13 +9,15 @@
         <!-- 외부 JS  -->
         <script type="module" src="./JS/main.js" defer></script>
     </head>
+   
+    <!-- 스크롤 효과 .scbar -->
     <body class="scbar">
 
 
         <!-- 상단영역 -->
-        <div id="headere">
+        <header id="header">
 
-            <header class="header core-box "></header>
+        <div class="header ">
             
             <!-- 1. 네비게이션 -->
             <nav class="gnb-box col1-block col2-none">
@@ -49,7 +51,7 @@
                 </a>
                 </nav>
 
-            </div> <!-- 헤더닫기 -->
+        </div>
 
 
             <!-- 모바일 네비게이션 -->
@@ -74,7 +76,7 @@
                                 
             </nav>
 
-
+        </header> <!-- 헤더닫기 -->
 
 
             <main id="main">
@@ -84,7 +86,7 @@
             <!--  2. 배너 파트  -->
             <div id="banner">
             <!-- 배너배경 칼라 (내비 밑으로 가기위한 배경 설정)-->
-            <div class=" banner-mv core-box"> 
+            <div class=" banner-mv"> 
                 
              
                     <video muted autoplay loop>
@@ -137,7 +139,7 @@
 
      <!--  3. 슬라이드 광고파트  -->
      <div id="ad-slide" >
-        <div class="slide-wrap core-box ">
+        <div class="slide-wrap ">
 
             <div class="slide-part2 col-10 col2-12"> 
                 <div class="scroll">
@@ -375,7 +377,7 @@
                          <span class="h-underline-last-line"> FRESH </span></h2>
                
                     <p class="article">&nbsp훌륭한 버거들은 훌륭한 재료들이 필요합니다. 버거킹은 100% 호주산 쇠고기로 만들어졌습니다! <br>&nbsp 거부할 수 없고 연기가 많이 나는 BBQ 불꽃구이 소고기와 갓 자른 큼지막한 샐러드, 두툼한 핫칩과 선정적인 소스들을 제공합니다.버거킹의 모든 버거들은 여러분이 좋아하는 방식으로 주문하기에 신선합니다.</p>
-                    <div class="view-button"><a href="#">VIEW MENU</a></div>
+                    <div class="view-button"><a href="#">메뉴 보기</a></div>
                
             </div><!-- 클래스 콘텐트 오 1/2 -->
             
@@ -392,28 +394,34 @@
 
             <!-- 사용방법 왼쪽 1/2 -->
             <div class="use-box use-box01 col-6 col2-12">
-               
+                <!-- 검은배경 -->
+               <div class="bg-box"></div>
+
                 <div class="use-cont">
                     <div class="use-img">
                       <img src="" alt="">
                     </div>
+                <h2 class="use-title">버거킹 APP 이용방법</h2>
                 <p>Bite into better burgers and better deals with the Hungry Jack's App. Gain access to exclusive rewards & vouchers, play Shake & Win and win prizes daily, and more!</p>
                 </div>
 
-                <div class="view-button"><a href="#">VIEW MENU</a></div>
+                <div class="view-button"><a href="#">이용방법 안내</a></div>
             </div> <!-- 사용방법 왼쪽 1/2 -->
 
             <!-- 사용방법 오른쪽 1/2 -->
             <div class="use-box use-box02 col-6 col2-12">
-              
+                <!-- 검은배경 -->
+                <div class="bg-box"></div>
+
                 <div class="use-cont">
                     <div class="use-img">
                         <img src="" alt="">
                       </div>
+                      <h2 class="use-title">딜리버리 이용방법</h2>
                 <p>Want to work for us? If you’re a team player who performs well in fun, high-energy environments a job at Hungry Jack’s could satisfy more than your hunger.</p>
                 </div>
 
-                <div class="view-button"><a href="#">VIEW MENU</a></div>
+                <div class="view-button"><a href="#">이용방법 안내</a></div>
             </div><!-- 사용방법 오른쪽 1/2 -->
         </div><!-- 사용방법 인박스 - 플렉스 -->
         
@@ -425,6 +433,8 @@
 <!-- 하단파트 -->
 <!-- 푸터 -->
 <footer id="footer">
+
+ <div class="footer">
     <div class="footer-menu">
         <ul>
             <li></li>
@@ -444,60 +454,15 @@
         <a href=""></a>
         <a href=""></a>
     </div>
+</div>
 
 </footer>
-
-<!--  
-1. 네비게이션
-1-1.메뉴소개
-1-2.매장소개
-1-3.이벤트
-1-4.브랜드스토리
-1-5.고객센터
-1-6.딜리버리
+</body>
+</html>
 
 
-2. 배너 파트
 
-
-3. 슬라이드 광고파트
-3-1 . 광고 이미지들
-3-2. 스크롤바
-
-
-4. 치킨버거 메뉴 광고 파트 & 버튼
-4-1. 영상
-4-2. 소개글
-4-3. 버튼
-
-
-5. 앱광고파트
-5-1. 이미지
-5-2. 소개글
-5-3. 버튼
-
-6. SNS 파트
-6-1. 유튜브
-6-2. 페이스북
-6-3. 인스타그램
-
-7. 와퍼 메뉴 광고 파트 & 버튼
-7-1. 영상
-7-2. 소개글
-7-3. 버튼 
-
-8. 버거킹앱&딜리버리 이용방법
-8-1. 버거킹앱 이용방법 이미지
-8-2. 버거킹 앱 이용방법 버튼
-8-3. 딜리버리 이용방법 이미지
-8-4. 딜리버리 이용방법 버튼
-
-9. 푸터
-9-1. 로고
-9-2. 정보
-9-3. SNS
-9-4. 이용약관 
-
+<!-- 
 호주버거킹
 https://www.hungryjacks.com.au/
 
@@ -508,13 +473,11 @@ https://www.burgerking.co.kr/
 상단배너-햄버거
 https://www.sliderrevolution.com/templates/fast-food-burger-restaurant-slider/
 
--->
+ -->
 
 
 
             
-        </header>
+       
     
     
-    </body>
-</html>

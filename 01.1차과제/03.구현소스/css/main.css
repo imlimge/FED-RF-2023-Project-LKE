@@ -770,7 +770,7 @@ font-size: 22px;
 line-height: 1.55em;
 
 
-z-index: 9;
+z-index: 888;
 transition: .4s;
 
 }
@@ -868,8 +868,7 @@ cursor: pointer;
 /*********************** 앱박스 공통 ************************/
 
 #ad-app{
-  position: relative;
-  top: 0;
+
   margin: 20vh 0;
   box-sizing: border-box; 
 }
@@ -975,7 +974,7 @@ color: #fff;
  position: relative;
  height:700px;
  box-sizing: border-box;
- 
+ overflow: hidden;
 }
 
 /* 고정이미지&팝업이미지 묶음 */
@@ -1065,11 +1064,11 @@ height: 100%;
 .sns-outbox {
 
   position: absolute;
-  height: 400px;
+  height: 40vh;
   background-color: #d0021b;
   
   width: 100%;
-  top: -30%;
+ 
 
 }
 
@@ -1146,10 +1145,12 @@ height: 100%;
   background-color: #fff;
   border-radius: 20px;
   text-align: center;
+  line-height:25px;
 }
 
 .status>h4{
   font-size: .8rem;
+
 }
 
 
@@ -1169,15 +1170,16 @@ height: 100%;
   position: relative;
   height: 100%;
   top: 0;
-  margin:10vh 0;
-    
+  margin-top:10vh;
+  overflow: hidden;
   
 }
 .use-outbox{
 
   width: 100%;
-  height: 600px;
+
   background-color: #b3b3b3;
+
 }
 
 .use-inbox{
@@ -1188,10 +1190,19 @@ height: 100%;
 
 }
 
+
 .use-box{
-  height: 600px;
-  background-color: #222;
+  height: 700px;
 }
+
+
+.bg-box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 51%);
+}
+
 
 .use-cont{
   position: relative;
@@ -1202,21 +1213,46 @@ height: 100%;
 }
 
 .use-img{
-  display: inline-block;
+  position: relative;
   left: 50%;
-  width: 300px;
-  height: 300px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  padding: 50px 0;
+ 
+}
+
+.use-img img{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 
 }
 
-.use-cont>p{
-  
-  font-family: 'RixInooAriDuriR';
+
+.use-title{
+  font-family: 'Cafe24Ssurround';
+  font-weight: normal;
+  font-size: min(2.4rem,7.3vw);
+  line-height: min(5rem,6vw);
   color: #fff;
-  font-size: 1.5rem;
+
+  text-align: center;
+  
+ 
+}
+
+
+
+.use-cont>p{
+  position: relative;
+  
+  color: #fff;
+  font-size: 1.2rem;
   text-align: center;
   display: inline-block;
-  position: relative;
+
+  font-family: 'Arial', sans-serif;
 
 }
 
@@ -1238,6 +1274,16 @@ height: 100%;
 
 
 
+
+/*********************** 푸터 ************************/
+
+
+.footer{
+position: relative;
+width: 100%;
+height: 400px;
+background-color: #222;
+}
 
 
 
