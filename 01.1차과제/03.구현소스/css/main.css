@@ -616,8 +616,6 @@ top: 10vh;
 
 /*********************** 슬라이드 광고 - 모바일 ************************/
 .m-slide{
-  position: relative;
-  width: 100%;
   margin-top: -50vh;
 
 }
@@ -629,7 +627,13 @@ top: 10vh;
 
 .m-slide-img{
   display: flex;
+
  
+  
+}
+
+.m-slide-img-item{
+  
   
 }
 
