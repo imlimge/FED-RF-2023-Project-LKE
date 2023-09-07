@@ -167,6 +167,17 @@ font-family: 'Noto Sans KR', sans-serif;
         
   
   }
+
+
+
+  /* --------------- 박스 그리드 1160px ----------------- */
+  /* SNS박스 - 반응형 떄 모양을 잡기위한 폭크기 조절 */
+
+  @media screen and (max-width:1160px){
+
+  .col3-4 {width: 33.33%;}
+
+}
   
   
 
