@@ -289,6 +289,8 @@ text-align: center;
 }
 
 /*********************** 배너************************/
+
+
 /* 배너에 마우스 따라다니는 무버 */
 .mover{
   position: absolute;
@@ -345,16 +347,6 @@ text-align: center;
 
 
 
-/* 배너 배경 색 >> 네비 뒤에 색을 주기위해 따로 빼둔 배너컬러 
-.banner-back-color{
-  position: absolute;
-  top: 0;
-
-  background-color: #bb0a1f ;
-  height: 900px;
-  width: 100%;
-} */
-
 
 
 
@@ -365,41 +357,46 @@ text-align: center;
   min-height: 61vh;    /* 슬라이드 광고이미지 -> top:0 겹치기*/
   margin: 0px auto 15%;
 
-
+  overflow: hidden;
 
  }
+
+
 
 
 /* 배너 동영상 */
 .banner-mv{
 position: absolute;
 width: 100%;
-height: 110%;
+
 top: 0;
 
 overflow: hidden;
 margin: 0px auto;
-opacity: 100%;
-background-color: #bb0a1f ;
+
 
 z-index: -1;
 
 }
 
 
-.banner-mv>video {
-  min-height:100%;
-  min-width: 100%;
-  object-fit: cover; 
-  z-index: -2;
+
+.banner-video {
+  
+
 }
 
+.banner-video>video{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 
+}
 .banner-back-color{
   position: absolute;
   top: 0;
 
-  background-color: #bb0a1f ;
+  /* background-color: #bb0a1f ; */
   height: 100%;
   width: 100%;
   opacity: 90%;
@@ -547,7 +544,8 @@ top: 10vh;
 
 
 #ad-slide {
-  margin: 10vh 0 70vh 0;
+  height: 30vw;
+  margin: -6vh 0 17vh 0;
 }
 
 
@@ -616,30 +614,30 @@ top: 10vh;
 
 /*********************** 슬라이드 광고 - 모바일 ************************/
 .m-slide{
-  margin-top: -50vh;
-
+  margin-top: -37vh;
+  
 }
 
-.m-slide-wrap{
 
-  /* overflow: hidden; */
+
+.m-slide-wrap{
+  overflow: hidden;
 }
 
 .m-slide-img{
   display: flex;
-
  
   
 }
 
 .m-slide-img-item{
-  
-  
+
+ 
 }
 
-.m-slide-img-item>img{
-  width: 100%;
-  height: auto;
+.m-slide-img-item>a>img{
+  width: 100vw;
+  aspect-ratio: 1;
 
  }
 
@@ -739,8 +737,6 @@ animation: video-cover-ani 1s ease-in forwards;
 
 /* 오른쪽 1/2 */
  .content{
- height:700px;
-
   padding: 3vw 9vw 3vw 5vw;
   box-sizing: border-box;
   
@@ -1006,6 +1002,8 @@ color: #fff;
 
 
 
+
+
 /* 오른쪽 1/2 */
 .shake-img-box{
  position: relative;
@@ -1088,6 +1086,9 @@ height: 100%;
 
 
 
+
+
+
 /*********************** SNS박스  ************************/
 
 #sns{
@@ -1127,6 +1128,7 @@ height: 100%;
 }
 
 .sns-item{
+  flex: 1;
   display: flex; 
   position: relative;
   width: 230px;
@@ -1207,7 +1209,7 @@ height: 100%;
   position: relative;
   height: 100%;
   top: 0;
-  margin-top:10vh;
+  margin-top:20vh;
   overflow: hidden;
   
 }
