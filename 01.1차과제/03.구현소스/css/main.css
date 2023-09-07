@@ -363,7 +363,7 @@ text-align: center;
   position: relative;
   width: 100%;
   min-height: 61vh;    /* 슬라이드 광고이미지 -> top:0 겹치기*/
-  margin: 0 auto 9%;
+  margin: 0px auto 15%;
 
 
 
@@ -543,7 +543,7 @@ top: 10vh;
 }
 
 
-/*********************** 슬라이드 광고 ************************/
+/*********************** 슬라이드 광고 - 가로형 ************************/
 
 
 #ad-slide {
@@ -612,6 +612,37 @@ top: 10vh;
   bottom: 0;
   border-radius: 10px;
 }
+
+
+/*********************** 슬라이드 광고 - 모바일 ************************/
+.m-slide{
+  position: relative;
+  width: 100%;
+  margin-top: -50vh;
+
+}
+
+.m-slide-wrap{
+
+  /* overflow: hidden; */
+}
+
+.m-slide-img{
+  display: flex;
+ 
+  
+}
+
+.m-slide-img-item>img{
+  width: 100%;
+  height: auto;
+
+ }
+
+ 
+
+
+
 
 /*********************** 광고박스 치킨 ************************/
 
@@ -880,6 +911,8 @@ cursor: pointer;
   background: #d0021b;
   padding: 5vh 0 8vh 0;
   right: 0;
+
+  overflow: hidden;
 }
 
 

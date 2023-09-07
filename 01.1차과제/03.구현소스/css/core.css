@@ -164,7 +164,9 @@ font-family: 'Noto Sans KR', sans-serif;
      /* 보일 박스 */
      .col2-block{display: block;}
   
-        
+     #use{
+      margin-top: 30vh;
+     }
   
   }
 
@@ -179,6 +181,10 @@ font-family: 'Noto Sans KR', sans-serif;
 
 }
   
+
+  /* --------------- 박스 그리드 1160px ----------------- */
+
+
   
 
 
