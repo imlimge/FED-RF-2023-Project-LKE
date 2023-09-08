@@ -55,7 +55,7 @@ function loadFn(){
     burger.onmouseenter = () => {
         mover.style.width = '140px';
         mover.style.height = '140px';
-        moverLetter.style.opacity = '100%';
+        moverLetter.forEach(ele=>ele.style.opacity = 1);
        
     };
 
@@ -63,7 +63,7 @@ function loadFn(){
         mover.style.width = '20px';
         mover.style.height = '20px';
     
-        moverLetter.style.opacity = '0%';
+        moverLetter.forEach(ele=>ele.style.opacity = 0);
     };
 
 
