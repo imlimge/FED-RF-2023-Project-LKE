@@ -49,7 +49,7 @@ function loadFn(){
   //버거이미지 오버시 원 크게 만들기
     const burger = qs('.banner-burgerImg');
     const moverLetter = qsa('.mover span');
-
+ 
     console.log(moverLetter);
     
     burger.onmouseenter = () => {
