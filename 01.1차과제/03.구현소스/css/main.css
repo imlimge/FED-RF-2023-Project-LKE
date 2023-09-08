@@ -359,7 +359,7 @@ text-align: center;
   position: relative;
   width: 100%;
   min-height: 61vh;    /* 슬라이드 광고이미지 -> top:0 겹치기*/
-  margin: 0px auto 15%;
+  margin: 0px auto 0;
 
 
  }
@@ -386,17 +386,19 @@ z-index: -1;
 
 
 .banner-video {
+  position: relative;
   height: 100%;
 
 }
 
 .banner-video>video{
-  position: relative;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
 
-  min-width: 100%;
-  height: 100%;
+
+ 
+ width: 100%;   
 }
 
 
@@ -739,6 +741,7 @@ height: 100%;
 width: 100%;
 top: 0;
 animation: video-cover-ani 1s ease-in forwards;
+z-index: 9999;
 }
 
 
@@ -1240,6 +1243,7 @@ height: 100%;
 
 
 .use-box{
+  position: relative;
   height: 700px;
 }
 
@@ -1322,7 +1326,24 @@ height: 100%;
 }
 
 
+/* 사용방법 1/2 커버 - 덮었다가 올라감 */
+.use-box-cover{
+  position: absolute;
+  background-color: #d0021b;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  animation: video-cover-ani .7s ease-in forwards;
+  z-index: 9999;
+  }
+  
+  /* 오른쪽 1/2 - 시간차 */
+  .delay{
 
+  animation: video-cover-ani .7s ease-in .4s forwards;
+ 
+  }
+  
 
 
 /*********************** 푸터 ************************/
@@ -1336,6 +1357,9 @@ background-color: #222;
 }
 
 
+.footer-box{
+  margin: 24px ;
+}
 
 
 
