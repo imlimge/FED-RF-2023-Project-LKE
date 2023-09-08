@@ -359,7 +359,7 @@ text-align: center;
   position: relative;
   width: 100%;
   min-height: 61vh;    /* 슬라이드 광고이미지 -> top:0 겹치기*/
-  margin: 0px auto 0;
+  margin: 0px auto 10vh;
 
 
  }
@@ -395,12 +395,12 @@ z-index: -1;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
-
- 
- width: 100%;   
+  min-width: 100%;
+  min-height: 100%;
 }
 
+  
+}
 
 
 .banner-back-color{
