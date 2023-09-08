@@ -157,16 +157,16 @@ font-family: 'Noto Sans KR', sans-serif;
   .col2-11 {width: 91.66%;}
   .col2-12 {width: 100%;} 
   
-  
-     /* 숨길 박스 */
-     .col2-none{display: none;}
-  
-     /* 보일 박스 */
-     .col2-block{display: block;}
-  
-     #use{
-      margin-top: 30vh;
-     }
+
+  /* 숨길 박스 */
+  .col2-none{display: none;}
+
+  /* 보일 박스 */
+  .col2-block{display: block;}
+
+  #use{
+  margin-top: 30vh;
+  }
   
   }
 
