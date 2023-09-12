@@ -8,11 +8,25 @@ window.addEventListener('DOMContentLoaded', loadFn);
 const qs = (x) => document.querySelector(x);
 const qsa = (x) => document.querySelectorAll(x);
 
-
+// addEvent 함수
+// ele - 요소, evt - 이벤트, fn - 함수
+const addEvt = 
+(ele, evt, fn) => ele.addEventListener(evt, fn);
 
 
 function loadFn(){
    
+/****************************************** 
+  [무버 이동 정의]
+  1. 이벤트 종류 : onmousemove
+  2. 이벤트 대상 : .banner
+  3. 움직일 대상 : .mover
+  4. 기능설계 : 배너위에서 마우스를 따라 .mover가 움직이며 
+  버거이미지 위에서 크기 및 투명도가 변한다.
+
+******************************************/
+
+
 
     // 움직일 대상: .mover
     const mover = qs('.mover');
@@ -69,6 +83,74 @@ function loadFn(){
 
 
  
+
+
+/******************************************** 
+    [슬라이드 이동 기능 정의]
+    1. 이벤트 종류 : click
+    2. 이벤트 대상 : .slide-img
+    3. 변경대상 : slide-img
+    4. 기능설계 : 
+    
+    (1)슬라이드 특정 시간마다 자동 이동
+    (2)슬라이드 이미지 클릭하며 수동 이동
+    (3)슬라이드 이미지 마지막 순번으로 갈 수록
+    스크롤바의 빨간 게이지 바가 길어짐
+
+********************************************/
+
+
+// 대상
+// 이벤트대상: .abtn
+const abtn = qsa('.abtn');
+
+// 변경대상 .slide-img
+const slideImg = qs('.slide-img');
+const slideImgItem = qsa('.slide-img-item');
+
+console.log('대상들',abtn,slideImg,slideImgItem);
+
+
+// 스크롤 퍼센트 확장을 위해 순번속성 만들기
+slideImg.querySelectorAll('li').forEach(
+  (ele,idx)=>{ele.setAttribute('data-seq',idx)}
+);///forEach///
+
+
+
+
+abtn.forEach(ele=>addEvt(ele,'click',goSlide));
+
+function goSlide(){
+  let isRight = this.classList.contains('ab2');
+
+
+
+  if(isRight){
+
+    rightSlide();
+
+  }///if/////
+
+  else{
+
+
+
+  }///else///
+  
+
+
+
+
+
+}///goSlide함수///////
+
+
+
+function rightSlide(){
+  slideImgItem.style.left = '-100%';
+
+}///rightSlide 함수 /////
 
 
 

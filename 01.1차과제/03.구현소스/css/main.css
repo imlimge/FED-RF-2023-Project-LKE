@@ -586,7 +586,7 @@ top: 10vh;
 
 }
 
-.slide-image-item img{
+.slide-img-item{
   position: relative;
   aspect-ratio:1440/480;
   height: 300px;
@@ -621,6 +621,30 @@ top: 10vh;
   bottom: 0;
   border-radius: 10px;
 }
+
+
+
+/* 임시로 넣는 이동버튼 */
+
+/*이동버튼*/
+.abtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /*Y축 중앙이동*/
+}
+
+/*왼쪽버튼*/
+.ab1 {
+  left: 50px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+  right: 50px;
+}
+
+
 
 
 /*********************** 슬라이드 광고 - 모바일 ************************/
@@ -811,6 +835,7 @@ font-family: 'Cafe24Ssurround';
 font-weight: bold;
 font-size: 22px;
 line-height: 1.55em;
+margin: 5% 0;
 
 
 z-index: 888;
@@ -824,12 +849,19 @@ transition: .4s;
 
 }
 
+.view-button:hover{
+  transform: scale(1.1);
+  transition: .4s;
+  cursor: pointer;
+}
+
 
 .use-box .view-button:hover{
 
 transform: translateX(-50%) scale(1.1);
 transition: .4s;
 cursor: pointer;
+
 }
 
 
@@ -1366,7 +1398,7 @@ height: 100%;
 .footer-box{
   position: relative;
   height: 100%;
-  background-color: #343434;
+ 
   margin:0 5vh ;
 }
 
@@ -1377,7 +1409,7 @@ height: 100%;
   width: 276px;
   height: 20px;
   right: 0;
-  background-color: #868686;
+ 
 
 }
 
