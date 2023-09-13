@@ -14,6 +14,22 @@ const addEvt =
 (ele, evt, fn) => ele.addEventListener(evt, fn);
 
 
+
+
+// 전역변수구역/////////////////
+// 1. 광클금지상태변수 - 0은 허용, 1은 불허용
+
+let clickSts = 0;
+
+
+// 2. 슬라이드 이동시간 : 상수로 설정
+const TIME_SLIDE = 400;
+
+
+
+
+
+
 function loadFn(){
    
 /****************************************** 
@@ -101,109 +117,142 @@ function loadFn(){
 
 
 // 대상
-// 이벤트대상: .abtn
-const abtn = qsa('.abtn');
-
-// 변경대상 .slide-img
+// 이벤트대상: .slide-img
+// 변경대상: .slide-img
 const slideImg = qs('.slide-img');
-const slideImgItem = qsa('.slide-img-item');
+const slideImgItems = qsa('.slide-img-item');
 
-console.log('대상들',abtn,slideImg,slideImgItem);
+
+console.log('슬라이드이미지',slideImg,slideImgItems);
+console.log('슬라이드이미지 크기',slideImg.offsetWidth)
+
+
 
 
 // 스크롤 퍼센트 확장을 위해 순번속성 만들기
 slideImg.querySelectorAll('li').forEach(
+
   (ele,idx)=>{ele.setAttribute('data-seq',idx)}
+
 );///forEach///
 
 
 
 
-abtn.forEach(ele=>addEvt(ele,'click',goSlide));
 
-function goSlide(){
-  let isRight = this.classList.contains('ab2');
-
-
-
-  if(isRight){
-
-    rightSlide();
-
-  }///if/////
-
-  else{
-
-
-
-  }///else///
-  
-
-
-
-
-
-}///goSlide함수///////
-
-
+slideImg.addEventListener('click',rightSlide);
 
 function rightSlide(){
-  slideImgItem.style.left = '-100%';
+
+  slideImg.style.left = '-900px';
+  //트랜지션주기
+  slideImg.style.transition = TIME_SLIDE+'ms ease-in-out';
+  setTimeout(()=>{
+    // 맨앞 li 맨뒤로 이동
+    slideImg.appendChild(slideImg.querySelectorAll('li')[0]);
+    // slideImg left값 0
+    slideImg.style.left = '0';
+    // 트랜지션 없애기
+    slideImg.style.transition = 'none';
+}, TIME_SLIDE);
+
+//console.log('이거뭐야',slideImg.querySelectorAll('li')[0]);
+
+clearAuto()
 
 }///rightSlide 함수 /////
 
 
 
 
+/**************************************  
+  자동넘기기 기능구현
+  -> 일정 시간 간격으로 이미지 클릭
+  -> 사용 JS내장함수 : setInterVal()
+  -> 버튼클릭 실행 메서드 : click()
+**************************************/
 
+//인터발변수
+let autoI;
+
+//타임아웃변수
+let autoT;
+
+//인터발호출 함수
+function slideAuto(){
+    autoI = setInterval(() => {
+      rightSlide();
+      
+
+}, 3000);
+
+
+}///slideAuto함수/////
+
+slideAuto();
     
+
+
+
+// 버튼을 클릭할 경우를 구분하여 자동넘김을 멈춰준다
+// rightSlide 함수에 clearAuto() 호출
+
+function clearAuto(){
+  
+ //1.인터발 지우기
+ clearInterval(autoI);
+ //2.타임아웃 지우기 (재실행호출 쓰나미 방지)
+ clearTimeout(autoT);
+
+ //일정시간 후 다시 인터발호출 셋팅하기
+ autoT = setTimeout(slideAuto,2000);
+
+}///clearAuto함수/////
+
+
+
+
+/*********************************** 
+  스크롤 퍼센트 이동
+  -> 슬라이드 이동마다 스크롤 비율맞춰 이동
+  -> 스크롤 잡고 이동
+***********************************/
+
+const scrollB = qs('.scroll');
+const scrollM = qs('.scroll-move');
+
+
+//전체 스크롤 가로값 scrollB.offsetWidth
+let scrollBW = scrollB.offsetWidth;
+//슬라이드이미지 갯수
+let slideNum = slideImgItems.length;
+//무브 스크롤 가로값 (전체스크롤/이미지갯수)
+let scrollMW = scrollBW/slideNum;
+//현재 보여지는 슬라이드 순번
+let nowSeq = slideImg.querySelectorAll('li')[0].getAttribute('data-seq');
+
+
+
+//슬라이드 이미지 갯수  lideImgItems.length => 5개
+//console.log(slideImgItems.length);
+
+
+//무브 스크롤 가로크기 CSS 설정 : width
+scrollM.style.width = scrollMW +'px';
+//무브 스크롤 위치 CSS 설정 : left
+scrollM.style.left = scrollMW*nowSeq + 'px';
+
+
+console.log('슬라이스현재순서',nowSeq);
+console.log('스크롤배경 사이즈',scrollBW);
+console.log('스크롤무브 사이즈',scrollMW);
+console.log('계산중',scrollBW/scrollMW);
+
+
+
+
 
 } ///////loadFn 함수//////////////////
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-                    var docWidth = document.documentElement.offsetWidth;
-
-                    [].forEach.call(
-                      document.querySelectorAll('*'),
-                      function(el) {
-                        if (el.offsetWidth > docWidth) {
-                          console.log(el);
-                        }
-                      }
-                    ); */
-
-
-
-// 변경대상 : banner_burgerImg
-// var burgerImg = document.querySelector('.banner_burgerImg');
-
-// console.log("배너버거이미지",burgerImg);
-
-
-// var hcode = '';
-
-
-// for(var i=0;i<9;i++){
-//   hcode += `
-//    <img src="./images/03.main/01.banner/burger_img (${i+1}).png" alt="배너버거이미지${i+1}">
-
-
-//   `;
-
-// }////// for //////
-
-// burgerImg.innerHTML = hcode;
 
 
