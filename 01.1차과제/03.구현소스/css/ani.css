@@ -46,6 +46,8 @@
 
 
 
+
+
 /* 시도하려고 하는 개별 애니 */
 
 
@@ -119,6 +121,16 @@
     height: 0;
     transform-origin: top;
     
+
+  }
+}
+
+
+
+/************************ 커버 ************************/
+@keyframes cover-ani{
+  100%{
+    transform: translateY(-200%) ;
 
   }
 }

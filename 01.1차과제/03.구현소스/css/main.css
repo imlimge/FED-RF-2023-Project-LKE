@@ -10,13 +10,17 @@
 
 
 /*********************** 네비게이션************************/
+
+
+
 .gnb-box{
+  
   position: sticky;
   top: 40px;
   max-width: 80%;
   margin: 47px auto;
 
-animation:  gnb-box-ani 1s ease-in-out forwards;
+animation:  gnb-box-ani 1s ease-in-out 2.5s forwards;
 
  
 }
@@ -348,7 +352,7 @@ text-align: center;
 
 
 #banner{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -370,7 +374,7 @@ text-align: center;
 .banner-mv{
 position: absolute;
 width: 100%;
-height: 90vh;
+height: 100vh;
 
 top: 0;
 
@@ -421,7 +425,7 @@ z-index: -1;
 .banner-back{
   position: absolute;
   width: 80vw;
-  top: 30%;
+  /* top: 30%; */
   left: calc(50% - 80vw/2);
 
 
@@ -437,10 +441,11 @@ z-index: -1;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 80vw;
+
+  width: 30vw;
   margin: 10% auto;
   transition: .5s ease-in;
-  animation: banner-back-ani 2s cubic-bezier(0.1, 0.75, 0.57, 0.99) forwards;
+  animation: banner-back-ani 2s cubic-bezier(0.1, 0.75, 0.57, 0.99) 1.7s forwards;
  
   
 }
@@ -450,10 +455,10 @@ z-index: -1;
 
 /* 배너 버거 이미지 : 자식 */
 .banner-burgerImg{
-  position: absolute;
+  position: sticky;
   margin: 0 auto;
 
-top: 10vh;
+  top: 10vh;
   width:80vw;  
   left: calc(50% - 80vw/2);
 
@@ -485,12 +490,12 @@ top: 10vh;
  */
 
 /* 배너 버거 개별 이미지 호버시 개별 이미지 조금 더 움직이기 */
-.banner-burgerImg:hover img{
+/* .banner-burgerImg:hover img{
 
   margin: -1.5% auto;
   transition: .5s ease-in;
 
-}
+} */
 
 
 /* 배너 버거 이미지 호버시 개별 이미지 조금 더 움직이기
@@ -555,7 +560,7 @@ top: 10vh;
 
 #ad-slide {
   height: 30vw;
-  margin: -6vh 0 35vh 0;
+  margin: -6vh 0 25vh 0;
 }
 
 
@@ -622,29 +627,11 @@ top: 10vh;
   bottom: 0;
   border-radius: 10px;
   cursor: pointer;
+
+
+  left:0;
 }
 
-
-
-/* 임시로 넣는 이동버튼 */
-
-/*이동버튼*/
-.abtn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  /*Y축 중앙이동*/
-}
-
-/*왼쪽버튼*/
-.ab1 {
-  left: 50px;
-}
-
-/*오른쪽버튼*/
-.ab2 {
-  right: 50px;
-}
 
 
 
@@ -946,7 +933,7 @@ cursor: pointer;
 
 #ad-app{
   
-  margin: 10vh 0;
+  margin: 30vh 0;
   box-sizing: border-box; 
 }
 
@@ -1141,7 +1128,7 @@ height: 100%;
 
   position: relative;
   height: 40vh;
-  margin: 20vh 0;
+  margin: 30vh 0;
 
 
 }
@@ -1341,18 +1328,20 @@ height: 100%;
   text-align: center;
   display: inline-block;
 
+  
+  font-family: 'ChosunGu';
   font-family: 'Arial', sans-serif;
 
 }
 
 .use-box01{
-  background: url(../images/03.main/07.use/use01.jpg) no-repeat center/cover;
+  background:#b10215 url(../images/03.main/07.use/use01.jpg) no-repeat center/cover;
 
 }
 
 
 .use-box02{
-  background: url(../images/03.main/07.use/use02.jpg) no-repeat center/cover;
+  background:#ff3030 url(../images/03.main/07.use/use02.jpg) no-repeat center/cover;
 }
 
 
@@ -1450,193 +1439,31 @@ font-size: .9rem;
 
 
 
+/*********************** 커버 ************************/
 
-/* 실패한 배너 */
+.cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 0 10% 0;
 
-/* 
-.banner{
+  background-color: #d0021b;
+
+  animation: cover-ani 4s ease-in-out 1s forwards;
+
+}
+
+
+
+.cover span{
   position: relative;
-  top: -150px;
-  height: 85vh;
-  width: 100%;
-  background-color: #bb0a1f ;
-
-   overflow: hidden;
-}
-
-
-.banner-back img{
-  position: absolute;
-  width: 600px;
-  margin: 0 auto;
   
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
-
-.banner-burgerImg{
-
-  width: 600px;
-  height: 600px;
- 
-
-}
-
-.burger-sticky{
-
-  position: sticky;
-  top: 0;
+  font-family: 'RixInooAriDuriR';
+  color: #f5ebdc;
+  font-size: 10rem;
   text-align: center;
-  margin-top: 300px;
-}
-
-
-
-.banner-burgerImg img{
-
-
-}
-
-
-
-
-.burger-sticky:nth-child(9){
-  top:104px
-}
-.burger-sticky:nth-child(8){
-  top: calc(104px*2)
-}
-.burger-sticky:nth-child(7){
-  top: calc(104px*3)
-}
-.burger-sticky:nth-child(6){
-  top: calc(104px*3)
-}
-.burger-sticky:nth-child(5){
-  top: calc(104px*3)
-}
-.burger-sticky:nth-child(4){
-  top: calc(104px*3)
-}
-.burger-sticky:nth-child(3){
-  top: calc(104px*3)
-}
-.burger-sticky:nth-child(2){
-  top: calc(104px*3)
-}
-.burger-sticky:nth-child(1){
-  top: calc(104px*3)
-}
-
-
-
-
-
-.banner{
-  position: absolute;
-  top: 0;
-  height: 80vh;
-  width: 100%;
-  background-color: #bb0a1f ;
-
- 
-}
-
-
-.banner-back img{
-  position: absolute;
-  width: 600px;
-  margin: 0 auto;
-  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: inherit;
   
 }
-
-.banner-burgerImg{
-  position: absolute;
-  width: 600px;  
-  height: 600px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.banner-burgerImg img{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-
-
-.banner-burgerImg img:nth-child(9){
-  transform: translateY(-80%);
-}
-.banner-burgerImg img:nth-child(8){
-  transform: translateY(-35%);
-}
-.banner-burgerImg img:nth-child(7){
-  transform: translateY(-15%);
-}
-.banner-burgerImg img:nth-child(6){
-  transform: translateY(35%);
-}
-.banner-burgerImg img:nth-child(5){
-  transform: translateY(5%);
-}
-.banner-burgerImg img:nth-child(4){
-  transform: translateY(65%);
-}
-.banner-burgerImg img:nth-child(3){
-  transform: translateY(65%);
-}
-.banner-burgerImg img:nth-child(2){
-  transform: translateY(135%);
-}
-.banner-burgerImg img:nth-child(1){
-  transform: translateY(145%);
-}
- */
-
-
-
-
- /* 
- 
- 배너버거 위치잡아둔거
- 
-.banner-burgerImg img:nth-child(9){
-  top: -130%;
-}
-
-.banner-burgerImg img:nth-child(8){
-  top: -85.7%;
-}
-.banner-burgerImg img:nth-child(7){
-  top: -67.7%;
-}
-.banner-burgerImg img:nth-child(6){
-  top: -47.7%;
-}
-.banner-burgerImg img:nth-child(5){
-  top: -26.7%;
-}
-.banner-burgerImg img:nth-child(4){
-  top: -0.3%;
-}
-.banner-burgerImg img:nth-child(3){
-  top: 24.3%;
-}
-.banner-burgerImg img:nth-child(2){
-  top: 57.3%;
-}
-.banner-burgerImg img:nth-child(1){
-  top: 94.3%;
-
-}
-*/

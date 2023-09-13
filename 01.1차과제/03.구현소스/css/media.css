@@ -92,7 +92,10 @@
 /* --------------- 박스 그리드 1160px ----------------- */
 
 
-/* --------------- 박스 그리드 600px ----------------- */
+
+
+
+/* ---------------  개별설정 가로 : 600px ----------------- */
 @media screen and (max-width:600px){
 
     #use{
@@ -102,7 +105,48 @@
 
   }
 
+
+
+
+
+  /* --------------- 개별성정 : 세로 미디어쿼리 ----------------- */
+  @media screen and (max-height:700px){
+
+    #sns{
+      margin: 50vh 0;
+    }
   
+    #use{
+      margin-top: 50vh;
+    }
+  
+
+  }
+  @media screen and (max-height:580px){
+
+    #sns{
+      margin: 70vh 0;
+    }
+  
+    #use{
+      margin-top: 70vh;
+    }
+  
+
+  }
+  
+  @media screen and (max-height:480px){
+
+    #sns{
+      margin: 70vh 0;
+    }
+  
+    #use{
+      margin-top: 70vh;
+    }
+  
+
+  }
   
 
 

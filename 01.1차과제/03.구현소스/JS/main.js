@@ -23,7 +23,7 @@ let clickSts = 0;
 
 
 // 2. 슬라이드 이동시간 : 상수로 설정
-const TIME_SLIDE = 400;
+const TIME_SLIDE = 200;
 
 
 
@@ -77,7 +77,7 @@ function loadFn(){
 
 
   //버거이미지 오버시 원 크게 만들기
-    const burger = qs('.banner-burgerImg');
+  /*   const burger = qs('.banner-burgerImg');
     const moverLetter = qsa('.mover span');
  
     console.log(moverLetter);
@@ -95,7 +95,7 @@ function loadFn(){
     
         moverLetter.forEach(ele=>ele.style.opacity = 0);
     };
-
+ */
 
 
  
@@ -158,10 +158,62 @@ function rightSlide(){
 
 //console.log('이거뭐야',slideImg.querySelectorAll('li')[0]);
 
+
+scrollMove();
+
+
 clearAuto()
+
 
 }///rightSlide 함수 /////
 
+
+/*********************************** 
+  스크롤 퍼센트 이동
+  -> 슬라이드 이동마다 스크롤 비율맞춰 이동
+  -> 스크롤 잡고 이동
+***********************************/
+
+const scrollB = qs('.scroll');
+const scrollM = qs('.scroll-move');
+
+
+//전체 스크롤 가로값 scrollB.offsetWidth
+let scrollBW = scrollB.offsetWidth;
+//슬라이드이미지 갯수
+let slideNum = slideImgItems.length;
+//무브 스크롤 가로값 (전체스크롤/이미지갯수)
+let scrollMW = scrollBW/slideNum;
+
+//무브 스크롤 가로크기 CSS 설정 : width
+scrollM.style.width = scrollMW +'px';
+
+
+
+
+function scrollMove(){
+  
+  
+  //슬라이드 이미지 갯수  lideImgItems.length => 5개
+  //console.log(slideImgItems.length);
+  //트랜지션주기
+  scrollM.style.transition = TIME_SLIDE+'ms ease-in-out';
+  
+  //무브 스크롤 위치값을 위한 순번구하기
+  let nowSeq = slideImg.querySelectorAll('li')[1].getAttribute('data-seq');
+ 
+  //무브 스크롤 위치 CSS 설정 : left
+  scrollM.style.left = scrollMW*nowSeq + 'px';
+
+
+  console.log('슬라이스현재순서',nowSeq);
+  console.log('스크롤배경 사이즈',scrollBW);
+  console.log('스크롤무브 사이즈',scrollMW);
+  console.log('계산중',scrollBW/scrollMW);
+
+
+  
+}/////scrollMove함수/////
 
 
 
@@ -187,6 +239,8 @@ function slideAuto(){
 }, 3000);
 
 
+
+
 }///slideAuto함수/////
 
 slideAuto();
@@ -209,44 +263,6 @@ function clearAuto(){
 
 }///clearAuto함수/////
 
-
-
-
-/*********************************** 
-  스크롤 퍼센트 이동
-  -> 슬라이드 이동마다 스크롤 비율맞춰 이동
-  -> 스크롤 잡고 이동
-***********************************/
-
-const scrollB = qs('.scroll');
-const scrollM = qs('.scroll-move');
-
-
-//전체 스크롤 가로값 scrollB.offsetWidth
-let scrollBW = scrollB.offsetWidth;
-//슬라이드이미지 갯수
-let slideNum = slideImgItems.length;
-//무브 스크롤 가로값 (전체스크롤/이미지갯수)
-let scrollMW = scrollBW/slideNum;
-//현재 보여지는 슬라이드 순번
-let nowSeq = slideImg.querySelectorAll('li')[0].getAttribute('data-seq');
-
-
-
-//슬라이드 이미지 갯수  lideImgItems.length => 5개
-//console.log(slideImgItems.length);
-
-
-//무브 스크롤 가로크기 CSS 설정 : width
-scrollM.style.width = scrollMW +'px';
-//무브 스크롤 위치 CSS 설정 : left
-scrollM.style.left = scrollMW*nowSeq + 'px';
-
-
-console.log('슬라이스현재순서',nowSeq);
-console.log('스크롤배경 사이즈',scrollBW);
-console.log('스크롤무브 사이즈',scrollMW);
-console.log('계산중',scrollBW/scrollMW);
 
 
 
