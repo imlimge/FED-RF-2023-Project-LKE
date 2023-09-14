@@ -85,28 +85,6 @@ function loadFn(){
 
 
 
-  //버거이미지 오버시 원 크게 만들기
-  /*   const burger = qs('.banner-burgerImg');
-    const moverLetter = qsa('.mover span');
- 
-    console.log(moverLetter);
-    
-    burger.onmouseenter = () => {
-        mover.style.width = '140px';
-        mover.style.height = '140px';
-        moverLetter.forEach(ele=>ele.style.opacity = 1);
-       
-    };
-
-    burger.onmouseleave = () => {
-        mover.style.width = '20px';
-        mover.style.height = '20px';
-    
-        moverLetter.forEach(ele=>ele.style.opacity = 0);
-    };
- */
-
-
  
 
 
@@ -156,14 +134,15 @@ function rightSlide(){
   slideImg.style.left = '-900px';
   //트랜지션주기
   slideImg.style.transition = TIME_SLIDE+'ms ease-in-out';
-  setTimeout(()=>{
-    // 맨앞 li 맨뒤로 이동
-    slideImg.appendChild(slideImg.querySelectorAll('li')[0]);
-    // slideImg left값 0
-    slideImg.style.left = '0';
-    // 트랜지션 없애기
-    slideImg.style.transition = 'none';
-}, TIME_SLIDE);
+
+        setTimeout(()=>{
+          // 맨앞 li 맨뒤로 이동
+          slideImg.appendChild(slideImg.querySelectorAll('li')[0]);
+          // slideImg left값 0
+          slideImg.style.left = '0';
+          // 트랜지션 없애기
+          slideImg.style.transition = 'none';
+      }, TIME_SLIDE);
 
 //console.log('이거뭐야',slideImg.querySelectorAll('li')[0]);
 
@@ -203,7 +182,7 @@ scrollM.style.width = scrollMW +'px';
 function scrollMove(){
   
   
-  //슬라이드 이미지 갯수  lideImgItems.length => 5개
+  //슬라이드 이미지 갯수  slideImgItems.length => 5개
   //console.log(slideImgItems.length);
   //트랜지션주기
   scrollM.style.transition = TIME_SLIDE+'ms ease-in-out';

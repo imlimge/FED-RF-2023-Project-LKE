@@ -39,7 +39,7 @@ animation:  gnb-box-ani 1s ease-in-out 2.5s forwards;
 
 
 .gnb a{
-  color: #ffffff;
+  color: #f5ebdc;
   font-weight: bold;
   font-size: min(1.2rem,1.4vw);
   /* font-size: 1.2rem; */
@@ -243,7 +243,7 @@ transform: scale(1.2);
 .m-delivery a{
   display: inline-block;
   font-family: 'Cafe24Ssurround';
-  color: #fff;
+  color: #f5ebdc;
   font-size: 1rem;
   margin-top: -11.2px;
 }
@@ -764,7 +764,7 @@ z-index: -1;
 
 
 /* 광고 비디오 커버 - 덮었다가 올라감 */
-.ad-video-cover1{
+.ad-video-cover1.on{
 position: absolute;
 background-color: #d0021b;
 height: 100%;
@@ -775,7 +775,7 @@ z-index: 9999;
 }
 
 /* 광고 비디오 커버 - 덮었다가 올라감 */
-.ad-video-cover2{
+.ad-video-cover2.on{
 position: absolute;
 background-color: #d0021b;
 height: 100%;
@@ -837,7 +837,7 @@ z-index: 9999;
 .view-button{
 position: relative;   /* 일단 위에서 밀어서 버튼이 내려가려고 */
 
-color: #fff;
+color: #f5ebdc;
 text-align: center;
 background-image:url(../images/00.common/button-red.svg) ;
 display: inline-block;
@@ -862,7 +862,7 @@ transition: .4s;
 
 
 .view-button>a{
-  color: #fff;
+  color: #f5ebdc;
 
 }
 
@@ -971,7 +971,8 @@ cursor: pointer;
   position: relative;
   background: #d0021b;
   overflow: hidden;
-  float: right;
+  margin-left: auto;
+ 
 }
 
 
@@ -1027,7 +1028,7 @@ cursor: pointer;
 
 /* 앱광고에만 적용되는 텍스트 색상 변경 */
 #ad-app .title{
-color: #fff;
+color: #f5ebdc;
 }
 
 
@@ -1036,13 +1037,13 @@ color: #fff;
 }
 
 #ad-app .article{
-  color: #fff;
+  color: #f5ebdc;
 }
 
 
 #ad-app .h-underline-last-line{
     
-  border-bottom: 10px solid #ffffff;
+  border-bottom: 10px solid #f5ebdc;
   width: 100%;
 }
 
@@ -1167,39 +1168,15 @@ color: #fff;
 .sns-list {
   display: flex;
   flex-wrap: nowrap;
-  align-items: stretch;
-  gap: 0 20px;
-  justify-content: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-
-.sns-item{
-  flex: 1;
-  display: flex; 
-   width: 230px;
-
-
-  justify-content: flex-end;
-  
-}
-
-/* 링크를 위한 범위 설정 .sns-itme과 동일크기 */
-.sns-item>.cont>a{
-  position: absolute;
-  width: 230px;
-  height: 100px;
-  top: 0;
-  left: 0;
+  justify-content: space-evenly;
  
 }
 
-.sns-img{
 
+.sns-item{
+  text-align: center;
 }
+
 
 
 
@@ -1209,34 +1186,28 @@ color: #fff;
   transition: .5s ease-out ;
 }
 
-.cont{
-  padding: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
 
-  width: 100%;
-  text-align: center;
+.cont {
+  padding: 10px 10px;
+  height: 70px;
 }
+
 
 
 .sns-tit{
-  color: #fff;
-  margin-bottom: 5%;
+  color: #f5ebdc;
+  padding: 1vw 0;
 }
 
 .status{
-  background-color: #fff;
+  background-color: #f5ebdc;
   border-radius: 20px;
   text-align: center;
   line-height:25px;
+  font-size: .9rem;
+  width: 100px;
 }
 
-.status>h4{
-  font-size: .8rem;
-
-}
 
 
 /*********************** 광고박스 와퍼 ************************/
@@ -1324,7 +1295,7 @@ color: #fff;
   font-weight: normal;
   font-size: min(2.4rem,7.3vw);
   line-height: min(5rem,6vw);
-  color: #fff;
+  color: #f5ebdc;
 
   text-align: center;
   margin: 4% 0;
@@ -1336,7 +1307,7 @@ color: #fff;
 .use-cont>p{
   position: relative;
   
-  color: #fff;
+  color: #f5ebdc;
   font-size: 1.2rem;
   text-align: center;
   display: inline-block;
@@ -1365,7 +1336,7 @@ color: #fff;
 
 
 /* 사용방법 1/2 커버 - 덮었다가 올라감 */
-.use-box-cover{
+.use-box-cover.on{
   position: absolute;
   background-color: #d0021b;
   height: 100%;
@@ -1375,8 +1346,10 @@ color: #fff;
   z-index: 9999;
   }
   
+
+  
   /* 오른쪽 1/2 - 시간차 */
-  .delay{
+  .delay.on{
 
   animation: video-cover-ani .7s ease-in .4s forwards;
  
@@ -1462,9 +1435,9 @@ font-size: .9rem;
   width: 100vw;
   padding: 0 0 10% 0;
 
-  /* background-color: #d0021b; */
+  background-color: #d0021b;
 
-  /* animation: cover-ani 4s ease-in-out 1s forwards; */
+  animation: cover-ani 4s ease-in-out 1s forwards;
 
 }
 

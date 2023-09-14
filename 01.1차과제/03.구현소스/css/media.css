@@ -60,14 +60,7 @@
   /* 보일 박스 */
   .col2-block{display: block;}
 
-  #use{
-  margin-top: 60vh;
-  }
-
-  
-  .sns-list{
-    flex-wrap: wrap;
-  }
+ 
 
   .footer-menu{
     position: relative;
@@ -80,96 +73,9 @@
   }
 }
 
-  /* --------------- 박스 그리드 1160px ----------------- */
-  /* SNS박스 - 반응형 떄 모양을 잡기위한 폭크기 조절 */
-
-  @media screen and (max-width:1160px){
-
-  .col3-4 {width: 33.33%;}
-
-}
-  
 
 /* --------------- 박스 그리드 1160px ----------------- */
 
 
 
 
-
-/* ---------------  개별설정 가로 : 600px ----------------- */
-@media screen and (max-width:600px){
-
-    #use{
-    margin-top: 30vh;
-    }
-  
-
-  }
-
-
-
-
-
-  /* --------------- 개별성정 : 세로 미디어쿼리 ----------------- */
-
- /*  @media screen and (max-height:700px){
-
-    #sns{
-      margin: 50vh 0;
-    }
-  
-    #use{
-      margin-top: 50vh;
-    }
-  
-
-  }
-  @media screen and (max-height:580px){
-
-    #sns{
-      margin: 70vh 0;
-    }
-  
-    #use{
-      margin-top: 70vh;
-    }
-  
-
-  }
-  
-  @media screen and (max-height:480px){
-
-    #sns{
-      margin: 70vh 0;
-    }
-  
-    #use{
-      margin-top: 70vh;
-    }
-  
-
-  }
-   */
-
-
-  /* 모든 그리드 크래스 100%로 일괄변경 */
-        /* 
-          CSS 선택자 문법 : 속성선택자
-          [속셩명=값] -> 어떤속성값이 정확히 일치
-          [속셩명^=값] -> 어떤속성값이 어떤값으로 시작
-          [속셩명$=값] -> 어떤속성값이 어떤값으로 끝남
-          [속셩명*=값] -> 어떤속성값이 어떤값이 포함됨
-
-        */
-
-
-        /* [class^='fl']{ */
- 
-        /* [class$='-3']{
-                  outline: 10px dotted orange;
-        } 
-
-        [class*='col-']{
-          width: 100%;
-  }
-*/
