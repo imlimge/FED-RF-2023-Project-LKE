@@ -4,6 +4,10 @@
 
 window.addEventListener('DOMContentLoaded', loadFn);
 
+
+
+
+
 //DOM선택함수
 const qs = (x) => document.querySelector(x);
 const qsa = (x) => document.querySelectorAll(x);
@@ -13,6 +17,11 @@ const qsa = (x) => document.querySelectorAll(x);
 const addEvt = 
 (ele, evt, fn) => ele.addEventListener(evt, fn);
 
+// 바운딩 위치값 함수
+const getBCR = ele => ele.getBoundingClientRect().top;
+
+// 옵셋탑값 반환함수
+const getOT = (ele) => ele.offsetTop;
 
 
 
@@ -267,8 +276,40 @@ function clearAuto(){
 
 
 
+/**************************************  
+ 스크롤마다 등장 
+  -> 스크롤 내리면서 특정 상황 발생
+
+**************************************/
+
+// 윈도우 높이값
+let winH = window.innerHeight;
+// 문서 전체 높이값
+let docH =  document.body.clientHeight;
+// 스크롤 한계값 : 전체 document 높이 - 윈도우 높이값
+let scLimit = docH - winH;
+
+
+
+
+const slide = qs('#ad-slide');
+
+function action(){
+ 
+  // 1. 스크롤 위치값
+  let scTop = window.scrollY;
+
+
+
+}
+
+
+
+
+
 
 } ///////loadFn 함수//////////////////
+
 
 
 
