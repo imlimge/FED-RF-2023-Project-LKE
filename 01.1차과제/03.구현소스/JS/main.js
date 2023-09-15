@@ -261,16 +261,20 @@ function clearAuto(){
 
 **************************************/
 
-// 등장요소 1 - .ad-slide  
+// 등장요소 1 - .ad-slide     >> right :-100%; 에서 0
 const slide = qs('.ad-slide');
-// 등장요소 2 - .ad-video-cover1 
-const adCover1 = qs('.ad-video-cover1');
-// 등장요소 3 - .ad-video-cover1 
+// 등장요소 2 - .ad-video-cover1 //on 추가
+const adCover1 = qs('.ad-video-cover1'); 
+// 등장요소 3 - .ad-video-cover1 //ani 추가
 const shake = qs('.app-outbox');
-// 등장요소 4 - .ad-video-cover1 
+// 등장요소 4 - .ad-video-cover1 //on 추가
 const adCover2 = qs('.ad-video-cover2');
-// 등장요소 5 - .ad-video-cover1 
+// 등장요소 5 - .ad-video-cover1 //on 추가
 const useCover = qsa('.use-box-cover');
+
+
+
+
 
 //  이미지이동값 = 윈도우높이*스크롤이동값/스크롤한계값
 // 윈도우 높이값
