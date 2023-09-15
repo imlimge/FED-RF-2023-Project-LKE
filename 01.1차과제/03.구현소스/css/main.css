@@ -39,7 +39,7 @@ animation:  gnb-box-ani 1s ease-in-out 2.5s forwards;
 
 
 .gnb a{
-  color: #f5ebdc;
+  color: #fff;
   font-weight: bold;
   font-size: min(1.2rem,1.4vw);
   /* font-size: 1.2rem; */
@@ -243,7 +243,7 @@ transform: scale(1.2);
 .m-delivery a{
   display: inline-block;
   font-family: 'Cafe24Ssurround';
-  color: #f5ebdc;
+  color: #fff;
   font-size: 1rem;
   margin-top: -11.2px;
 }
@@ -578,7 +578,8 @@ z-index: -1;
   height: 30vw;
   margin: -6vh 0 25vh 0;
   position: relative;
-
+  right: -100%;
+ transition: 2s;
 }
 
 
@@ -587,7 +588,7 @@ z-index: -1;
 .slide-wrap{
   position: relative;
   top: 0;
-  
+
 }
 
 .slide-part1{
@@ -837,7 +838,7 @@ z-index: 9999;
 .view-button{
 position: relative;   /* 일단 위에서 밀어서 버튼이 내려가려고 */
 
-color: #f5ebdc;
+color: #fff;
 text-align: center;
 background-image:url(../images/00.common/button-red.svg) ;
 display: inline-block;
@@ -862,7 +863,7 @@ transition: .4s;
 
 
 .view-button>a{
-  color: #f5ebdc;
+  color: #fff;
 
 }
 
@@ -976,6 +977,10 @@ cursor: pointer;
 }
 
 
+.app-outbox.ani{
+  animation: app-shake-ani .1s ease-out 8 alternate backwards;
+}
+
 .app-outbox:before{ 
   content: ' shake';
   position: absolute;
@@ -1028,7 +1033,7 @@ cursor: pointer;
 
 /* 앱광고에만 적용되는 텍스트 색상 변경 */
 #ad-app .title{
-color: #f5ebdc;
+color: #fff;
 }
 
 
@@ -1043,7 +1048,7 @@ color: #f5ebdc;
 
 #ad-app .h-underline-last-line{
     
-  border-bottom: 10px solid #f5ebdc;
+  border-bottom: 10px solid #fff;
   width: 100%;
 }
 
@@ -1195,12 +1200,12 @@ color: #f5ebdc;
 
 
 .sns-tit{
-  color: #f5ebdc;
+  color: #fff;
   padding: 1vw 0;
 }
 
 .status{
-  background-color: #f5ebdc;
+  background-color: #fff;
   border-radius: 20px;
   text-align: center;
   line-height:25px;
@@ -1295,7 +1300,7 @@ color: #f5ebdc;
   font-weight: normal;
   font-size: min(2.4rem,7.3vw);
   line-height: min(5rem,6vw);
-  color: #f5ebdc;
+  color: #fff;
 
   text-align: center;
   margin: 4% 0;
@@ -1435,9 +1440,8 @@ font-size: .9rem;
   width: 100vw;
   padding: 0 0 10% 0;
 
-  background-color: #d0021b;
-
-  animation: cover-ani 4s ease-in-out 1s forwards;
+  /* background-color: #d0021b;
+  animation: cover-ani 4s ease-in-out 1s forwards; */
 
 }
 

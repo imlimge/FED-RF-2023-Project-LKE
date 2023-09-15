@@ -126,6 +126,24 @@
 }
 
 
+/************************ 앱광고 ************************/
+@keyframes app-shake-ani{
+0%{
+
+transform: rotate(0deg);
+transform-origin: center;
+}
+
+100%{
+ transform: rotate(4deg);
+ transform-origin: center;
+}
+
+
+}
+
+
+
 
 /************************ 커버 ************************/
 @keyframes cover-ani{

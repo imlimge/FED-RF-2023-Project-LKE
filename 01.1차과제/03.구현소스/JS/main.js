@@ -194,10 +194,10 @@ function scrollMove(){
   scrollM.style.left = scrollMW*nowSeq + 'px';
 
 
-  console.log('슬라이스현재순서',nowSeq);
-  console.log('스크롤배경 사이즈',scrollBW);
-  console.log('스크롤무브 사이즈',scrollMW);
-  console.log('계산중',scrollBW/scrollMW);
+  // console.log('슬라이스현재순서',nowSeq);
+  // console.log('스크롤배경 사이즈',scrollBW);
+  // console.log('스크롤무브 사이즈',scrollMW);
+  // console.log('계산중',scrollBW/scrollMW);
 
 
   
@@ -261,26 +261,49 @@ function clearAuto(){
 
 **************************************/
 
-// 윈도우 높이값
-let winH = window.innerHeight;
-// 문서 전체 높이값
-let docH =  document.body.clientHeight;
-// 스크롤 한계값 : 전체 document 높이 - 윈도우 높이값
-let scLimit = docH - winH;
-
-
-
-
+// 등장요소 1 - #ad-slide  
 const slide = qs('#ad-slide');
 
-function action(){
- 
-  // 1. 스크롤 위치값
+
+// 윈도우 높이값
+// let winH = window.innerHeight;
+
+// 스크롤 등장 기준 (4/5위치)
+// const CRITERIA = window.innerHeight/4*3;
+
+// 문서 전체 높이값
+// let docH =  document.body.clientHeight;
+
+// 스크롤 한계값 : 전체 document 높이 - 윈도우 높이값
+// let scLimit = docH - winH;
+
+
+//슬라이드 탑값
+let slideT = slide.offsetTop;
+
+
+
+
+// 스크롤 등장액션 이벤트 설정
+addEvt(window,'scroll',showIt);
+
+function showIt(){
+  
+  
+  //스크롤바 위치값
   let scTop = window.scrollY;
+  
+  console.log('슬라이드탑값/스크롤위치',slideT,scTop);
+  
+  if(scTop>200){
+    slide.style.right= '0%';
+    
+  }
 
 
 
-}
+
+}/////showIt함수 ////
 
 
 
