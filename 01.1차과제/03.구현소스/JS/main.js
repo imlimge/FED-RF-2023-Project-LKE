@@ -261,10 +261,18 @@ function clearAuto(){
 
 **************************************/
 
-// 등장요소 1 - #ad-slide  
-const slide = qs('#ad-slide');
+// 등장요소 1 - .ad-slide  
+const slide = qs('.ad-slide');
+// 등장요소 2 - .ad-video-cover1 
+const adCover1 = qs('.ad-video-cover1');
+// 등장요소 3 - .ad-video-cover1 
+const shake = qs('.app-outbox');
+// 등장요소 4 - .ad-video-cover1 
+const adCover2 = qs('.ad-video-cover2');
+// 등장요소 5 - .ad-video-cover1 
+const useCover = qsa('.use-box-cover');
 
-
+//  이미지이동값 = 윈도우높이*스크롤이동값/스크롤한계값
 // 윈도우 높이값
 // let winH = window.innerHeight;
 
@@ -278,18 +286,26 @@ const slide = qs('#ad-slide');
 // let scLimit = docH - winH;
 
 
-//슬라이드 탑값
+// 슬라이드 탑값
 let slideT = slide.offsetTop;
 
 
 
+// 이미지이동값 = 윈도우높이*스크롤이동값/스크롤한계값
+
+
 
 // 스크롤 등장액션 이벤트 설정
-addEvt(window,'scroll',showIt);
+addEvt(window,'scroll',show1);
+addEvt(window,'scroll',show2);
+addEvt(window,'scroll',show3);
+addEvt(window,'scroll',show4);
+addEvt(window,'scroll',show5);
 
-function showIt(){
-  
-  
+
+
+function show1(){
+    
   //스크롤바 위치값
   let scTop = window.scrollY;
   
@@ -297,13 +313,67 @@ function showIt(){
   
   if(scTop>200){
     slide.style.right= '0%';
+  }
+}/////showIt함수 ////
+
+
+
+
+function show2(){
     
+  //스크롤바 위치값
+  let scTop = window.scrollY;
+if(scTop > 800){
+    adCover1.classList.add('on');
+  }
+}/////showIt함수 ////
+
+
+
+
+function show3(){
+    
+  //스크롤바 위치값
+  let scTop = window.scrollY;
+       if(scTop > 1700){
+    shake.classList.add('ani');
   }
 
+}/////showIt함수 ////
 
 
+
+function show4(){
+    
+  //스크롤바 위치값
+  let scTop = window.scrollY;
+       if(scTop > 3200){
+    adCover2.classList.add('on');
+  }
 
 }/////showIt함수 ////
+
+
+
+function show5(){
+    
+  //스크롤바 위치값
+  let scTop = window.scrollY;
+
+  if(scTop > 4350){
+
+  useCover.forEach((ele,idx)=> ele.classList.add('on2'));
+
+  
+  }
+
+}/////showIt함수 ////
+
+
+
+
+
+
 
 
 

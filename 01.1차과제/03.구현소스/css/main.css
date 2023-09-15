@@ -574,12 +574,13 @@ z-index: -1;
 /*********************** 슬라이드 광고 - 가로형 ************************/
 
 
-#ad-slide {
+.ad-slide {
   height: 30vw;
   margin: -6vh 0 25vh 0;
   position: relative;
   right: -100%;
- transition: 2s;
+ transition: right 2s;
+
 }
 
 
@@ -657,7 +658,7 @@ z-index: -1;
 
 /*********************** 슬라이드 광고 - 모바일 ************************/
 .m-slide{
-  margin-top: -37vh;
+  position: relative;
   
 }
 
@@ -764,26 +765,35 @@ z-index: -1;
   
 
 
-/* 광고 비디오 커버 - 덮었다가 올라감 */
-.ad-video-cover1.on{
+/* 광고 비디오 커버  */
+.ad-video-cover1{
 position: absolute;
 background-color: #d0021b;
 height: 100%;
 width: 100%;
 top: 0;
-animation: video-cover-ani 1s ease-in forwards;
+
+z-index: 9999;
+}
+
+
+
+
+
+/* 광고 비디오 커버 -  */
+.ad-video-cover2{
+position: absolute;
+background-color: #d0021b;
+height: 100%;
+width: 100%;
+top: 0;
+
 z-index: 9999;
 }
 
 /* 광고 비디오 커버 - 덮었다가 올라감 */
-.ad-video-cover2.on{
-position: absolute;
-background-color: #d0021b;
-height: 100%;
-width: 100%;
-top: 0;
+.on{
 animation: video-cover-ani 1s ease-in forwards;
-z-index: 9999;
 }
 
 
@@ -1341,20 +1351,23 @@ color: #fff;
 
 
 /* 사용방법 1/2 커버 - 덮었다가 올라감 */
-.use-box-cover.on{
+.use-box-cover{
   position: absolute;
   background-color: #d0021b;
   height: 100%;
   width: 100%;
   top: 0;
-  animation: video-cover-ani .7s ease-in forwards;
+
   z-index: 9999;
   }
   
+  .on2{
+    animation: video-cover-ani .7s ease-in forwards;
+  }
 
   
   /* 오른쪽 1/2 - 시간차 */
-  .delay.on{
+  .delay.on2{
 
   animation: video-cover-ani .7s ease-in .4s forwards;
  
@@ -1436,12 +1449,11 @@ font-size: .9rem;
   position: absolute;
   top: 0;
   left: 0;
-  /* height: 100vh; */
   width: 100vw;
   padding: 0 0 10% 0;
 
-  /* background-color: #d0021b;
-  animation: cover-ani 4s ease-in-out 1s forwards; */
+  background-color: #d0021b;
+  animation: cover-ani 4s ease-in-out 1s forwards;
 
 }
 
