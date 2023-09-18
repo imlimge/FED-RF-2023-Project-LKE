@@ -27,11 +27,9 @@ animation:  gnb-box-ani 1s ease-in-out 2.5s forwards;
 
 .gnb{
  
-  display: flex;
   height: 70px;
+  display: flex;
 
-
-  
   box-shadow: 3px 3px 5px #35262680;
   border-radius: 30px;
 
