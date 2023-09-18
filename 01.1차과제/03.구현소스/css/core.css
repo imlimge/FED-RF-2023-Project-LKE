@@ -121,11 +121,11 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 .scbar::-webkit-scrollbar-thumb{
   /* 스크롤바 */
-  background-color: #d0021b;
+  background-color: #222;
   border-radius: 8px;
 }
 .scbar::-webkit-scrollbar-track{
   /* 스크롤바 트랙 */
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 2px;
 }

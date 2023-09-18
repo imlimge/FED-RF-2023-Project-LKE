@@ -322,18 +322,19 @@ text-align: center;
 
 /* 모바일 서브메뉴 */
 .sub-menu{
-  position: relative;
+  position: fixed;
   top: -60px;
-  height: 100vh;
+  height: calc(100% + 60px);
   width: 80vw;
   background-color: #d0021b;
-
+  overflow-y: auto;
+  
 }
 
 .sub-menu-outbox{
   width: 100%;
   height: 100%;
-  padding: 10vw;
+  padding: 15vw 7vw;
   box-sizing: border-box;
 }
 
@@ -602,41 +603,17 @@ z-index: -1;
 
 
 .banner p{
-  font-family: 'ChosunGu';
+  font-family: 'Cafe24Ssurround';
   padding: 4vw 0;
   font-weight: bold;
   font-size: min(1.2rem,3vw);
   text-align: center;
+  color: #222;
 
 }
 
 
 
-
-/* 배너 버거 이미지 : 자식 */
-.banner-burgerImg{
-  position: sticky;
-  margin: 0 auto;
-
-  top: 10vh;
-  width:80vw;  
-  left: calc(50% - 80vw/2);
-
-  height: 400px;
-
-}
-
-
-
-
-/* 배너 버거 이미지 개별 위치 속성 및 트랜지션 */
-.banner-burgerImg img{
- position: relative;
-  display: block;
-  margin: 0 auto;
-  transition: .5s ease-in;
-
-}
 
 
 
@@ -672,47 +649,6 @@ z-index: -1;
  */
 
 
-
-/****************배너 애니메이션 *******************/
-
-.banner-burgerImg img:nth-child(9){
-  top: -130%;
-  animation: banner-burgerImg-to-up .3s cubic-bezier(0.24, 0.96, 0.5, 1.24);
-}
-
-.banner-burgerImg img:nth-child(8){
-  top: -85.7%;
-  animation: banner-burgerImg-to-up .5s cubic-bezier(0.24, 0.96, 0.5, 1.24) ;
-}
-.banner-burgerImg img:nth-child(7){
-  top: -67.7%;
-  animation: banner-burgerImg-to-up .8s cubic-bezier(0.14, 0.82, 0.4, 1.11) ;
-}
-.banner-burgerImg img:nth-child(6){
-  top: -47.7%;
-  animation: banner-burgerImg-to-up 1s cubic-bezier(0.14, 0.82, 0.4, 1.11);
-}
-.banner-burgerImg img:nth-child(5){
-  top: -26.7%;
-    animation: banner-burgerImg-to-up 1.3s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
-}
-.banner-burgerImg img:nth-child(4){
-  top: -0.3%;
-    animation: banner-burgerImg-to-up 1.5s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
-}
-.banner-burgerImg img:nth-child(3){
-  top: 24.3%;
-    animation: banner-burgerImg-to-up 1.8s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
-}
-.banner-burgerImg img:nth-child(2){
-  top: 57.3%;
-    animation: banner-burgerImg-to-up 2s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
-}
-.banner-burgerImg img:nth-child(1){
-  top: 100%;
-  animation: banner-burgerImg-opacity s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
-   
-}
 
 
 /*********************** 슬라이드 광고 - 가로형 ************************/
@@ -1467,17 +1403,15 @@ color: #fff;
 
 
 
-.use-cont>p{
+.use-cont p{
   position: relative;
   
   color: #f5ebdc;
   font-size: 1.2rem;
   text-align: center;
-  display: inline-block;
-
   
   font-family: 'ChosunGu';
-  font-family: 'Arial', sans-serif;
+
 
 }
 
@@ -1593,7 +1527,7 @@ font-size: .9rem;
 
 /*********************** 커버 ************************/
 
-.cover.on{
+.cover{
   position: absolute;
   top: 0;
   left: 0;
@@ -1605,6 +1539,9 @@ font-size: .9rem;
 
 }
 
+.cover.on{
+  display: none; 
+}
 
 
 .cover span{
@@ -1620,6 +1557,70 @@ font-size: .9rem;
 
 
 
+
+/****************배너 애니메이션 *******************/
+
+/* 배너 버거 이미지 : 자식 */
+.banner-burgerImg{
+  margin: 0 auto;
+  width:80vw;  
+
+  height: 400px;
+
+}
+
+
+
+
+/* 배너 버거 이미지 개별 위치 속성 및 트랜지션 */
+.banner-burgerImg img{
+ position: relative;
+  display: block;
+  margin: 0 auto;
+  transition: .5s ease-in;
+
+}
+
+
+
+.banner-burgerImg img:nth-child(9){
+  top: -130%;
+  animation: banner-burgerImg-to-up .3s cubic-bezier(0.24, 0.96, 0.5, 1.24);
+}
+
+.banner-burgerImg img:nth-child(8){
+  top: -85.7%;
+  animation: banner-burgerImg-to-up .5s cubic-bezier(0.24, 0.96, 0.5, 1.24) ;
+}
+.banner-burgerImg img:nth-child(7){
+  top: -67.7%;
+  animation: banner-burgerImg-to-up .8s cubic-bezier(0.14, 0.82, 0.4, 1.11) ;
+}
+.banner-burgerImg img:nth-child(6){
+  top: -47.7%;
+  animation: banner-burgerImg-to-up 1s cubic-bezier(0.14, 0.82, 0.4, 1.11);
+}
+.banner-burgerImg img:nth-child(5){
+  top: -26.7%;
+    animation: banner-burgerImg-to-up 1.3s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
+}
+.banner-burgerImg img:nth-child(4){
+  top: -0.3%;
+    animation: banner-burgerImg-to-up 1.5s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
+}
+.banner-burgerImg img:nth-child(3){
+  top: 24.3%;
+    animation: banner-burgerImg-to-up 1.8s cubic-bezier(0.25, 0.84, 0.46, 1.04) ;
+}
+.banner-burgerImg img:nth-child(2){
+  top: 57.3%;
+    animation: banner-burgerImg-to-up 2s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
+}
+.banner-burgerImg img:nth-child(1){
+  top: 100%;
+  animation: banner-burgerImg-opacity s cubic-bezier(0.1, 0.64, 0.43, 0.96) ;
+   
+}
 
 
 
