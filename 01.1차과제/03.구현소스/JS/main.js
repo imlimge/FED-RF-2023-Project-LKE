@@ -36,10 +36,18 @@ const TIME_SLIDE = 200;
 
 
 
-
-
-
 function loadFn(){
+  
+  let keyValue = location.href;
+  console.log(keyValue.indexOf('?'));
+  // url 창 전체주소
+  // url창에 ?표가 있는 여부 검사(-1이면 물음표가 없음)
+  // 물음표가 있는 파라미터주소이면 if문 안으로 못들어감!
+  if(keyValue.indexOf('?')==-1){
+    qs('.cover').classList.add('on');
+    // 기존 url에 파라미터전달값 삽입하기
+    history.pushState('my',null,'?key=val');
+  }
    
 /****************************************** 
   [무버 이동 정의]
@@ -297,14 +305,29 @@ let slideT = slide.offsetTop;
 
 // 이미지이동값 = 윈도우높이*스크롤이동값/스크롤한계값
 
+// 스크롤 대상 요소 : .sc-show
+const scShow = qsa('.sc-show');
+console.log(scShow);
+// 윈도우 절반값
+const winH = window.innerHeight/2;
+
+
+addEvt(window,'scroll',()=>{
+  scShow.forEach(ele=>{
+    console.log(getBCR(ele))
+    if(getBCR(ele) < winH) ele.classList.add('on');
+    else ele.classList.remove('on');
+  })
+
+})
 
 
 // 스크롤 등장액션 이벤트 설정
-addEvt(window,'scroll',show1);
-addEvt(window,'scroll',show2);
-addEvt(window,'scroll',show3);
-addEvt(window,'scroll',show4);
-addEvt(window,'scroll',show5);
+// addEvt(window,'scroll',show1);
+// addEvt(window,'scroll',show2);
+// addEvt(window,'scroll',show3);
+// addEvt(window,'scroll',show4);
+// addEvt(window,'scroll',show5);
 
 
 

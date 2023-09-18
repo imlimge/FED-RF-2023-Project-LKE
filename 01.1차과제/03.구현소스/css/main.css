@@ -1080,7 +1080,7 @@ cursor: pointer;
 
 
 /* 흔들려야 하는 배경박스 나중에 오른쪽에서 왼쪽으로 이동함 */
-.app-outbox {
+.app-outbox.ani {
   position: relative;
   background: #d0021b;
   overflow: hidden;
@@ -1089,7 +1089,7 @@ cursor: pointer;
 }
 
 
-.app-outbox.ani{
+.app-outbox.ani.on{
   animation: app-shake-ani .1s ease-out 8 alternate backwards;
 }
 
@@ -1453,7 +1453,7 @@ color: #fff;
 
 
 /* 사용방법 1/2 커버 - 덮었다가 올라감 */
-.use-box-cover{
+.use-box-cover.on2{
   position: absolute;
   background-color: #d0021b;
   height: 100%;
@@ -1463,13 +1463,13 @@ color: #fff;
   z-index: 9999;
   }
   
-  .on2{
+  .on2.on{
     animation: video-cover-ani .7s ease-in forwards;
   }
 
   
   /* 오른쪽 1/2 - 시간차 */
-  .delay.on2{
+  .delay.on2.on{
 
   animation: video-cover-ani .7s ease-in .4s forwards;
  
@@ -1547,21 +1547,21 @@ font-size: .9rem;
 
 /*********************** 커버 ************************/
 
-cover{
+.cover.on{
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   padding: 0 0 10% 0;
 
-/*   background-color: #d0021b;
+  background-color: #d0021b;
   animation: cover-ani 4s ease-in-out 1s forwards;
- */
+
 }
 
 
 
-.cover span{
+.cover.on span{
   position: relative;
   
   font-family: 'RixInooAriDuriR';
