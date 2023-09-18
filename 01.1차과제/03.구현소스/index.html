@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="./css/main.css" />
         <!-- 미디어쿼리 CSS -->
         <link rel="stylesheet" href="./css/media.css" />
+
+        <!-- 메뉴 data JS -->
+        <script src="./js/data.js"></script>
         <!-- 외부 JS  -->
         <script src="./JS/main.js" defer></script>
 
@@ -98,22 +101,50 @@
 
                     <!-- 모바일 서브메뉴 -->
                     <div class="sub-menu">
-                            <div class="sub-menu-outbox">
-                                <div class="sub-menu-inbox">
-                                    <div class="sub-menu-top">
-                                        
-                                        <a href="#"><img src="./images/01.top-navigation/m-close.png" alt="모바일 서브메뉴 열기">                    
+                            <div class="sub-menu-outbox"> <!-- 서브메뉴 아웃 -->
+                                <div class="sub-menu-inbox"> <!-- 서브메뉴 인 -->
+                                 
+
+                                        <!-- 서브메뉴 클로즈 버튼 -->
+                                        <div class="sub-menu-close">
+                                        <a href="#">
+                                        <img src="./images/01.top-navigation/m-close.png" alt="모바일 서브메뉴 열기">                    
                                         </a>
-                                    </div>
-
-                                    <div class="sub-menu-list">
+                                        </div>
 
 
-                                    </div>
+                                        <!-- 서브메뉴 리스트 -->
+                                        <div class="sub-menu-list">
+                                        
 
-                                </div>
+                                        <ul>
+                                            <li>
+                                                <!-- 서브메뉴 타이틀 -->
+                                                <a href="#"><span class="sub-menu-title">서브메뉴 타이틀</span></a>
+                                                <!-- 서브메뉴 리스트 열기 버튼 -->
+                                                <div class="sub-menu-open-btn"> 
+                                                <img src="./images/01.top-navigation/icon_r.png" alt="서브메뉴 열기 버튼">               
+                                                </div>
+                                                <!-- 서브메뉴 리스트 : 열기상태 -->
+                                                <div class="sub-menu-open">
+                                                    <ol>
+                                                        <li>
+                                                            <a href="#">서브메뉴 리스트</a>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                         </ul>
 
-                            </div>
+
+                                   <!-- 구조화 연습
+                                    ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>ol>li>a[href='#'] -->
+                                        
+                                
+                                </div><!-- 서브메뉴 인 -->
+                                
+
+                        </div><!-- 서브메뉴 아웃 -->
                     </div> <!-- 모바일 서브메뉴 -->
             
                </div>  <!-- 모바일 상단 gnb -->

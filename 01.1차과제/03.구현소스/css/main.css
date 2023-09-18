@@ -338,20 +338,32 @@ background-color: rgb(0 0 0 / 51%);
 .sub-menu-outbox{
   width: 100%;
   height: 100%;
-  padding: 0 8vw 10vw 8vw;
+  padding: 10vw;
   box-sizing: border-box;
 }
 
-
-
-.sub-menu-top{
+.sub-menu-inbox{
   width: 100%;
-  height: 10vw;
-  
+  height: 100%;
 }
 
 
 
+/* 서브메뉴 클로즈 버튼 */
+.sub-menu-close{
+  height: 15%;
+}  
+
+.sub-menu-title{
+  font-family: 'RixInooAriDuriR';
+
+}
+
+
+/* 서브메뉴 리스트 */
+.sub-menu-list {
+   height: 85%;
+}
 
 
 
@@ -1542,9 +1554,9 @@ cover{
   width: 100vw;
   padding: 0 0 10% 0;
 
-  background-color: #d0021b;
+/*   background-color: #d0021b;
   animation: cover-ani 4s ease-in-out 1s forwards;
-
+ */
 }
 
 
