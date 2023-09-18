@@ -36,18 +36,37 @@ const TIME_SLIDE = 200;
 
 
 
+
 function loadFn(){
   
+
+/********************************************
+ [새로고침 시 오프닝 커버 없애기]
+********************************************/
+const cover = qs('.cover');
+
   let keyValue = location.href;
-  console.log(keyValue.indexOf('?'));
+  
+  //console.log(keyValue.indexOf('?'));
   // url 창 전체주소
   // url창에 ?표가 있는 여부 검사(-1이면 물음표가 없음)
   // 물음표가 있는 파라미터주소이면 if문 안으로 못들어감!
   if(keyValue.indexOf('?')==-1){
-    qs('.cover').classList.add('on');
+    cover.classList.add('on');
+   
     // 기존 url에 파라미터전달값 삽입하기
     history.pushState('my',null,'?key=val');
+
   }
+
+
+/********************************************
+ [커버 일정 시간 후 display none하기]
+********************************************/
+
+
+
+
    
 /****************************************** 
   [무버 이동 정의]
@@ -118,8 +137,8 @@ const slideImg = qs('.slide-img');
 const slideImgItems = qsa('.slide-img-item');
 
 
-console.log('슬라이드이미지',slideImg,slideImgItems);
-console.log('슬라이드이미지 크기',slideImg.offsetWidth)
+//console.log('슬라이드이미지',slideImg,slideImgItems);
+//console.log('슬라이드이미지 크기',slideImg.offsetWidth)
 
 
 
@@ -269,15 +288,15 @@ function clearAuto(){
 
 **************************************/
 
-// 등장요소 1 - .ad-slide     >> right :-100%; 에서 0
+// 등장요소 1 - .ad-slide    
 const slide = qs('.ad-slide');
-// 등장요소 2 - .ad-video-cover1 //on 추가
+// 등장요소 2 - .ad-video-cover1
 const adCover1 = qs('.ad-video-cover1'); 
-// 등장요소 3 - .ad-video-cover1 //ani 추가
+// 등장요소 3 - .ad-video-cover1
 const shake = qs('.app-outbox');
 // 등장요소 4 - .ad-video-cover1 //on 추가
 const adCover2 = qs('.ad-video-cover2');
-// 등장요소 5 - .ad-video-cover1 //on 추가
+// 등장요소 5 - .ad-video-cover1
 const useCover = qsa('.use-box-cover');
 
 
@@ -307,7 +326,8 @@ let slideT = slide.offsetTop;
 
 // 스크롤 대상 요소 : .sc-show
 const scShow = qsa('.sc-show');
-console.log(scShow);
+
+// console.log(scShow);
 // 윈도우 절반값
 const winH = window.innerHeight/2;
 
@@ -328,7 +348,7 @@ addEvt(window,'scroll',()=>{
 // addEvt(window,'scroll',show3);
 // addEvt(window,'scroll',show4);
 // addEvt(window,'scroll',show5);
-
+/* 
 
 
 function show1(){
@@ -398,7 +418,7 @@ function show5(){
 
 
 
-
+ */
 
 
 

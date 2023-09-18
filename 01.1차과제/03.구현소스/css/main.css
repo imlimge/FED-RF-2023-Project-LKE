@@ -304,26 +304,21 @@ text-align: center;
 
 
 .m-snb-box{
-  position: relative;
-
+  position: absolute;
+  z-index: 999;
 }
 
-
-/* 모바일 서브메뉴 어두운배경 */
-.sub-menu-back{
-position: absolute;
-top: -60px;
-left: 0;
-width: 100%;
-height: 100vh;
-background-color: rgb(0 0 0 / 51%);
-
-
+.m-snb-box:before{
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 51%);
+  
 }
 
-.sub-menu *{
-  outline: 1px dashed #fff;
-}
 
 /* 모바일 서브메뉴 */
 .sub-menu{
@@ -354,20 +349,82 @@ background-color: rgb(0 0 0 / 51%);
   height: 15%;
 }  
 
-.sub-menu-title{
-  font-family: 'RixInooAriDuriR';
 
+.sub-menu-close img{
+  width: 26px;
 }
+
+
+
 
 
 /* 서브메뉴 리스트 */
 .sub-menu-list {
-   height: 85%;
+  position: relative;
+  height: 85%;
+}
+
+
+.sub-menu-title{
+  display: inline-block;
+  font-family: 'Cafe24Ssurround';
+  font-size: min(6.6vw,1.8rem);
+  color: #fff;
+
+}
+
+.sub-menu-list>ul::after{
+  content: '';
+  width: 100%;
+  display: inline-block;
+  border-bottom:1px solid #ff4747 ;
+  margin: 4vw 0;
+
+}
+
+.sub-menu-open-btn{
+ position: absolute;
+display: inline-block; 
+right: 0;
+
+
+
 }
 
 
 
+.sub-menu-open-btn img{
+  width: 55%;
+  cursor: pointer;
+  transition: .5s ease-out;
+}
 
+.sub-menu-open-btn img.on{
+  transform: rotate(90deg);
+  transition: .5s ease-out;
+}
+
+
+
+.sub-menu-open{
+  height: 100%;
+  overflow: hidden;
+  transition: height 2s ease-out;
+}
+
+.sub-menu-open.on{
+  height: 100%;
+  transition: height 1s ease-out;
+}
+
+
+.sub-menu-open-list{
+  display: inline-block;
+  color: #fff;
+  font-family: 'ChosunGu';
+  font-size: 2.3vw;
+  padding: 1vw;
+}
 
 
 /*********************** 배너************************/
@@ -670,7 +727,9 @@ z-index: -1;
 
 }
 
-
+.ad-slide.on{
+  right: 0%;
+}
 
 
 .slide-wrap{
@@ -853,7 +912,7 @@ z-index: -1;
 
 
 /* 광고 비디오 커버  */
-.ad-video-cover1{
+.ad-video-cover{
 position: absolute;
 background-color: #d0021b;
 height: 100%;
@@ -864,22 +923,9 @@ z-index: 9999;
 }
 
 
-
-
-
-/* 광고 비디오 커버 -  */
-.ad-video-cover2{
-position: absolute;
-background-color: #d0021b;
-height: 100%;
-width: 100%;
-top: 0;
-
-z-index: 9999;
-}
 
 /* 광고 비디오 커버 - 덮었다가 올라감 */
-.on{
+.ad-video-cover.on{
 animation: video-cover-ani 1s ease-in forwards;
 }
 
@@ -1080,7 +1126,7 @@ cursor: pointer;
 
 
 /* 흔들려야 하는 배경박스 나중에 오른쪽에서 왼쪽으로 이동함 */
-.app-outbox.ani {
+.app-outbox {
   position: relative;
   background: #d0021b;
   overflow: hidden;
@@ -1089,7 +1135,7 @@ cursor: pointer;
 }
 
 
-.app-outbox.ani.on{
+.app-outbox.on{
   animation: app-shake-ani .1s ease-out 8 alternate backwards;
 }
 
@@ -1144,21 +1190,21 @@ cursor: pointer;
  
 
 /* 앱광고에만 적용되는 텍스트 색상 변경 */
-#ad-app .title{
+.app-inbox .title{
 color: #fff;
 }
 
 
-#ad-app .sub-title{
+.app-inbox .sub-title{
   color: #222;
 }
 
-#ad-app .article{
+.app-inbox .article{
   color: #f5ebdc;
 }
 
 
-#ad-app .h-underline-last-line{
+.app-inbox .h-underline-last-line{
     
   border-bottom: 10px solid #fff;
   width: 100%;
@@ -1166,12 +1212,12 @@ color: #fff;
 
 
 
-#ad-app .bg-txt{
+.app-inbox .bg-txt{
   right:20%;
 }
 
 
-#ad-app .view-button{
+.app-inbox .view-button{
   background-image:url(../images/00.common/button-black.svg) ;
  
 }
@@ -1453,7 +1499,7 @@ color: #fff;
 
 
 /* 사용방법 1/2 커버 - 덮었다가 올라감 */
-.use-box-cover.on2{
+.use-box-cover{
   position: absolute;
   background-color: #d0021b;
   height: 100%;
@@ -1463,15 +1509,15 @@ color: #fff;
   z-index: 9999;
   }
   
-  .on2.on{
+  .use-box-cover.on{
     animation: video-cover-ani .7s ease-in forwards;
   }
 
   
   /* 오른쪽 1/2 - 시간차 */
-  .delay.on2.on{
+  .use-box-cover.on.delay{
 
-  animation: video-cover-ani .7s ease-in .4s forwards;
+  animation: video-cover-ani .7s ease-in .6s forwards;
  
   }
   
@@ -1561,7 +1607,7 @@ font-size: .9rem;
 
 
 
-.cover.on span{
+.cover span{
   position: relative;
   
   font-family: 'RixInooAriDuriR';
@@ -1571,6 +1617,12 @@ font-size: .9rem;
   display: inherit;
   
 }
+
+
+
+
+
+
 
 
 

@@ -131,7 +131,10 @@ function loadFn(){
   // 2.코드만들기
   let hcode = '';
 
- for(let x in mData){`
+ for(let x in mData){
+  
+  hcode +=
+  `
  <ul>
   <li>
      <!-- 서브메뉴 타이틀 -->
@@ -143,16 +146,67 @@ function loadFn(){
      <!-- 서브메뉴 리스트 : 열기상태 -->
      <div class="sub-menu-open">
          <ol>
-             <li>
-                 <a href="#">서브메뉴 리스트</a>
-             </li>
+             <!-- 서브메뉴 리스트 -->
+             ${makeCode(mData[x])}
          </ol>
      </div>
  </li>
 </ul>
 
- 
- `} ///forin/////
+
+`
+
+/*  구조화 연습
+ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>ol>li>a[href='#'] */
+
+// console.log('x',x,'/mData[x]',mData[x]);
+
+} ///forin///////////////////////////////
+
+
+// console.log('코드',hcode);
+
+function makeCode(obj){
+
+      //console.log('서브메뉴',obj);
+
+      let hcode ='';
+
+      for(let x in obj){
+      hcode += 
+      `
+      <li>
+        <a href="#"> 
+        <span class="sub-menu-open-list">
+        ${x}
+        </span>
+        </a>
+      </li>
+      `;
+    }////forin////////
+    return hcode;
+
+} ///////////makeCode함수 //////////
+
+
+
+//메뉴 생성하기
+snbList.innerHTML = hcode;
+
+
+
+/**********************************************  
+    [ 서브메뉴 버튼 누르면 내용 보이기]
+    이벤트 대상: .sub-menu-open-btn
+    변경 대상: .sub-menu-open
+
+**********************************************/
+
+
+domFn.qsa('.sub-menu-open-btn');
+
+
+
 
 
 };///////////loadFn////////////
