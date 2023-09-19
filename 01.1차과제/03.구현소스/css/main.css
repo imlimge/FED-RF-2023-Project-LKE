@@ -925,7 +925,7 @@ animation: video-cover-ani 1s ease-in forwards;
   padding: 4vw 0;
  
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: min(1.1rem,4vw);
   line-height: 1.8rem;
  
   text-align: justify;
@@ -1424,13 +1424,11 @@ color: #fff;
 
 .use-cont p{
   position: relative;
-  
   color: #f5ebdc;
   font-size: 1.2rem;
   text-align: center;
-  
   font-family: 'ChosunGu';
-
+  line-height: 1.7rem;
 
 }
 
