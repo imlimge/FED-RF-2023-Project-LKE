@@ -814,9 +814,9 @@ z-index: -1;
 
 .bg-txt{
   position: absolute;
-  font-size: 17rem;
-  line-height: 16rem;
-  top: 21%;
+  font-size: 23vw;
+  line-height: 23vw;
+  bottom: 0;
   right: 0;
 
   color: #000;
@@ -899,14 +899,11 @@ animation: video-cover-ani 1s ease-in forwards;
 
 
 .sub-title{
-  color:  #bb0a1f;
-  
+  color: #bb0a1f;
   font-family: 'Roboto Condensed', sans-serif;
-  margin-bottom: 20px;
-
+  margin: 3vw 0 1vw 0;
   font-weight: bold;
-  font-size: min(1.8rem,4.6vw);
-
+  font-size: min(1.8rem,3vw);
 
 }
 
@@ -944,18 +941,17 @@ display: inline-block;
 background-size: 100% 100%;
 background-repeat: no-repeat;
 background-position: top left;
-min-width: 258px;
+min-width: 177px;
 
 padding: 0.9em;
 
 font-family: 'Cafe24Ssurround';
 font-weight: bold;
-font-size: 22px;
+font-size: 1.2rem;
 line-height: 1.55em;
 margin: 5% 0;
 
 
-z-index: 888;
 transition: .4s;
 
 }
@@ -1185,7 +1181,6 @@ color: #fff;
 /* 오른쪽 1/2 */
 .shake-img-box{
  position: relative;
- height:700px;
 
 }
 
@@ -1240,22 +1235,22 @@ color: #fff;
 
 .pop-images img:nth-child(1){
   transform: translate(195px, -103px) ;
-  width: min(81.7vw,401px);
+  width: min(68.7vw,50vh);
 }
 
 .pop-images img:nth-child(2){
   transform: translate(98px, 28px);
-  width: min(99.7vw,567.5px);
+  width: min(99.7vw,71vh);
 
 }
 
 .pop-images img:nth-child(3){
   transform: translate(10.3px, -162px);
-  width: min(81.7vw,401px);
+  width: min(68.7vw,49.9vh);
 }
 .pop-images img:nth-child(4){
   transform: translate(-42.2px, 108px);
-  width: min(81.7vw,401px);
+  width: min(81.7vw,45vh);
 }
 
 

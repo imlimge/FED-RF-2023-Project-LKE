@@ -61,6 +61,16 @@
   .col2-block{display: block;}
 
  
+  .article {
+    padding: 4vw 6vw;
+  }
+
+  .shake-img-box{
+  
+    height:600px;
+   
+   }
+  
 
   .footer-menu{
     position: relative;
@@ -77,12 +87,13 @@
 /* --------------- 박스 그리드 1160px ----------------- */
 
 
-/* --------------- 박스 그리드 400px ----------------- */
-@media screen and (max-width:400px){
+/* --------------- 그리드 500px ----------------- */
+@media screen and (max-width:500px){
 
-/* 
-.banner-back span{
-  line-height: 3;
-} */
+  .article {
+    padding: 9vw 10vw;
+  }
+
+
 
 }
