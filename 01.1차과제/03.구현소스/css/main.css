@@ -903,18 +903,18 @@ animation: video-cover-ani 1s ease-in forwards;
   font-family: 'Roboto Condensed', sans-serif;
   margin: 3vw 0 1vw 0;
   font-weight: bold;
-  font-size: min(1.8rem,3vw);
+  font-size: min(1.8rem,4.7vw);
 
 }
 
 .title{
   font-family: 'RixInooAriDuriR';
   font-weight: normal;
-  font-size: min(4rem,6vw);
-  line-height: min(5rem,6vw);
+  font-size: min(3.3rem,7.5vw);
+  line-height: min(3.4rem,7.8vw);
 
   color: #222;
-  padding: 0 30% 0 0;
+  padding: 0 10% 0 0;
 
 }
 
@@ -992,8 +992,8 @@ cursor: pointer;
 
 
 .h-underline-last-line{
-    
-    border-bottom: 10px solid #222;
+
+    border-bottom: min(7.3px,1.6vw) solid #222;
     
 }
 
@@ -1158,7 +1158,7 @@ color: #fff;
 
 .app-inbox .h-underline-last-line{
     
-  border-bottom: 10px solid #fff;
+  border-bottom: min(7.3px,1.6vw) solid #fff;
   width: 100%;
 }
 
@@ -1408,7 +1408,7 @@ color: #fff;
   font-family: 'Cafe24Ssurround';
   font-weight: normal;
   font-size: min(2.4rem,7.3vw);
-  line-height: min(5rem,6vw);
+  line-height: min(3rem,8.8vw);
   color: #fff;
 
   text-align: center;
