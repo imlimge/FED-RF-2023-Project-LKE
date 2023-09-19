@@ -22,7 +22,7 @@
   margin: 47px auto;
 
 animation:  gnb-box-ani 1s ease-in-out 2.5s forwards;
-
+z-index: 9999;
  
 }
 
@@ -1421,11 +1421,11 @@ color: #fff;
 .use-cont p{
   position: relative;
   color: #f5ebdc;
-  font-size: 1.2rem;
+  font-size: min(1.1rem,4vw);
   text-align: center;
   font-family: 'ChosunGu';
   line-height: 1.7rem;
-
+  padding: 0px 15%;
 }
 
 .use-box01{

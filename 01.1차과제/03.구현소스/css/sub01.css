@@ -3,3 +3,39 @@
 
 
 
+#sub01-main *{
+  outline: 1px dashed red;
+}
+
+.sub-nav{
+  position: relative;
+  top:-300px;
+  width: 100%;
+  height: 600px;
+  background-color: #000;
+}
+
+.sub-outbox{
+  padding-top: -300px ;
+  box-sizing: border-box;
+  height: 600px;
+}
+
+.sub-inbox{
+  height: 300px;
+  
+}
+
+.menu-top{
+  position: relative;
+  top: -350px;
+  height: 500px;
+  width: 90%;
+  margin-left: auto;
+  background: url(../images/04-1.sub01-menu/01.whats-new/desktop-topBanner.png) no-repeat center/cover;
+}
+
+.menu-list{
+  
+  
+}
