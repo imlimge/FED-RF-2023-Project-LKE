@@ -335,13 +335,14 @@ text-align: center;
   height: calc(100% + 60px);
   width: 80vw;
   background-color: #d0021b;
+  left: -120%;
  
-  transform: translateX(-100%);
-
+  transition: .5s ease;
 }
 
 .sub-menu.on{
-  animation: snb-box-ani .5s ease-out forwards;
+
+ left:0;
 
 }
 
@@ -1531,6 +1532,7 @@ color: #fff;
 .copyright p{
 margin: 5px 0;
 font-size: .9rem;
+font-style: normal;
 
 }
 
