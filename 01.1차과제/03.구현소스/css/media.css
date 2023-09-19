@@ -60,7 +60,10 @@
   /* 보일 박스 */
   .col2-block{display: block;}
 
- 
+ .view-button{
+  min-width: 145px;
+  font-size: 1.1rem;
+ }
   .article {
     padding: 4vw 6vw;
   }
