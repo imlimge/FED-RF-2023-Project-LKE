@@ -26,6 +26,7 @@
   
 }
 
+
 .menu-top{
   position: relative;
   top: -350px;
@@ -34,6 +35,31 @@
   margin-left: auto;
   background: url(../images/04-1.sub01-menu/01.whats-new/desktop-topBanner.png) no-repeat center/cover;
 }
+
+
+.menu-content{
+  width: 50%;
+  height: 100%;
+  padding: 7vw 0vw 7vw 10vw;
+  box-sizing: border-box;  
+}
+
+.menu-title {
+  font-family: 'Cafe24Ssurround';
+  color: #fff;
+  font-size: min(3.3rem,7.5vw);
+  line-height: min(5rem,11vw);
+}
+
+.menu-content .h-underline-last-line{
+  border-bottom: min(7.3px,1.6vw) solid #fff;
+  width: 100%;
+}
+
+.menu-content p{
+  color: #fff;
+}
+
 
 .menu-list{
   
