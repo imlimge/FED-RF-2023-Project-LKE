@@ -1234,23 +1234,23 @@ color: #fff;
 
 
 .pop-images img:nth-child(1){
-  transform: translate(195px, -103px) ;
-  width: min(68.7vw,50vh);
+  transform: translate(53.7%, -27%);
+  width: min(69vw,42.2vh);
 }
 
 .pop-images img:nth-child(2){
-  transform: translate(98px, 28px);
-  width: min(99.7vw,71vh);
+  transform: translate(23%, 23%);
+  width: min(97.7vw,71vh);
 
 }
 
 .pop-images img:nth-child(3){
-  transform: translate(10.3px, -162px);
-  width: min(68.7vw,49.9vh);
+  transform: translate(1%, -37%);
+  width: min(69.7vw,48.9vh);
 }
 .pop-images img:nth-child(4){
-  transform: translate(-42.2px, 108px);
-  width: min(81.7vw,45vh);
+  transform: translate(-22%, 41%);
+  width: min(78.7vw,42vh);
 }
 
 
