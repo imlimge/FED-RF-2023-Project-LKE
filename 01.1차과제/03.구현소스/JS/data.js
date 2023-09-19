@@ -107,14 +107,15 @@ const mData = {
     "COMM.": ["광고(TV/Digital", "수상내역", "신제품", "ESG"],
   },
 
-  고객센터: [
+  고객센터 : {
+    고객센터 :[
     "공지사항",
     "버거킹앱 이용안내",
     "FAQ",
     "문의",
     "가맹점모집",
-    "인재채용",
-  ],
+    "인재채용"],
+  },
 }; ///////////// mData ///////////////////
 
 
@@ -142,13 +143,14 @@ function loadFn(){
      <!-- 서브메뉴 리스트 열기 버튼 -->
      <div class="sub-menu-open-btn">
      <img src="./images/01.top-navigation/icon_r.png" alt="서브메뉴 열기 버튼">                                       
-     </div>
+     
      <!-- 서브메뉴 리스트 : 열기상태 -->
      <div class="sub-menu-open">
          <ol>
              <!-- 서브메뉴 리스트 -->
              ${makeCode(mData[x])}
          </ol>
+     </div>
      </div>
  </li>
 </ul>
@@ -202,9 +204,10 @@ snbList.innerHTML = hcode;
 
 **********************************************/
 
-
+//이벤트 대상
 domFn.qsa('.sub-menu-open-btn');
-
+//변경대상
+domFn.qsa('.sub-menu-open');
 
 
 

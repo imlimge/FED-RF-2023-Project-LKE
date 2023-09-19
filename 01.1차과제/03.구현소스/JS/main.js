@@ -8,9 +8,14 @@ window.addEventListener('DOMContentLoaded', loadFn);
 
 
 
-//DOM선택함수
+//선택함수
 const qs = (x) => document.querySelector(x);
 const qsa = (x) => document.querySelectorAll(x);
+const qsEl = (el, x) => el.querySelector(x);
+const qsaEl = (el, x) => el.querySelectorAll(x);
+
+
+
 
 // addEvent 함수
 // ele - 요소, evt - 이벤트, fn - 함수
@@ -71,10 +76,112 @@ const cover = qs('.cover');
 
 
 
+/********************************************
+ [모바일 서브메뉴박스 열기]
+  1. 이벤트 종류 : click
+  2. 이벤트 대상 : .sub-menu-open-btn
+  3. 움직일 대상 : .sub-menu-open
+  4. 기능설계 : 버튼을 누르면 .on을 추가한다
+********************************************/
+
+const subOpen = qs('.m-hamburger>a');
+const subClose = qs('.sub-menu-close');
+const snbBox = qs('.m-snb-box');
+const snbMenu = qs('.sub-menu');
+const body = document.getElementsByTagName('body')[0];
+
+
+
+
+subOpen.addEventListener('click',open);
+
+
+
+
+function open(){
+  snbBox.classList.add('on');
+  snbMenu.classList.add('on');
+  body.classList.add('scrollLock');
+
+}
+
+subClose.addEventListener('click',close);
+
+function close(){
+
+    snbBox.classList.remove('on');
+    snbMenu.classList.remove('on');
+    body.classList.remove('scrollLock');
+
+}
+
+
+
 
   
+/********************************************
+ [모바일 서브메뉴]
+  1. 이벤트 종류 : click
+  2. 이벤트 대상 : .sub-menu-open-btn
+  3. 움직일 대상 : .sub-menu-open
+  4. 기능설계 : 버튼을 누르면 .on을 추가한다
+********************************************/
+// 이벤트 대상
+const snbBtn = qsa('.sub-menu-open-btn');
+const snbList = qsa('.sub-menu-open');
 
 
+
+
+
+console.log(snbBtn,snbList);
+
+// 이벤트 설정
+snbBtn.forEach(ele=>{
+  addEvt(ele,'click',showSub);
+});
+
+
+// 함수 설정
+function showSub(){
+
+  console.log('나야나',this);
+  let isBtn = this;
+
+  // 2. 서브메뉴 내부 ol박스 높이값 읽기
+  let hv = qsEl(isBtn,'ol').clientHeight;
+  console.log(hv); 
+
+  qsEl(isBtn,'.sub-menu-open').style.height = hv + 'px';
+
+  isBtn.classList.add('on');
+
+
+
+  snbBtn.forEach(ele=>{
+    let result = ele.isSameNode(this);
+    
+    let target = qsEl(ele,'.sub-menu-open');
+
+    console.log('같니', result,target);
+    
+  // 현재 노드와 같은 li는 처리하지 않음
+
+ 
+  if(!result){ // false일때만 들어옴
+     
+      // 하위에 .smenu가 없으면 처리안함
+      if(target) 
+      target.style.height = '0px';
+       }///if////
+
+})
+
+
+
+
+
+}///showSub/////
 
 
    
@@ -187,7 +294,7 @@ function rightSlide(){
 scrollMove();
 
 
-clearAuto()
+clearAuto();
 
 
 }///rightSlide 함수 /////
@@ -344,7 +451,7 @@ const winH = window.innerHeight/2;
 
 addEvt(window,'scroll',()=>{
   scShow.forEach(ele=>{
-    console.log(getBCR(ele))
+    //console.log(getBCR(ele))
     if(getBCR(ele) < winH) ele.classList.add('on');
     else ele.classList.remove('on');
   })

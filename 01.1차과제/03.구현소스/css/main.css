@@ -306,9 +306,17 @@ text-align: center;
 .m-snb-box{
   position: absolute;
   z-index: 999;
+  
+ 
 }
 
-.m-snb-box:before{
+.m-snb-box{
+
+  
+}
+
+
+.m-snb-box.on::before{
   content: '';
   position: absolute;
   top: -60px;
@@ -327,27 +335,37 @@ text-align: center;
   height: calc(100% + 60px);
   width: 80vw;
   background-color: #d0021b;
-  /* overflow-y: auto; */
-  
+ 
+  transform: translateX(-100%);
+
 }
+
+.sub-menu.on{
+  animation: snb-box-ani .5s ease-out forwards;
+
+}
+
 
 .sub-menu-outbox{
   width: 100%;
   height: 100%;
-  padding: 15vw 7vw;
+  padding: 15vw 7vh;
   box-sizing: border-box;
 }
 
 .sub-menu-inbox{
   width: 100%;
   height: 100%;
+  top: 60px;
+  position: relative;
 }
 
 
 
 /* 서브메뉴 클로즈 버튼 */
 .sub-menu-close{
-  height: 15%;
+  cursor: pointer;
+  height: 17vw;
 }  
 
 
@@ -363,13 +381,14 @@ text-align: center;
 .sub-menu-list {
   position: relative;
   height: 85%;
+  margin-top: 3vh;
 }
 
 
 .sub-menu-title{
   display: inline-block;
   font-family: 'Cafe24Ssurround';
-  font-size: min(6.6vw,1.8rem);
+  font-size: min(4.7vw,2.3rem);
   color: #fff;
 
 }
@@ -378,14 +397,12 @@ text-align: center;
   content: '';
   width: 100%;
   display: inline-block;
-  border-bottom:1px solid #ff4747 ;
+  border-bottom:1px solid #a50505 ;
   margin: 4vw 0;
 
 }
 
 .sub-menu-open-btn{
- position: absolute;
-display: inline-block; 
 right: 0;
 
 
@@ -395,27 +412,28 @@ right: 0;
 
 
 .sub-menu-open-btn img{
-  width: 55%;
   cursor: pointer;
-  transition: .5s ease-out;
+  transition: .2s ease-out;
+  right: 0;
+  position: absolute;
+  transform: scale(0.5) translateY(-145%);
 }
 
-.sub-menu-open-btn img.on{
-  transform: rotate(90deg);
-  transition: .5s ease-out;
+.sub-menu-open-btn.on img{
+  transform: scale(0.5) translateY(-145%) rotate(90deg);
+  transition: .3s ease-out;
 }
 
 
 
 .sub-menu-open{
-  height: 100%;
+  height: 0;
   overflow: hidden;
-  transition: height 2s ease-out;
+  transition: height .5s ease-out;
 }
 
 .sub-menu-open.on{
-  height: 100%;
-  transition: height 1s ease-out;
+
 }
 
 
@@ -423,7 +441,7 @@ right: 0;
   display: inline-block;
   color: #fff;
   font-family: 'ChosunGu';
-  font-size: min(3.3vw,1.5rem);
+  font-size: min(4.6vw,1.4rem);
   padding: 1.7vw 0 1.7vw 4.2vw;
 }
 
@@ -1636,3 +1654,7 @@ font-size: .9rem;
   clear: both;
 
 }
+
+
+
+.scrollLock { overflow: hidden; }
