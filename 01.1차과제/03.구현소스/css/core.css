@@ -121,7 +121,7 @@ font-family: 'Noto Sans KR', sans-serif;
 }
 .scbar::-webkit-scrollbar-thumb{
   /* 스크롤바 */
-  background-color: #222;
+  background-color: #111;
   border-radius: 8px;
 }
 .scbar::-webkit-scrollbar-track{

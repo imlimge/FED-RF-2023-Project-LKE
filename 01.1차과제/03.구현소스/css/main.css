@@ -22,8 +22,8 @@
   margin: 47px auto;
 
 animation:  gnb-box-ani 1s ease-in-out 2.5s forwards;
-z-index: 9999;
- 
+
+ z-index: 999;
 }
 
 .gnb{
@@ -614,7 +614,7 @@ z-index: -1;
   font-family: 'RixInooAriDuriR';
   font-weight: normal;
   font-size: min(3rem,9vw);
-  color: #222;
+  color: #111;
   text-align: center;
   display: inline-block;
 }
@@ -628,7 +628,7 @@ z-index: -1;
   font-weight: bold;
   font-size: min(1.2rem,3vw);
   text-align: center;
-  color: #222;
+  color: #111;
 
 }
 
@@ -913,7 +913,7 @@ animation: video-cover-ani 1s ease-in forwards;
   font-size: min(3.3rem,7.5vw);
   line-height: min(3.4rem,7.8vw);
 
-  color: #222;
+  color: #111;
   padding: 0 10% 0 0;
 
 }
@@ -993,7 +993,7 @@ cursor: pointer;
 
 .h-underline-last-line{
 
-    border-bottom: min(7.3px,1.6vw) solid #222;
+    border-bottom: min(7.3px,1.6vw) solid #111;
     
 }
 
@@ -1004,7 +1004,7 @@ cursor: pointer;
     bottom: 0px;
     left: 0;
     height: 5px;
-    border-bottom: 10px solid #222;
+    border-bottom: 10px solid #111;
     width: 100%;
     position: absolute;
     margin-bottom: -5px;
@@ -1148,7 +1148,7 @@ color: #fff;
 
 
 .app-inbox .sub-title{
-  color: #222;
+  color: #111;
 }
 
 .app-inbox .article{
@@ -1476,7 +1476,7 @@ color: #fff;
 .footer{
   width: 100%;
   height: 200px;
-  background-color: #222;
+  background-color: #111;
   padding: 5vh 0;
 
   color: #f5ebdc;
@@ -1551,6 +1551,7 @@ font-style: normal;
   background-color: #d0021b;
   animation: cover-ani 4s ease-in-out 1s forwards;
 
+  z-index: 999999;
 }
 
 .cover.on{
