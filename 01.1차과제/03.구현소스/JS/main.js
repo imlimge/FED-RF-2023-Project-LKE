@@ -31,6 +31,7 @@ function loadFn() {
  [새로고침 시 오프닝 커버 없애기]
 ********************************************/
   const cover = qs(".cover");
+  const gnbBox = qs(".gnb-box");
 
   let keyValue = location.href;
 
@@ -48,6 +49,7 @@ function loadFn() {
   //물음표가 있으면 on넣기 (display : none)
   if (keyValue.indexOf("?") !== -1) {
     cover.classList.add("on");
+    gnbBox.classList.remove("on");
   }
 
   /********************************************

@@ -119,6 +119,21 @@ const mData = {
 }; ///////////// mData ///////////////////
 
 
+
+
+
+const snbLink = {
+  메뉴소개: "./sub01.html",
+  매장소개: "./sub01.html",
+  이벤트: "./sub01.html",
+  브랜드스토리: "./sub01.html",
+  고객센터: "./sub01.html",
+  딜리버리: "./sub01.html",
+
+  }; /////////////snbLink ///////////////
+
+
+
 function loadFn(){
   // console.log('로딩완료2');
 
@@ -128,6 +143,7 @@ function loadFn(){
   const snbList = domFn.qs('.sub-menu-list');
   
 
+  
 
   // 2.코드만들기
   let hcode = '';
@@ -139,7 +155,7 @@ function loadFn(){
  <ul>
   <li>
      <!-- 서브메뉴 타이틀 -->
-     <a href="#"><span class="sub-menu-title">${x}</span></a>
+     <a href="${snbLink[x]}"><span class="sub-menu-title">${x}</span></a>
      <!-- 서브메뉴 리스트 열기 버튼 -->
      <div class="sub-menu-open-btn">
      <img src="./images/01.top-navigation/icon_r.png" alt="서브메뉴 열기 버튼">                                       
@@ -157,6 +173,8 @@ function loadFn(){
 
 
 `
+//console.log('링링링링',hcode);
+;
 
 /*  구조화 연습
 ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>ol>li>a[href='#'] */
@@ -167,6 +185,9 @@ ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>
 
 
 // console.log('코드',hcode);
+
+
+
 
 function makeCode(obj){
 

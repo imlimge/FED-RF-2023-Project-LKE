@@ -154,6 +154,24 @@ transform-origin: center;
 }
 
 
+@keyframes static-image-ani{
+0%{
+
+transform: rotate(0deg);
+transform-origin: center;
+}
+
+100%{
+ transform: rotate(-5deg);
+ transform-origin: center;
+}
+
+
+}
+
+
+
+
 
 
 /************************ 커버 ************************/
