@@ -154,15 +154,15 @@ transform-origin: center;
 }
 
 
-@keyframes static-image-ani{
+@keyframes shake-ani{
 0%{
 
-transform: rotate(0deg);
+transform: rotate(10deg);
 transform-origin: center;
 }
 
 100%{
- transform: rotate(-5deg);
+ transform: rotate(-10deg);
  transform-origin: center;
 }
 

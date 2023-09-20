@@ -1089,10 +1089,6 @@ cursor: pointer;
 }
 
 
-.static-image.on>img{
-  animation: static-image-ani .1s ease-out 8 alternate backwards;
-}
-
 
 .app-outbox:before{ 
   content: ' shake';
@@ -1193,6 +1189,10 @@ color: #fff;
 }
 
 
+.shake.on img{
+  animation: shake-ani .1s ease-out 8 alternate backwards;
+}
+
 
 
 /* 이미지 전체 사이즈 & 위치 조정 */
@@ -1208,57 +1208,63 @@ color: #fff;
 
 }
 
-/* 고정 이미지- 핸드폰 */
-.static-image{
-
-}  
-
-/* 모바일 버전일때 크기 */
-/* .static-image{
-  transform: translateY(-13vh) scale(0.6);
-
-
-}  
- */
 
 
 
-.static-img>img:nth-child(1){
+
+
+
+/* 나중에 등장하는 이미지 */
+.pop-img{
 
 }
 
 
-/* 나중에 등장하는 이미지 */
-.pop-images{
+
+.pop-img img:nth-child(1){
+  opacity: 0;
+  transform: translate(53.7%, -27%);
+  width: min(69vw,42.2vh);
+}
+
+.pop-img img:nth-child(2){
+  opacity: 0;
+  transform: translate(23%, 23%);
+  width: min(97.7vw,71vh);
+  
+}
+
+.pop-img img:nth-child(3){
+  opacity: 0;
+  transform: translate(1%, -37%);
+  width: min(69.7vw,48.9vh);
  
+}
+.pop-img img:nth-child(4){
+  opacity: 0;
+  transform: translate(-22%, 41%);
+  width: min(78.7vw,42vh);
   
 }
 
 
 
-.pop-images img:nth-child(1){
-  transform: translate(53.7%, -27%);
-  width: min(69vw,42.2vh);
+.pop-img.on img:nth-child(1){
+ opacity: 100%;
+ transition: opacity .03s ease-in .1s;
 }
-
-.pop-images img:nth-child(2){
-  transform: translate(23%, 23%);
-  width: min(97.7vw,71vh);
-
+.pop-img.on img:nth-child(2){
+ opacity: 100%;
+ transition: opacity .03s ease-in .2s;
 }
-
-.pop-images img:nth-child(3){
-  transform: translate(1%, -37%);
-  width: min(69.7vw,48.9vh);
+.pop-img.on img:nth-child(3){
+ opacity: 100%;
+ transition: opacity .03s ease-in .3s;
 }
-.pop-images img:nth-child(4){
-  transform: translate(-22%, 41%);
-  width: min(78.7vw,42vh);
+.pop-img.on img:nth-child(4){
+ opacity: 100%;
+ transition: opacity .03s ease-in .4s;
 }
-
-
-
-
 
 
 
