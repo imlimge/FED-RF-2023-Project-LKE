@@ -2,6 +2,23 @@
 
 
 
+//로딩구역 호출설정
+window.addEventListener('DOMContentLoaded', loadFn);
+
+
+
+// DOM 함수 객체 //////////////
+const domFn = {
+  // 요소선택함수 ////////
+  qs: (x) => document.querySelector(x),
+  qsEl: (el, x) => el.querySelector(x),
+  qsa: (x) => document.querySelectorAll(x),
+  qsaEl: (el, x) => el.querySelectorAll(x),
+
+  // 이벤트셋팅함수
+  addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn),
+}; /////// domFn 객체 /////////////
+
 
 // 서브메뉴 데이터
 const mData = {
@@ -121,35 +138,118 @@ const mData = {
 
 
 const snbLink = {
-  메뉴소개: "./sub01.html?key=val",
-  매장소개: "./sub01.html?key=val",
-  이벤트: "./sub01.html?key=val",
-  브랜드스토리: "./sub01.html?key=val",
-  고객센터: "./sub01.html?key=val",
-  딜리버리: "./sub01.html?key=val",
+  메뉴소개: "./sub01.html",
+  매장소개: "./sub01.html",
+  이벤트: "./sub01.html",
+  브랜드스토리: "./sub01.html",
+  고객센터: "./sub01.html",
+  딜리버리: "./sub01.html",
 
   }; /////////////snbLink ///////////////
 
 
 
-  const bData = [ 
-      "아메리카노",
-      "로드하우스 와퍼",
-      "로드하우스 그릴드 치킨 버거",
-      "잭프라이드 치킨 버거",
-      "로드하우스 치킨 헝거세트 ",
-      "로드하우스 콤보 헝거세트",
-      "터키시 베이컨 에그 모닝",
-      "그레이비 치킨볼 팩",
-      "그레이비 치킨볼 콤보",
-      "그레이비 치킨볼",
-      "비스코프 라떼",
-      "비스코프 쉐이크",
-      "포테이토 모닝 콤보",
-      "몬테스리스토 콤보",
-      "그레이비 와퍼 세트",
-      "로드하우스 와퍼 주니어",
-      "스파이시 더블 와퍼",
-      "풀드포크 앵거스 와퍼",
-    ]
- 
+function loadFn(){
+  // console.log('로딩완료2');
+
+
+
+  // 1.대상선정: .sub-menu-list
+  const snbList = domFn.qs('.sub-menu-list');
+  
+
+  
+
+  // 2.코드만들기
+  let hcode = '';
+
+ for(let x in mData){
+  
+  hcode +=
+  `
+ <ul>
+  <li>
+     <!-- 서브메뉴 타이틀 -->
+     <a href="${snbLink[x]}"><span class="sub-menu-title">${x}</span></a>
+     <!-- 서브메뉴 리스트 열기 버튼 -->
+     <div class="sub-menu-open-btn">
+     <img src="./images/01.top-navigation/icon_r.png" alt="서브메뉴 열기 버튼">                                       
+     
+     <!-- 서브메뉴 리스트 : 열기상태 -->
+     <div class="sub-menu-open">
+         <ol>
+             <!-- 서브메뉴 리스트 -->
+             ${makeCode(mData[x])}
+         </ol>
+     </div>
+     </div>
+ </li>
+</ul>
+
+
+`
+//console.log('링링링링',hcode);
+;
+
+/*  구조화 연습
+ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>ol>li>a[href='#'] */
+
+// console.log('x',x,'/mData[x]',mData[x]);
+
+} ///forin///////////////////////////////
+
+
+// console.log('코드',hcode);
+
+
+
+
+function makeCode(obj){
+
+      //console.log('서브메뉴',obj);
+
+      let hcode ='';
+
+      for(let x in obj){
+      hcode += 
+      `
+      <li>
+        <a href="#"> 
+        <span class="sub-menu-open-list">
+        ${x}
+        </span>
+        </a>
+      </li>
+      `;
+    }////forin////////
+    return hcode;
+
+} ///////////makeCode함수 //////////
+
+
+
+//메뉴 생성하기
+snbList.innerHTML = hcode;
+
+
+
+/**********************************************  
+    [ 서브메뉴 버튼 누르면 내용 보이기]
+    이벤트 대상: .sub-menu-open-btn
+    변경 대상: .sub-menu-open
+
+**********************************************/
+
+//이벤트 대상
+domFn.qsa('.sub-menu-open-btn');
+//변경대상
+domFn.qsa('.sub-menu-open');
+
+
+
+
+};///////////loadFn////////////
+
+
+
+// ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>ol>li>a[href='#']

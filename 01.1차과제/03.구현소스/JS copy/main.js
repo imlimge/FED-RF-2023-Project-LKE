@@ -26,10 +26,121 @@ let clickSts = 0;
 // 2. 슬라이드 이동시간 : 상수로 설정
 const TIME_SLIDE = 200;
 
-
-
 function loadFn() {
- 
+  /********************************************
+ [새로고침 시 오프닝 커버 없애기]
+********************************************/
+  const cover = qs(".cover");
+  const gnbBox = qs(".gnb-box");
+
+  let keyValue = location.href;
+
+  // console.log(keyValue.indexOf("?"));
+  // url 창 전체주소
+  // url창에 ?표가 있는 여부 검사(-1이면 물음표가 없음)
+  // 물음표가 있는 파라미터주소이면 if문 안으로 못들어감!
+
+  //물음표가 없으면 ?넣기
+  if (keyValue.indexOf("?") == -1) {
+    // 기존 url에 파라미터전달값 삽입하기
+    history.pushState("my", null, "?key=val");
+  }
+
+  //물음표가 있으면 on넣기 (display : none)
+  if (keyValue.indexOf("?") !== -1) {
+    cover.classList.add("on");
+    gnbBox.classList.remove("on");
+  }
+
+  /********************************************
+ [모바일 서브메뉴박스 열기]
+  1. 이벤트 종류 : click
+  2. 이벤트 대상 : .sub-menu-open-btn
+  3. 움직일 대상 : .sub-menu-open
+  4. 기능설계 : 버튼을 누르면 .on을 추가한다
+********************************************/
+
+  const subOpen = qs(".m-hamburger>a");
+  const subClose = qs(".sub-menu-close");
+  const snbBox = qs(".m-snb-box");
+  const snbMenu = qs(".sub-menu");
+  const body = document.getElementsByTagName("body")[0];
+
+  subOpen.addEventListener("click", open);
+
+  function open() {
+    snbBox.classList.add("on");
+    snbMenu.classList.add("on");
+    body.classList.add("scrollLock");
+  }
+
+  subClose.addEventListener("click", close);
+
+  function close() {
+    snbBox.classList.remove("on");
+    snbMenu.classList.remove("on");
+    body.classList.remove("scrollLock");
+  }
+
+  /********************************************
+ [모바일 서브메뉴]
+  1. 이벤트 종류 : click
+  2. 이벤트 대상 : .sub-menu-open-btn
+  3. 움직일 대상 : .sub-menu-open
+  4. 기능설계 : 버튼을 누르면 .on을 추가한다
+********************************************/
+  // 이벤트 대상
+  const snbBtn = qsa(".sub-menu-open-btn");
+  const snbList = qsa(".sub-menu-open");
+
+  // console.log(snbBtn, snbList);
+
+  // 이벤트 설정
+  snbBtn.forEach((ele) => {
+    addEvt(ele, "click", showSub);
+  });
+
+  // 함수 설정
+  function showSub() {
+
+      // console.log("나야나", this);
+
+    let isBtn = this;
+
+    if (isBtn) {
+      // 2. 서브메뉴 내부 ol박스 높이값 읽기
+      let hv = qsEl(isBtn, "ol").clientHeight;
+      
+
+      qsEl(isBtn, ".sub-menu-open").style.height =
+        (isBtn.clientHeight == 0 ? hv : 0) + "px";
+        
+
+      isBtn.classList.toggle("on");
+
+      snbBtn.forEach((ele) => {
+        let result = ele.isSameNode(this);
+
+        let target = qsEl(ele, ".sub-menu-open");
+
+        console.log("같니", result, target);
+
+        // 현재 노드와 같은 li는 처리하지 않음
+
+        if (!result) {
+          // false일때만 들어옴
+
+          // 하위에 .smenu가 없으면 처리안함
+          if (target) target.style.height = "0px";
+        } ///if////
+      }); /////forEach///////////
+
+
+
+
+
+    } ///if////////////
+  } ///showSub/////
 
   /****************************************** 
   [무버 이동 정의]
@@ -237,6 +348,19 @@ function loadFn() {
       else ele.classList.remove("on");
     });
   });
+
+/**************************************  
+  서브페이지 - 메뉴
+  -> 메뉴리스트
+
+**************************************/
+
+
+  // 메뉴 대상 요소 : .burger
+  const burger = qs(".burger");
+  console.log(burger);
+
+
 
 
 

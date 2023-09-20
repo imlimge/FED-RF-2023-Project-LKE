@@ -85,6 +85,29 @@
   .copyright p{
     line-height: 1.2rem;
   }
+
+
+  .menu-list-item{
+    left : 0;
+  }
+  .menu-list-item>a>img{
+    display: none;
+  }
+
+  .menu-list-item h4{
+    margin-top: 9vw;
+  }
+
+  .burger ul{    
+   
+    grid-template-columns: repeat(3,1fr);
+ 
+  }
+  .item-list{
+    font-size: min(1.2rem,2.4vw);
+  }
+
+
 }
 
 
@@ -98,6 +121,14 @@
     padding: 9vw 10vw 9vw 0;
   }
 
-
+  .burger ul{    
+   
+    grid-template-columns: repeat(2,1fr);
+ 
+  }
+  
+  .item-list{
+    font-size: min(1rem,16px);
+  }
 
 }

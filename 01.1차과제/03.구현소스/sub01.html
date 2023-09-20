@@ -12,11 +12,14 @@
         <link rel="stylesheet" href="./css/media.css" />
 
         <!-- 외부 JS  -->
-        <script src="./JS/main.js" defer></script>
-        <!-- 메뉴 data JS -->
-        <script src="./JS/data.js"></script>
+        <script src="./JS/data.js" defer></script>
+        <!-- 외부 JS  -->
+        <script type="module"src="./JS/sub01.js"></script>
+        <!-- 외부 공통 JS  -->
+        <script type="module" src="./JS/common.js"></script>
+       
 
-      
+
     </head>
    
     <!-- 스크롤 효과 .scbar -->
@@ -39,7 +42,7 @@
                         <ul class="gnb ">
                             <!-- 왼쪽메뉴 -->
                             <li>
-                                <a href="#">메뉴소개</a>
+                                <a href="./sub01.html?key=val">메뉴소개</a>
                             </li>
                             <li>
                                 <a href="#">매장소개</a>
@@ -207,7 +210,7 @@
                      
 
                        <!-- 메뉴 리스트 버튼 -->
-                       <div class="menu-btn">
+                       <div class="menu-btn col1-block col2-none">
                         <img src="./images/00.common/icon_l.png" alt="메뉴 왼쪽버튼">
                         <img src="./images/00.common/icon_r.png" alt="메뉴 오른쪽버튼">
                        </div>
@@ -218,23 +221,82 @@
             </div>  <!-- 메뉴 리스트 겉박스 -->
         </div>
 
+
+
+
         <div class="menu">
-            <div class="menu-top">
+            <!-- 메뉴 소개 -->
+            <div class="menu-top col1-block col2-none">
                 <div class="menu-content">
                     <h2 class="menu-title">
+                        <span class="h-underline-last-line">스페셜 & 할인팩</span></h2>
+                        <p class="article">버거킹의 새로운 메뉴를 소개합니다! <br>스페셜한 새로운 메뉴와 할인된 세트 메뉴 </p>
+
+                </div>
+
+
+
+            </div><!-- 메뉴 소개 - 모바일 -->
+            <div class="m-menu-top col1-none col2-block">
+                <div class="m-menu-content">
+                    <img src="./images/04.sub-top/menu01.png" alt="메뉴소개 모바일 대표 버거이미지">
+                    <h2 class="m-menu-title">
                         <span class="h-underline-last-line">스페셜 & 할인팩</span></h2>
                         <p class="article">버거킹의 새로운 메뉴를 소개합니다! <br>스페셜한 새로운 메뉴와 신제품 </p>
 
                 </div>
 
             </div>
-            <div class="menu-list">
+
+
+            <!-- 아이템(버거) 리스트 -->
+            <div class="item-list">
+                <div class="bgbox item"><!-- 배경글자박스 -->
+                    <div class="bg-txt item">  <!-- 배경글자 -->
+                        BEST
+                        <br>
+                        AND
+                        <br>
+                        SPECIAL
+                     </div>
+                </div> <!-- 배경글자박스 -->
+                <div class="burger">
+
+
+
+                </div>
+
 
 
 
             </div>
         </div>
 
+
+
+    <!-- 오프닝 커버 -->
+
+    <div class="cover col1-block col2-none">
+             
+        <span>Welcome</span>
+        <div class="banner-burgerImg col1-block col2-none ">
+            
+            <img src="./images/03.main/01.banner/burger_img (9).png" alt="배너 버거이미지9">
+            <img src="./images/03.main/01.banner/burger_img (8).png" alt="배너 버거이미지8">
+            <img src="./images/03.main/01.banner/burger_img (7).png" alt="배너 버거이미지7">
+            <img src="./images/03.main/01.banner/burger_img (6).png" alt="배너 버거이미지6">
+            <img src="./images/03.main/01.banner/burger_img (5).png" alt="배너 버거이미지5">
+            <img src="./images/03.main/01.banner/burger_img (4).png" alt="배너 버거이미지4">
+            <img src="./images/03.main/01.banner/burger_img (3).png" alt="배너 버거이미지3">
+            <img src="./images/03.main/01.banner/burger_img (2).png" alt="배너 버거이미지2">
+            <img src="./images/03.main/01.banner/burger_img (1).png" alt="배너 버거이미지1">
+        
+        
+        </div> 
+        
+        <span>to BURGERKING</span>
+        
+</div>
 
 
           
@@ -276,8 +338,10 @@
             </address>
         </div>
         <div class="sns">
+        <!--     
             <a href=""></a>
-            <a href=""></a>
+            <a href=""></a> 
+        -->
         </div>
     </div>  <!-- 푸터박스 --> 
 
