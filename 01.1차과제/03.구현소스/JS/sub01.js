@@ -73,12 +73,7 @@ mbtn.forEach(ele=>dFn.addEvt(ele,'click',bMove));
 
 function bMove(){
 
-  
-for (let i = 25; i<100; i += 25){
- 
-
-
-  
+   
 
   let isRight = this.classList.contains('ab2');
  
@@ -86,19 +81,16 @@ for (let i = 25; i<100; i += 25){
 
  if(isRight){
    
-   mList.style.right = i+'%';
-   console.log(i);
-    
+   mList.style.right = '25%';
+   
    }
 
    else{
-     mList.style.right = -i+'%';
+     mList.style.right = '0%';
    }
 
 
 }
-}
-
 
 
 /* 
