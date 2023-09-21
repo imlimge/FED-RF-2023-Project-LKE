@@ -27,6 +27,7 @@
   height: 300px;
   position: relative;
   top: 300px;
+  overflow: hidden;
 }
 
 
@@ -48,8 +49,9 @@ cursor: pointer;
 
 
 .menu-list{
-  overflow: hidden;
+
  display: flex;
+ position:relative;
 
 }
 
@@ -65,16 +67,21 @@ cursor: pointer;
   transition: opacity .8s;
 }
 
+
+
 .menu-list-item:first-child{
   opacity: 1;
+  
 }
 
 .menu-list-item.on{
   opacity: 1;
+
 }
 
 .menu-list-item:hover{
   opacity: 1;
+  
 }
 
 
@@ -85,7 +92,65 @@ cursor: pointer;
 .menu-list-item h4{
   color: #fff;
   margin-top: 10px;
+  word-break: keep-all;
+  display: inline-block;
 }
+
+/* .menu-list-item:first-child h4{
+  color:#d0021b;
+}
+
+.menu-list-item:hover h4{
+  color:#d0021b;
+}
+ */
+
+
+.menu-list-item h4::after{
+  content: '';
+  display: block;
+
+  width: 0%;
+  margin-left: 100%;
+
+  height: 3px;
+  background-color: #d0021b;
+
+  transition:.3s;
+  margin: .3vw 0;
+
+}
+
+
+
+
+.menu-list-item.on h4::after{
+  content: '';
+  display: block;
+
+  width: 100%;
+  margin-left: 100%;
+
+  height: 3px;
+  background-color: #d0021b;
+
+  transition:.3s;
+  margin: .3vw 0;
+
+}
+
+
+
+.menu-list-item:hover h4::after{
+  width: 100%;
+  margin-left: 0%;
+  transition: width .3s;
+
+} 
+
+
+
+
 
 /*********************** 메뉴소개 ************************/
 
@@ -106,7 +171,7 @@ cursor: pointer;
 .menu-content{
   width: 50%;
   height: 100%;
-  padding: 7vw 0vw 7vw 10vw;
+  padding: 12vw 0vw 7vw 10vw;
   box-sizing: border-box;  
 }
 
@@ -115,6 +180,7 @@ cursor: pointer;
   color: #fff;
   font-size: min(3.3rem,7.5vw);
   line-height: min(5rem,11vw);
+  word-break: keep-all;
 }
 
 .menu-content .h-underline-last-line{
@@ -146,7 +212,7 @@ cursor: pointer;
 
 .m-menu-content>img{
   position: relative;
-  width: 35vw;
+  width: 40vw;
 
 }
 
@@ -155,7 +221,7 @@ cursor: pointer;
   color: #fff;
   font-size: min(2rem,5.7vw);
   margin-top: 4vw;
- 
+  word-break: keep-all;
 }
 
 .m-menu-content .h-underline-last-line{
@@ -168,6 +234,7 @@ cursor: pointer;
   font-size: min(1.1rem,3vw);
   margin: 5vw auto;
   padding: 0;
+  line-height: min(1.4rem,4vw);
 }
 
 /*********************** 아이템(버거) 리스트  ************************/
@@ -175,14 +242,22 @@ cursor: pointer;
 
   margin: 5vw 10vw;
 
+
+}
+
+
+
+.item-list p{
   font-family: 'Cafe24Ssurround';
-  font-weight: normal;
   color: #111;
   font-weight: bold;
 
   font-size: min(1.2rem,1.7vw);
+  word-break: keep-all;
 
+  
 }
+
 
 
 .bgbox.item{
@@ -220,4 +295,18 @@ cursor: pointer;
 .burger img:hover{
   transform: scale(1.06);
   transition: 0.5s;
+
 }
+
+
+.burger img:hover .item-list p {
+  margin-bottom: 1vw;
+
+}
+
+
+/* 이미지 호버시 글자 작아짐 - 왜 안되지 */
+/* .burger img:hover .item-list p{
+  transform: scale(0.9);
+  transition: 0.5s;
+} */
