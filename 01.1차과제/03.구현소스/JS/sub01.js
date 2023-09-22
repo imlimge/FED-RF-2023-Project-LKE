@@ -9,23 +9,51 @@ import dFn from "./dom.js";
 const menuFolder = {
   "스페셜&할인팩":"01.whats-new",
   "맥모닝":"02.new",
+  "와퍼&주니어":"03.whopper",
+
 }
 
 
 const menuIntro = {
   "스페셜&할인팩":"버거킹의 새로운 메뉴를 소개합니다! <br>스페셜한 새로운 메뉴와 할인된 세트 메뉴",
   "맥모닝":"하루를 맥모닝으로 시작하세요",
+  "와퍼&주니어":"버거킹의 진수는 순수 소고기 패티를 직화로 구운 패티입니다!",
+  "치킨&슈림프버거":"바삭한 치킨 패티와 풍부한 맛의 새우패티를 만나보세요",
+  "올데이킹&킹모닝":"올데이올데이올데이",
+  사이드:"사이드사이드사이드",
+  "음료&디저트":"음료음료음료",
 }
 
 
 
 
 
+//// 메뉴 클릭 설정만들기 ///////////
+const mListItem = dFn.qsa('.menu-list-item');
 
-/* changeTop("스페셜&할인팩");
-changeMTop("스페셜&할인팩");
+mListItem.forEach(ele=>{
+  ele.onclick = ()=>{
+    // 하위 h4요소 글자 읽기
+    let txt = dFn.qsEl(ele,'h4').innerText;
+    console.log(txt);
+    changeMenu(txt);
 
- */
+    changeTopImg(txt);
+
+    changeTop(txt);
+    
+    changeMTop(txt);
+    
+    
+    
+
+  }
+})
+
+
+
+
+
 
 /**************************************  
   서브페이지 - 메뉴 상단
@@ -33,45 +61,57 @@ changeMTop("스페셜&할인팩");
 
 **************************************/
 
+
 const menuTop = dFn.qs(".menu-top");
 const mobileMenuTop = dFn.qs(".m-menu-top");
 
 
-console.log(menuTop,mobileMenuTop);
-
-/* 
 changeTopImg("스페셜&할인팩");
+
+changeTop("스페셜&할인팩");
+
+changeMTop("스페셜&할인팩");
+
+
 
 
 function changeTopImg(menu){
-menuTop.style.background = `url(../images/04-1.sub01-menu/${menuFolder[menu]}/desktop-topBanner.png) no-repeat center/cover;`;
-}; */
 
-/* function changeTop(menu){
+  menuTop.style.background = `url(../images/04-1.sub01-menu/${menuFolder[menu]}/desktop-topBanner.png) no-repeat center/cover;`;
 
+};
+  
+
+
+function changeTop(aa){
+ 
+  mData[aa];
   let zcode = 
   `   
 
   <div class="menu-content">
-      <h2 class="menu-title">
-          <span class="h-underline-last-line">${menu}</span></h2>
-          <p class="article">${menuIntro[menu]} </p>
-
-</div>
-
+  <h2 class="menu-title">
+  <span class="h-underline-last-line">${aa}</span></h2>
+  <p class="article">${menuIntro[aa]} </p>
+  
+  </div>
+  
   `;
-  console.log(zcode);
   menuTop.innerHTML = zcode;
-
+  
+  console.log('changeTop',zcode,'aa',aa);
   
 };
 
+console.log(menuTop,mobileMenuTop);
 
 
 
 
 function changeMTop(menu){
 
+
+  mData[menu];
   
   let ycode = 
   `   
@@ -87,19 +127,21 @@ function changeMTop(menu){
 
   `;
 
-  console.log(ycode);
+  console.log(ycode,menu);
   mobileMenuTop.innerHTML = ycode;
 
   
 };
 
 
- */
 
 
 
 
+  const m = dFn.qs(".menu");
+  console.log(m);
 
+  
 /**************************************  
   서브페이지 - 메뉴
   -> 메뉴리스트
@@ -158,17 +200,15 @@ function changeMenu(menu){
 
 } ///////// changeMenu 함수 ///////////
 
-//// 메뉴 클릭 설정만들기 ///////////
-const mListItem = dFn.qsa('.menu-list-item');
 
-mListItem.forEach(ele=>{
-  ele.onclick = ()=>{
-    // 하위 h4요소 글자 읽기
-    let txt = dFn.qsEl(ele,'h4').innerText;
-    console.log(txt);
-    changeMenu(txt);
-  }
-})
+
+
+
+
+
+
+
+
 
 
 /*    bData[i-1] */
