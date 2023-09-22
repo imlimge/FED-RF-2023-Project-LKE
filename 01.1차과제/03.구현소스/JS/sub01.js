@@ -35,7 +35,7 @@
       `<li>
       <figure>
           <img src="./images/04-1.sub01-menu/01.whats-new/menulist/menu_new${i}.png" alt="${bData[i-1]}">
-          <figcaption><p>${bData[i-1]}</p></figcaption>
+          <figcaption><p>${Object.keys("스페셜&할인팩"[i-1])}</p></figcaption>
       </figure>
       </li>
       `
@@ -49,7 +49,7 @@
     burger.innerHTML = hcode;
 
 
-
+ /*    bData[i-1] */
 
 
 
