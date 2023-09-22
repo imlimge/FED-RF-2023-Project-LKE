@@ -52,7 +52,7 @@ cursor: pointer;
 
  display: flex;
  position:relative;
-
+ right: 0;
 }
 
 .menu-list-item{
