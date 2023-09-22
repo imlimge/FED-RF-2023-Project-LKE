@@ -28,8 +28,42 @@ const TIME_SLIDE = 200;
 
 
 
+
+
+
+
+
+
 function loadFn() {
+
+
  
+/********************************************
+ [새로고침 시 오프닝 커버 없애기]
+********************************************/
+const cover = qs(".cover");
+const gnbBox = qs(".gnb-box");
+
+let keyValue = location.href;
+
+// console.log(keyValue.indexOf("?"));
+// url 창 전체주소
+// url창에 ?표가 있는 여부 검사(-1이면 물음표가 없음)
+// 물음표가 있는 파라미터주소이면 if문 안으로 못들어감!
+
+//물음표가 없으면 ?넣기
+if (keyValue.indexOf("?") == -1) {
+  // 기존 url에 파라미터전달값 삽입하기
+  history.pushState("my", null, "?key=val");
+}
+
+//물음표가 있으면 on넣기 (display : none)
+if (keyValue.indexOf("?") !== -1) {
+  cover.classList.add("on");
+  gnbBox.classList.remove("on");
+}
+
+
 
   /****************************************** 
   [무버 이동 정의]
