@@ -35,15 +35,15 @@ mListItem.forEach(ele=>{
   ele.onclick = ()=>{
     // 하위 h4요소 글자 읽기
     let txt = dFn.qsEl(ele,'h4').innerText;
-    console.log(txt);
     changeMenu(txt);
-
+    
     changeTopImg(txt);
-
+    
     changeTop(txt);
     
     changeMTop(txt);
     
+    console.log('txt',txt);
     
     
 
@@ -76,12 +76,13 @@ changeMTop("스페셜&할인팩");
 
 
 function changeTopImg(menu){
+  console.log(menu);
 
-  menuTop.style.background = `url(../images/04-1.sub01-menu/${menuFolder[menu]}/desktop-topBanner.png) no-repeat center/cover;`;
+  menuTop.style.background = `url('./images/04-1.sub01-menu/${menuFolder[menu]}/desktop-topBanner.png') no-repeat center/cover`;
 
 };
   
-
+console.log('메뉴메뉴',menuTop);
 
 function changeTop(aa){
  
