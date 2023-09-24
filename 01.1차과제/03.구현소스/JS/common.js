@@ -88,7 +88,7 @@ function makeCode(obj){
       hcode += 
       `
       <li>
-        <a href="#"> 
+        <a href="./sub01.html"> 
         <span class="sub-menu-open-list">
         ${x}
         </span>

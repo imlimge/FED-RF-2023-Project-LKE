@@ -10,7 +10,11 @@ const menuFolder = {
   "스페셜&할인팩":"01.whats-new",
   "맥모닝":"02.new",
   "와퍼&주니어":"03.whopper",
-
+  "치킨&슈림프버거":"04.chicken",
+  "올데이킹&킹모닝":"05.allday",
+   사이드:"06.side",
+  "음료&디저트":"07.drink",
+  
 }
 
 
@@ -19,9 +23,9 @@ const menuIntro = {
   "맥모닝":"하루를 맥모닝으로 시작하세요",
   "와퍼&주니어":"버거킹의 진수는 순수 소고기 패티를 직화로 구운 패티입니다!",
   "치킨&슈림프버거":"바삭한 치킨 패티와 풍부한 맛의 새우패티를 만나보세요",
-  "올데이킹&킹모닝":"올데이올데이올데이",
-  사이드:"사이드사이드사이드",
-  "음료&디저트":"음료음료음료",
+  "올데이킹&킹모닝":"올데이 매일매일 즐거운 버거킹 <br> 메일 버거킹과 함께입니다 ",
+  사이드:"신선하고 좋은 감자로 만든 감자튀김과<br> 바삭하고 부드러운 치킨너겟",
+  "음료&디저트":"청량한 음료와 버거킹만의 스페셜한 커피",
 }
 
 
@@ -79,6 +83,7 @@ function changeTopImg(menu){
   console.log(menu);
 
   menuTop.style.background = `url('./images/04-1.sub01-menu/${menuFolder[menu]}/desktop-topBanner.png') no-repeat center/cover`;
+  mobileMenuTop.style.background = `url('./images/04-1.sub01-menu/${menuFolder[menu]}/mobile-topBanner.png') no-repeat center/cover`;
 
 };
   
@@ -119,7 +124,7 @@ function changeMTop(menu){
 
 
   <div class="m-menu-content">
-      <img src="./images/04.sub-top/menu01.png" alt="메뉴소개 모바일 대표 버거이미지">
+      <img src="./images/04.sub-top/${menu}.png" alt="메뉴소개 모바일 대표 버거이미지">
       <h2 class="m-menu-title">
           <span class="h-underline-last-line">${menu}</span></h2>
           <p class="article">${menuIntro[menu]} </p>
