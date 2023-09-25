@@ -166,14 +166,12 @@ function showSub() {
       if (!result) {
         // false일때만 들어옴
 
-        // 하위에 .sub-menu-open가 없으면 처리안함
-
         target.style.height = "0px";
         ele.classList.remove("on");
       }
-      //  else{
-      //   isBtn.classList.add("on");
-      // }
+
+     
+
     }); /////forEach///////////
   } ///if////////////
 } ///showSub/////
