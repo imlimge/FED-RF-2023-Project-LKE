@@ -189,6 +189,7 @@ dFn.qsa('.sub-menu-open');
 
       isBtn.classList.toggle("on");
 
+
       snbBtn.forEach((ele) => {
         let result = ele.isSameNode(this);
 
@@ -198,12 +199,21 @@ dFn.qsa('.sub-menu-open');
 
         // 현재 노드와 같은 li는 처리하지 않음
 
+
         if (!result) {
           // false일때만 들어옴
 
-          // 하위에 .smenu가 없으면 처리안함
-          if (target) target.style.height = "0px";
-        } ///if////
+          // 하위에 .sub-menu-open가 없으면 처리안함
+        
+          target.style.height = "0px";
+
+       /*    isBtn.classList.remove("on");
+     
+  }
+         else{
+          isBtn.classList.add("on"); */
+        } 
+
       }); /////forEach///////////
 
 
