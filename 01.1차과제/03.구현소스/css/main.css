@@ -23,7 +23,7 @@
   z-index: 999;
 }
 
-.gnb-box.on{
+.gnb-box .on{
   animation:  gnb-box-ani 1s ease-in-out 2.5s forwards;
 }
 
