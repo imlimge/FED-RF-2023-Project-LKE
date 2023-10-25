@@ -54,6 +54,10 @@ ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>
   // console.log('x',x,'/mData[x]',mData[x]);
 } ///forin///////////////////////////////
 
+
+
+
+
 // console.log('코드',hcode);
 
 function makeCode(obj) {
@@ -71,14 +75,42 @@ function makeCode(obj) {
         </a>
       </li>
       `;
+  
   } ////forin////////
   return hcode;
 } ///////////makeCode함수 //////////
 
 // ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>ol>li>a[href='#']
 
+  
+
 //메뉴 생성하기
 snbList.innerHTML = hcode;
+
+
+
+let pm = location.href;
+
+
+
+//// 제이쿼리 구역//////
+
+$(()=>{
+
+
+  const sList = $('.sub-menu-open-list a');
+
+
+
+  sList.click(e=>
+    location.href='menu.html?menu='+$(mData[x]).text().toLowerCase());
+})
+
+
+console.log(pm)
+
+
+
 
 /**********************************************  
     [ 서브메뉴 버튼 누르면 내용 보이기]
@@ -159,7 +191,7 @@ function showSub() {
 
       let target = dFn.qsEl(ele, ".sub-menu-open");
 
-      console.log("같니", result, target);
+      //console.log("같니", result, target);
 
       // 현재 노드와 같은 li는 처리하지 않음
 

@@ -1,0 +1,8 @@
+버거킹 서브메뉴 링크걸기
+
+보그PJ linksys.js 
+제이쿼리-> linksys.js
+
+값을 읽어서 주소에 붙여
+
+Copyright 2021. 저작권자 All pictures cannot be copied without permission. 

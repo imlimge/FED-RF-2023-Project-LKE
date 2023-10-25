@@ -47,7 +47,7 @@ mListItem.forEach(ele=>{
     
     changeMTop(txt);
     
-    console.log('txt',txt);
+    //console.log('txt',txt);
     
     
 
@@ -80,14 +80,14 @@ changeMTop("스페셜&할인팩");
 
 
 function changeTopImg(menu){
-  console.log(menu);
+  //console.log(menu);
 
   menuTop.style.background = `url('./images/04-1.sub01-menu/${menuFolder[menu]}/desktop-topBanner.png') no-repeat center/cover`;
   mobileMenuTop.style.background = `url('./images/04-1.sub01-menu/${menuFolder[menu]}/mobile-topBanner.png') no-repeat center/cover`;
 
 };
   
-console.log('메뉴메뉴',menuTop);
+//console.log('메뉴메뉴',menuTop);
 
 function changeTop(aa){
  
@@ -105,11 +105,11 @@ function changeTop(aa){
   `;
   menuTop.innerHTML = zcode;
   
-  console.log('changeTop',zcode,'aa',aa);
+  //console.log('changeTop',zcode,'aa',aa);
   
 };
 
-console.log(menuTop,mobileMenuTop);
+//console.log(menuTop,mobileMenuTop);
 
 
 
@@ -133,7 +133,7 @@ function changeMTop(menu){
 
   `;
 
-  console.log(ycode,menu);
+  //console.log(ycode,menu);
   mobileMenuTop.innerHTML = ycode;
 
   
@@ -145,7 +145,7 @@ function changeMTop(menu){
 
 
   const m = dFn.qs(".menu");
-  console.log(m);
+  //console.log(m);
 
   
 /**************************************  
@@ -169,7 +169,7 @@ changeMenu("스페셜&할인팩");
 function changeMenu(menu){
   const selData = mData.메뉴소개[menu];
   const CNT_SEL = selData.length;
-  console.log(selData);
+  //console.log(selData);
   
   let hcode = "<ul>";
   
@@ -233,14 +233,14 @@ let seqNum = 0;
 
 mList.style.transition = '.5s';
 
-console.log(mbtn, mList);
+//console.log(mbtn, mList);
 
 mbtn.forEach((ele) => dFn.addEvt(ele, "click", bMove));
 
 function bMove() {
   let isRight = this.classList.contains("ab2");
 
-  console.log(this, isRight);
+  //console.log(this, isRight);
 
   if (isRight) {
     seqNum++;
