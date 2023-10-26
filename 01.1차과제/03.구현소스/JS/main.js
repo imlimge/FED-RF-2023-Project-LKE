@@ -265,7 +265,7 @@ if (keyValue.indexOf("?") !== -1) {
   // 윈도우 절반값
   const winH = window.innerHeight / 2;
 
-  addEvt(window, "scroll", () => {
+  addEvt(window,"scroll", () => {
     scShow.forEach((ele) => {
       //console.log(getBCR(ele))
       if (getBCR(ele) < winH) ele.classList.add("on");
@@ -275,21 +275,20 @@ if (keyValue.indexOf("?") !== -1) {
 
 
 
-  const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
-
+ 
 
 
   // 모바일 이벤트 함수
 
-const mSlideItem = qsa('m-slide-img-item');
+/* const mSlideItem = qsa('m-slide-img-item');
   
 mSlideItem.addEventListener('touchstart',touchStart);
 mSlideItem.addEventListener('touchend',touchEnd);
 
-
+ */
 
 //터치 위치값 변수
-let pos_start=0, pos_end=0;
+/* let pos_start=0, pos_end=0;
 
 function touchStart(e){
   pos_start = e.touches[0].screenY;
@@ -298,7 +297,7 @@ function touchStart(e){
   
  }
 
-
+ */
 
 
 
