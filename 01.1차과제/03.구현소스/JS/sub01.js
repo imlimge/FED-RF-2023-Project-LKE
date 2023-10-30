@@ -223,19 +223,19 @@ function changeMenu(menu){
   서브페이지 - 메뉴리스트 슬라이드 구현
 **************************************/
 // 이벤트 대상
-const mbtn = dFn.qsa(".abtn");
+// const mbtn = dFn.qsa(".abtn");
 
 // 변경 대상
-const mList = dFn.qs(".menu-list");
+// const mList = dFn.qs(".menu-list");
 // 이동순번
-let seqNum = 0;
+/* let seqNum = 0;
 
 
 mList.style.transition = '.5s';
-
+ */
 //console.log(mbtn, mList);
 
-mbtn.forEach((ele) => dFn.addEvt(ele, "click", bMove));
+/* mbtn.forEach((ele) => dFn.addEvt(ele, "click", bMove));
 
 function bMove() {
   let isRight = this.classList.contains("ab2");
@@ -250,7 +250,7 @@ function bMove() {
     if(seqNum<0)seqNum=0;
   }
   mList.style.right = seqNum * 25 + "%";
-}
+} */
 
 /* 
 function bMove(){
@@ -277,3 +277,86 @@ function bMove(){
       }  
 }
  */
+
+
+
+
+// 제이쿼리로 메뉴 클릭하여 슬라이드하기 + 모바일 터치설정
+
+$(()=>{ ////////////JQB /////////////
+  const TRS_TIME_DT = '.5s ease-out';
+  const TRS_TIME_MOB = '.3s ease-out';
+
+
+  const target = $('.menu-list');
+
+
+
+
+  target.draggable({
+    axis:'x' 
+  })
+  .css({
+    transition: TRS_TIME_DT
+  });
+
+  // 한계값 설정하기 /////////////
+  // 화면크기 업데이트
+  const updateWin = () => $(window).width();
+  // 최초 윈도우 가로크기 업데이트
+  let winW = updateWin();
+  // 윈도우 리사이즈시 윈도우 가로크기 업데이트
+  $(window).resize(()=>{
+    winW = updateWin();
+    // console.log('업데이트화면 가로크기',winW)
+    firstPoint = winW / 9 ;
+    lastPoint = winW / 3 * 2;
+    console.log('업데이트화면 한계값',firstPoint,'/',lastPoint)
+
+
+})
+
+
+// 트랜지션 모바일 / DT 크기일 때 전환
+// 위에서 설정하였으므로 만약 모바일 크기범위이면 아래값을 덮어씀
+if(winW<500) target.css({transition:TRS_TIME_MOB});
+
+
+
+// 첫번째 한계값 설정하기 : 화면크기의 1/9로 설정
+let firstPoint = winW / 9 
+// console.log('첫번째 한계값',firstPoint)
+
+// 마지막 한계값 설정하기
+// 대상박스 width값 - 화면크기의 2/3
+let lastPoint = winW / 3 * 2;
+console.log('마지막 한계값',lastPoint)
+
+
+
+
+target.on('mousedown mouseup mousemove',()=>{
+ // 움직이는 대상 left 위치값
+ let tgPos = target.offset().left;
+console.log('현재 left값',tgPos);
+
+
+ if(tgPos > firstPoint){
+   target.css({
+     left:firstPoint+'px'
+   });
+ }
+
+ // 마지막 한계값 체크하여 제한하기
+ // left값이 마이너스 이므로 -lastPoint로 계산
+ else if(tgPos < -lastPoint){
+   target.css({
+     left:-lastPoint+'px'
+   });
+ } 
+
+})
+
+
+}); ////////////JQB /////////////
+

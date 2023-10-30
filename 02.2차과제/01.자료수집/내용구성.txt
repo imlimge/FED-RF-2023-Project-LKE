@@ -1,9 +1,12 @@
--라이트/다크모드 심플
+-라이트/다크모드 심플 >> 메인참고
 https://www.itstoughlove.com/
+-심플 & 오버시 바탕화면 색상 변경
 https://www.isramirez.com/
+-테이블표
 https://fitcult.webflow.io/schedule
 -페이지 다양성 구조화 (참고)
 https://nationalstudentshow.com/
+-색 전환 / 컨텐츠 쌓이는 부분
 https://rblln.fr/
 https://baga.ge/
 https://www.cheniecemanning.com/about
