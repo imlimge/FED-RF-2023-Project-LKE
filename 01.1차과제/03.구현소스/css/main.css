@@ -1576,7 +1576,7 @@ font-style: normal;
   left: 0;
   width: 100vw;
   padding: 0 0 10% 0;
-  height: 100vh;
+  height: 100vw;
   background-color: #d0021b;
   animation: cover-ani 4s ease-in-out 1s forwards;
 
