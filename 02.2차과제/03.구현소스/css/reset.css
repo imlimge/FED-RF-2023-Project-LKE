@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* 카이로스 수학학원 사이트 - 리셋 css */
+/* 버거킹 : 리셋 CSS - reset.css */
 /* 기본 초기화 셋팅 */
 
 
@@ -16,12 +16,13 @@ figure, figcaption
 }
 
 
-ul, ol, li{
+ul, ol{
   list-style: none;
   
 }
 
 
 a{
+  color: #222;
   text-decoration: none;
 }

@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 카이로스 수학학원 사이트 - 메인 css */
+
+
+@import url(./reset.css);
+@import url(./media.css);
+
+
+body *{
+outline: 1px dotted blue;
+}
+
+
+.header{ 
+  width: 15vw;
+  height: 100vh;
+  position: fixed;
+}
+
+
+.main{
+  position: relative;
+  width: 85vw;
+  height: 100vh;
+  left: 15vw;
+}
+
+
+section{
+
+  height: 100vh;
+}
