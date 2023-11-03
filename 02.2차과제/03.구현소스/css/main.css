@@ -8,21 +8,7 @@
 
 body *{
 outline: 1px dotted blue;
-}
 
-
-.header{ 
-  width: 15vw;
-  height: 100vh;
-  position: fixed;
-}
-
-
-.main{
-  position: relative;
-  width: 85vw;
-  height: 100vh;
-  left: 15vw;
 }
 
 
@@ -30,3 +16,129 @@ section{
 
   height: 100vh;
 }
+
+/* __________________________________ */
+
+#header{
+  position: relative;
+  z-index: 999;
+}
+
+
+.header{ 
+  width: 15%;
+  height: 100vh;
+  position: fixed;
+
+
+}
+
+.gnb-box{
+  height: 100%;
+  position: relative;
+}
+
+.gnb__menu {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(10, 1fr);
+  justify-items: start;
+
+}
+
+.gnb__menu li{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: aqua;
+
+
+  border-right: 1px solid #000;
+ }
+
+
+.gnb__menu li a{
+  position: absolute;
+  width: 100px;
+  height: 37px;
+
+  text-align: center;
+  line-height: 2.3;
+
+  display: inline-block;
+  background-color: #fff
+
+
+}
+
+
+.gnb__menu li:nth-child(1) a{
+  top:50px
+}
+.gnb__menu li:nth-child(2) a{
+  top:100px
+}
+.gnb__menu li:nth-child(3) a{
+  top:170px
+}
+.gnb__menu li:nth-child(4) a{
+  top:230px
+}
+.gnb__menu li:nth-child(5) a{
+  top:300px
+}
+
+
+
+
+
+
+
+.main{
+  position: relative;
+  width: 100%;
+  padding-left: 15%;
+  /* left: 15%; */
+  background-color: yellow;
+}
+
+.main section{
+  
+}
+
+.top-area{
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  left: 15%;
+
+}
+
+.top-area .logo{
+  width: 150px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.top-area .logo>img{
+  width: 100%;
+}
+
+.top-area .trans_btn{
+  width: 150px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  right: calc(15% + 20PX);
+}
+
+
+
+
+
+
+
+
+
