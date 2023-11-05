@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* 챗지피티 응용 */
+
+
+
+/* 왼쪽 네비게이션 세로줄 추가 */
+.vertical-lines {
+  width: 300px; /* 전체 가로폭 설정 */
+  height: 200px;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.vertical-lines::before,
+.vertical-lines::after,
+.vertical-lines div:nth-child(2),
+.vertical-lines div:nth-child(3),
+.vertical-lines div:nth-child(4) {
+  content: "";
+  position: absolute;
+  width: 2%; /* 세로선의 가로폭을 설정 (전체 가로폭 대비 비율로) */
+  background-color: #000; /* 세로선의 색상을 설정하세요. */
+  height: 100%; /* 세로선의 높이를 조절하세요. */
+}
+
+.vertical-lines::before {
+  left: 20%; /* 첫 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+}
+
+.vertical-lines::after {
+  left: 40%; /* 두 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+}
+
+.vertical-lines div:nth-child(2) {
+  left: 60%; /* 세 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+}
+
+.vertical-lines div:nth-child(3) {
+  left: 80%; /* 네 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+}
+
+.vertical-lines div:nth-child(4) {
+  left: 100%; /* 다섯 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+}
+
+
+
+
+
+
+
+<svg>
+<use xlink:href="#nav__item" />
+</svg>
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.9.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="nav__item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.28 841.89" style="enable-background:new 0 0 595.28 841.89;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFF7F2;stroke:#231F20;stroke-miterlimit:10;}
+</style>
+<polygon class="st0" points="236,365.74 136,373.46 136,336.46 236,328.74 228.13,347.24 "/>
+</svg>
+
+
+
+
+<!-- svg 심볼 코드구역 -->
+<div style="display:none">
+ <svg>
+   <symbol viewBox="0 0 150 30" id="nav__item">
+     <style type="text/css">
+       .st0{
+         fill:#FFF7F2;
+         stroke:#231F20;
+         stroke-miterlimit:10;}
+     </style>
+     <polygon points="236,365.74 136,373.46 136,336.46 236,328.74 228.13,347.24 "/>
+   </symbol>
+ </svg>
+</div>
+

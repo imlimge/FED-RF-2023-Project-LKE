@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+
+
+:root {
+  /* 미색 FAF7F5 */
+  --bright-color: #fff7f2;
+  --dark-color: #231F20;
+  --font-size: 16px;
+}
+
+
+/*--------------  폰트   --------------*/
+
+/* 제목 */
+@font-face {
+  font-family: 'KOTRALEAP';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* 본문 - 바탕 */
+@font-face {
+  font-family: 'GowunBatang-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

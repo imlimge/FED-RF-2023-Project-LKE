@@ -3,11 +3,14 @@
 
 
 @import url(./reset.css);
+@import url(./core.css);
 @import url(./media.css);
 
 
+
+
 body *{
-outline: 1px dotted blue;
+/* outline: 1px dotted orange; */
 
 }
 
@@ -15,6 +18,13 @@ outline: 1px dotted blue;
 section{
 
   height: 100vh;
+}
+
+
+.inner{
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* __________________________________ */
@@ -50,42 +60,122 @@ section{
   width: 100%;
   height: 100%;
   display: inline-block;
-  background-color: aqua;
+  background-color: #fff;
 
-
-  border-right: 1px solid #000;
+  border-left: 1px solid var(--dark-color);
+  border-right: 2px solid var(--dark-color);
  }
 
-
-.gnb__menu li a{
+ .gnb__menu li a{
   position: absolute;
   width: 100px;
   height: 37px;
-
   text-align: center;
-  line-height: 2.3;
-
+  line-height: 2.9;
   display: inline-block;
-  background-color: #fff
+  transform: rotate(356deg);
+  /* background-color: var(--bright-color);
+  outline:1px solid #000; */
+  z-index: 1;
+  /* clip-path:  polygon(100% 0%, 90% 45%, 100% 88%, 0 100%, 0 55%, 0 12%); */
+  /* top: 10px; */
 
+  font-family: 'KOTRALEAP';
 
 }
+
+
+.gnb__menu li a::before{
+  content: '';
+  background: url(../images/nav_w.png) no-repeat;
+  position: absolute;
+  left: -2px;
+  width: 102px;
+  height: 46px;
+  /* background-color: var(--bright-color); */
+  /* outline: 1px solid var(--dark-color); */
+  /* clip-path: polygon(100% 0%, 90% 45%, 100% 88%, 0 100%, 0 55%, 0 12%); */
+  z-index: -1;
+  transform: rotate(4deg);
+}
+
+
+.gnb__menu li.on a::before{
+  background: url(../images/nav_b.png) no-repeat;
+}
+
+.gnb__menu li.on a{
+  color: var(--bright-color);
+}
+
+
+
+
+/* 챗지피티에서 응용 : 원하는 바에 가까우나 왼쪽으로 몰리는게
+ 너무 궁금하고 이게 뭐지---------------------------------------- */
+
+ /* li요소에 아래의 클래스를 추가함 */
+ .vertical-lines {
+  position: relative;
+}
+
+.vertical-lines::before,
+.vertical-lines::after {
+  content: "";
+  position: absolute;
+  width: 2%; /* 세로선의 가로폭을 설정 (전체 가로폭 대비 비율로) */
+  background-color: var(--dark-color); /* 세로선의 색상을 설정하세요. */
+  height: 100%; /* 세로선의 높이를 조절하세요. */
+}
+
+.vertical-lines::before {
+  left: 30%; /* 첫 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+}
+
+.vertical-lines::after {
+  left: 60%; /* 두 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+}
+
+/* 챗지피티에서 응용---------------------------------------- */
+
+
+
+
+
+
+
+.gnb__menu li:nth-child(1){
+  order: 2;
+}
+.gnb__menu li:nth-child(2){
+  order: 1;
+}
+.gnb__menu li:nth-child(3){
+  order: 4;
+}
+.gnb__menu li:nth-child(4){
+  order: 5;
+}
+.gnb__menu li:nth-child(5){
+  order: 3;
+}
+
 
 
 .gnb__menu li:nth-child(1) a{
-  top:50px
+  top:50px;
 }
 .gnb__menu li:nth-child(2) a{
-  top:100px
+  top:112px;
 }
 .gnb__menu li:nth-child(3) a{
-  top:170px
+  top:170px;
 }
 .gnb__menu li:nth-child(4) a{
-  top:230px
+  top:230px;
 }
 .gnb__menu li:nth-child(5) a{
-  top:300px
+  top:300px;
 }
 
 
@@ -95,11 +185,11 @@ section{
 
 
 .main{
-  position: relative;
-  width: 100%;
+  
   padding-left: 15%;
-  /* left: 15%; */
-  background-color: yellow;
+  padding-right: 5%;
+
+  background-color: var(--bright-color);
 }
 
 .main section{
@@ -124,14 +214,76 @@ section{
 
 .top-area .logo>img{
   width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+
+
+
+.top-area .trans_btn_box{
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  right: calc(15% + 60PX);
+
+  border-radius: 50px;
+
+  background-color: var(--dark-color);
+  border: 1px solid var(--bright-color);
+
 }
 
 .top-area .trans_btn{
-  width: 150px;
-  height: 40px;
+
+
+}
+
+.trans_btn .btn{
+  display: inline-block;
+  width: 77px;
+  height: 94%;
+  border-radius: 50px;
+  text-align: center;
+ line-height: 1.9;
+
+}
+
+.trans_btn .btn1{
   position: absolute;
-  bottom: 0;
-  right: calc(15% + 20PX);
+
+  left: 0;
+  background-color: var(--bright-color);
+  border: 1px solid var(--dark-color);
+ 
+}
+
+
+
+.trans_btn .btn2{
+  position: absolute;
+  right: 0;
+  color: var(--bright-color);
+}
+
+
+
+.trans_btn .btn1 .part2{
+  position: absolute;
+
+  left: 0;
+  background-color: var(--bright-color);
+  border: 1px solid var(--dark-color);
+ 
+}
+
+
+
+.trans_btn .btn2 .part2{
+  position: absolute;
+  right: 0;
+  color: var(--bright-color);
 }
 
 
@@ -139,6 +291,12 @@ section{
 
 
 
-
+.intro_logo img{
+  position: absolute;
+  width: 41%;
+  left: 32%;
+  top: 14%;
+  color: var(--dark-color);
+}
 
 
