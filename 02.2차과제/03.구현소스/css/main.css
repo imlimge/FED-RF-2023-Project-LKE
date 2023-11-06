@@ -10,14 +10,24 @@
 
 
 body *{
-/* outline: 1px dotted orange; */
+outline: 1px dotted orange;
 
 }
 
+h2{
+  font-family:var(--bold-font);
+}
+
+
 
 section{
-
   height: 100vh;
+}
+
+
+/* 각 파트 제목 */
+.tit{
+  font-size: var(--bold-font-size);
 }
 
 
@@ -69,44 +79,79 @@ section{
  .gnb__menu li a{
   position: absolute;
   width: 100px;
-  height: 37px;
+  height: 40px;
   text-align: center;
-  line-height: 2.9;
+  line-height: 2.5;
   display: inline-block;
-  transform: rotate(356deg);
-  /* background-color: var(--bright-color);
-  outline:1px solid #000; */
+  transform: rotate(358deg);
+  color: var(--dark-color);
+  /* background-color: var(--bright-color); */
+  /* outline:1px solid #000; */
   z-index: 1;
   /* clip-path:  polygon(100% 0%, 90% 45%, 100% 88%, 0 100%, 0 55%, 0 12%); */
   /* top: 10px; */
 
-  font-family: 'KOTRALEAP';
+  font-family:var(--bold-font);
+  font-size: var(--font-size);
 
 }
 
 
 .gnb__menu li a::before{
   content: '';
-  background: url(../images/nav_w.png) no-repeat;
+  /* background: url(../images/nav_w.png) no-repeat; */
   position: absolute;
-  left: -2px;
-  width: 102px;
-  height: 46px;
-  /* background-color: var(--bright-color); */
+  left: 0;
+  width: 100px;
+  height: 40px;
+  background-color: var(--bright-color);
   /* outline: 1px solid var(--dark-color); */
-  /* clip-path: polygon(100% 0%, 90% 45%, 100% 88%, 0 100%, 0 55%, 0 12%); */
+  clip-path: polygon(100% 0%, 90% 45%, 100% 88%, 0 100%, 0 55%, 0 12%);
   z-index: -1;
-  transform: rotate(4deg);
+  transform: rotate(2deg);
 }
 
 
-.gnb__menu li.on a::before{
-  background: url(../images/nav_b.png) no-repeat;
+.gnb__menu li a::after{
+  content: '';
+  /* background: url(../images/nav_w.png) no-repeat; */
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 101px;
+  height: 42px;
+  background-color: var(--dark-color);
+  /* outline: 1px solid var(--dark-color); */
+  clip-path: polygon(100% 0%, 90% 45%, 100% 88%, 0 100%, 0 55%, 0 12%);
+  z-index: -2;
+  transform: rotate(2deg);
 }
 
-.gnb__menu li.on a{
+
+
+/* 네비게시연 아이템 on 되어있는 상태 */
+.gnb__item.on.gnb__item::before{
+  background-color: var(--dark-color);
+}
+.gnb__item.on.gnb__item::after{
+  background-color: var(--bright-color);
+}
+
+.gnb__menu li a.gnb__item.on {
   color: var(--bright-color);
 }
+
+
+
+
+.gnb__menu li a:hover::before{
+  content: '';
+  background-color: yellow;
+}
+
+
+
+
 
 
 
@@ -220,7 +265,7 @@ section{
 
 
 
-
+/* 상단 오른쪽 토글버튼 */
 .top-area .trans_btn_box{
   width: 150px;
   height: 30px;
@@ -246,10 +291,15 @@ section{
   height: 94%;
   border-radius: 50px;
   text-align: center;
- line-height: 1.9;
+ line-height: 1.4;
+  font-size: 2rem;
+
+ font-family:var(--bold-font);
 
 }
 
+
+/* 혁신관 */
 .trans_btn .btn1{
   position: absolute;
 
@@ -260,7 +310,7 @@ section{
 }
 
 
-
+/* 단계관 */
 .trans_btn .btn2{
   position: absolute;
   right: 0;
@@ -290,13 +340,67 @@ section{
 
 
 
+/* 인트로 */
+#intro{
+  height: 3000px;
+  padding-top:120px;
+}
 
-.intro_logo img{
+
+
+.intro__logo{
+  position: sticky;
+  top: 30px;
+}
+
+
+
+.intro__logo img{
   position: absolute;
-  width: 41%;
-  left: 32%;
-  top: 14%;
+  width: 60%;
+
+  
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
   color: var(--dark-color);
 }
 
 
+
+
+.intro__content__warp{
+  
+}
+
+.intro__content{
+
+}
+
+.intro{
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+  width: 50vw;
+  height: 800px;
+}
+
+
+.intro1{
+  position: sticky;
+  top: 300px;
+  background-color: var(--color1);
+}
+
+
+.intro2{
+  position: sticky;
+  top: 350px;
+
+  bottom: 0;
+
+  background-color: var(--color2);
+
+}

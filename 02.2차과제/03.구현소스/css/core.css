@@ -3,10 +3,23 @@
 
 
 :root {
-  /* 미색 FAF7F5 */
+  
+  /* 색상 */
   --bright-color: #fff7f2;
+  /* 미색 FAF7F5 */
   --dark-color: #231F20;
-  --font-size: 16px;
+
+  --color1: #2d2d2d;
+  --color2: #5c5c5c;
+  --color3: #818181;
+
+
+  /* 폰트설정 */
+  --bold-font:'KOTRALEAP';
+
+  --font-size: 1.6rem;
+  --bold-font-size:7rem;
+
 }
 
 

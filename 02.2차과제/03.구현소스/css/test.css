@@ -81,3 +81,41 @@
  </svg>
 </div>
 
+
+
+
+<!-- 외곽선을 위한 svg -->
+<!-- <div class="nav__btn">
+<svg viewBox="0 0 100 40" width="100px" height="40px">
+  <polygon
+  class="nav__btn_back"
+  points="0,0 100,0 "
+  />
+</svg>
+</div> -->
+
+
+
+
+/* 외곽선을 위한 svg */
+.nav__btn{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 40px;
+  transform: rotate(2deg);
+}
+
+.nav__btn_back{
+  /* outline:1px solid #000; */
+  /* background-color: red; */
+  fill: transparent;
+  z-index: -1;
+  stroke-width: 1;
+  stroke-dasharray: 300%;
+  stroke: blue;
+  transform: rotate(2deg);
+
+}
+
