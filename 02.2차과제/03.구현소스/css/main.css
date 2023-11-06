@@ -174,11 +174,13 @@ section{
 }
 
 .vertical-lines::before {
-  left: 30%; /* 첫 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+  left: 30%; 
+  /* 첫 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
 }
 
 .vertical-lines::after {
-  left: 60%; /* 두 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+  left: 60%;
+   /* 두 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
 }
 
 /* 챗지피티에서 응용---------------------------------------- */
@@ -342,22 +344,22 @@ section{
 
 /* 인트로 */
 #intro{
-  height: 3000px;
-  padding-top:120px;
+  height: 3200px;
+  padding-top: 26vh;
 }
 
 
 
 .intro__logo{
   position: sticky;
-  top: 30px;
+  top: 50px;
 }
 
 
 
 .intro__logo img{
   position: absolute;
-  width: 60%;
+  width: 42%;
 
   
   left: 0;
@@ -378,29 +380,52 @@ section{
 
 }
 
-.intro{
+.intro__item{
   left: 0;
   right: 0;
   margin: 0 auto;
   border-radius: 20px 20px 0 0;
   width: 50vw;
   height: 800px;
+  
+  padding: 71px 70px;
+  color: var(--bright-color);
+  box-sizing: border-box;
+}
+
+.intro__item h3{
+  position: absolute;
+  font-size: 8rem;
+  line-height: 9.2rem;
 }
 
 
-.intro1{
+.intro__item.intro1{
   position: sticky;
-  top: 300px;
+  top: calc(100vh + 20vh);
+}
+
+
+/* 인트로 내용 파트1 */
+.intro__item.intro2{
+  display: flex;
+  position: sticky;
+  top: 20vh;
   background-color: var(--color1);
 }
 
-
-.intro2{
+/* 인트로 내용 파트2 */
+.intro__item.intro3{
   position: sticky;
-  top: 350px;
-
-  bottom: 0;
-
+  top: 25vh;
   background-color: var(--color2);
+}
 
+
+
+/* 인트로 내용 파트3 */
+.intro__item.intro4{
+  position: sticky;
+  background-color: var(--color3);
+  top: 30vh;
 }
