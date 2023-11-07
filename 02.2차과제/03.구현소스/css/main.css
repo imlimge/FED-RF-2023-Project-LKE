@@ -239,6 +239,11 @@ section{
   background-color: var(--bright-color);
 }
 
+/* 인트로4 발생 시 전체배경 색 변경 */
+.main.on{
+  background-color: var(--color3);
+}
+
 .main section{
   
 }
@@ -344,7 +349,7 @@ section{
 
 /* 인트로 */
 #intro{
-  height: 3200px;
+  height: 5500px;
   padding-top: 26vh;
 }
 
@@ -388,15 +393,16 @@ section{
   width: 50vw;
   height: 800px;
   
-  padding: 71px 70px;
+  padding: 8vw 5vw;
+
   color: var(--bright-color);
   box-sizing: border-box;
 }
 
 .intro__item h3{
-  position: absolute;
-  font-size: 8rem;
-  line-height: 9.2rem;
+  font-size: 6vw;
+  line-height: 6.7vw;
+  margin-bottom: 5vh;
 }
 
 
@@ -408,7 +414,6 @@ section{
 
 /* 인트로 내용 파트1 */
 .intro__item.intro2{
-  display: flex;
   position: sticky;
   top: 20vh;
   background-color: var(--color1);
@@ -421,6 +426,10 @@ section{
   background-color: var(--color2);
 }
 
+.intro3 article{
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
 
 
 /* 인트로 내용 파트3 */
@@ -428,4 +437,35 @@ section{
   position: sticky;
   background-color: var(--color3);
   top: 30vh;
+  height: 3000px;
 }
+
+
+.round__box{
+  height: 250px;
+}
+
+
+
+.about{
+  position: sticky;
+  top:300px
+}
+
+.about__teacher1.on{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+  top: 0;
+
+}
+
+.about__teacher2.on{
+
+  width: 100vw;
+  height: 100vh;
+  background-color: plum;
+
+}
+
