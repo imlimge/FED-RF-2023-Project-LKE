@@ -10,15 +10,15 @@
   --dark-color: #231F20;
 
   --color1: #2d2d2d;
-  --color2: #5c5c5c;
-  --color3: #818181;
+  --color2: #3f3f3f;
+  --color3: #5b5b5b;
 
 
   /* 폰트설정 */
   --bold-font:'KOTRALEAP';
 
   --font-size: 1.6rem;
-  --bold-font-size:7rem;
+  --bold-font-size: min(9vw,6rem);
 
 }
 

@@ -10,22 +10,26 @@
 
 
 body *{
-outline: 1px dotted orange;
-
+/* outline: 1px dotted orange; */
+  
 }
 
 h2{
   font-family:var(--bold-font);
+  color: var(--dark-color);
 }
 
-
-.main section{
-  padding-left: 15%;
-  padding-right: 5%;
+h3,h4,article{
+  font-family: 'GowunBatang-Regular';
 }
+
 
 section{
   height: 100vh;
+  padding-left: 12%;
+  padding-right: 5%;
+  padding-top: 6%;
+  background-color: var(--bright-color);
 }
 
 
@@ -50,7 +54,7 @@ section{
 
 
 .header{ 
-  width: 15%;
+  width: 12%;
   height: 100vh;
   position: fixed;
 
@@ -214,16 +218,16 @@ section{
 
 
 .gnb__menu li:nth-child(1) a{
-  top:50px;
+  top:70px;
 }
 .gnb__menu li:nth-child(2) a{
-  top:112px;
+  top:132px;
 }
 .gnb__menu li:nth-child(3) a{
-  top:170px;
+  top:190px;
 }
 .gnb__menu li:nth-child(4) a{
-  top:230px;
+  top:238px;
 }
 .gnb__menu li:nth-child(5) a{
   top:300px;
@@ -246,18 +250,14 @@ section{
   color: var(--bright-color);
 }
 
-.main section{
-  
-}
 
 .top-area{
   width: 100%;
   height: 60px;
   position: fixed;
 
-  margin-left: 15%;
-  margin-right: 5%;
-  /* left: 15%; */
+
+  left: 12%;
 
 }
 
@@ -285,7 +285,7 @@ section{
   position: absolute;
   bottom: 0;
   
-  right: calc(15% + 60PX);
+  right: calc(12% + 60PX);
 
   border-radius: 50px;
 
@@ -365,6 +365,7 @@ section{
 .intro__logo{
   position: sticky;
   top: 50px;
+  height: 477px;
 }
 
 
@@ -407,8 +408,8 @@ section{
 }
 
 .intro__item h3{
-  font-size: 6vw;
-  line-height: 6.7vw;
+  font-size: 5vw;
+  line-height: 6.4vw;
   margin-bottom: 5vh;
 }
 
@@ -433,48 +434,133 @@ section{
   background-color: var(--color2);
 }
 
-.intro3 article{
+.intro__item article{
     line-height: 1.5;
     font-size: 1.4rem;
-}
+   text-align: center;
+ }
 
 
 /* 인트로 내용 파트3 */
 .intro__item.intro4{
   position: sticky;
   background-color: var(--color3);
-  top: 30vh;
-  height: 3000px;
+
+  height: 2500px;
 }
 
 
 .round__box{
   height: 250px;
+  outline: 1px dotted #fff;
 }
 
 
 
 .about{
   position: sticky;
-  top:300px
+  top:20vh;
 }
 
 
 
-.about__teacher1.on{
-  position: absolute;
-  width: 100vw;
+.about__teacher{
+  position: relative;
+  width: 100%;
   height: 100vh;
-  background-color: aqua;
-  top: 0;
+  padding-left: 12%;
+  padding-right: 5%;
+  box-sizing: border-box;
   
-  padding-left: -15%;
-  padding-right: -5%;
+}
+
+
+.about__teacher.part1{
+  background-color: var(--bright-color);
+}
+
+
+
+.about__teacher.part2.on{
+
+  background-color: var(--dark-color);
+  color: var(--bright-color);
+}
+
+.about__box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 
 }
 
-.about__teacher2.on{
 
+.about__round{
+flex: 1;
 
 }
 
+
+.round{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+
+  border-radius: 50%;
+  border: 1px solid var(--dark-color);
+}
+
+.round.part2{
+  border: 1px dashed var(--bright-color);
+}
+
+.about__content{
+  flex: 1;
+}
+
+.about__title h3{
+  font-size: 6vw;
+}
+.about__title.part2 h3{
+  text-align: right;
+}
+
+.about__title h4{
+  font-size: 2vw;
+}
+.about__title.part2 h4{
+  text-align: right;
+}
+
+.about__history{
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+.about__history span{
+display: inline-block;
+padding: 1vh 0;
+}
+
+.about__history span::after{
+  content: '';
+  position: absolute;
+  /* 어떻게 하긴 했는데 왜 높이값으로 비율에 맞게 구성이 될까? top값이 아니고 */
+  height: 24px;
+
+  border-bottom: 1px solid var(--dark-color);
+  right: 0;
+  left: 53.5%;
+}
+
+.about__history.part2{
+text-align: right;
+}
+
+.about__history.part2 span::after{
+  border-bottom: 1px solid var(--bright-color);
+  left: 0;
+  right: 46.5%;
+}
