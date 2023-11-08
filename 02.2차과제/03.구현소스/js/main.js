@@ -118,11 +118,12 @@ function rotFn2(ele) {
 
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
+  // 모바일일때 1로 변경하면 됨
+  slidesPerView: 3,
   spaceBetween: 30,
-  centeredSlides: true,
+  
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    type: "progressbar",
   },
 });

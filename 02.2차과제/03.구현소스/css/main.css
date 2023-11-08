@@ -274,7 +274,7 @@ section{
   /* left: 20px; */
 }
 
-.top-area .logo>img{
+.top-area .logo img{
   width: 100%;
   bottom: 0;
   position: absolute;
@@ -299,7 +299,7 @@ section{
 }
 
 .top-area .trans_btn{
-
+  cursor: pointer;
 
 }
 
@@ -635,13 +635,18 @@ text-align: right;
 .slide__wrap{
   width: 100%;
   overflow: hidden;
+  position: relative;
+  padding: 18vh 0;
 }
+/* 오버프로우 히든하면 z인덱스 안먹히는거
+어떻게 해결하면 좋을까 */
+
 
 .slide{
   height: 100px;
   outline:  1px solid var(--dark-color);
 
-  overflow: hidden;
+  
 
   transform: scale(1.2) rotate(355deg) translate(2px, -40px);
 }
@@ -672,6 +677,13 @@ text-align: right;
   transform: scale(0.6);
 }
 
+.slide_back{
+  width: 100%;
+  height: 37%;
+  top: 0;
+  background-color: var(--dark-color);
+  position: absolute;
+}
 
 /* _____________________  학원소개  _________________________ */
 .photo{
@@ -679,40 +691,51 @@ text-align: right;
   width: 100%;
   height: 500px;
   overflow: hidden;
-  right: -5%;
+  right: -6%;
+  padding-top: 20vh;
 }
 
 .photo__box{
   height: 100%;
   display: flex;
+  width: 3000px;
 }
 
 
 .photo__item{
-  width: 200px;
-  height: 300px;
+  height: 44vh;
   background-color: var(--dark-color);
-}
+  position: relative;
+  border-radius: 20px;
 
+}
+.photo__title{
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+}
+.photo__item h3{
+  bottom: 0;
+  color: var(--bright-color);
+
+  font-size: min(6vw,2rem);
+  text-align: center;
+}
 
 
 .swiper {
-  width: 1500px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
 }
 
-.swiper-wrapper {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1500px;
+.swiper-slide {
+width: 100%;
 }
 
 .swiper-slide img {
-  /* display: block;
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover; */
+  object-fit: cover;
 }
