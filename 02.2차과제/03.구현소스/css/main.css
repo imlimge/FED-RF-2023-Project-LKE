@@ -452,11 +452,41 @@ section{
 
 .round__box{
   height: 250px;
-  outline: 1px dotted #fff;
+  /* outline: 1px dotted #fff; */
 }
 
 
 
+.big-round {
+  position: relative;
+
+  width: 20vw;
+  aspect-ratio: 1;
+
+  border: 1px solid var(--bright-color);
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  float: left;
+}
+
+.big-round.bx2 {
+  border: 1px dashed var(--bright-color);
+}
+/* 회전하는 작은 원 */
+.small-round {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--bright-color);
+  border-radius: 50%;
+  background-color: var(--bright-color);
+  transition: 1s linear;
+  z-index: 1;
+}
 .about{
   position: sticky;
   top:20vh;
@@ -564,3 +594,12 @@ text-align: right;
   left: 0;
   right: 46.5%;
 }
+
+
+.slide{
+  width: 100%;
+  height: 100px;
+  outline:  1px solid var(--dark-color);
+  background-color: var(--bright-color);
+}
+

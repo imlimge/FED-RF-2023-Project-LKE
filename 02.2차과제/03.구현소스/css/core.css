@@ -25,7 +25,7 @@
 
 /*--------------  폰트   --------------*/
 
-/* 제목 */
+/* 제목 - 코트라 도약*/
 @font-face {
   font-family: 'KOTRALEAP';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2') format('woff2');
@@ -34,10 +34,34 @@
 }
 
 
-/* 본문 - 바탕 */
+
+/* 제목 - 단조*/
+@font-face {
+  font-family: 'Danjo-bold-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* 본문 - 제주(바탕) */
 @font-face {
   font-family: 'GowunBatang-Regular';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+
+/* 영문 - Merriweather(세리프) */
+@font-face { 
+  src:url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+  font-family: 'Merriweather', serif;
+}
+
+/* 영문 - Libre Baskerville(세리프) */
+@font-face { 
+  src:url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+  font-family: 'Libre Baskerville', serif;
 }

@@ -7,10 +7,21 @@
 </head>
 
   
-
+<!-- 스와이퍼 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- 메인 CSS  -->
 <link rel="stylesheet" href="./css/main.css" />
+
+
+ <!-- 외부 JS  -->
+ <script type="module" src="./JS/main.js"></script>
+
+
+<script>
+ 
+
+</script>
 
 
 <body>
@@ -104,7 +115,15 @@
           
           <div class="about">
             <h3>실력에서<br>멘탈까지</h3>
-            <div class="round__box"></div>
+            <div class="round__box">
+              <div class="big-round">
+                <div class="small-round"></div>
+              </div>
+              <div class="big-round bx2">
+              
+              </div>
+          
+            </div>
             <article>
               수학 전공 선생님으로 풍부한 경험<br>
 심리학 전공 선생님으로 명확한 코칭
@@ -128,7 +147,9 @@
     <div class="about__box">
           <!-- 원형 -->
               <div class="about__round">
-                    <div class="round"></div>
+                    <div class="round">
+                      <div class="small-round round2"></div>
+                    </div>
               </div>
          <!-- 내용 -->
          <div class="about__content">
@@ -189,10 +210,17 @@
 
   <!-- 움직임 효과 -->
   <div class="slide">
-    <div class="slide__text"></div>
+    <div class="slide__text">
+
+    </div>
     <div class="slide__logo"></div>
     <div class="slide__text"></div>
   </div>
+
+
+
+
+
   <!-- 중간광고 -->
   <div class="ad"></div>
 
@@ -203,11 +231,17 @@
   <section id="facility">
     <div class="facility">
       <h2 class="tit">학원시설</h2>
-      <!-- 학원 사진 -->
+      <!-- 학원 사진 --> 
+      <!-- 스와이퍼 예정
+      view-source:https://swiperjs.com/demos/130-centered/core
+      https://swiperjs.com/demos
+    -->
       <div class="photo">
-        <div class="photo__item"></div>
-        <div class="photo__item"></div>
-        <div class="photo__item"></div>
+        <div class="photo__box">
+          <div class="photo__item"></div>
+          <div class="photo__item"></div>
+          <div class="photo__item"></div>
+      </div>
       </div>
     </div>
   </section>
