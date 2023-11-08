@@ -28,7 +28,7 @@ section{
   height: 100vh;
   padding-left: 12%;
   padding-right: 5%;
-  padding-top: 6%;
+  padding-top: 7vh;
   background-color: var(--bright-color);
 }
 
@@ -620,9 +620,36 @@ text-align: right;
 
 
 .slide{
-  width: 100%;
   height: 100px;
   outline:  1px solid var(--dark-color);
-  background-color: var(--bright-color);
+
+  overflow: hidden;
+
+  transform: scale(1.2) rotate(355deg) translate(2px, -40px);
 }
 
+.slide__box{
+  position: relative;
+  /* JS에서 스크롤 시 레프트값 조절하여 이동 */
+  left: -570px; 
+  display: flex;
+  background-color: var(--bright-color);
+  height: 100%;
+  width: 3000px;
+}
+
+.slide__text{
+  font-size: 7.5rem;
+  font-family: 'Merriweather', serif;
+}
+
+.slide__text span{
+  line-height: 1.3;
+}
+
+.slide__logo{
+  height: 100%;
+}
+.slide__logo img{
+  transform: scale(0.6);
+}
