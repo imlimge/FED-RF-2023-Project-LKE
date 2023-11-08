@@ -11,6 +11,8 @@
 
 
 
+- 강사소개 small-round forEach가 한번만 불려온다
+
 
 
 

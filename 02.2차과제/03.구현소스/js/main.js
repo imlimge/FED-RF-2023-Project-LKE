@@ -15,14 +15,20 @@ const tg2 = dFn.qsa(".small-round.round2");
 let TM = 1000;
 
 // 회전함수 최초호출
-
 rotFn();
 
 
-tg2.forEach(ele => {
-  rotFn2(ele);
-});
 
+tg2.forEach(ele => {
+  // rotFn2(ele);
+  console.log(ele);
+}); 
+
+
+for(let ele of tg2){
+  // rotFn2(ele);
+  console.log(ele);
+}
 
 function rotFn() {
   setTimeout(() => {
@@ -105,4 +111,4 @@ function rotFn2(ele) {
 
   setTimeout(rotFn2, TM * 4);
 
-}
+} ////// rotFn2 함수 ///////
