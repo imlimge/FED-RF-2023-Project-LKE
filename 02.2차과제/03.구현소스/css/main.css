@@ -527,10 +527,28 @@ section{
 
 
 .about__round{
+  position: relative;
 flex: 1;
 
 }
 
+.round__content{
+  top: 37%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.about__round h4{
+  font-size: 2vw;
+text-align: center;
+}
+
+.about__round span{
+  text-align: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
 
 .round{
   position: relative;
@@ -542,8 +560,14 @@ flex: 1;
   border: 1px solid var(--dark-color);
 }
 
+
+
 .round.part2{
   border: 1px dashed var(--bright-color);
+}
+
+.small-round.round2{
+  border: 1px solid var(--dark-color);
 }
 
 .about__content{

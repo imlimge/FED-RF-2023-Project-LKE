@@ -11,7 +11,7 @@ import dFn from "./dom.js";
 const tg = dFn.qs(".small-round");
 
 // 애니시간(ms)
-let TM = 700;
+let TM = 1000;
 
 // 회전함수 최초호출
 
