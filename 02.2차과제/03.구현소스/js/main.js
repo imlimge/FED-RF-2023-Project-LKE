@@ -112,3 +112,17 @@ function rotFn2(ele) {
   setTimeout(rotFn2, TM * 4);
 
 } ////// rotFn2 함수 ///////
+
+
+
+
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
