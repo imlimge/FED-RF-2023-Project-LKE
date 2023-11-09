@@ -114,16 +114,51 @@ function rotFn2(ele) {
 } ////// rotFn2 함수 ///////
 
 
+window.addEventListener("resize", function() {
+  // window resize시 처리
+  let winW = window.innerWidth;
+  console.log(winW)
+})
 
 
 
-var swiper = new Swiper(".mySwiper", {
-  // 모바일일때 1로 변경하면 됨
-  slidesPerView: 3,
-  spaceBetween: 30,
+var swiper = new Swiper(".mySwiper",
+{
+  // 모바일일때 1로 변경하고 싶은데
+  // 안돼서 css에서 전체폭 사이즈를 수정하는거로
+  // 임시 설정
   
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
   pagination: {
     el: ".swiper-pagination",
-    type: "progressbar",
   },
-});
+
+  breakpoints: {
+    200: {
+      slidesPerView: 1.2, 
+      spaceBetween: 40,
+    },
+    700: {
+      slidesPerView: 1.5, 
+      spaceBetween: 40,
+    },
+    1000: {
+      slidesPerView: 2.4, 
+      spaceBetween: 50,
+    },
+
+}
+
+}
+
+);
