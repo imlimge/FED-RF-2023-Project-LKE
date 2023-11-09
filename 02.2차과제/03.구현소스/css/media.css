@@ -29,5 +29,31 @@
 
 
 
+   @media screen and (max-width:500px){
+   
+   section{
+    padding-left: 2%;
+    padding-right: 2%;
+   }
+   
+   
+   .gnb-box{
+      display: none;
+   }
+
+
+   .top-area .trans_btn_box {
+     bottom: -32px;
+     left: 0;
+    }
+
+  .trans_btn .btn{
+    line-height: 1.4;
+    font-size: 1.7rem;
+ }
+ 
+
+   }
+
 
 
