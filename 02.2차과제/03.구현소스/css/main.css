@@ -26,15 +26,16 @@ h3,h4,article{
 
 section{
   height: 100vh;
-  padding-left: 12%;
-  padding-right: 5%;
-  padding-top: 7vh;
+
   background-color: var(--bright-color);
 }
 
 
 /* 각 파트 제목 */
 .tit{
+  padding-left: 12%;
+  padding-right: 5%;
+  padding-top: 7vh;
   font-size: var(--bold-font-size);
 }
 
@@ -357,8 +358,10 @@ section{
 
 /* 인트로 */
 #intro{
-  height: 5500px;
+  height: 4790px;
   padding-top: 26vh;
+  padding-left: 12%;
+  padding-right: 5%;
 }
 
 
@@ -399,7 +402,7 @@ section{
   right: 0;
   margin: 0 auto;
   border-radius: 20px 20px 0 0;
-  width: 60vw;
+  width: 80vw;
   height: 800px;
   
   padding: 8vw 5vw;
@@ -439,6 +442,8 @@ section{
     line-height: 1.5;
     font-size: 1.4rem;
    text-align: center;
+   display: inline-block;
+   margin: 3vh 0;
  }
 
 
@@ -447,21 +452,17 @@ section{
   position: sticky;
   background-color: var(--color3);
 
-  height: 2500px;
+  height: 1700px;
 }
 
 
 .round__box{
-  height: 250px;
-  /* outline: 1px dotted #fff; */
+text-align: center;
 }
 
 .round__wrap{
-  width: 100%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-
+  display: flex;
+  justify-content: center;
 }
 
 .big-round {
@@ -638,7 +639,7 @@ text-align: right;
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 20vh 0;
+  /* padding: 20vh 0; */
 }
 /* 오버프로우 히든하면 z인덱스 안먹히는거
 어떻게 해결하면 좋을까 */
@@ -646,11 +647,9 @@ text-align: right;
 
 .slide{
   height: 100px;
-  outline:  1px solid var(--dark-color);
-
+  border:  1px solid var(--dark-color);
   
-
-  transform: scale(1.2) rotate(355deg) translate(2px, -40px);
+  /* transform: scale(1.2) rotate(355deg) translate(2px, -40px); */
 }
 
 .slide__box{
@@ -680,55 +679,61 @@ text-align: right;
 }
 
 .slide_back{
-  width: 100%;
-  height: 37%;
-  top: 0;
-  background-color: var(--dark-color);
-  position: absolute;
+/* width: 100%;
+height: 37%;
+top: 0;
+background-color: var(--dark-color);
+position: absolute; */
 }
 
 .slide_back.slide2{
   background-color: var(--bright-color);
   position: absolute;
   top: 34%;
-  transform: rotate(8deg);
+  /* transform: rotate(8deg); */
  }
 
 .slide.slide2{
-  transform: scale(1.2) rotate(10deg) translate(2px, -40px);
+  /* transform: scale(1.2) rotate(10deg) translate(2px, -40px); */
 }
 
 /* _____________________  광고  _________________________ */
 
 
 
-
-.ad{
-  position: absolute;
-  width: 100%;
-  height: 562px;
-  background: red;
-  /* overflow: hidden; */
+.cont{
+  height: 504px;
 }
 
-.ad-box{
+.cont__box{
   position: relative;
   width: 100%;
-  /* height: 500px; */
+  height: 700px;
 }
 
-.ad-content{
+.cont__content{
   position: sticky;
   top: 100px;
-  width: 80%;
+  width: 800px;
   height: 500px;
-  background-color: yellow;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
-.ad__title{
-  position: sticky;
-  top: 250px;
+.cont__title{
+  /* position: sticky; */
+  top: 375px;
   font-size: 3vw;
+}
+.cont__img{
+  width: 300px;
+  height: 300px;
+  border: 1px dotted #000;
 }
 
 /* _____________________  학원소개  _________________________ */

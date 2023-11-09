@@ -2,32 +2,6 @@
 //Dom함수 모듈
 import dFn from "./dom.js";
 
-const aTeacher = $('.about__teacher');
-aTeacher.css({
-  position:'fixed',
-  top:'0',
-  left:'0',
-  width:'100vw',
-  height: '100vh',
-  zIdex: '9999'
-}).hide();
-
-$(window).scroll(()=>{
-  let scTop = $(window).scrollTop();
-  console.log(scTop);
-  if(scTop>4700 && scTop<5000){
-    aTeacher.eq(0).show();
-  }
-  else if(scTop>=5000&&scTop<5300){
-    aTeacher.eq(1).show();
-  }
-  else if(scTop>5300){
-    aTeacher.hide();
-  }
-  else{
-    aTeacher.hide();
-  }
-})
 
 /*------------------- 인트로 -  라운드 박스 ------------------ */
 // 대상: .tg
@@ -44,14 +18,10 @@ rotFn();
 
 tg2.forEach(ele => {
  rotFn2(ele);
-  console.log(ele);
+  // console.log(ele);
 }); 
 
 
-for(let ele of tg2){
-  // rotFn2(ele);
-  console.log(ele);
-}
 
 function rotFn() {
   setTimeout(() => {

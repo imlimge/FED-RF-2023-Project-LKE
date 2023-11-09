@@ -31,7 +31,7 @@
 
    @media screen and (max-width:500px){
    
-   section{
+   section, #intro{
     padding-left: 2%;
     padding-right: 2%;
    }
@@ -53,6 +53,26 @@
  }
  
 
+ .about__box{
+   flex-direction: column;
+ }
+
+ .about__box.part2{
+   flex-direction: column-reverse;
+ }
+
+
+.round{
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.about__history span::after{
+   left:12.6%
+}
+.about__history.part2 span::after {
+   right: 5.3%;
+}
    }
 
 

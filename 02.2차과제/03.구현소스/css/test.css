@@ -139,3 +139,34 @@
 
   </div>
 </section> -->
+
+
+
+티쳐 제이쿼리
+
+const aTeacher = $('.about__teacher');
+aTeacher.css({
+  position:'fixed',
+  top:'0',
+  left:'0',
+  width:'100vw',
+  height: '100vh',
+  // zIndex: '9999'
+}).hide();
+
+$(window).scroll(()=>{
+  let scTop = $(window).scrollTop();
+  // console.log(scTop);
+  if(scTop>4000 && scTop<5000){
+    aTeacher.eq(0).show();
+  }
+  else if(scTop>=5000&&scTop<6000){
+    aTeacher.eq(1).show();
+  }
+  else if(scTop>6000){
+    aTeacher.hide();
+  }
+  else{
+    aTeacher.hide();
+  }
+})
