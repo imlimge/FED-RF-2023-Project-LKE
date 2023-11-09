@@ -145,15 +145,15 @@ var swiper = new Swiper(".mySwiper",
 
   breakpoints: {
     200: {
-      slidesPerView: 1.2, 
-      spaceBetween: 40,
+      slidesPerView: 1.7, 
+      spaceBetween: 10,
     },
     700: {
-      slidesPerView: 1.5, 
-      spaceBetween: 40,
+      slidesPerView: 2, 
+      spaceBetween: 30,
     },
     1000: {
-      slidesPerView: 2.4, 
+      slidesPerView: 2.2, 
       spaceBetween: 50,
     },
 

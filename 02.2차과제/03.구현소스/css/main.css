@@ -636,7 +636,7 @@ text-align: right;
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 18vh 0;
+  padding: 20vh 0;
 }
 /* 오버프로우 히든하면 z인덱스 안먹히는거
 어떻게 해결하면 좋을까 */
@@ -685,6 +685,50 @@ text-align: right;
   position: absolute;
 }
 
+.slide_back.slide2{
+  background-color: var(--bright-color);
+  position: absolute;
+  top: 34%;
+  transform: rotate(8deg);
+ }
+
+.slide.slide2{
+  transform: scale(1.2) rotate(10deg) translate(2px, -40px);
+}
+
+/* _____________________  광고  _________________________ */
+
+
+
+
+.ad{
+  position: absolute;
+  width: 100%;
+  height: 562px;
+  background: red;
+  /* overflow: hidden; */
+}
+
+.ad-box{
+  position: relative;
+  width: 100%;
+  /* height: 500px; */
+}
+
+.ad-content{
+  position: sticky;
+  top: 100px;
+  width: 80%;
+  height: 500px;
+  background-color: yellow;
+}
+
+.ad__title{
+  position: sticky;
+  top: 250px;
+  font-size: 3vw;
+}
+
 /* _____________________  학원소개  _________________________ */
 
 #facility{
@@ -695,13 +739,13 @@ text-align: right;
 .facility .tit{
   padding-left: 12%;
   padding-right: 5%;
+  padding-top: 7vh;
 }
 
 
 .photo{
   position: relative;
   overflow: hidden;
-  right: -6%;
   padding-top: 20vh;
 }
 
@@ -750,4 +794,9 @@ text-align: right;
   height: 100%;
   object-fit: cover;
 }
+
+
+
+/* _____________________  시간표  _________________________ */
+
 
