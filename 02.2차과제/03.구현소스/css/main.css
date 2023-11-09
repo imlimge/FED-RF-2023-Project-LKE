@@ -456,7 +456,13 @@ section{
   /* outline: 1px dotted #fff; */
 }
 
+.round__wrap{
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 
+}
 
 .big-round {
   position: relative;
