@@ -117,10 +117,7 @@ window.addEventListener("resize", function() {
 
 var swiper = new Swiper(".mySwiper",
 {
-  // 모바일일때 1로 변경하고 싶은데
-  // 안돼서 css에서 전체폭 사이즈를 수정하는거로
-  // 임시 설정
-  
+
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
@@ -137,7 +134,7 @@ var swiper = new Swiper(".mySwiper",
   },
 
   breakpoints: {
-    200: {
+    300: {
       slidesPerView: 1.7, 
       spaceBetween: 10,
     },
