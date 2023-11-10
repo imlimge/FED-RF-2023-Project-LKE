@@ -42,16 +42,25 @@
    }
 
 
+   
+   .top-area{
+      left: 0;
+   }
+
+
    .top-area .trans_btn_box {
      bottom: -32px;
      left: 0;
+     right: 0;
+     margin: 0 auto;
     }
 
-  .trans_btn .btn{
-    line-height: 1.4;
-    font-size: 1.7rem;
- }
- 
+    .top-area .logo{
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
 
  .about__box{
    flex-direction: column;
