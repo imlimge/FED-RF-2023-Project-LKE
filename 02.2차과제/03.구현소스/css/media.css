@@ -52,12 +52,15 @@
       text-align: center;
    }
    
-   .gnb__box{
+   .header{
       display: none;
    }
 
-
+   .m-header{
+      display: block;
+   }
    
+
    .top-area{
       left: 0;
       height: 93px;

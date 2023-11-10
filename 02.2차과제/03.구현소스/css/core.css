@@ -18,11 +18,19 @@
   --bold-font:'KOTRALEAP';
 
   --font-size: 1.6rem;
-  --bold-font-size: min(9vw,6rem);
+  --bold-font-size: min(5.3vw,5rem);
 
 
   /* 스와이퍼 색상 */
   --swiper-theme-color: #5b5b5b;
+
+
+
+  /* 여백 */
+  --margin-right: 5%;
+
+  /* .header 여백만큼 패딩 및 마진값 설정 */
+  --margin-left: 12%;
 }
 
 
