@@ -62,7 +62,7 @@ section{
 
 }
 
-.gnb-box{
+.gnb__box{
   height: 100%;
   position: relative;
 }
@@ -358,7 +358,7 @@ section{
 
 /* 인트로 */
 #intro{
-  height: 4790px;
+  height: 560vh;
   padding-top: 26vh;
   padding-left: 12%;
   padding-right: 5%;
@@ -452,7 +452,7 @@ section{
   position: sticky;
   background-color: var(--color3);
 
-  height: 1700px;
+  height: 170vh;
 }
 
 
