@@ -115,7 +115,11 @@
 .about__history.part2 span::after {
    right: 5.3%;
 }
-   }
+ 
+.photo{
+   padding-top: 30vh;
+}
 
 
 
+}/*************** 500px 이하 ***************/
