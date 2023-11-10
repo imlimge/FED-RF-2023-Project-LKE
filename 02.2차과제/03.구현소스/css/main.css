@@ -283,6 +283,7 @@ section{
   width:100%;
   /* height: 10%; */
   position: fixed;
+  z-index: 9999;
 }
 
 .m-gnb-box{
@@ -334,9 +335,9 @@ section{
   height: 40px;
   background-color: var(--bright-color);
   /* outline: 1px solid var(--dark-color); */
-  clip-path: polygon(100% 0%, 90% 45%, 100% 88%, 0 100%, 0 55%, 0 12%);
+  clip-path: polygon(31% 0 ,100% 0%, 88% 51%, 100% 144%, 0 100%, 0 50%, 0 99%);
   z-index: -1;
-  transform: rotate(2deg);
+  /* transform: rotate(2deg); */
 }
 
 
@@ -350,9 +351,9 @@ section{
   height: 42px;
   background-color: var(--dark-color);
   /* outline: 1px solid var(--dark-color); */
-  clip-path: polygon(100% 0%, 90% 45%, 100% 88%, 0 100%, 0 55%, 0 12%);
+  clip-path: polygon(31% 0 ,100% 0%, 88% 51%, 100% 144%, 0 100%, 0 50%, 0 99%);
   z-index: -2;
-  transform: rotate(2deg);
+  /* transform: rotate(2deg); */
 }
 
 .m-gnb__menu li:nth-child(1) a{
@@ -369,6 +370,35 @@ section{
 }
 .m-gnb__menu li:nth-child(5) a{
   left:65%;
+}
+
+
+/* 네비게시연 아이템 on 되어있는 상태 */
+.m-gnb__item.on.m-gnb__item::before{
+  background-color: var(--dark-color);
+}
+.m-gnb__item.on.m-gnb__item::after{
+  background-color: var(--bright-color);
+}
+
+.m-gnb__menu li a.m-gnb__item.on {
+  color: var(--bright-color);
+}
+
+.m-gnb__menu li:nth-child(1){
+  order: 2;
+}
+.m-gnb__menu li:nth-child(2){
+  order: 1;
+}
+.m-gnb__menu li:nth-child(3){
+  order: 4;
+}
+.m-gnb__menu li:nth-child(4){
+  order: 5;
+}
+.m-gnb__menu li:nth-child(5){
+  order: 3;
 }
 
 
