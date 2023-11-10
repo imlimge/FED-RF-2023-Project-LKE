@@ -35,7 +35,21 @@
     padding-left: 2%;
     padding-right: 2%;
    }
+      
+   .tit{
+      padding-left: 2%;
+      padding-right: 2%;
+      text-align: center;
+   }
    
+
+
+
+   .facility .tit{
+      padding-left: 2%;
+      padding-right: 2%;
+      text-align: center;
+   }
    
    .gnb__box{
       display: none;
@@ -45,6 +59,7 @@
    
    .top-area{
       left: 0;
+      height: 93px;
    }
 
 
