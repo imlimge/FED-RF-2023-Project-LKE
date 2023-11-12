@@ -21,10 +21,7 @@
   --bold-font-size: min(5.3vw,5rem);
 
 
-  /* 스와이퍼 색상 */
-  --swiper-theme-color: #5b5b5b;
-
-
+ 
 
   /* 여백 */
   --margin-right: 5%;
@@ -33,7 +30,35 @@
   --margin-left: 12%;
 }
 
+[type="radio"] {
+  /* accent-color:var(--dark-color); */
+}
 
+
+[type="radio"] {
+  appearance: none;
+  border: max(2px, 0.1em) solid var(--dark-color);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+
+}
+[type="radio"]:checked {
+  border: max(2px, 0.1em) solid var(--dark-color);
+  background-color: var(--dark-color);
+}
+[type="radio"]:focus-visible {
+  outline: max(2px, 0.1em) dotted tomato;
+  outline-offset: max(2px, 0.1em);
+}
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+[type="radio"]:hover + span {
+  cursor: pointer;
+}
 /*--------------  폰트   --------------*/
 
 /* 제목 - 코트라 도약*/

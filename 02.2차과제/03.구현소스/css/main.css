@@ -10,7 +10,7 @@
 
 
 body *{
-outline: 1px dotted orange;
+/* outline: 1px dotted orange; */
   
 }
 
@@ -26,6 +26,8 @@ h2{
 h3,h4,article{
   font-family: 'GowunBatang-Regular';
 }
+
+
 
 
 section{
@@ -84,7 +86,7 @@ user-select: none;
 .gnb__menu {
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   justify-items: start;
 
 }
@@ -239,7 +241,8 @@ user-select: none;
 .vertical-lines::after {
   content: "";
   position: absolute;
-  width: 2%; /* 세로선의 가로폭을 설정 (전체 가로폭 대비 비율로) */
+  width: 5%; 
+  /* 세로선의 가로폭을 설정 (전체 가로폭 대비 비율로) */
   background-color: var(--dark-color); /* 세로선의 색상을 설정하세요. */
   height: 100%; /* 세로선의 높이를 조절하세요. */
 }
@@ -269,13 +272,16 @@ user-select: none;
   order: 1;
 }
 .gnb__menu li:nth-child(3){
-  order: 4;
+  order: 3;
 }
 .gnb__menu li:nth-child(4){
-  order: 5;
+  order: 4;
 }
 .gnb__menu li:nth-child(5){
-  order: 3;
+  order: 5;
+}
+.gnb__menu li:nth-child(6){
+  order: 6;
 }
 
 
@@ -294,6 +300,9 @@ user-select: none;
 }
 .gnb__menu li:nth-child(5) a{
   top:300px;
+}
+.gnb__menu li:nth-child(6) a{
+  top:350px;
 }
 
 
@@ -314,7 +323,7 @@ user-select: none;
 
 .m-gnb__menu{
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
  }
 
  .m-gnb__menu li{
@@ -329,8 +338,8 @@ user-select: none;
 
  .m-gnb__menu li a{
   position: absolute;
-  width: 100px;
-  height: 40px;
+  width: 107px;
+  height: 41px;
   text-align: center;
   line-height: 2.5;
   display: inline-block;
@@ -377,20 +386,24 @@ user-select: none;
   /* transform: rotate(2deg); */
 }
 
+
 .m-gnb__menu li:nth-child(1) a{
-  left:5%;
+  left: 2%;
 }
 .m-gnb__menu li:nth-child(2) a{
-  left:20%;
+  left: 14%;
 }
 .m-gnb__menu li:nth-child(3) a{
-  left:35%;
+  left: 29%;
 }
 .m-gnb__menu li:nth-child(4) a{
-  left:50%;
+  left: 43%;
 }
 .m-gnb__menu li:nth-child(5) a{
-  left:65%;
+  left: 58%;
+}
+.m-gnb__menu li:nth-child(6) a{
+  left: 71%;
 }
 
 
@@ -416,10 +429,13 @@ user-select: none;
   order: 4;
 }
 .m-gnb__menu li:nth-child(4){
-  order: 5;
+  order: 3;
 }
 .m-gnb__menu li:nth-child(5){
-  order: 3;
+  order: 6;
+}
+.m-gnb__menu li:nth-child(6){
+  order: 5;
 }
 
 
@@ -989,37 +1005,158 @@ position: absolute; */
 
 
 /* _____________________  반소개  _________________________ */
+
 #about__class{
-position: relative;
-
-
+  height: 130vh;
 }
 .about__class {
-  position: absolute;
-  width: 24vw;
-  height: 51vh;
+  position: relative;
+  height: auto;
+  display: flex;
+  /* width: 100%; */
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right);
+  gap: 2vw;
+  align-items: flex-start
+}
+
+
+
+.about__class__box {
+  /* position: absolute; */
+  /* width: 24vw; */
+  /* height: 51vh; */
+  /* height: auto; */
+  box-sizing: border-box;
   border: 1px solid var(--dark-color);
   background-color: var(--bright-color);
   border-radius: 20px;
   margin: 3vh 0;
+  text-align: center;
+  padding: 2.9vh 2vw;
+  flex: 1;
 }
 
 
-.about__class.class1{
-  left: 19%;
-  top: 23%;
+.about__class__box h2{
+  font-size: 3rem;
+  margin: 5% 0;
+}
+
+.about__class__box article{
+
+  color: var(--dark-color);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: bold;
+  padding: 3vw 0;
+
+}
+
+.about__class__box hr{
+
+  color: var(--dark-color);
+  width: 90%;
+}
+
+.about__class__box h3{
+  font-size: 2rem;
+  padding: 2vw 0;
+}
+.about__class__box h4{
+  font-size: 1.7rem;
+}
+.about__class__box p{
+  font-size: 1.3rem;
+}
+
+
+
+.about__class__box.class1{
+  /* left: 19%;
+  top: 3%; */
   }
-.about__class.class2{
-  left: 45%;
-  top: 28%;
+.about__class__box.class2{
+  /* left: 45%;
+  top: 10%; */
+  /* top: 13%; */
+  /* position: relative; */
+  transform: translateY(10%);
   }
-.about__class.class3{
-  left: 71%;
-  top: 37%;
+.about__class__box.class3{
+  /* left: 71%;
+  top: 17%; */
+  transform: translateY(21%);
   }
 
+.class__name__box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.class__name h4{
+ 
+  display: inline-block;
+  border: 1px solid var(--dark-color);
+  border-radius: 20px;
+  padding: 1% 5%;
+}
+
+.class__name p{
+  padding: 4% 0;
+}
 
 
 /* _____________________  시간표  _________________________ */
+table {
+  width: 100%;
+  border: 1px solid #444444;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid orange;
+}
+
+#time_table{
+
+}
+
+.time_table{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.time__table__radio{
+  position: relative;
+  text-align: right;
+}
+
+label{
+  font-size: 1.2rem;
+}
+.time_table__box{
+  width: 40%;
+  height: 75%;
+  box-sizing: border-box;
+
+  border: 1px dashed orange;
+
+  margin-right: var(--margin-right);
+  position: absolute;
+  right: 0;
+}
 
 
+/* _____________________  시간표  _________________________ */
+#notice{
+  background-color: var(--dark-color);
+
+}
+
+#notice .tit{
+  color: var(--bright-color);
+}

@@ -27,37 +27,46 @@
    .col1-block{display: block;}
 
 
+
+
    @media screen and (max-width:950px){
- 
+      .time_table__box{
+         width: 50%;
+      }
+
+   }
+
+   @media screen and (max-width:750px){
+
+
       #about__class{
-      /* 임시높이 */
-      height: auto;
+         height: 260vh;
       }
+      
       .about__class {
-         position: relative;
-         width: 61vw;
-     
-         margin: 2vh auto;
-      }
-      .about__class.class1{
-         left: 0%;
-         right: 0;
-         }
-       .about__class.class2{
-         left: 3%;
-         right: 0;
-         }
-       .about__class.class3{
-         left: 5%;
-         right: 0;
-         }
-       
-       
+         flex-direction: column;
+         align-items: stretch
+     }
+     .about__class__box {
+      margin: 0;
+     }
+
+
+
+     .time_table__box{
+      width: 60%;
+    
+     }
+
 
 
 
    }
-   
+
+
+
+
+
 
 
    @media screen and (max-width:500px){
@@ -91,6 +100,14 @@
       display: block;
    }
    
+   
+.vertical-lines::before,
+.vertical-lines::after {
+
+  width: 0; 
+ 
+}
+
 
    .top-area{
       left: 0;
@@ -123,7 +140,7 @@
     }
 
 
-
+   
 
 
  .about__box{
@@ -152,22 +169,21 @@
    
 }
 
+#time_table{
+position: relative;
+}
+.time_table__box{
 
+   width: 90%;
+    height: 70%;
+    margin: auto;
+    top: 8%;
+    bottom: 0;
+   
+    left: 0;
+    right: 0;
+  }
 
-.about__class.class1{
-   left: 0;
-   right: 0;
-   }
- .about__class.class2{
-   left: 0;
-   right: 0;
-   }
- .about__class.class3{
-   left: 0;
-   right: 0;
-   }
- 
- 
 
 
 
