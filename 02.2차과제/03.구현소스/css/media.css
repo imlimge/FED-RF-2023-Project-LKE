@@ -27,6 +27,37 @@
    .col1-block{display: block;}
 
 
+   @media screen and (max-width:950px){
+ 
+      #about__class{
+      /* 임시높이 */
+      height: auto;
+      }
+      .about__class {
+         position: relative;
+         width: 61vw;
+     
+         margin: 2vh auto;
+      }
+      .about__class.class1{
+         left: 0%;
+         right: 0;
+         }
+       .about__class.class2{
+         left: 3%;
+         right: 0;
+         }
+       .about__class.class3{
+         left: 5%;
+         right: 0;
+         }
+       
+       
+
+
+
+   }
+   
 
 
    @media screen and (max-width:500px){
@@ -118,7 +149,25 @@
  
 .photo{
    padding-top: 30vh;
+   
 }
+
+
+
+.about__class.class1{
+   left: 0;
+   right: 0;
+   }
+ .about__class.class2{
+   left: 0;
+   right: 0;
+   }
+ .about__class.class3{
+   left: 0;
+   right: 0;
+   }
+ 
+ 
 
 
 

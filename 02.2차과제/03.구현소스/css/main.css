@@ -10,7 +10,7 @@
 
 
 body *{
-/* outline: 1px dotted orange; */
+outline: 1px dotted orange;
   
 }
 
@@ -120,6 +120,10 @@ user-select: none;
 }
 
 
+.gnb__menu li a:hover{
+  color: var(--bright-color);
+}
+
 /* 네비게이션 아이템 책갈피 모양 */
 .gnb__menu li a::before{
   content: '';
@@ -170,7 +174,8 @@ user-select: none;
 
 .gnb__menu li a:hover::before{
   content: '';
-  background-color: yellow;
+  background-color: var(--dark-color);
+
 }
 
 
@@ -981,6 +986,37 @@ position: absolute; */
   height: 100%;
   object-fit: cover;
 }
+
+
+/* _____________________  반소개  _________________________ */
+#about__class{
+position: relative;
+
+
+}
+.about__class {
+  position: absolute;
+  width: 24vw;
+  height: 51vh;
+  border: 1px solid var(--dark-color);
+  background-color: var(--bright-color);
+  border-radius: 20px;
+  margin: 3vh 0;
+}
+
+
+.about__class.class1{
+  left: 19%;
+  top: 23%;
+  }
+.about__class.class2{
+  left: 45%;
+  top: 28%;
+  }
+.about__class.class3{
+  left: 71%;
+  top: 37%;
+  }
 
 
 
