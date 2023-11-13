@@ -12,7 +12,7 @@ html{
 }
 
 body *{
-/* outline: 1px dotted orange; */
+outline: 1px dotted orange;
   
 }
 
@@ -1205,9 +1205,9 @@ label{
 
 
 .notice__box{
-  width: 10%;
+  width: 100%;
   height: 70%;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   margin-top: 5%;
 }
 
@@ -1227,3 +1227,75 @@ padding: 3% 2% 3% 30%;
 
 }
 
+/* _____________________  컨택트  _________________________ */
+.contact__box{
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right);
+
+  display: flex;
+  position: relative;
+  gap: 5%;
+}
+
+.contact__box h4{
+font-size: 1.6rem;
+margin: 3% 0;
+
+display: inline-block;
+border: 1px solid var(--dark-color);
+border-radius: 20px;
+padding: 1% 5%;
+}
+
+.contact__box p{
+  display: inline-block;
+  width: 100%;
+  font-size: 1.4rem;
+  margin-top: 3%;
+}
+.contact__box span{
+  display: inline-block;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 9%;
+}
+
+.contact__map{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+  border-radius: 20px;
+
+}
+
+
+.contact__time{
+
+  flex: 1;
+}
+.contact__address{
+
+  flex: 1;
+}
+.contact__number{
+
+  flex: 1;
+}
+
+.wrap1{
+  padding-top: 5%;
+
+  flex: 1;
+}
+
+.wrap2{
+  display: flex;
+  justify-content: space-around;
+
+  padding-top: 5%;
+  gap: 3%;
+
+  flex: 1;
+}
