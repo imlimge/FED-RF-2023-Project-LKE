@@ -7,7 +7,9 @@
 
 
 
-
+html{
+  scroll-behavior: smooth;
+}
 
 body *{
 /* outline: 1px dotted orange; */
@@ -275,10 +277,10 @@ user-select: none;
   order: 3;
 }
 .gnb__menu li:nth-child(4){
-  order: 4;
+  order: 5;
 }
 .gnb__menu li:nth-child(5){
-  order: 5;
+  order: 4;
 }
 .gnb__menu li:nth-child(6){
   order: 6;
@@ -316,7 +318,7 @@ user-select: none;
   display: none;
 }
 
-.m-gnb-box{
+.m-gnb__box{
   width: 100%;
   position: relative;
 }
@@ -481,12 +483,23 @@ user-select: none;
   width: 100%;
   bottom: 0;
   position: absolute;
+  mix-blend-mode: difference;
+
 }
+
+
+/* .top-area .logo img:nth-child(2){
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  mix-blend-mode: difference;
+
+} */
 
 
 
 /* 상단 오른쪽 토글버튼 */
-.top-area .trans_btn_box{
+.top-area .trans_btn__box{
   width: 150px;
   height: 24.59px;
   position: absolute;
@@ -1125,7 +1138,7 @@ th, td {
 }
 
 .time_table{
-  position: relative;
+  /* position: relative; */
   width: 100%;
   height: 100%;
 }
@@ -1139,6 +1152,7 @@ label{
   font-size: 1.2rem;
 }
 .time_table__box{
+  position: relative;
   width: 40%;
   height: 75%;
   box-sizing: border-box;
@@ -1160,3 +1174,56 @@ label{
 #notice .tit{
   color: var(--bright-color);
 }
+
+
+
+
+/* _____________________  공지사항  _________________________ */
+#notice{
+  position: relative;
+ /*  padding-left: var(--margin-left);
+  padding-right: var(--margin-right);
+  box-sizing: border-box; */
+}
+
+.accordion{
+  text-align: right;
+}
+.accordion h3{
+  font-size: 1.5rem;
+  border-top: 1px solid var(--bright-color);
+  padding: 1% 2%;
+  cursor: pointer;
+}
+
+
+.accordion p,ul,ol,li{
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--bright-color);
+}
+
+
+.notice__box{
+  width: 10%;
+  height: 70%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.notice__title{
+  background-color: var(--dark-color);
+  border-color: var(--bright-color);
+  color: var(--bright-color);
+
+
+}
+
+
+.notice_content{
+background-color: var(--color1);
+height:auto;
+padding: 3% 2% 3% 30%;
+
+}
+

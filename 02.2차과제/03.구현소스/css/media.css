@@ -115,7 +115,7 @@
    }
 
 
-   .top-area .trans_btn_box {
+   .top-area .trans_btn__box {
      bottom: -32px;
      left: 0;
      right: 0;
@@ -169,22 +169,34 @@
    
 }
 
+.about__class {
+   margin-left: 6%;
+   margin-right: 6%;
+}
+
+
+
 #time_table{
-position: relative;
+/* position: relative; */
 }
 .time_table__box{
-
+   position: relative;
    width: 90%;
-    height: 70%;
-    margin: auto;
-    top: 8%;
-    bottom: 0;
-   
-    left: 0;
-    right: 0;
+   height: 70%;
+   margin: auto;
+   top: 22%;
+   bottom: 0px;
+   left: 0;
+   right: 0;
   }
 
 
-
+  .notice__box {
+   width: 95%;
+   height: 70%;
+   margin-left: 0;
+   margin-top: 5%;
+   padding-top: 55%;
+}
 
 }/*************** 500px 이하 ***************/
