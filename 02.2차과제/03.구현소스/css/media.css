@@ -251,8 +251,9 @@
    flex: 1;
  }
 
-
-
+ .footer__logo img{
+   width: 60vw;
+ }
 
 
 
