@@ -34,6 +34,10 @@
          width: 50%;
       }
 
+      .time_table__text{
+         display: none;
+      }
+
    }
 
    @media screen and (max-width:750px){
