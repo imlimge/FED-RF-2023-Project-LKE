@@ -221,16 +221,26 @@
    flex-wrap: nowrap;
    --margin-right: 0; 
    --margin-left: 0;
+   gap: 0%;
 }
 
+.contact__box p {
+   font-size: 1.2rem;
+}
+
+.contact__box span {
+   font-size: 1.4rem;
+}
+
+
+
  .wrap1{
-   /* display: flex; */
-   justify-content: space-around;
-   padding-top: 5%;
-   gap: 3%;
-   /* flex: 1; */
-   height: 100%;
    position: relative;
+   justify-content: space-around;
+   padding-top: 50%;
+   gap: 3%;
+
+   height: 40%;
  }
  
  .wrap2{
