@@ -520,7 +520,7 @@
     <div class="time_table__text">
     <p>"STUDENTS ARE PROUD OF KAIROS"</p>
     </div>
-    
+
       <!-- 시간표 왼쪽 이미지 -->
        <!-- <img src="./images/logo_letter_w4000.png" alt=""> -->
 
@@ -536,23 +536,22 @@
           </div>
 
           <!-- 시간표 테이블 -->
-    <table class="time_table">
+    <table class="time_table" >
       <thead></thead>
       <tbody>
           <!-- 초등부 -->
           <tr class="Elementary">
             <td class="class-name" colspan="2">초등부</td>
+          
             <td class="day">월수금</td>
             <td class="time">2:30~4:00</td>
           </tr>
-        </tbody>
-      </table>
-
+     
+          <!-- 테이블 공백 -->
+          <tr class="empty"></tr>
 
       <!-- 중등부 -->
-      <table class="time_table">
-        <thead></thead>
-        <tbody>
+ 
           <tr class="Middle">
           
               <td class="class-name" rowspan="4">중등부</td>
@@ -567,41 +566,41 @@
             </tr>
             <tr>
               <td class="class-part" rowspan="2">3반</td>
-              <td class="day">화목</td>
-              <td class="time">2:00~3:30</td>
+              <td class="day up">화목</td>
+              <td class="time up">2:00~3:30</td>
             </tr>
             <tr>
               
-              <td class="day">월</td>
-              <td class="time">4:00~5:30</td>
+              <td class="day down">월</td>
+              <td class="time down">4:00~5:30</td>
             </tr>
-          </tbody>
-        </table>
+
+
+       <!-- 테이블 공백 -->
+            <tr class="empty"></tr>
 
           <!-- 고등부 -->
-          <table class="time_table">
-            <thead></thead>
-            <tbody>
+      
           <tr class="high">
               <td class="class-name" rowspan="5">고등부</td>
               <td class="class-part" rowspan="2">예비고1</td>
               
-              <td class="day">화목</td>
-              <td class="time">4:00~6:00</td>
+              <td class="day up">화목</td>
+              <td class="time up">4:00~6:00</td>
             </tr>
             <tr>
-              <td class="day">토</td>
-              <td class="time">2:00~4:00</td>
+              <td class="day down">토</td>
+              <td class="time down">2:00~4:00</td>
             </tr>
 
             <tr>
               <td class="class-part" rowspan="2">예비고2</td>
-              <td class="day">월수금</td>
-              <td class="time">12:00~2:00</td>
+              <td class="day up">월수금</td>
+              <td class="time up">12:00~2:00</td>
             </tr>
             <tr>
-              <td class="day">월수금</td>
-              <td class="time">7:00~9:00</td>
+              <td class="day down">월수금</td>
+              <td class="time down">7:00~9:00</td>
             </tr>
             <tr>
               <td class="class-part" >기하</td>
