@@ -27,7 +27,7 @@
   --margin-right: 5%;
 
   /* .header 여백만큼 패딩 및 마진값 설정 */
-  --margin-left: 12%;
+  --margin-left: 10%;
 }
 
 [type="radio"] {

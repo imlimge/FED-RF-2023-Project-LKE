@@ -64,6 +64,7 @@ section{
   position: fixed;
 /* background-color: transparent; */
 user-select: none;
+border-radius: 20px;
 }
 
 /* _____________________  gnb _________________________ */
@@ -91,7 +92,7 @@ user-select: none;
 .gnb__menu {
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   justify-items: start;
 
 }
@@ -956,8 +957,14 @@ position: absolute; */
 .cont__img{
   width: 300px;
   height: 300px;
-  border: 1px dotted #000;
+  text-align: center;
+
 }
+.cont__img img{
+  height: 100%;
+  
+}
+
 
 /* _____________________  학원소개  _________________________ */
 
@@ -1030,9 +1037,13 @@ border-radius: 20px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.7;
+  transition: .5s ;
 }
 
-
+.swiper-slide:hover img{
+  opacity: 1;
+}
 /* _____________________  반소개  _________________________ */
 
 #about__class{
