@@ -152,6 +152,37 @@ window.addEventListener("resize", function() {
 
 
 
+
+    var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2, 
+          spaceBetween: 10,
+        },
+        500: {
+          slidesPerView: 1.5, 
+          spaceBetween: 10,
+        },
+        900: {
+          slidesPerView: 2.5, 
+          spaceBetween: 20,
+        },
+        1000: {
+          slidesPerView: 3.5, 
+          spaceBetween: 20,
+        },
+    
+    }
+    });
+
+
 var swiper = new Swiper(".mySwiper",
 {
 
@@ -172,16 +203,16 @@ var swiper = new Swiper(".mySwiper",
 
   breakpoints: {
     300: {
-      slidesPerView: 1.5, 
-      spaceBetween: 10,
+      slidesPerView: 1.3, 
+      spaceBetween: 1,
     },
     700: {
       slidesPerView: 2, 
-      spaceBetween: 30,
+      spaceBetween: 20,
     },
     1000: {
       slidesPerView: 2.2, 
-      spaceBetween: 50,
+      spaceBetween: 20,
     },
 
 }

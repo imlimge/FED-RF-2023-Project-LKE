@@ -58,6 +58,16 @@
 
 
 
+        .photo__item h3 {
+    
+         font-size: min(5.7vw,1.7rem);
+         line-height: 2;
+     }
+
+
+
+
+
       #about__class{
          height: 260vh;
       }
