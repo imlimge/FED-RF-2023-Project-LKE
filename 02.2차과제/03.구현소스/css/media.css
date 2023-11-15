@@ -30,6 +30,10 @@
 
 
    @media screen and (max-width:950px){
+    
+      
+      
+      
       .time_table__box{
          width: 50%;
       }
@@ -41,6 +45,17 @@
    }
 
    @media screen and (max-width:750px){
+
+
+      .cont__content{
+         flex-direction:column;
+      }
+
+      .cont__title{
+         font-size: 2rem;
+         
+        }
+
 
 
       #about__class{
@@ -144,7 +159,7 @@
   }
 
     .intro__logo{
-      top: 20%;
+      top: 40%;
     }
 
 
@@ -178,6 +193,14 @@
    right: 5.3%;
 }
  
+
+
+
+.cont__img{
+   flex: 1;
+}
+
+
 .photo{
    padding-top: 30vh;
    
@@ -255,6 +278,10 @@
    flex: 1;
  }
 
+ .footer{
+   margin-left: 6%;
+   margin-right: 6%;
+ }
  .footer__logo img{
    width: 60vw;
  }

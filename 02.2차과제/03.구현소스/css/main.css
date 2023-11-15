@@ -4,6 +4,7 @@
 
 @import url(./reset.css);
 @import url(./core.css);
+@import url(./ani.css);
 
 
 
@@ -605,6 +606,10 @@ user-select: none;
   color: var(--dark-color);
 }
 
+.intro__logo img:nth-child(1){
+  animation: intro-rotate 8s linear infinite;
+  transform: scale(1.5);
+}
 
 
 
@@ -624,7 +629,7 @@ user-select: none;
   width: 80vw;
   height: 800px;
   
-  padding: 8vw 5vw;
+  padding: 9vw 5vw;
 
   color: var(--bright-color);
   box-sizing: border-box;
@@ -934,7 +939,6 @@ position: absolute; */
   position: sticky;
   top: 100px;
   height: 500px;
-  /* background-color: yellow; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -945,9 +949,8 @@ position: absolute; */
 
 .cont__title{
   font-family: 'GowunBatang-Regular';
-  /* position: sticky; */
-  top: 375px;
-  font-size: 3vw;
+  font-size: 3rem;
+  text-align: center;
   
 }
 .cont__img{
@@ -1186,6 +1189,7 @@ table {
 .time__table__radio{
   position: relative;
   text-align: right;
+  margin: 2% 0;
 }
 
 label{
