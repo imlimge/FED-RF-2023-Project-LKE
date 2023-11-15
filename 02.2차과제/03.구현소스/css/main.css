@@ -608,8 +608,14 @@ border-radius: 20px;
 }
 
 .intro__logo img:nth-child(1){
-  animation: intro-rotate 8s linear infinite;
   transform: scale(1.5);
+  animation: intro-rotate 8s linear infinite,
+  intro-scale 1.5s ease-in 1 ;
+}
+
+.intro__logo img:nth-child(2){
+  animation: intro-scale2 1.5s ease-in 1 forwards ;
+
 }
 
 

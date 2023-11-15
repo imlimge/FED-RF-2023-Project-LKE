@@ -12,3 +12,27 @@
     }
 
 }
+
+
+
+
+@keyframes intro-scale{
+  0%{
+    scale: 8 ;
+   
+    }
+
+
+}
+@keyframes intro-scale2{
+  0%{
+    scale: 2 ;
+   
+    }
+  100%{
+    scale: 1 ;
+   
+    }
+
+
+}
