@@ -95,9 +95,9 @@ $(window).scroll(() => {
   for (let x = 0; x < 6; x++) 
   addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
 
-  // intro4의배경 .intro_bg 
-  if (scTop2 > 3000 & scTop2 < 3800 ) introBg.addClass("on");
-  else introBg.removeClass("on");
+  // // intro4의배경 .intro_bg 
+  // if (scTop2 > 3000 & scTop2 < 3800 ) introBg.addClass("on");
+  // else introBg.removeClass("on");
 
 
   slideBox1.css({
