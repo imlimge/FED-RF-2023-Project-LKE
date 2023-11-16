@@ -190,7 +190,9 @@
     }
 
 
-   
+    .slide__text span {
+      line-height: 1;
+  }
 
 
  .about__box{
