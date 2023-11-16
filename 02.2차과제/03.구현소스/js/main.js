@@ -110,10 +110,10 @@ $(window).scroll(() => {
     left : `${-scTop2/7 * 0.7}px`
   })
   slideBox4.css({
-    left : `${-scTop2/7 * 0.7}px`
+    left : `${-1000 + scTop2/7 * 0.7}px`
   })
   imgLogo.css({
-    left : `${1500+ -scTop2/13 * 2}px`
+    left : `${1500+ -scTop2/13 * 2.2}px`
   })
 
 
