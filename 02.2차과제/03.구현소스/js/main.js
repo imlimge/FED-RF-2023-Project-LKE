@@ -55,7 +55,7 @@ const bumwee = [
 ];
 
 const addOn = (seq, scTop, start, end) => {
-  if (scTop > start && scTop < end) {
+  if (scTop > start -1 && scTop < end) {
     gnbMenu
       .find(".gnb__item").eq(seq)
       .addClass("on")
@@ -72,8 +72,6 @@ const addOn = (seq, scTop, start, end) => {
       .find("a")
       .removeClass("on");
 
-   
-
       
   }
 };
@@ -86,12 +84,21 @@ $(window).scroll(() => {
     addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
 });
 
+
+
+
 /*------------------------------- 인트로 ------------------------------- */
 /***************************************************************
  *
  *  기능 : 인트로 로고 스크롤 시 회전하며 움직임
  *
  ***************************************************************/
+
+
+
+
+
+
 
 /***************************************************************
  *

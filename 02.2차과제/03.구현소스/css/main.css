@@ -293,27 +293,26 @@ border-radius: 20px;
 
 
 .gnb__menu li:nth-child(1) a{
-  top:70px;
+  top: 90px;
 }
 .gnb__menu li:nth-child(2) a{
-  top:132px;
+  top: 126px;
 }
 .gnb__menu li:nth-child(3) a{
-  top:190px;
+  top: 163px;
 }
 .gnb__menu li:nth-child(4) a{
-  top:238px;
+  top: 198px;
 }
 .gnb__menu li:nth-child(5) a{
-  top:300px;
+  top: 235px;
 }
 .gnb__menu li:nth-child(6) a{
-  top:350px;
+  top: 270px;
 }
 
 
 /*_________________ 모바일 네비게이션 _________________*/
-
 .m-header{
   width:100%;
   /* height: 10%; */
@@ -346,21 +345,16 @@ border-radius: 20px;
 
  .m-gnb__menu li a{
   position: absolute;
-  width: 107px;
-  height: 41px;
+  width: 90px;
+  height: 30px;
   text-align: center;
-  line-height: 2.5;
+  line-height: 2;
   display: inline-block;
-
   color: var(--dark-color);
-
   z-index: 1;
-
-
   font-family:var(--bold-font);
-  font-size: var(--font-size);  
+  font-size: 1.4rem;
   transform: rotate(52deg) scale(0.7);
-
 }
 
 
@@ -369,11 +363,11 @@ border-radius: 20px;
   /* background: url(../images/nav_w.png) no-repeat; */
   position: absolute;
   left: 0;
-  width: 100px;
-  height: 40px;
+  width: 90px;
+  height: 30px;
   background-color: var(--bright-color);
   /* outline: 1px solid var(--dark-color); */
-  clip-path: polygon(31% 0 ,100% 0%, 88% 51%, 100% 144%, 0 100%, 0 50%, 0 99%);
+  clip-path: polygon(26% 0 ,100% 0%, 88% 51%, 100% 144%, 0 100%, 0 50%, 0 99%);
   z-index: -1;
   /* transform: rotate(2deg); */
 }
@@ -385,11 +379,11 @@ border-radius: 20px;
   position: absolute;
   left: 0;
   top: -1px;
-  width: 101px;
-  height: 42px;
+  width: 91px;
+  height: 32px;
   background-color: var(--dark-color);
   /* outline: 1px solid var(--dark-color); */
-  clip-path: polygon(31% 0 ,100% 0%, 88% 51%, 100% 144%, 0 100%, 0 50%, 0 99%);
+  clip-path: polygon(27% 0 ,100% 0%, 88% 51%, 100% 144%, 0 100%, 0 50%, 0 99%);
   z-index: -2;
   /* transform: rotate(2deg); */
 }
@@ -405,7 +399,7 @@ border-radius: 20px;
   left: 29%;
 }
 .m-gnb__menu li:nth-child(4) a{
-  left: 43%;
+  left: 41%;
 }
 .m-gnb__menu li:nth-child(5) a{
   left: 58%;
@@ -431,13 +425,13 @@ border-radius: 20px;
   order: 2;
 }
 .m-gnb__menu li:nth-child(2){
-  order: 1;
+  order: 3;
 }
 .m-gnb__menu li:nth-child(3){
   order: 4;
 }
 .m-gnb__menu li:nth-child(4){
-  order: 3;
+  order: 1;
 }
 .m-gnb__menu li:nth-child(5){
   order: 6;
@@ -608,13 +602,14 @@ border-radius: 20px;
 }
 
 .intro__logo img:nth-child(1){
-  transform: scale(1.5);
-  animation: intro-rotate 8s linear infinite,
-  intro-scale 1.5s ease-in 1 ;
+  transform: scale(1);
+  animation: intro-rotate 8s linear infinite;
+  /* intro-scale 1.5s ease-in 1 ; */
 }
 
 .intro__logo img:nth-child(2){
-  animation: intro-scale2 1.5s ease-in 1 forwards ;
+  transform: scale(.7);
+  /* animation: intro-scale2 1.5s ease-in 1 forwards ; */
 
 }
 
