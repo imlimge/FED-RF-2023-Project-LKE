@@ -139,7 +139,7 @@
    }
 
 
-   
+
 
    .top-area{
       left: 0;
@@ -208,7 +208,7 @@
 }
 
 .about__history span::after{
-   left:12.6%
+    left: 10.6%;
 }
 .about__history.part2 span::after {
    right: 5.3%;

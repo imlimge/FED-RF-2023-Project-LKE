@@ -76,12 +76,43 @@ const addOn = (seq, scTop, start, end) => {
   }
 };
 
+
+const introBg = $('.intro_bg');
+
+const slideBox1 = $('.box1');
+const slideBox2 = $('.box2');
+const slideBox3 = $('.box3');
+const imgLogo = $('.image__logo img');
+
+
 $(window).scroll(() => {
   let scTop = $(window).scrollTop();
    console.log(scTop);
 
+  // 네비게이션 아이템 위치마다 on
   for (let x = 0; x < 6; x++) 
-    addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
+  addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
+
+  // intro4의배경 .intro_bg 
+  if (scTop > 3000 & scTop < 3800 ) introBg.addClass("on");
+  else introBg.removeClass("on");
+
+
+  slideBox1.css({
+    left : `${-scTop * 0.2}px`
+  })
+  slideBox2.css({
+    left : `${-1000 + scTop/5 * 0.4}px`
+  })
+  slideBox3.css({
+    left : `${-scTop/7 * 0.4}px`
+  })
+  imgLogo.css({
+    left : `${-scTop/7 * 0.5}px`
+  })
+
+
+
 });
 
 
@@ -90,8 +121,9 @@ $(window).scroll(() => {
 /*------------------------------- 인트로 ------------------------------- */
 /***************************************************************
  *
- *  기능 : 인트로 로고 스크롤 시 회전하며 움직임
+ *  기능 : 인트로 4 되면 #intro on 넣기
  *
+ *  3000~3650 위치 사이
  ***************************************************************/
 
 
