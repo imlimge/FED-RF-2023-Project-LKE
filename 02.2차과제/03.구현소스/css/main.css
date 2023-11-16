@@ -857,7 +857,7 @@ padding: 1vh 0;
 
   border-bottom: 1px solid var(--dark-color);
   right: 0;
-  left: 53.5%;
+  left: 52.5%;
 }
 
 .about__history.part2{
@@ -867,7 +867,7 @@ text-align: right;
 .about__history.part2 span::after{
   border-bottom: 1px solid var(--bright-color);
   left: 0;
-  right: 46.5%;
+  right: 47.5%;
 }
 
 
@@ -1337,6 +1337,7 @@ label{
 .image__logo img{
   left: 0;
   position: relative;
+  width: 100%;
 }
 
 /* _____________________  공지사항  _________________________ */

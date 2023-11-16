@@ -82,11 +82,13 @@ const introBg = $('.intro_bg');
 const slideBox1 = $('.box1');
 const slideBox2 = $('.box2');
 const slideBox3 = $('.box3');
+const slideBox4 = $('.box4');
 const imgLogo = $('.image__logo img');
 
 
 $(window).scroll(() => {
   let scTop = $(window).scrollTop();
+  let scTop2 = scTop;
    console.log(scTop);
 
   // 네비게이션 아이템 위치마다 on
@@ -94,21 +96,24 @@ $(window).scroll(() => {
   addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
 
   // intro4의배경 .intro_bg 
-  if (scTop > 3000 & scTop < 3800 ) introBg.addClass("on");
+  if (scTop2 > 3000 & scTop2 < 3800 ) introBg.addClass("on");
   else introBg.removeClass("on");
 
 
   slideBox1.css({
-    left : `${-scTop * 0.2}px`
+    left : `${-scTop2 * 0.2}px`
   })
   slideBox2.css({
-    left : `${-1000 + scTop/5 * 0.4}px`
+    left : `${-1000 + scTop2/5 * 0.7}px`
   })
   slideBox3.css({
-    left : `${-scTop/7 * 0.4}px`
+    left : `${-scTop2/7 * 0.7}px`
+  })
+  slideBox4.css({
+    left : `${-scTop2/7 * 0.7}px`
   })
   imgLogo.css({
-    left : `${-scTop/7 * 0.5}px`
+    left : `${1500+ -scTop2/13 * 2}px`
   })
 
 
