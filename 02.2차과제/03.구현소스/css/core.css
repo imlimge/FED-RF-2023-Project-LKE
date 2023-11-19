@@ -7,7 +7,7 @@
   /* 색상 */
   --bright-color: #fefcfb;
   /* 미색 FAF7F5 */
-  --dark-color: #231F20;
+  --dark-color: #161616;
 
   --color1: #2d2d2d;
   --color2: #3f3f3f;
@@ -18,7 +18,7 @@
   --bold-font:'KOTRALEAP';
 
   --font-size: 1.6rem;
-  --bold-font-size: min(5.3vw,5rem);
+  --bold-font-size: min(3.3vw,4rem);
 
 
  

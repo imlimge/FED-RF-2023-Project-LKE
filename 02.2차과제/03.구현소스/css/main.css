@@ -18,7 +18,7 @@ body *{
 }
 
 body{
-  background-color: var(--bright-color);
+  /* background-color: var(--d-color); */
 }
 
 h2{
@@ -36,14 +36,14 @@ h3,h4,article{
 section{
   height: 100vh;
 
-  background-color: var(--bright-color);
+  /* background-color: var(--bright-color); */
 }
 
 /* 각 파트 제목 */
 .tit{
   padding-left: var(--margin-left);
   padding-right: var(--margin-right);
-  padding-top: 8vh;
+  padding-top: 10vh;
   font-size: var(--bold-font-size);
   text-align: right;
 }
@@ -491,51 +491,73 @@ border-radius: 20px;
 /* 상단 오른쪽 토글버튼 */
 .top-area .trans_btn__box{
   width: 150px;
-  height: 24.59px;
+  height: 24px;
   position: absolute;
   bottom: 0;
   right: calc(var(--margin-left) + var(--margin-right));
   border-radius: 50px;
   background-color: var(--dark-color);
   border: 1px solid var(--bright-color);
+  /* transition: 1s; */
 }
+
+
+.trans_btn__box.on{
+  background-color: var(--bright-color);
+  border: 1px solid var(--dark-color);
+}
+
 
 .top-area .trans_btn{
   cursor: pointer;
 
 }
 
+
 .trans_btn .btn{
   display: inline-block;
   width: 77px;
-  height: 90%;
+  height: 24px;
   border-radius: 50px;
   text-align: center;
-  line-height: 1.2;
-  font-size: 1.9rem;
+  line-height: 1.3;
+  font-size: 1.7rem;
   font-family:var(--bold-font);
+  box-sizing: border-box;
 }
 
 
 
 
 /* 혁신관 */
-.trans_btn .btn1{
+.btn.m_btn{
+  
   position: absolute;
-
-  left: 0;
+  left: 0px;
   background-color: var(--bright-color);
   border: 1px solid var(--dark-color);
- 
+  transition: left .4s;
 }
 
 
-/* 단계관 */
-.trans_btn .btn2{
+/* 혁신관 뒤글자 */
+.btn.b_btn1{
+
+  position: absolute;
+  left: 0px;
+
+}
+
+
+
+
+/* 단계관 뒤글자 */
+
+.btn.b_btn2{
   position: absolute;
   right: 0;
   color: var(--bright-color);
-}
+ }
 
 
 
@@ -563,7 +585,7 @@ border-radius: 20px;
 
 /* 인트로 */
 #intro{
-  height: 560vh;
+  height: auto;
   padding-top: 26vh;
   padding-left: var(--margin-left);
   padding-right: var(--margin-right);
@@ -617,7 +639,7 @@ border-radius: 20px;
   right: 0;
   margin: 0 auto;
   border-radius: 20px 20px 0 0;
-  width: 80vw;
+  width: 60vw;
   height: 800px;
   
   position: relative;
@@ -992,12 +1014,12 @@ position: absolute; */
   padding-right: 0%;
 }
 
-.facility .tit{
+/* .facility .tit{
   padding-left: var(--margin-left);
   padding-right: var(--margin-right);
   padding-top: 8vh;
 }
-
+ */
 
 .photo{
   position: relative;
@@ -1259,20 +1281,19 @@ label{
 
 
 .time_table .class-part{
-  /* background-color: var(--color2);
-  color: var(--bright-color); */
+  background-color: var(--color2);
+  color: var(--bright-color);
   border: 1px dotted var(--dark-color);
   position: relative;
   width: 16%;
 
   border-left: none;
   border-right: none;
-
   font-family: 'GowunBatang-Regular';
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
-.class-part::after{
+/* .class-part::after{
   content: '';
   height: 100%;
   width: 115px;
@@ -1282,7 +1303,7 @@ label{
   top: 0;
   z-index: -1;
 
-}
+} */
 
 .time_table .day{
   background-color: var(--bright-color);
@@ -1406,9 +1427,11 @@ padding: 3% 2% 3% 30%;
   margin-right: var(--margin-right);
   display: flex;
   position: relative;
-  gap: 5%;
+  /* gap: 5%; */
   flex-direction: column;
+  height: 77vh;
 }
+
 
 .contact__box h4{
 font-size: 1.6rem;

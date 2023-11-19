@@ -2,7 +2,7 @@
 //Dom함수 모듈
 import dFn from "./dom.js";
 
-/*------------------------- 네비게이션 -  on ------------------------ */
+/*------------------------- 네비게이션 ------------------------- */
 
 /***************************************************************
  *
@@ -77,13 +77,13 @@ const addOn = (seq, scTop, start, end) => {
 };
 
 
-const introBg = $('.intro_bg');
-
+// 슬라이드 파트 
 const slideBox1 = $('.box1');
 const slideBox2 = $('.box2');
 const slideBox3 = $('.box3');
 const slideBox4 = $('.box4');
 const imgLogo = $('.image__logo img');
+
 
 
 $(window).scroll(() => {
@@ -100,6 +100,10 @@ $(window).scroll(() => {
   // else introBg.removeClass("on");
 
 
+
+  /*********************************************  
+   * 슬라이드 파트 스크롤 시 좌 우 이동
+  *********************************************/
   slideBox1.css({
     left : `${-scTop2 * 0.2}px`
   })
@@ -117,13 +121,53 @@ $(window).scroll(() => {
   })
 
 
-
 });
 
+/*------------------------- 상단 영역 ------------------------- */
+
+/***************************************************************
+ *
+ *  기능 : 토글 버튼 누르면 버튼 모양 변경 및 섹션 색상 변경
+ * 
+ ***************************************************************/
+const transBtnBox = $('.trans_btn__box');
+const mBtn = $('.btn.m_btn');
+const bBtn1 = $('.btn.b_btn1');
+const bBtn2 = $('.btn.b_btn2');
+
+console.log(transBtnBox,mBtn,bBtn1,bBtn2)
+
+transBtnBox.click(function(){
+ transBtnBox.toggleClass("on");
+
+
+
+  
+  if(transBtnBox.hasClass('on')){
+ 
+    mBtn.css({left:'73px',color:'var(--bright-color)',backgroundColor:'var(--dark-color)',border: '1px solid var(--bright-color)'}).text('단계관');
+
+}
+else{
+  mBtn.css({left:'0px',color:'var(--dark-color)',backgroundColor:'var(--bright-color)',border: '1px solid var(--dark-color)',
+  }).text('혁신관');
+
+}
+
+}
+)
 
 
 
 /*------------------------------- 인트로 ------------------------------- */
+/***************************************************************
+ * 
+ *  기능 : 인트로 스크롤시 바로 보이기
+ *  
+ * 
+ ***************************************************************/
+
+
 /***************************************************************
  *
  *  기능 : 인트로 4 되면 #intro on 넣기
@@ -302,6 +346,8 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 /* _____________________  공지사항  _________________________ */
+// 제이쿼리 아코디언
 $(function () {
   $(".accordion").accordion();
 });
+
