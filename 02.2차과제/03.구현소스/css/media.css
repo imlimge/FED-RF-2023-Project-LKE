@@ -45,8 +45,9 @@
    }
 
    @media screen and (max-width:750px){
-
-
+.tit{
+   
+}
       .cont__content{
          flex-direction:column;
       }
@@ -80,7 +81,10 @@
       margin: 0;
      }
 
+     .about__title h3{
+      font-size: min(5.9vw,2.8rem);
 
+    }
 
      .time_table__box{
       width: 60%;
@@ -203,6 +207,8 @@
    flex-direction: column-reverse;
  }
 
+ 
+
 
 .round{
    top: 50%;
@@ -232,6 +238,7 @@
 .about__class {
    margin-left: 6%;
    margin-right: 6%;
+   margin-top: 10%;
 }
 
 

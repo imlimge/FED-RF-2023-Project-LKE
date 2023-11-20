@@ -2,6 +2,21 @@
 //Dom함수 모듈
 import dFn from "./dom.js";
 
+
+
+/***************************************************************
+ * 
+ *  기능 : 특정 섹션 스크롤 시 상단에 스무스하게 위치
+ *  대상 : 인트로 1~4 / 각 섹션
+ *  
+ ***************************************************************/
+
+
+
+
+
+
+
 /*------------------------- 네비게이션 ------------------------- */
 
 /***************************************************************
@@ -135,15 +150,17 @@ const mBtn = $('.btn.m_btn');
 const bBtn1 = $('.btn.b_btn1');
 const bBtn2 = $('.btn.b_btn2');
 
+const black = $('.intro,.facility,.time_table,.notice,.contact,.tit,.time__table__radio input');
+console.log(black)
 console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
 transBtnBox.click(function(){
- transBtnBox.toggleClass("on");
+ transBtnBox.toggleClass("black");
+ black.toggleClass("black");
 
 
 
-  
-  if(transBtnBox.hasClass('on')){
+  if(transBtnBox.hasClass('black')){
  
     mBtn.css({left:'73px',color:'var(--bright-color)',backgroundColor:'var(--dark-color)',border: '1px solid var(--bright-color)'}).text('단계관');
 
@@ -166,15 +183,6 @@ else{
  *  
  * 
  ***************************************************************/
-
-
-/***************************************************************
- *
- *  기능 : 인트로 4 되면 #intro on 넣기
- *
- *  3000~3650 위치 사이
- ***************************************************************/
-
 
 
 
@@ -345,9 +353,22 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+/* _____________________  강사소개  _________________________ */
+/***************************************************************
+ *
+ *  기능 : 상사소개 약력 아래 라인 스크롤 시 순번대로 길어짐
+ *  
+ ***************************************************************/
+
+
+
+
+
+
 /* _____________________  공지사항  _________________________ */
 // 제이쿼리 아코디언
 $(function () {
   $(".accordion").accordion();
 });
+
 

@@ -7,6 +7,20 @@
 @import url(./ani.css);
 
 
+.intro,.facility,.time_table,.notice,.contact {
+  height: 100vh;
+  background-color: var(--bright-color);
+  color: var(--dark-color);
+
+}
+
+.black{
+  background-color: var(--dark-color);
+  color: var(--bright-color);
+  border-color: var(--bright-color);
+}
+
+
 
 html{
   scroll-behavior: smooth;
@@ -39,6 +53,8 @@ section{
   /* background-color: var(--bright-color); */
 }
 
+
+
 /* 각 파트 제목 */
 .tit{
   padding-left: var(--margin-left);
@@ -46,6 +62,7 @@ section{
   padding-top: 10vh;
   font-size: var(--bold-font-size);
   text-align: right;
+  color: var(--point-color);
 }
 
 
@@ -221,7 +238,7 @@ border-radius: 20px;
 
 /* 네비게시연 아이템 on 되어있는 상태 */
 .gnb__item.on.gnb__item::before{
-  background-color: var(--dark-color);
+  background-color: var(--point-color);
 }
 .gnb__item.on.gnb__item::after{
   background-color: var(--bright-color);
@@ -411,7 +428,7 @@ border-radius: 20px;
 
 /* 네비게시연 아이템 on 되어있는 상태 */
 .m-gnb__item.on.m-gnb__item::before{
-  background-color: var(--dark-color);
+  background-color: var(--point-color);
 }
 .m-gnb__item.on.m-gnb__item::after{
   background-color: var(--bright-color);
@@ -502,7 +519,7 @@ border-radius: 20px;
 }
 
 
-.trans_btn__box.on{
+.trans_btn__box.black{
   background-color: var(--bright-color);
   border: 1px solid var(--dark-color);
 }
@@ -545,6 +562,7 @@ border-radius: 20px;
 
   position: absolute;
   left: 0px;
+  color: var(--dark-color);
 
 }
 
@@ -751,7 +769,7 @@ text-align: center;
   height: 10px;
   border: 1px solid var(--bright-color);
   border-radius: 50%;
-  background-color: var(--bright-color);
+  background-color: var(--point-color);
   transition: 1s linear;
   z-index: 1;
 }
@@ -848,7 +866,7 @@ text-align: center;
 }
 
 .about__title h3{
-  font-size: 6vw;
+  font-size: min(3.8vw,4rem);
 }
 .about__title.part2 h3{
   text-align: right;
@@ -918,7 +936,7 @@ text-align: right;
   left: -1000px; 
 
   display: flex;
-  background-color: var(--bright-color);
+  background-color: var(--point-color);
   height: 100%;
   width: 5500px;
 }
@@ -968,6 +986,7 @@ position: absolute; */
 
 
 .cont{
+  background-color: var(--point-color);
   height: 504px;
 }
 
@@ -1014,12 +1033,7 @@ position: absolute; */
   padding-right: 0%;
 }
 
-/* .facility .tit{
-  padding-left: var(--margin-left);
-  padding-right: var(--margin-right);
-  padding-top: 8vh;
-}
- */
+
 
 .photo{
   position: relative;
@@ -1051,7 +1065,7 @@ position: absolute; */
   height: 35px;
   position: absolute;
   bottom: 0;
-background-color: var(--dark-color);
+
 border-radius: 20px;
 }
 .photo__item h3{
@@ -1204,11 +1218,9 @@ table {
 }
 
 #time_table{
-  position: relative;
 }
 
-.time_table{
-  /* position: relative; */
+.time_table_content{
   width: 100%;
   height: 90%;
 
@@ -1232,7 +1244,7 @@ table {
 }
 
 /* 이미지 현재 없음 */
-.time_table img{
+.time_table_content img{
   position: absolute;
   transform: translate(-70%, -29%) scale(.8);
   z-index: -1;
@@ -1262,16 +1274,16 @@ label{
 }
 
 
-.time_table .empty{
+.time_table_content .empty{
   height: 2%;
 }
 
 
 
-.time_table .class-name{
+.time_table_content .class-name{
   border-radius: 20px 0 0 20px;
   width: 30%;
-  background-color: var(--dark-color);
+  background-color: var(--color1);
   color: var(--bright-color);
 
   font-family: 'GowunBatang-Regular';
@@ -1280,7 +1292,7 @@ label{
 
 
 
-.time_table .class-part{
+.time_table_content .class-part{
   background-color: var(--color2);
   color: var(--bright-color);
   border: 1px dotted var(--dark-color);
@@ -1305,43 +1317,44 @@ label{
 
 } */
 
-.time_table .day{
+.time_table_content .day{
   background-color: var(--bright-color);
   border: 1px solid var(--bright-color);
   /* border-radius: 20px; */
   width: 20%;
   font-weight: bold;
   background-color: #cdc9c3;
+  color: var(--dark-color);
   
 
 }
 
-.time_table .time{
+.time_table_content .time{
   background-color: var(--bright-color);
   border: 1px dashed var(--dark-color);
-  border-radius: 0 20px 20px 0;
   border-left: none;
   width: 30%;
+  color: var(--dark-color);
 }
 
 
 
-.time_table .day.up{
+.time_table_content .day.up{
   /* border-radius:20px 20px 0 0; */
   border-bottom: none;
 
 }
-.time_table .day.down{
+.time_table_content .day.down{
   border-top: none;
   /* border-radius: 0 0 20px 20px; */
 }
 
 
-.time_table .time.up{
+.time_table_content .time.up{
   /* border-radius:0 20px 0 0; */
   border-bottom: none;
 }
-.time_table .time.down{
+.time_table_content .time.down{
   /* border-radius:0 0 20px 0; */
   border-top: none;
 }
@@ -1368,7 +1381,7 @@ label{
 }
 
 #notice .tit{
-  color: var(--bright-color);
+  color: var(--point-color);
 }
 
 

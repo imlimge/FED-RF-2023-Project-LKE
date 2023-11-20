@@ -13,12 +13,14 @@
   --color2: #3f3f3f;
   --color3: #5b5b5b;
 
+  /* 포인트컬러 */
+  --point-color: rgb(50, 139, 255);
 
   /* 폰트설정 */
   --bold-font:'KOTRALEAP';
 
   --font-size: 1.6rem;
-  --bold-font-size: min(3.3vw,4rem);
+  --bold-font-size: min(5.7vw,3.7rem);
 
 
  
@@ -30,11 +32,8 @@
   --margin-left: 10%;
 }
 
-[type="radio"] {
-  /* accent-color:var(--dark-color); */
-}
 
-
+/* 라디오 */
 [type="radio"] {
   appearance: none;
   border: max(2px, 0.1em) solid var(--dark-color);
@@ -45,14 +44,15 @@
 }
 [type="radio"]:checked {
   border: max(2px, 0.1em) solid var(--dark-color);
-  background-color: var(--dark-color);
+  background-color: var(--point-color);
+  
 }
 [type="radio"]:focus-visible {
   outline: max(2px, 0.1em) dotted tomato;
   outline-offset: max(2px, 0.1em);
 }
 [type="radio"]:hover {
-  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  box-shadow: 0 0 0 max(2px, 0.2em) lightgray;
   cursor: pointer;
 }
 
