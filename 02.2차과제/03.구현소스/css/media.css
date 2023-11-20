@@ -319,8 +319,7 @@
  }
 
  .footer{
-   margin-left: 6%;
-   margin-right: 6%;
+    padding: 15% 7%;
  }
  .footer__logo img{
    width: 60vw;

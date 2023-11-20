@@ -54,6 +54,10 @@
   background-color: var(--dark-color);
 }
 
+.footer.dark p{
+  color: var(--bright-color);
+}
+
 
 /* 밝은 버전 ----------- */
 
@@ -1663,9 +1667,9 @@ border: 1px solid #000;
 }
 
 .footer__content{
+  display: inline-block;
   height: 14vh;
-
   font-size: 1.4rem;
-  padding-top: 5%;
+  padding-top: 15%;
 }
 
