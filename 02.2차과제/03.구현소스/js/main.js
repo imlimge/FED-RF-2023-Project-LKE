@@ -161,27 +161,36 @@ const transBtnBox = $('.trans_btn__box');
 const mBtn = $('.btn.m_btn');
 const bBtn1 = $('.btn.b_btn1');
 const bBtn2 = $('.btn.b_btn2');
-
-const black = $('.intro,.facility,.time_table,.notice,.contact,.tit,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
-console.log(black)
 console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
+
+// 클래스 dark 시 검은색으로 변해야 하는 파트
+const dark = $('.intro,.facility,.time_table,.contact,.tit,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
+
+console.log(dark)
+
+// 클래스 dark 시  밝은 색으로 변해야 하는 파트
+const bright = $('.notice, .accordion h3,.notice__title,.tit2,.notice_content');
+
 transBtnBox.click(function(){
- transBtnBox.toggleClass("black");
- black.toggleClass("black");
+  
+  dark.toggleClass("dark");
+  bright.toggleClass("bright");
+  
+  
+  transBtnBox.toggleClass("dark");
 
-
-
-  if(transBtnBox.hasClass('black')){
+// 토글버튼 on off 변경
+  if(transBtnBox.hasClass('dark')){
  
     mBtn.css({left:'73px',color:'var(--bright-color)',backgroundColor:'var(--dark-color)',border: '1px solid var(--bright-color)'}).text('단계관');
 
-}
-else{
-  mBtn.css({left:'0px',color:'var(--dark-color)',backgroundColor:'var(--bright-color)',border: '1px solid var(--dark-color)',
-  }).text('혁신관');
+  }
+  else{
+    mBtn.css({left:'0px',color:'var(--dark-color)',backgroundColor:'var(--bright-color)',border: '1px solid var(--dark-color)',
+    }).text('혁신관');
 
-}
+  }
 
 }
 )

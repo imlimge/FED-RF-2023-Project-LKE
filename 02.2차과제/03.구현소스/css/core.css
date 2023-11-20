@@ -12,10 +12,18 @@
   --color1: #2d2d2d;
   --color2: #3f3f3f;
   --color3: #5b5b5b;
+  --color4: #878787;
 
   /* 포인트컬러 */
   /* --point-color: rgb(50, 139, 255); */
-  --point-color: rgb(255 196 55);;
+  --point-color: rgb(255 196 55);
+
+  /* 기타컬러 */
+  --ex1-color: rgb(95, 167, 255);;
+  --ex2-color: rgb(123, 255, 147);;
+  --ex3-color: rgb(255, 142, 221);;
+
+
 
   /* 폰트설정 */
   --bold-font:'KOTRALEAP';

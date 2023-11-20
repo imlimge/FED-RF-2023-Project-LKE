@@ -14,18 +14,20 @@
 
 }
 
-.black{
+
+/* 어두운 버전 ----------- */
+.dark{
   background-color: var(--dark-color);
   color: var(--bright-color);
   border-color: var(--bright-color) ; 
 }
 
-.black .img{
+.dark .img{
   filter: invert(1);
   mix-blend-mode: plus-lighter;
 }
 
-.contact__time.black::after{
+.contact__time.dark::after{
   content: '';
   position: absolute;
   height: 100%;
@@ -35,13 +37,49 @@
   background-color: var(--bright-color);
 }
 
-.contact__box_title.black{
+.contact__box_title.dark{
   border: 1px solid var(--bright-color) !important;
 }
 
-.footer.black{
+.footer.dark{
   background-color: var(--dark-color);
 }
+
+
+/* 밝은 버전 ----------- */
+
+.bright{
+  background-color: var(--bright-color);
+  color: var(--dark-color);
+  border-color: var(--dark-color) ; 
+}
+.notice.tit{
+  background-color: var(--bright-color);
+  color: var(--dark-color);
+}
+.notice.bright{
+  background-color: var(--bright-color);
+  color: var(--dark-color);
+  border-color: var(--dark-color) ; 
+}
+.accordion h3.bright{
+  border-top: 1px solid var(--dark-color);
+}
+
+.notice__title.bright{
+  background-color: var(--bright-color);
+  border-color: var(--dark-color);
+  color: var(--dark-color);
+
+}
+
+
+.notice_content.bright{
+  background-color: var(--color4);
+}
+
+
+
 
 html{
   scroll-behavior: smooth;
@@ -522,7 +560,7 @@ border-radius: 20px;
 }
 
 
-.trans_btn__box.black{
+.trans_btn__box.dark{
   background-color: var(--bright-color);
   border: 1px solid var(--dark-color);
 }
@@ -1146,7 +1184,7 @@ border-radius: 20px;
 
 
 .about__class__box {
-  /* position: absolute; */
+  position: relative;
   /* width: 24vw; */
   /* height: 51vh; */
   /* height: auto; */
@@ -1319,6 +1357,24 @@ label{
 }
 
 
+/* 시간표 각 파트 위에 호버하면
+배경백 바뀌는거 */
+.elementary.class-name:hover .time_table{
+ background-color: var(--ex1-color);
+}
+.middle:hover .time_table{
+  background-color: var(--ex2-color);
+}
+.high:hover .time_table{
+  background-color: var(--ex3-color);
+}
+
+.time:hover{
+  background-color: var(--point-color);
+}
+
+
+
 
 .time_table_content .class-part{
   background-color: var(--color2);
@@ -1403,12 +1459,12 @@ label{
 }
 
 /* _____________________  공지사항  _________________________ */
-#notice{
+.notice{
   background-color: var(--dark-color);
 
 }
 
-#notice .tit{
+.notice .tit{
   color: var(--point-color);
 }
 
