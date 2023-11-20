@@ -150,7 +150,7 @@ const mBtn = $('.btn.m_btn');
 const bBtn1 = $('.btn.b_btn1');
 const bBtn2 = $('.btn.b_btn2');
 
-const black = $('.intro,.facility,.time_table,.notice,.contact,.tit,.time__table__radio input');
+const black = $('.intro,.facility,.time_table,.notice,.contact,.tit,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo');
 console.log(black)
 console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 

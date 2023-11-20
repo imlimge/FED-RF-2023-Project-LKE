@@ -17,7 +17,17 @@
 .black{
   background-color: var(--dark-color);
   color: var(--bright-color);
-  border-color: var(--bright-color);
+  border-color: var(--bright-color) ; 
+}
+
+.black .img{
+  filter: invert(1);
+  mix-blend-mode: plus-lighter;
+}
+
+
+.contact__box_title.black{
+  border: 1px solid var(--bright-color) !important;
 }
 
 
@@ -26,14 +36,7 @@ html{
   scroll-behavior: smooth;
 }
 
-body *{
-/* outline: 1px dotted orange; */
-  
-}
 
-body{
-  /* background-color: var(--d-color); */
-}
 
 h2{
   font-family:var(--bold-font);
@@ -50,7 +53,6 @@ h3,h4,article{
 section{
   height: 100vh;
 
-  /* background-color: var(--bright-color); */
 }
 
 
@@ -66,11 +68,6 @@ section{
 }
 
 
-.inner{
-  width: 1100px;
-  margin: 0 auto;
-  position: relative;
-}
 
 .back__line{
   width: 100%;
@@ -490,7 +487,6 @@ border-radius: 20px;
   width: 100%;
   bottom: 0;
   position: absolute;
-  mix-blend-mode: difference;
 
 }
 
@@ -749,7 +745,7 @@ text-align: center;
   width: 20vw;
   aspect-ratio: 1;
 
-  border: 1px solid var(--bright-color);
+  border: 1px solid var(--point-color);
   box-sizing: border-box;
   border-radius: 50%;
 
@@ -757,7 +753,7 @@ text-align: center;
 }
 
 .big-round.bx2 {
-  border: 1px dashed var(--bright-color);
+  border: 1px dashed var(--point-color);
 }
 /* 회전하는 작은 원 */
 .small-round {
@@ -767,7 +763,7 @@ text-align: center;
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  border: 1px solid var(--bright-color);
+  border: 1px solid var(--point-color);
   border-radius: 50%;
   background-color: var(--point-color);
   transition: 1s linear;
@@ -778,7 +774,9 @@ text-align: center;
   top:20vh;
 }
 
-
+.about__title h4{
+  color: var(--point-color);
+}
 
 .about__teacher{
   position: relative;
@@ -1397,7 +1395,7 @@ label{
   text-align: right;
 }
 .accordion h3{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   border-top: 1px solid var(--bright-color);
   padding: 1% 2%;
   cursor: pointer;
@@ -1405,7 +1403,7 @@ label{
 
 
 .accordion p,ul,ol,li{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.3;
   color: var(--bright-color);
 }
@@ -1423,7 +1421,11 @@ label{
   border-color: var(--bright-color);
   color: var(--bright-color);
 
+}
 
+.notice__title:hover{
+  background-color: var(--point-color);
+  transition: .5s;
 }
 
 
@@ -1446,7 +1448,7 @@ padding: 3% 2% 3% 30%;
 }
 
 
-.contact__box h4{
+.contact__box_title{
 font-size: 1.6rem;
 margin: 3% 0;
 
@@ -1455,6 +1457,7 @@ border: 1px solid var(--dark-color);
 border-radius: 20px;
 padding: 1% 5%;
 }
+
 
 .contact__box p{
   display: inline-block;
