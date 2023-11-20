@@ -45,9 +45,7 @@
    }
 
    @media screen and (max-width:750px){
-.tit{
-   
-}
+
       .cont__content{
          flex-direction:column;
       }
@@ -114,6 +112,7 @@
     padding-right: 2%;
    }
       
+
    .tit{
       padding-left: 2%;
       padding-right: 2%;
@@ -121,7 +120,9 @@
       display: none;
    }
    
-
+.intro__item{
+   width: 70vw;
+}
 
 
    .facility .tit{
