@@ -139,9 +139,11 @@
       display: block;
    }
    
-   .m-gnb__menu li:nth-child(1){
 
-   }
+ .m-gnb__menu li a {
+    line-height: 1.9;
+    font-size: 1.6rem;
+}
 
 
 
@@ -209,6 +211,12 @@
  }
 
  
+ .about__content.part1{
+   padding-left: 5%;
+ }
+ .about__content.part2{
+   padding-right: 5%;
+ }
 
 
 .round{
@@ -228,6 +236,7 @@
 
 .cont__img{
    flex: 1;
+ 
 }
 
 
