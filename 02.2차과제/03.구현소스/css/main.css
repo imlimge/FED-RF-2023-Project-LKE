@@ -98,7 +98,6 @@ html{
   scroll-behavior: smooth;
 }
 
-
 h3,h4,p{
   color: var(--dark-color);
 }
@@ -724,10 +723,13 @@ border-radius: 20px;
   box-sizing: border-box;
 }
 
+
+
 .intro__item h3{
   font-size: 5vw;
   line-height: 6.4vw;
   margin-bottom: 5vh;
+  color: var(--bright-color)
 }
 
 
@@ -835,9 +837,6 @@ text-align: center;
   top:20vh;
 }
 
-.about__title h4{
-  color: var(--point-color);
-}
 
 .about__teacher{
   position: relative;
@@ -928,11 +927,17 @@ text-align: center;
   font-size: min(3.8vw,4rem);
 }
 .about__title.part2 h3{
+color: var(--bright-color);
+
+}
+
+.about__title.part2 h3{
   text-align: right;
 }
 
 .about__title h4{
-  font-size: min(3.5vw,2rem);
+  font-size: min(4.5vw,2rem);
+  color: var(--point-color);
 }
 .about__title.part2 h4{
   text-align: right;
