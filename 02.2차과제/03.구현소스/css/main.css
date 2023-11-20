@@ -22,6 +22,11 @@
   border-color: var(--bright-color) ; 
 }
 
+.back__line.dark{
+  border: 1px solid var(--bright-color);
+}
+
+
 .dark .img{
   filter: invert(1);
   mix-blend-mode: plus-lighter;
@@ -29,6 +34,10 @@
 
 .contact.dark p{
   color: var(--bright-color);
+}
+
+.time_table.dark .time_table_content .day{
+  border: 1px solid var(--dark-color);
 }
 
 .contact.dark span{
@@ -726,8 +735,8 @@ border-radius: 20px;
 
 
 .intro__item h3{
-  font-size: 5vw;
-  line-height: 6.4vw;
+  font-size: 4vw;
+  line-height: 4.7vw;
   margin-bottom: 5vh;
   color: var(--bright-color)
 }
@@ -1677,4 +1686,6 @@ border: 1px solid #000;
   font-size: 1.4rem;
   padding-top: 15%;
 }
+
+
 

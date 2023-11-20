@@ -201,7 +201,9 @@
       line-height: 1;
   }
 
-
+#about__class{
+   height: 180vh;
+}
  .about__box{
    flex-direction: column;
  }

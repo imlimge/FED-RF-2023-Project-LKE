@@ -25,28 +25,6 @@ import dFn from "./dom.js";
  *
  ***************************************************************/
 
-// 네비게이션 아이템들 (on)
-/* const gnbItem = dFn.qsa('.gnb__item');
-console.log(gnbItem);
-
-var winY = window.scrollY;
-
-
- const introP = dFn.qs('#intro').offsetTop;
-const aboutP = dFn.qs('#about').offsetTop;
-const facilityP = dFn.qs('#facility').offsetTop;
-const timeTableP = dFn.qs('#time_table').offsetTop;
-const noticeP = dFn.qs('#notice').offsetTop;
-const contactP = dFn.qs('#contact').offsetTop;
-
- 
-console.log(introP,aboutP,facilityP,timeTableP,noticeP,contactP)
-
-if(winY>aboutP){
-  gnbItem.addClass('on');
-}  */
-
-// 제이쿼리로 시도
 const gnbMenu = $(".gnb__menu");
 const mGnbMenu = $(".m-gnb__menu");
 console.log(gnbMenu);
@@ -100,13 +78,31 @@ const slideBox4 = $('.box4');
 const imgLogo = $('.image__logo img');
 
 
+// 스크롤 이동 파트 리스트
+// (인트로)
+// .intro__item .intro2 .m-intro
+// .intro__item .intro3 .m-intro
+// .intro__item .intro4 .m-intro
+// (강사소개)
+// .about__teacher .part1
+// .about__teacher .part2
+// (각 섹션파트)
+// .intro, .facility, .time_table, .notice, .contact 
+
+
+
+/*------------------------- 스크롤 액션 ------------------------- */
 
 $(window).scroll(() => {
   let scTop = $(window).scrollTop();
   let scTop2 = scTop;
+  let scTop3 = scTop;
    console.log(scTop);
 
-  // 네비게이션 아이템 위치마다 on
+
+  /*********************************************  
+   * 파트마다 네비게이션 파트에 on
+  *********************************************/
   for (let x = 0; x < 6; x++) 
   addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
 
@@ -135,6 +131,15 @@ $(window).scroll(() => {
     left : `${1500+ -scTop2/13 * 2.2}px`
   })
 
+
+  /****************************************
+   * 
+   *  기능 : 인트로 스크롤 시 바로 보이기
+   * 
+   **************************************/
+
+
+
   /*********************************************  
    * 강사소개 파트 스크롤 시 약력 
    * transform: scaleX(100%); 0에서 100으로
@@ -149,6 +154,10 @@ $(window).scroll(() => {
 
 
 });
+
+
+
+
 
 /*------------------------- 상단 영역 ------------------------- */
 
@@ -165,7 +174,7 @@ console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
 
 // 클래스 dark 시 검은색으로 변해야 하는 파트
-const dark = $('.intro,.facility,.time_table,.contact,.tit,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
+const dark = $('.back__line,.intro,.facility,.time_table,.contact,.tit,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
 
 console.log(dark)
 
@@ -198,14 +207,6 @@ transBtnBox.click(function(){
 
 
 /*------------------------------- 인트로 ------------------------------- */
-/***************************************************************
- * 
- *  기능 : 인트로 스크롤시 바로 보이기
- *  
- * 
- ***************************************************************/
-
-
 
 
 
