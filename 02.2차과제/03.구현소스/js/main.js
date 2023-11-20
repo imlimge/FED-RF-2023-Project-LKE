@@ -91,13 +91,36 @@ const imgLogo = $('.image__logo img');
 
 
 
+  /*********************************************  
+   * 강사소개 파트 스크롤 시 약력 
+   * transform: scaleX(100%); 0에서 100으로
+   * .about__history
+   * .about__history part2
+   * 각각 .line 요소들의 순번대로 0 -> 100 되기
+  *********************************************/
+
+/* window.addEventListener("resize", function () {
+  const teacherP = $('.about__teacher').height();
+  console.log(teacherP)
+ 
+
+  let teacherPc = teacherP/100
+  console.log(teacherPc);
+
+  높이에서 100 나누어서 스크롤 할 때마다 teacherPc
+
+});
+ */
+
+
+
 /*------------------------- 스크롤 액션 ------------------------- */
 
 $(window).scroll(() => {
   let scTop = $(window).scrollTop();
   let scTop2 = scTop;
-  let scTop3 = scTop;
-   console.log(scTop);
+
+  //  console.log(scTop);
 
 
   /*********************************************  
@@ -174,9 +197,9 @@ console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
 
 // 클래스 dark 시 검은색으로 변해야 하는 파트
-const dark = $('.back__line,.intro,.facility,.time_table,.contact,.tit,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
+const dark = $('.back__line,.intro,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
 
-console.log(dark)
+console.log('dark',dark)
 
 // 클래스 dark 시  밝은 색으로 변해야 하는 파트
 const bright = $('.notice, .accordion h3,.notice__title,.tit2,.notice_content');
@@ -310,10 +333,15 @@ function rotFn2(ele) {
   setTimeout(() => rotFn2(ele), TM * 4);
 } ////// rotFn2 함수 ///////
 
-window.addEventListener("resize", function () {
-  // window resize시 처리
-  let winW = window.innerWidth;
-});
+
+
+
+
+
+
+
+
+
 
 var swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 4,
