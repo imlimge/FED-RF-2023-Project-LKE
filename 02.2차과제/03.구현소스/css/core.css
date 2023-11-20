@@ -14,7 +14,8 @@
   --color3: #5b5b5b;
 
   /* 포인트컬러 */
-  --point-color: rgb(50, 139, 255);
+  /* --point-color: rgb(50, 139, 255); */
+  --point-color: rgb(255 196 55);;
 
   /* 폰트설정 */
   --bold-font:'KOTRALEAP';

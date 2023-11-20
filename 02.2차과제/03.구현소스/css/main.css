@@ -25,12 +25,23 @@
   mix-blend-mode: plus-lighter;
 }
 
+.contact__time.black::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  right: 0;
+  background-color: var(--bright-color);
+}
 
 .contact__box_title.black{
   border: 1px solid var(--bright-color) !important;
 }
 
-
+.footer.black{
+  background-color: var(--dark-color);
+}
 
 html{
   scroll-behavior: smooth;
@@ -52,7 +63,7 @@ h3,h4,article{
 
 section{
   height: 100vh;
-
+  background-color: var(--bright-color);
 }
 
 
@@ -188,9 +199,8 @@ border-radius: 20px;
 }
 
 .gnb__menu li a.gnb__item.on {
-  color: var(--bright-color);
+  color: var(--dark-color);
 }
-
 
 
 
@@ -241,9 +251,6 @@ border-radius: 20px;
   background-color: var(--bright-color);
 }
 
-.gnb__menu li a.gnb__item.on {
-  color: var(--bright-color);
-}
 
 
 
@@ -653,7 +660,7 @@ border-radius: 20px;
   right: 0;
   margin: 0 auto;
   border-radius: 20px 20px 0 0;
-  width: 60vw;
+  width: 40vw;
   height: 800px;
   
   position: relative;
@@ -782,8 +789,8 @@ text-align: center;
   position: relative;
   width: 100%;
   height: 100vh;
-  padding-left: var(--margin-left);
-  padding-right: var(--margin-right);
+  /* padding-left: var(--margin-left);
+  padding-right: var(--margin-right); */
   box-sizing: border-box;
   
 }
@@ -882,32 +889,55 @@ text-align: center;
   font-size: 1.4rem;
 }
 
+
 .about__history span{
-display: inline-block;
-padding: 1vh 0;
+display: block;
+padding: 1vh 5% 1vh 0;
 }
 
-.about__history span::after{
+.about__history .line{
+  margin-top: -8.1px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid var(--dark-color);
+  transform: scaleX(100%);
+  transform-origin: right;
+}
+
+
+/* .about__history span::after{
   content: '';
   position: absolute;
-  /* 어떻게 하긴 했는데 왜 높이값으로 비율에 맞게 구성이 될까? top값이 아니고 */
   height: 24px;
 
   border-bottom: 1px solid var(--dark-color);
   right: 0;
   left: 52.5%;
-}
+} */
 
-.about__history.part2{
+
+
+
+.about__history.part2 span{
 text-align: right;
+padding: 1vh 0 1vh 15%;
 }
 
-.about__history.part2 span::after{
+.about__history.part2 .line{
+  margin-top: -8.1px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid var(--bright-color);
+  transform: scaleX(100%);
+  transform-origin: left;
+}
+
+/* .about__history.part2 span::after{
   border-bottom: 1px solid var(--bright-color);
   left: 0;
   right: 47.5%;
 }
-
+ */
 
 /* _____________________  슬라이드  _________________________ */
 
@@ -1546,12 +1576,15 @@ border: 1px solid #000;
 /* _____________________  푸터  _________________________ */
 
 .footer{
-  margin-left: var(--margin-left);
-  margin-right: var(--margin-right);
+  background-color: var(--bright-color);
+  padding-left: var(--margin-left);
+  padding-right: var(--margin-right);
+  padding-top: 10%;
+
 }
 
 .footer__logo{
-  margin: 10% 0;
+
   text-align: center;
 }
 .footer__logo img{
@@ -1563,6 +1596,7 @@ border: 1px solid #000;
 .footer__content{
   height: 14vh;
 
+  font-size: 1.4rem;
   padding-top: 5%;
 }
 

@@ -135,6 +135,18 @@ $(window).scroll(() => {
     left : `${1500+ -scTop2/13 * 2.2}px`
   })
 
+  /*********************************************  
+   * 강사소개 파트 스크롤 시 약력 
+   * transform: scaleX(100%); 0에서 100으로
+   * .about__history
+   * .about__history part2
+   * 각각 따로 .line 순번대로 100 되기
+  *********************************************/
+
+
+
+
+
 
 });
 
@@ -150,7 +162,7 @@ const mBtn = $('.btn.m_btn');
 const bBtn1 = $('.btn.b_btn1');
 const bBtn2 = $('.btn.b_btn2');
 
-const black = $('.intro,.facility,.time_table,.notice,.contact,.tit,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo');
+const black = $('.intro,.facility,.time_table,.notice,.contact,.tit,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
 console.log(black)
 console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
