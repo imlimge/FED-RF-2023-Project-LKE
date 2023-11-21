@@ -115,12 +115,21 @@ const imgLogo = $('.image__logo img');
 
 
 /*------------------------- 스크롤 액션 ------------------------- */
+// 윈도우 높이값
+let winH = window.innerHeight;
+// 문서 전체 높이값
+let docH =  document.body.clientHeight;
+// 스크롤 한계값 : 전체 document 높이 - 윈도우 높이값
+let scLimit = docH - winH;
+
+
+
 
 $(window).scroll(() => {
   let scTop = $(window).scrollTop();
-  let scTop2 = scTop;
+  let scTop2 = winH*scTop/scLimit;
 
-  //  console.log(scTop);
+   console.log(scTop2);
 
 
   /*********************************************  
@@ -135,24 +144,28 @@ $(window).scroll(() => {
 
 
 
+
+
   /*********************************************  
    * 슬라이드 파트 스크롤 시 좌 우 이동
   *********************************************/
-  slideBox1.css({
-    left : `${-scTop2 * 0.2}px`
-  })
-  slideBox2.css({
-    left : `${-1000 + scTop2/5 * 0.7}px`
-  })
-  slideBox3.css({
-    left : `${-scTop2/7 * 0.7}px`
-  })
-  slideBox4.css({
-    left : `${-1000 + scTop2/7 * 0.7}px`
-  })
-  imgLogo.css({
-    left : `${1500+ -scTop2/13 * 2.2}px`
-  })
+
+    slideBox1.css({
+      left : `${-300 + scTop2 * 0.7}px`
+    })
+    slideBox2.css({
+      left : `${-300 + scTop2 * 0.7}px`
+    })
+    slideBox3.css({
+      left : `${-300 + scTop2 * -0.5}px`
+    })
+    slideBox4.css({
+      left : `${-500 + scTop2 * 0.7}px`
+    })
+    imgLogo.css({
+      left : `${-550 + scTop2 * 0.7}px`
+    })
+
 
 
   /****************************************

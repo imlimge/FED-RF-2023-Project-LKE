@@ -1096,7 +1096,7 @@ padding: 1vh 0 1vh 15%;
 
 
 .slide{
-  height: 100px;
+  height: 30px;
   border:  1px solid var(--dark-color);
   background-color: var(--point-color);
   /* transform: scale(1.2) rotate(355deg) translate(2px, -40px); */
@@ -1105,7 +1105,7 @@ padding: 1vh 0 1vh 15%;
 .slide__box{
   position: relative;
   /* JS에서 스크롤 시 레프트값 조절하여 이동 */
-  left: -1000px; 
+  left: -300px; 
 
   display: flex;
 
@@ -1119,8 +1119,9 @@ padding: 1vh 0 1vh 15%;
 }
 
 .slide__text{
-  font-size: 7.5rem;
+  font-size: 3rem;
   font-family: 'Merriweather', serif;
+  font-weight: bold;
 }
 
 .slide__text span{
@@ -1131,7 +1132,8 @@ padding: 1vh 0 1vh 15%;
   height: 100%;
 }
 .slide__logo img{
-  transform: scale(0.6);
+    transform: scale(0.3);
+    transform-origin: top;
 }
 
 .slide_back{
