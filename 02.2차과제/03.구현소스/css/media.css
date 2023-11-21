@@ -164,35 +164,28 @@
      transform: scale(0.8);
     }
 
-    .top-area .logo{
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-    }
 
-    .top-area .logo img {
-  
-      transform: scale(.9);
-  }
+ 
+  /* 상단로고 */
 
 
 
-    .intro__logo{
+   .top-area .logo{
       top: 22.6px;
-      left: -88px;
-      /* top: 40%; */
+      left: -10px;
+    
     }
 
 
-.intro__logo img:nth-child(1){
-  animation: intro-rotate 8s linear infinite;
-  transform: scale(0.7);
-}
+   .logo img:nth-child(1){
+   animation: intro-rotate 8s linear infinite;
+   transform: scale(0.7);
+   }
 
-.intro__logo img:nth-child(2){
-   animation: none ;
-   transform: scale(.6);
-}
+   .logo img:nth-child(2){
+      animation: none ;
+      transform: scale(.6);
+   }
 
 
 
@@ -331,7 +324,7 @@
    flex: 1;
  }
 
- 
+
  .contact__time::after {
    content: '';
    position: absolute;

@@ -19,7 +19,9 @@ figure, figcaption
   margin: 0;
   padding: 0;
   list-style: none;
+  
 }
+
 
 a{
   color: #222;
@@ -54,6 +56,7 @@ body {
   /* body하위 요소의 높이값 %의 기준이됨! */
   /* overflow: hidden; */
   /* 스크롤바 없애기(스크롤안됨!) */
+
 }
 
 

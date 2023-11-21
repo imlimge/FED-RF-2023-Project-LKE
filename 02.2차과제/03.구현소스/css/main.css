@@ -24,10 +24,12 @@ h2{
   
 }
 
-h3,h4,article{
+h3,h4{
   font-family: 'GowunBatang-Regular';
 }
-
+article,p,span{
+  font-family: 'SUIT-Regular';
+}
 
 
 
@@ -564,12 +566,13 @@ section{
 
 }
 
+/* 상단영역 로고 */
 .top-area .logo{
   width: 150px;
   height: 40px;
   position: absolute;
   bottom: 0;
-
+  left: 0px;
   /* left: 20px; */
 }
 
@@ -577,6 +580,40 @@ section{
   width: 100%;
   bottom: 0;
   position: absolute;
+
+}
+
+
+.logo{
+  position: fixed;
+  top: 34px;
+  left: -28px;
+  width: 300px;
+}
+
+
+
+.logo img{
+  position: absolute;
+  width: 42%;
+
+  
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  color: var(--dark-color);
+}
+
+.logo img:nth-child(1){
+  transform: scale(1);
+  animation: intro-rotate 8s linear infinite;
+  /* intro-scale 1.5s ease-in 1 ; */
+}
+
+.logo img:nth-child(2){
+  transform: scale(.7);
+  /* animation: intro-scale2 1.5s ease-in 1 forwards ; */
 
 }
 
@@ -696,39 +733,6 @@ section{
 }
 
 
-.intro__logo{
-  position: fixed;
-  top: 34px;
-  left: -28px;
-  width: 300px;
-}
-
-
-
-.intro__logo img{
-  position: absolute;
-  width: 42%;
-
-  
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 0;
-  color: var(--dark-color);
-}
-
-.intro__logo img:nth-child(1){
-  transform: scale(1);
-  animation: intro-rotate 8s linear infinite;
-  /* intro-scale 1.5s ease-in 1 ; */
-}
-
-.intro__logo img:nth-child(2){
-  transform: scale(.7);
-  /* animation: intro-scale2 1.5s ease-in 1 forwards ; */
-
-}
-
 
 .intro_op{
  position: sticky;
@@ -758,13 +762,13 @@ font-size: max(10vw,5.8rem);
 }
 
 
-.intro__logo2{
+.logo2{
   width: 100%;
   overflow: hidden;
 }
 
 
-.intro__logo2 img {
+.logo2 img {
   position: absolute;
   width: 42%;
   animation: intro-rotate 20s linear infinite;
@@ -1183,11 +1187,14 @@ position: absolute; */
 }
 
 .cont__title{
-  font-family: 'GowunBatang-Regular';
+
   font-size: 3rem;
   text-align: center;
-  
 }
+.cont__title span{
+  font-family: 'GowunBatang-Regular';
+}
+
 .cont__img{
   width: 300px;
   height: 300px;
@@ -1254,6 +1261,18 @@ position: absolute; */
   transition: .3s;
 }
 
+.photo__item.on::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 20px;
+  top: 10px;
+  left: 10px;
+  transition: .3s;
+}
+
 .photo__item img{
   border-radius: 20px;
 }
@@ -1273,12 +1292,13 @@ padding: 2% 0;
 .photo__title::after{
   content: '';
   position: absolute;
-  width: 68%;
+  width: 55%;
   height: 1px;
   background-color: var(--point-color);
   top: 50%;
   right: 5%;
 }
+
 
 .photo__item h3{
   bottom: 0;
@@ -1351,10 +1371,9 @@ padding: 2% 0;
 }
 
 .about__class__box article{
-
   color: var(--dark-color);
-  font-size: 1.6rem;
-  line-height: 1.2;
+  font-size: 1.5rem;
+  line-height: 1.4;
   font-weight: bold;
   padding: 3vw 0;
 
@@ -1374,7 +1393,7 @@ padding: 2% 0;
   font-size: 1.7rem;
 }
 .about__class__box p{
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 
