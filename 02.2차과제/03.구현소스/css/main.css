@@ -92,7 +92,9 @@ section{
   color: var(--point-color);
 }
 
-
+.intro.dark .intro_op span{
+  color: var(--bright-color) !important;
+}
 
 
 
@@ -180,7 +182,6 @@ section{
 
 
 .header{ 
-  width: 12%;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -393,22 +394,22 @@ section{
 
 
 .gnb__menu li:nth-child(1) a{
-  top: 90px;
+  top: 65%;
 }
 .gnb__menu li:nth-child(2) a{
-  top: 126px;
+  top: 70%;
 }
 .gnb__menu li:nth-child(3) a{
-  top: 163px;
+  top: 75%;
 }
 .gnb__menu li:nth-child(4) a{
-  top: 198px;
+  top: 80%;
 }
 .gnb__menu li:nth-child(5) a{
-  top: 235px;
+  top: 85%;
 }
 .gnb__menu li:nth-child(6) a{
-  top: 270px;
+  top: 90%;
 }
 
 
@@ -489,24 +490,27 @@ section{
 }
 
 
+
+
 .m-gnb__menu li:nth-child(1) a{
-  left: 2%;
+  left: 25.2%;
 }
 .m-gnb__menu li:nth-child(2) a{
-  left: 14%;
+  left: 35.2%;
 }
 .m-gnb__menu li:nth-child(3) a{
-  left: 29%;
+  left: 45.6%;
 }
 .m-gnb__menu li:nth-child(4) a{
-  left: 41%;
+  left: 53%;
 }
 .m-gnb__menu li:nth-child(5) a{
-  left: 58%;
+  left: 66.1%;
 }
 .m-gnb__menu li:nth-child(6) a{
-  left: 71%;
+  left: 75%;
 }
+
 
 
 /* 네비게시연 아이템 on 되어있는 상태 */
@@ -693,9 +697,10 @@ section{
 
 
 .intro__logo{
-  position: sticky;
-  top: 50px;
-  height: 477px;
+  position: fixed;
+  top: 34px;
+  left: -28px;
+  width: 300px;
 }
 
 
@@ -723,6 +728,54 @@ section{
   /* animation: intro-scale2 1.5s ease-in 1 forwards ; */
 
 }
+
+
+.intro_op{
+ position: sticky;
+ top: 20vh;
+}
+
+
+.intro_op span:nth-child(1){
+  font-family: 'KOTRALEAP';
+font-size: max(10vw,5.8rem);
+}
+.intro_op span:nth-child(2){
+  font-family: 'Merriweather', serif;
+font-size: max(10vw,5.8rem);
+}
+.intro_op span:nth-child(3){
+  font-family: 'Danjo-bold-Regular';
+font-size: max(10vw,5.8rem);
+}
+.intro_op span:nth-child(4){
+  font-family: 'Libre Baskerville', serif;
+font-size: max(10vw,5.8rem);
+}
+.intro_op span:nth-child(5){
+  font-family: 'KOTRALEAP';
+font-size: max(10vw,5.8rem);
+}
+
+
+.intro__logo2{
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.intro__logo2 img {
+  position: absolute;
+  width: 42%;
+  animation: intro-rotate 20s linear infinite;
+  /* left: 0; */
+  right: 0;
+  margin: 0 auto;
+  top: 180px;
+  color: var(--dark-color);
+  scale: 2;
+}
+
 
 
 
@@ -774,14 +827,14 @@ section{
 /* 인트로 내용 파트1 */
 .intro__item.intro2{
   position: sticky;
-  top: 20vh;
+  top: 27vh;
   background-color: var(--color1);
 }
 
 /* 인트로 내용 파트2 */
 .intro__item.intro3{
   position: sticky;
-  top: 25vh;
+  top: 30vh;
   background-color: var(--color2);
 }
 
@@ -866,7 +919,7 @@ text-align: center;
 }
 .about{
   position: sticky;
-  top:20vh;
+  top: 29vh;
 }
 
 
@@ -1729,6 +1782,7 @@ border: 1px solid #000;
   padding-left: var(--margin-left);
   padding-right: var(--margin-right);
   padding-top: 10%;
+  text-align: center;
 
 }
 
