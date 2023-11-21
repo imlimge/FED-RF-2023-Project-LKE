@@ -197,12 +197,14 @@ console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
 
 // 클래스 dark 시 검은색으로 변해야 하는 파트
-const dark = $('.back__line,.intro,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
+const dark = $('.tit,.back__line,.intro,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.intro__logo,.image__logo,.footer,.contact__time');
 
 console.log('dark',dark)
 
 // 클래스 dark 시  밝은 색으로 변해야 하는 파트
 const bright = $('.notice, .accordion h3,.notice__title,.tit2,.notice_content');
+
+
 
 transBtnBox.click(function(){
   
@@ -210,6 +212,7 @@ transBtnBox.click(function(){
   bright.toggleClass("bright");
   
   
+
   transBtnBox.toggleClass("dark");
 
 // 토글버튼 on off 변경

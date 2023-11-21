@@ -7,7 +7,66 @@
 @import url(./ani.css);
 
 
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+h3,h4,p{
+  color: var(--dark-color);
+}
+
+h2{
+  font-family:var(--bold-font);
+  /* color: var(--point-color); */
+  
+}
+
+h3,h4,article{
+  font-family: 'GowunBatang-Regular';
+}
+
+
+
+
+section{
+  height: 100vh;
+  background-color: var(--bright-color);
+}
+
+
+
+/* 각 파트 제목 */
+.tit{
+  padding-left: var(--margin-left);
+  padding-right: var(--margin-right);
+  padding-top: 10vh;
+  font-size: var(--bold-font-size);
+  text-align: right;
+  color: var(--point-color);
+}
+
+
+
+.back__line{
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  box-sizing: border-box;
+  border: 1px solid var(--dark-color);
+  position: fixed;
+  background-color: transparent !important;
+  user-select: none;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+
+
 .intro,.facility,.time_table,.notice,.contact {
+  position: relative;
   height: 100vh;
   background-color: var(--bright-color);
   color: var(--dark-color);
@@ -15,19 +74,19 @@
 }
 
 
-/* 어두운 버전 ----------- */
+/*------------------- 어두운 버전 -------------------- */
 .back__line .dark{
   border: 1px solid var(--bright-color);
 }
 
+
 .dark{
   background-color: var(--dark-color);
-  color: var(--bright-color);
-  border-color: var(--bright-color) ; 
-}
-.tit.dark{
   color: var(--point-color);
+  border-color: var(--bright-color) ; 
+  
 }
+
 
 .tit2{
   color: var(--point-color);
@@ -78,7 +137,8 @@
 }
 
 
-/* 밝은 버전 ----------- */
+
+/*------------------- 밝은 버전 -------------------- */
 
 .bright{
   background-color: var(--bright-color);
@@ -110,60 +170,6 @@
   background-color: var(--color4);
 }
 
-
-
-
-html{
-  scroll-behavior: smooth;
-}
-
-h3,h4,p{
-  color: var(--dark-color);
-}
-
-h2{
-  font-family:var(--bold-font);
-  color: var(--point-color);
-  
-}
-
-h3,h4,article{
-  font-family: 'GowunBatang-Regular';
-}
-
-
-
-
-section{
-  height: 100vh;
-  background-color: var(--bright-color);
-}
-
-
-
-/* 각 파트 제목 */
-.tit{
-  padding-left: var(--margin-left);
-  padding-right: var(--margin-right);
-  padding-top: 10vh;
-  font-size: var(--bold-font-size);
-  text-align: right;
-  color: var(--point-color);
-}
-
-
-
-.back__line{
-  width: 100%;
-  height: 100%;
-  padding: 10%;
-  box-sizing: border-box;
-  border: 1px solid var(--dark-color);
-  position: fixed;
-/* background-color: transparent; */
-user-select: none;
-border-radius: 20px;
-}
 
 /* _____________________  gnb _________________________ */
 
@@ -1168,6 +1174,7 @@ position: absolute; */
   border-radius: 20px;
 
 }
+
 .photo__item::before{
   content: '';
   width: 100%;
@@ -1178,7 +1185,6 @@ position: absolute; */
   top: 10px;
   left: 10px;
   mix-blend-mode: color;
-
 }
 
 .photo__item:hover::before{
