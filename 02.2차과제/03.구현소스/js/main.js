@@ -210,7 +210,7 @@ console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
 
 // 클래스 dark 시 검은색으로 변해야 하는 파트
-const dark = $('.tit,.back__line,.intro,.intro_op.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time');
+const dark = $('.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time');
 
 console.log('dark',dark)
 
@@ -392,6 +392,10 @@ var swiper = new Swiper(".mySwiper", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: true,
+  },
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
