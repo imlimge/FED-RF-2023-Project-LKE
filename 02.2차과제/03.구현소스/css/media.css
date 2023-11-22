@@ -90,7 +90,11 @@
      }
 
 
+     .marquee span {
 
+      width: 30%;
+    
+  }
 
 
 
@@ -342,6 +346,7 @@
  .footer__logo img{
    width: 60vw;
  }
+
 
 
 

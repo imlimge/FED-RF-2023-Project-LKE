@@ -1223,7 +1223,7 @@ position: absolute; */
 
 .marquee span {
   float: left;
-  width: 15%;
+  width: 50%;
   color: var(--point-color);
   font-size: 1.2rem;
   letter-spacing: .3rem;
