@@ -202,10 +202,16 @@
       line-height: 1;
   }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+#about__class{
+   height: 240vh;
+}
+>>>>>>> parent of 2374343 (231122_1534)
  .about__box{
    flex-direction: column;
  }

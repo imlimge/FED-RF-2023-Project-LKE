@@ -114,14 +114,6 @@ const imgLogo = $('.image__logo img');
 
 
 
-/*------------------------- 휠 이벤트 ------------------------- */
-
-/* window.addEventListener('wheel',wheelFn);
-
- const wheelFn(e){
-
- } */
-
 /*------------------------- 스크롤 액션 ------------------------- */
 // 윈도우 높이값
 let winH = window.innerHeight;
@@ -130,27 +122,15 @@ let docH =  document.body.clientHeight;
 // 스크롤 한계값 : 전체 document 높이 - 윈도우 높이값
 let scLimit = docH - winH;
 
-let i = -30;
 
 
 
 $(window).scroll(() => {
   let scTop = $(window).scrollTop();
+  let scTop2 = winH*scTop/scLimit;
 
-  const height = $(document).height() - $(window).height();
-  const percentY = Math.floor(scTop / height * 100);
+   console.log(scTop2);
 
-
- i += 1 ;
- if(i > 0) i = -30;
-
-
-
-// 1에서 99까지는 했는데 99에서 다시 1로 가는 법 
-
-
-console.log(scTop,percentY,i)
- 
 
   /*********************************************  
    * 파트마다 네비게이션 파트에 on
@@ -170,26 +150,20 @@ console.log(scTop,percentY,i)
    * 슬라이드 파트 스크롤 시 좌 우 이동
   *********************************************/
 
-    //왼쪽이동
-    slideBox1.css({   
-      left : i +'%'
+    slideBox1.css({
+      left : `${-300 + scTop2 * 0.7}px`
     })
-
-    //오른쪽
     slideBox2.css({
-      left :-30 -i +'%'
+      left : `${-300 + scTop2 * 0.7}px`
     })
     slideBox3.css({
-      left :i +'%'
+      left : `${-300 + scTop2 * -0.5}px`
     })
     slideBox4.css({
-      left :i +'%'
+      left : `${-500 + scTop2 * 0.7}px`
     })
-
-
-
     imgLogo.css({
-      left : i +'%'
+      left : `${-550 + scTop2 * 0.7}px`
     })
 
 
