@@ -180,10 +180,6 @@ section{
 }
 
 
-.notice_content.bright{
-  background-color: var(--color3);
-}
-
 
 
 
@@ -249,7 +245,8 @@ section{
 
 
 .gnb__menu li a:hover{
-  color: var(--bright-color);
+  color: var(--point-color);
+  
 }
 
 /* 네비게이션 아이템 책갈피 모양 */
@@ -290,7 +287,7 @@ section{
   background-color: var(--dark-color);
 }
 .gnb__item.on.gnb__item::after{
-  background-color: var(--bright-color);
+  background-color: var(--point-color);
 }
 
 .gnb__menu li a.gnb__item.on {
@@ -302,7 +299,7 @@ section{
 .gnb__menu li a:hover::before{
   content: '';
   background-color: var(--dark-color);
-
+  
 }
 
 
@@ -343,7 +340,7 @@ section{
   background-color: var(--point-color);
 }
 .gnb__item.on.gnb__item::after{
-  background-color: var(--bright-color);
+  /* background-color: var(--bright-color); */
 }
 
 
@@ -693,7 +690,7 @@ section{
   
   position: absolute;
   left: 0px;
-  background-color: var(--bright-color);
+  background-color: var(--point-color);
   border: 1px solid var(--dark-color);
   transition: left .4s;
 }
@@ -1764,7 +1761,7 @@ label{
 
 
 .notice_content{
-background-color: var(--color2);
+background-color: var(--point-color);
 height:auto;
 padding: 3% 2% 3% 30%;
 

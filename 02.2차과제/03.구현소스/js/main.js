@@ -243,11 +243,11 @@ transBtnBox.click(function(){
 // 토글버튼 on off 변경
   if(transBtnBox.hasClass('dark')){
  
-    mBtn.css({left:'73px',color:'var(--bright-color)',backgroundColor:'var(--dark-color)',border: '1px solid var(--bright-color)'}).text('단계관');
+    mBtn.css({left:'73px',color:'var(--dark-color)',backgroundColor:'var(--point-color)',border: '1px solid var(--bright-color)'}).text('단계관');
 
   }
   else{
-    mBtn.css({left:'0px',color:'var(--dark-color)',backgroundColor:'var(--bright-color)',border: '1px solid var(--dark-color)',
+    mBtn.css({left:'0px',color:'var(--dark-color)',backgroundColor:'var(--point-color)',border: '1px solid var(--dark-color)',
     }).text('혁신관');
 
   }
@@ -451,6 +451,7 @@ var swiper = new Swiper(".mySwiper", {
 // 제이쿼리 아코디언
 $(function () {
   $(".accordion").accordion();
+  
 });
 
 
