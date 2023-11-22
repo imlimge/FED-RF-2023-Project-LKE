@@ -105,6 +105,8 @@ section{
   mix-blend-mode: plus-lighter;
 }
 
+
+
 .contact.dark p{
   color: var(--bright-color);
 }
@@ -1138,18 +1140,14 @@ padding: 1vh 0 1vh 15%;
 .slide__box{
   position: relative;
   /* JS에서 스크롤 시 레프트값 조절하여 이동 */
-  left: -300px; 
+  left: -30%;
 
-  display: flex;
+  display: flex;  
 
   height: 100%;
   width: 5500px;
 }
 
-.slide__box.box2{
-  left: 0; 
-  right: 0px;
-}
 
 .slide__text{
   font-size: 3rem;
@@ -1178,16 +1176,11 @@ background-color: var(--dark-color);
 position: absolute; */
 }
 
-.slide_back.slide2{
-  background-color: var(--bright-color);
-  position: absolute;
-  top: 34%;
-  /* transform: rotate(8deg); */
+.slide.slide2{
+ background-color: var(--bright-color);
+
  }
 
-.slide.slide2{
-  /* transform: scale(1.2) rotate(10deg) translate(2px, -40px); */
-}
 
 /* _____________________  광고  _________________________ */
 
@@ -1364,8 +1357,9 @@ padding: 2% 0;
 /* _____________________  반소개  _________________________ */
 
 #about__class{
-  height: 150vh;
+  
 }
+
 .about__class {
   position: relative;
   height: auto;

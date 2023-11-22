@@ -32,6 +32,9 @@ https://baga.ge/
 할 것
 
 1. 스크롤 시 화면이 자동으로 하나씩 딱딱 걸리게
+https://springfall.cc/article/2022-10/javascript-smooth-animation
+참고해보기
+
 
 2. 탑영역 로고 이미지 색상..
 
@@ -43,7 +46,6 @@ https://baga.ge/
 .about__class__box 개개별 top값 위치 스크롤시 변경
 
 
-리액트 설치 옮기기 / 데이터화
 
-
-
+6. 메인 인트로 글자 동적요소
+https://blog.naver.com/PostView.naver?blogId=gloomysight&logNo=222715685104
