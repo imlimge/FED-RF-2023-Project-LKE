@@ -1356,37 +1356,55 @@ padding: 2% 0;
 }
 /* _____________________  반소개  _________________________ */
 
-#about__class{
-  
+#about__class {
+  height: auto;
 }
 
-.about__class {
+.about__class{
   position: relative;
-  height: auto;
-  display: flex;
-  /* width: 100%; */
-  margin-left: var(--margin-left);
-  margin-right: var(--margin-right);
-  gap: 2vw;
-  align-items: flex-start
+
+  padding: 10vh 13vw;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+.about__class-wrap{
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+  flex-direction: column;
+
+}
+
 
 
 
 .about__class__box {
+  
   position: relative;
-  /* width: 24vw; */
-  /* height: 51vh; */
-  /* height: auto; */
+  width: 300px;
+  height: 300px;
+
   box-sizing: border-box;
-  border: 1px solid var(--dark-color);
-  background-color: var(--bright-color);
-  border-radius: 20px;
-  margin: 3vh 0;
+  /* border: 1px dashed var(--point-color);
+  */
+  
+  box-shadow:2px 2px 8px -5px;
+  border-radius: 50%;
+
   text-align: center;
   padding: 2.9vh 2vw;
-  flex: 1;
+  
+
+
 }
+
+.about__sum{
+width: 100%;
+height: 100%;
+padding: 1vw 1vh;
+}
+
 
 
 .about__class__box h2{
@@ -1399,15 +1417,11 @@ padding: 2% 0;
   font-size: 1.5rem;
   line-height: 1.4;
   font-weight: bold;
-  padding: 3vw 0;
+  padding: 1vw 0;
 
 }
 
-.about__class__box hr{
 
-  color: var(--dark-color);
-  width: 90%;
-}
 
 .about__class__box h3{
   font-size: 2rem;
@@ -1421,29 +1435,38 @@ padding: 2% 0;
 }
 
 
+.about__class__box:hover .class__name__box-wrap{
+opacity: 1;
 
-.about__class__box.class1{
-  /* left: 19%;
-  top: 3%; */
-  }
-.about__class__box.class2{
-  /* left: 45%;
-  top: 10%; */
-  /* top: 13%; */
-  /* position: relative; */
-  transform: translateY(10%);
-  }
-.about__class__box.class3{
-  /* left: 71%;
-  top: 17%; */
-  transform: translateY(21%);
-  }
+} 
+
+
+.class__name__box-wrap{
+  display: flex;
+  gap: 1vw;
+  flex-direction: row;
+  opacity: 1;
+  position: absolute;
+  left: 111%;
+  top: 22%;
+}
+
+
+.class__name__box-wrap.on{
+  display: block;
+  
+}
+
+
+.class__name{
+  padding: 1vw;
+}
 
 .class__name__box{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
+  border-radius: 20px;
+  flex: 1;
+  background-color: var(--point-color);
+  width: 200px;
 }
 
 .class__name h4{
@@ -1452,8 +1475,9 @@ padding: 2% 0;
   border: 1px solid var(--dark-color);
   border-radius: 20px;
   padding: 1% 5%;
-  background-color: var(--point-color);
-  color: var(--dark-color);
+  background-color: var(--dark-color);
+  color: var(--bright-color);
+  font-size: 1.6rem;
 }
 
 .class__name p{
