@@ -67,6 +67,10 @@
 
 
 
+      #about__class{
+         height: 260vh;
+      }
+      
       .about__class {
          flex-direction: column;
          align-items: stretch
@@ -202,16 +206,10 @@
       line-height: 1;
   }
 
-<<<<<<< HEAD
 
 
 
 
-=======
-#about__class{
-   height: 240vh;
-}
->>>>>>> parent of 2374343 (231122_1534)
  .about__box{
    flex-direction: column;
  }
@@ -255,26 +253,17 @@
    
 }
 
-
-
-
-#about__class{
-   height: auto;
-  
-}
-
 .about__class {
-
-   padding: 2vh 6%;
-}
-
-
-.about__class__box.hide-box{
-   display: block;
+   margin-left: 6%;
+   margin-right: 6%;
+   margin-top: 10%;
 }
 
 
 
+#time_table{
+/* position: relative; */
+}
 .time_table__box{
    position: relative;
    width: 90%;
