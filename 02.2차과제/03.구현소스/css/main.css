@@ -7,7 +7,9 @@
 @import url(./ani.css);
 
 
-
+.mp{
+  height: 100vh;
+}
 
 
 html{

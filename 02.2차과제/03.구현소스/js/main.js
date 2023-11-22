@@ -6,12 +6,25 @@ import dFn from "./dom.js";
 
 /***************************************************************
  * 
- *  기능 : 특정 섹션 스크롤 시 상단에 스무스하게 위치
- *  대상 : 인트로 1~4 / 각 섹션
- *  
+ *  기능 : 스크롤 시 자동 화면 전환
+ *  대상 : 섹션
+ *  .mp 의 각 높이를 알아 낸 후 스크롤마다
+ *  다음 mp의 높이로 이동 
+ *   
  ***************************************************************/
+// 페이지 요소
+const mp = document.querySelectorAll(".mp");
+
+let mpP = [];
 
 
+mp.forEach((ele)=>{
+  ele.getBoundingClientRect();
+
+})
+
+
+console.log(mpP,Array.isArray(mpP),mp,Array.isArray(mp))
 
 
 
@@ -27,7 +40,7 @@ import dFn from "./dom.js";
 
 const gnbMenu = $(".gnb__menu");
 const mGnbMenu = $(".m-gnb__menu");
-console.log(gnbMenu);
+//console.log(gnbMenu);
 
 const introP = $("#intro").offset().top;
 const aboutP = $("#about").offset().top;
@@ -36,7 +49,7 @@ const timeTableP = $("#time_table").offset().top;
 const noticeP = $("#notice").offset().top;
 const contactP = $("#contact").offset().top;
 
-console.log(introP,'/', aboutP,'/', facilityP,'/', timeTableP,'/', noticeP,'/', contactP);
+//console.log(introP,'/', aboutP,'/', facilityP,'/', timeTableP,'/', noticeP,'/', contactP);
 
 const bumwee = [
   [introP, aboutP],
@@ -46,6 +59,9 @@ const bumwee = [
   [noticeP, contactP],
   [contactP, contactP+1000],
 ];
+
+
+
 
 const addOn = (seq, scTop, start, end) => {
   if (scTop > start -1 && scTop < end) {
@@ -139,7 +155,7 @@ $(window).scroll(() => {
   if(i > 0) i = -30;
 
 
-//  console.log(scTop,percentY,i)
+  //console.log(scTop,percentY,i)
 
   /*********************************************  
    * 파트마다 네비게이션 파트에 on
@@ -218,13 +234,13 @@ const transBtnBox = $('.trans_btn__box');
 const mBtn = $('.btn.m_btn');
 const bBtn1 = $('.btn.b_btn1');
 const bBtn2 = $('.btn.b_btn2');
-console.log(transBtnBox,mBtn,bBtn1,bBtn2)
+//console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
 
 // 클래스 dark 시 검은색으로 변해야 하는 파트
 const dark = $('.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time,.marquee');
 
-console.log('dark',dark)
+//console.log('dark',dark)
 
 // 클래스 dark 시  밝은 색으로 변해야 하는 파트
 const bright = $('.notice, .accordion h3,.notice__title,.tit2,.notice_content');

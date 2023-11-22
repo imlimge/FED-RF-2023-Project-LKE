@@ -174,6 +174,78 @@ $(window).scroll(()=>{
 
 
 
+-----------------------
+
+
+// 전체 페이지번호
+let pno = 0;
+// 페이지 요소
+const pg = $(".mp");
+// 전체 페이지개수
+const pgcnt = pg.length;
+
+
+console.log('섹션',pg,pgcnt)
+
+
+
+window.addEventListener('wheel',wheelFn);
+
+
+function wheelFn(e) {
+
+   // 1.휠방향 알아내기
+   let delta = e.wheelDelta;
+   console.log(delta);
+
+   // 2. 방향에 따른 페이지번호 증감
+   if (delta < 0) {
+     pno++;
+     if (pno === pgcnt) pno = pgcnt - 1;
+     // 마지막 페이지번호에 고정!
+   } //// if /////
+   else {
+     pno--;
+     if (pno === -1) pno = 0;
+     // 첫페이지번호에 고정!
+   } //// else ////
+
+   console.log(pno);
+
+   // 3. 스크롤 이동하기
+   movePg();
+
+ } /////////////// wheelFn 함수 ///////////////
+
+
+ // if
+
+/******************************************** 
+   함수명: movePg
+   기능: 페이지이동 애니메이션
+   ********************************************/
+
+   function movePg() {
+     // 대상: html,body -> 두개를 모두 잡아야 공통적으로 적용됨!
+     $("html,body")
+       .stop()
+       .animate(
+         {
+     
+         },
+         700,
+         "easeInOutQuint"
+       );
+       
+   } ///////////////// movePg ////////////////
+ 
+
+
+
+
+
+
+
 
 
 
