@@ -134,12 +134,12 @@ $(window).scroll(() => {
 
   const height = $(document).height() - $(window).height();
   const percentY = Math.floor(scTop / height * 100);
-  
+
   i += 1 ;
   if(i > 0) i = -30;
 
 
- console.log(scTop,percentY,i)
+//  console.log(scTop,percentY,i)
 
   /*********************************************  
    * 파트마다 네비게이션 파트에 on
@@ -174,9 +174,9 @@ $(window).scroll(() => {
     slideBox4.css({
       left :i +'%'
     })
-    imgLogo.css({
-      left : i +'%'
-    })
+    // imgLogo.css({
+    //   left : i +'%'
+    // })
 
 
 
@@ -222,7 +222,7 @@ console.log(transBtnBox,mBtn,bBtn1,bBtn2)
 
 
 // 클래스 dark 시 검은색으로 변해야 하는 파트
-const dark = $('.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time');
+const dark = $('.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time,.marquee');
 
 console.log('dark',dark)
 

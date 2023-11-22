@@ -81,6 +81,9 @@ section{
   border: 1px solid var(--bright-color);
 }
 
+.marquee.dark div{
+  background-color: var(--dark-color);
+}
 
 .dark{
   background-color: var(--dark-color);
@@ -165,8 +168,9 @@ section{
   border-color: var(--dark-color) ; 
 }
 .accordion h3.bright{
-  border-top: 1px solid var(--dark-color);
+  border-top: 1px solid var(--color4);
 }
+
 
 .notice__title.bright{
   background-color: var(--bright-color);
@@ -177,8 +181,11 @@ section{
 
 
 .notice_content.bright{
-  background-color: var(--color4);
+  background-color: var(--color3);
 }
+
+
+
 
 
 /* _____________________  gnb _________________________ */
@@ -1189,6 +1196,47 @@ position: absolute; */
   /* transform: scale(1.2) rotate(10deg) translate(2px, -40px); */
 }
 
+
+
+
+/* _____________________  자동 움직이는 글자  _________________________ */
+
+.marquee {
+  height: 25px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+  background-color: var(--bright-color);
+  animation: marquee 10s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 15%;
+  color: var(--point-color);
+  font-size: 1.2rem;
+  letter-spacing: .3rem;
+}
+
+@keyframes marquee {
+  0% { left: -100%; }
+  100% { left: 0%; }
+}
+
+
+
+
 /* _____________________  광고  _________________________ */
 
 
@@ -1644,6 +1692,8 @@ label{
 
 
 /* _____________________  큰로고  _________________________ */
+
+
 
 .image__logo{
   width: 100%;
