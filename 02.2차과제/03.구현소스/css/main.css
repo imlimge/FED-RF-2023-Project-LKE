@@ -1363,11 +1363,10 @@ padding: 2% 0;
 }
 /* _____________________  반소개  _________________________ */
 
-#about__class {
+#about__class{
   height: auto;
 }
-
-.about__class{
+.about__class {
   position: relative;
   height: auto;
   display: flex;
@@ -1438,12 +1437,12 @@ padding: 2% 0;
   top: 10%; */
   /* top: 13%; */
   /* position: relative; */
-  transform: translateY(10%);
+  /* transform: translateY(10%); */
   }
 .about__class__box.class3{
   /* left: 71%;
   top: 17%; */
-  transform: translateY(21%);
+  /* transform: translateY(21%); */
   }
 
 .class__name__box{
@@ -1466,6 +1465,7 @@ padding: 2% 0;
 .class__name p{
   padding: 4% 0;
 }
+
 
 
 /* _____________________  시간표  _________________________ */
@@ -1680,7 +1680,7 @@ label{
 }
 .accordion h3{
   font-size: 1.6rem;
-  border-top: 1px solid var(--bright-color);
+  border-top: 1px solid var(--color1);
   padding: 1% 2%;
   cursor: pointer;
 }

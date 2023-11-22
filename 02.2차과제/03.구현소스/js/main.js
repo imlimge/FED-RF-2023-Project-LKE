@@ -123,14 +123,23 @@ let docH =  document.body.clientHeight;
 let scLimit = docH - winH;
 
 
+let i = -30;
 
 
 $(window).scroll(() => {
   let scTop = $(window).scrollTop();
   let scTop2 = winH*scTop/scLimit;
 
-   console.log(scTop2);
+ 
 
+  const height = $(document).height() - $(window).height();
+  const percentY = Math.floor(scTop / height * 100);
+  
+  i += 1 ;
+  if(i > 0) i = -30;
+
+
+ console.log(scTop,percentY,i)
 
   /*********************************************  
    * 파트마다 네비게이션 파트에 on
@@ -150,20 +159,23 @@ $(window).scroll(() => {
    * 슬라이드 파트 스크롤 시 좌 우 이동
   *********************************************/
 
+    //왼쪽
     slideBox1.css({
-      left : `${-300 + scTop2 * 0.7}px`
+     left : i +'%'
     })
+    
+    //오른쪽
     slideBox2.css({
-      left : `${-300 + scTop2 * 0.7}px`
+      left :-30 -i +'%'
     })
     slideBox3.css({
-      left : `${-300 + scTop2 * -0.5}px`
+      left :i +'%'
     })
     slideBox4.css({
-      left : `${-500 + scTop2 * 0.7}px`
+      left :i +'%'
     })
     imgLogo.css({
-      left : `${-550 + scTop2 * 0.7}px`
+      left : i +'%'
     })
 
 
