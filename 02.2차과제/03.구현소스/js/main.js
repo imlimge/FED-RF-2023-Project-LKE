@@ -18,13 +18,13 @@ const mp = document.querySelectorAll(".mp");
 let mpP = [];
 
 
-mp.forEach((ele)=>{
-  ele.getBoundingClientRect();
+mp.forEach((ele,idx)=>{
+  mpP = ele.getBoundingClientRect();
+
+console.log('mp요소와 순번',ele,idx)
+console.log('mp겟바운딩',mpP)
 
 })
-
-
-console.log(mpP,Array.isArray(mpP),mp,Array.isArray(mp))
 
 
 
@@ -163,9 +163,8 @@ $(window).scroll(() => {
   for (let x = 0; x < 6; x++) 
   addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
 
-  // // intro4의배경 .intro_bg 
-  // if (scTop2 > 3000 & scTop2 < 3800 ) introBg.addClass("on");
-  // else introBg.removeClass("on");
+  
+
 
 
 
@@ -274,6 +273,57 @@ transBtnBox.click(function(){
 
 
 /*------------------------------- 인트로 ------------------------------- */
+
+
+
+
+
+
+
+  /*********************************************  
+   * 메인 첫 인트로 텍스트 부드럽게 등장
+  *********************************************/
+/*   
+제이쿼리 
+
+const sTxt = $('.intro_op span')
+  console.log(sTxt.text());
+
+  sTxt.hide();
+ */
+
+
+  // 출력대상
+  const introOP = document.querySelector('.intro_op')
+  // 글자요소 span들
+  const sTxt = document.querySelectorAll('.intro_op span')
+
+  let hcode = '';
+  // 순번증가변수
+  let seqNum = 0;
+
+
+
+
+
+
+// span들 추출
+  for(let x of sTxt){
+
+    hcode += `<span style=" transition-delay: ${seqNum*0.2}s;">${x.innerText}</span>`;
+    seqNum++;
+    // console.log(x)
+}
+
+
+introOP.innerHTML = hcode;
+
+setTimeout(() => {
+  introOP.classList.add('on');
+}, 500);
+
+// console.log(hcode)
+
 
 
 
