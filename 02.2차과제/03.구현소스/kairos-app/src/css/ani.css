@@ -1,0 +1,38 @@
+/* 애니메이션 css */
+
+@keyframes intro-rotate{
+
+  0%{
+    rotate: 0deg ;
+   
+    }
+ 100%{
+    rotate: 360deg ;
+   
+    }
+
+}
+
+
+
+
+@keyframes intro-scale{
+  0%{
+    scale: 8 ;
+   
+    }
+
+
+}
+@keyframes intro-scale2{
+  0%{
+    scale: 2 ;
+   
+    }
+  100%{
+    scale: 1 ;
+   
+    }
+
+
+}

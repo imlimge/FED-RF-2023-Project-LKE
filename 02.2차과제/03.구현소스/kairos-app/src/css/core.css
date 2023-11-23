@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+
+
+:root {
+  
+  /* 색상 */
+  --bright-color: #fefcfb;
+  /* 미색 FAF7F5 */
+  --dark-color: #161616;
+
+  --color1: #2d2d2d;
+  --color2: #3f3f3f;
+  --color3: #5b5b5b;
+  --color4: #b4b4b4;
+
+  /* 포인트컬러 */
+  --point-color: rgb(65 105 250);;
+
+  /* 기타컬러 */
+  --ex1-color: rgb(95, 167, 255);;
+  --ex2-color: rgb(123, 255, 147);;
+  --ex3-color: rgb(255, 142, 221);;
+
+
+
+  /* 폰트설정 */
+  --bold-font:'KOTRALEAP';
+
+  --font-size: 1.6rem;
+  --bold-font-size: min(5.7vw,3.7rem);
+
+
+ 
+
+  /* 여백 */
+  --margin-right: 5%;
+
+  /* .header 여백만큼 패딩 및 마진값 설정 */
+  --margin-left: 8%;
+}
+
+
+/* 라디오 */
+[type="radio"] {
+  appearance: none;
+  border: max(2px, 0.1em) solid var(--dark-color);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+
+}
+[type="radio"]:checked {
+  border: max(2px, 0.1em) solid var(--dark-color);
+  background-color: var(--point-color);
+  
+}
+[type="radio"]:focus-visible {
+  outline: max(2px, 0.1em) dotted tomato;
+  outline-offset: max(2px, 0.1em);
+}
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(2px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+[type="radio"]:hover + span {
+  cursor: pointer;
+}
+/*--------------  폰트   --------------*/
+
+/* 제목 - 코트라 도약*/
+@font-face {
+  font-family: 'KOTRALEAP';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* 제목 - 단조*/
+@font-face {
+  font-family: 'Danjo-bold-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* 본문 - 제주(바탕) */
+@font-face {
+  font-family: 'GowunBatang-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 본문 - 프리텐다드 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* 본문- 나눔바른고딕 */
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+ }
+ 
+ @font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+ }
+ 
+ @font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+ }
+
+
+
+/* 본문 - 스위트 */
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+
+
+/* 영문 - Merriweather(세리프) */
+@font-face { 
+  src:url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+  font-family: 'Merriweather', serif;
+}
+
+/* 영문 - Libre Baskerville(세리프) */
+@font-face { 
+  src:url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+  font-family: 'Libre Baskerville', serif;
+}
+

@@ -4,29 +4,6 @@ import dFn from "./dom.js";
 
 
 
-/***************************************************************
- * 
- *  기능 : 스크롤 시 자동 화면 전환
- *  대상 : 섹션
- *  .mp 의 각 높이를 알아 낸 후 스크롤마다
- *  다음 mp의 높이로 이동 
- *   
- ***************************************************************/
-// 페이지 요소
-const mp = document.querySelectorAll(".mp");
-
-let mpP = [];
-
-
-mp.forEach((ele,idx)=>{
-  mpP = ele.getBoundingClientRect();
-
-console.log('mp요소와 순번',ele,idx)
-console.log('mp겟바운딩',mpP)
-
-})
-
-
 
 
 
@@ -139,7 +116,40 @@ let docH =  document.body.clientHeight;
 let scLimit = docH - winH;
 
 
-let i = -30;
+
+
+/***************************************************************
+ * 
+ *  기능 : 스크롤 시 자동 화면 전환
+ *  대상 : 섹션
+ *  .mp 의 각 높이를 알아 낸 후 스크롤마다
+ *  다음 mp의 높이로 이동 
+ * 
+ *  스크롤Y 위치가 다음 mp요소의 -200px 일 때 다음 mp 요소의 위치로 가라
+ * 
+ ***************************************************************/
+// 페이지 요소
+const mp = document.querySelectorAll(".mp");
+
+let mpP = [];
+
+
+mp.forEach((ele,idx)=>{
+  mpP = ele.getBoundingClientRect().top;
+
+console.log('mp요소와 순번',ele,idx)
+console.log('mp겟바운딩',mpP)
+
+})
+
+
+
+  /*********************************************  
+   * 슬라이드 파트 스크롤 시 좌 우 이동
+  *********************************************/
+  // 슬라이드 % 시작값 설정
+  let i = -30;
+
 
 
 $(window).scroll(() => {
@@ -155,7 +165,7 @@ $(window).scroll(() => {
   if(i > 0) i = -30;
 
 
-  //console.log(scTop,percentY,i)
+  console.log(scTop,percentY,i)
 
   /*********************************************  
    * 파트마다 네비게이션 파트에 on
@@ -164,10 +174,6 @@ $(window).scroll(() => {
   addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
 
   
-
-
-
-
 
 
   /*********************************************  
@@ -200,6 +206,8 @@ $(window).scroll(() => {
    *  기능 : 인트로 스크롤 시 바로 보이기
    * 
    **************************************/
+
+
 
 
 

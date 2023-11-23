@@ -1,0 +1,6 @@
+/* 메인페이지 CSS - index.css */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./main.css);
+@import url(./ani.css);
+@import url(./media.css);

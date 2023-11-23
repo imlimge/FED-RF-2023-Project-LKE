@@ -1,16 +1,18 @@
 //Kairos - index.js (root에 출력)
 
 
-
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 
+import { Layout } from "./layout/Layout";
+
+//인덱스 CSS 불러오기
+import './css/index.css'
 
 export default function App() {
   return (
    <>
-   
-<h2>하하하</h2>
+    <Layout />
    </>
   );
 } ///////////// App 컴포넌트 ///////////////////
