@@ -57,15 +57,16 @@ section{
   z-index: 1;
 }
 
-
-
+/* 
+100vh 필요한 임시셋팅 
+ 
 .intro,.facility,.time_table,.notice,.contact {
   position: relative;
   height: 100vh;
   background-color: var(--bright-color);
   color: var(--dark-color);
 
-}
+} */
 
 
 /*------------------- 어두운 버전 -------------------- */

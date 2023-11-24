@@ -1,8 +1,13 @@
 /* 공지사항 CSS notice.css */
 
+
+#notice{
+  position: relative;
+}
+
 .notice{
   background-color: var(--dark-color);
-
+  
 }
 
 .notice .tit{
@@ -10,13 +15,6 @@
 }
 
 
-
-#notice{
-  position: relative;
- /*  padding-left: var(--margin-left);
-  padding-right: var(--margin-right);
-  box-sizing: border-box; */
-}
 
 .accordion{
   text-align: right;

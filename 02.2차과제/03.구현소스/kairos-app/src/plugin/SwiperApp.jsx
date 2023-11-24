@@ -26,13 +26,9 @@ export function SwiperApp() {
       <Swiper 
      slidesPerView= {3}
      spaceBetween= {30}
-     centeredSlides={ true}
-     pagination= {{
-       el: ".swiper-pagination",
-       clickable: true,
-     }}
-     modules={[Pagination]}
-     className="mySwiper"
+     centeredSlides={true}
+    modules={[Pagination]}
+   
      breakpoints= {{
        0: {
          slidesPerView: 1.7,
@@ -49,10 +45,66 @@ export function SwiperApp() {
        1000: {
          slidesPerView: 3.5,
          spaceBetween: 30,
-       }}
-     }     
-       
-      />
+       },
+      
+      }}
+           
+     className="mySwiper"
+      >
+
+     {/*  <!-- 학원 사진 -->  */}
+
+    {<div className="photo swiper mySwiper">
+        <div className="photo__box swiper-wrapper">
+              <div className="photo__item swiper-slide">
+                <img src="../../public/images/facility/siteH/photo1.png" alt="학원사진" />
+                    <div className="photo__title">
+                    <h3>학원전경</h3>
+                  </div>
+              </div>
+              <div className="photo__item swiper-slide">
+                <img src="../../public/images/facility/siteH/photo2.png" alt="학원사진" />
+                <div className="photo__title">
+                  <h3>강의실</h3>
+                </div>
+              </div>
+              <div className="photo__item swiper-slide">
+                <img src="../../public/images/facility/siteH/photo3.png" alt="학원사진" />
+                <div className="photo__title">
+                  <h3>강의실</h3>
+                </div>
+              </div>
+              <div className="photo__item swiper-slide">
+                <img src="../../public/images/facility/siteH/photo4.png" alt="학원사진" />
+                <div className="photo__title">
+                  <h3>강의실</h3>
+                 
+                </div>    
+              </div>
+              <div className="photo__item swiper-slide">
+                <img src="../../public/images/facility/siteH/photo5.png" alt="학원사진" />
+                <div className="photo__title">
+                  <h3>강의실</h3>
+                </div>      
+              </div>
+              <div className="photo__item swiper-slide">
+                <img src="../../public/images/facility/siteH/photo6.png" alt="학원사진" />
+                <div className="photo__title">
+                  <h3>마지막 강의실</h3>
+                </div>      
+              </div>
+         </div>
+      </div>
+          }
+
+
+
+
+        </Swiper>
     </>
+
+
+
   );
+
 } /////////// SwiperApp 컴포넌트 ///////////
