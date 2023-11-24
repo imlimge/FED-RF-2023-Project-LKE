@@ -135,10 +135,11 @@ let mpP = [];
 
 
 mp.forEach((ele,idx)=>{
-  mpP = ele.getBoundingClientRect().top;
+
+  mpP[ele] = ele.getBoundingClientRect().top;
 
 console.log('mp요소와 순번',ele,idx)
-console.log('mp겟바운딩',mpP)
+console.log('mp겟바운딩 [] ',mpP)
 
 })
 
@@ -446,7 +447,7 @@ function rotFn2(ele) {
 
 
 var swiper2 = new Swiper(".mySwiper2", {
-  slidesPerView: 4,
+  slidesPerView: 3,
   spaceBetween: 30,
   centeredSlides: true,
   pagination: {
@@ -468,7 +469,7 @@ var swiper2 = new Swiper(".mySwiper2", {
     },
     1000: {
       slidesPerView: 3.5,
-      spaceBetween: 20,
+      spaceBetween: 30,
     },
   },
 });
@@ -528,7 +529,7 @@ $(function () {
   
 
 
-
+//아코디언 첫페이지 닫아주는거 기능을 안함..
   $('.et_pb_accordion .et_pb_toggle_open').addClass('et_pb_toggle_close').removeClass('et_pb_toggle_open');
 
   $('.et_pb_accordion .et_pb_toggle').click(function() {

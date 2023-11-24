@@ -318,3 +318,27 @@ function wheelFn(e) {
 
 
 
+
+------------------------
+
+
+학원시설 사진 제목 부분
+.photo__item h3{
+    bottom: 0;
+    color: var(--point-color);
+    font-size: min(6vw,1.7rem);
+    text-align: left;
+    margin-left: 5%;
+    top: 153%;
+    position: relative;
+  
+  }
+
+  기존
+
+  bottom: 0;
+  color: var(--bright-color);
+
+  font-size: min(6vw,2rem);
+  text-align: left;
+  margin-left: 5%;

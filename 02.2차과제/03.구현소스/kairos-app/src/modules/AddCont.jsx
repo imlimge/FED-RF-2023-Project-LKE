@@ -28,10 +28,13 @@ export function AddCont(){
          <span>(임시내용) <br /> </span>
         <span>모듈 학원마다 내용 다르게</span>
 
-       </div>
-     
-     </div>
+        <div className="cont__btn">
+          <button>보러가기</button>
+        </div>
+        
  </div>
+</div>
+</div>
 </div>
 </section>
 

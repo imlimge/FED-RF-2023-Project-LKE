@@ -1272,7 +1272,9 @@ position: absolute; */
 }
 
 .cont__box{
-
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .cont__content{
@@ -1280,6 +1282,8 @@ position: absolute; */
   top: 100px;
 
   display: flex;
+  flex-direction: column;
+
   justify-content: center;
   align-items: center;
   left: 0;
@@ -1296,15 +1300,17 @@ position: absolute; */
   font-family: 'GowunBatang-Regular';
 }
 
-.cont__img{
-  width: 300px;
-  height: 300px;
-  text-align: center;
+.cont__btn{
 
+  /* text-align: center; */
+margin: 3vh 0;
 }
-.cont__img img{
-  height: 100%;
-  
+.cont__btn button{
+  width: 110px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid var(--bright-color);
 }
 
 
