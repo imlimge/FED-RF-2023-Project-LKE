@@ -6,8 +6,10 @@ import ReactDOM from "react-dom/client";
 
 import { Layout } from "./layout/Layout";
 
+
 //인덱스 CSS 불러오기
 import './css/index.css'
+
 
 export default function App() {
   return (
@@ -20,4 +22,4 @@ export default function App() {
 
 // 컴포넌트 출력 //////////
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(<App />);
+root.render(<App />); 

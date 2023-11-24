@@ -5,14 +5,14 @@ import { Facility } from "../modules/Facility";
 import { Contact } from "../modules/Contact";
 import { TimeTable } from "../modules/TimeTable";
 import { Notice } from "../modules/Notice";
-import { Slide } from "../modules/Slide";
+import { SlideText } from "../modules/SlideText";
+
+
+
 
 export function MainCont() {
   return (
     <>
-      <h3>Pages/MainCont.jsx : Pages의 메인컨트의 내용</h3>
-
-      <h4> - intro (동)</h4>
       {/* <!-- 학원소개 --> */}
       <section id="intro" className="intro">
         <div className="intro_op show-txt">
@@ -77,7 +77,7 @@ export function MainCont() {
                 </div>
                 {/* <!-- round__box --> */}
               </div>
-            </div>{" "}
+            </div>
             {/*  <!-- intro4 --> */}
           </div>
           {/* <!-- intro__content --> */}
@@ -85,7 +85,8 @@ export function MainCont() {
         {/* <!-- intro__content__warp --> */}
       </section>
 
-      <h4> - 강사소개 (동)</h4>
+      {/* 슬라이드 꾸밈요소 모듈 */}
+      <SlideText />
 
       {/* <!-- 강사소개 part1 --> */}
       <div id="about" className="about__teacher part1 on mp">
@@ -172,13 +173,13 @@ export function MainCont() {
       </div>
 
       {/* 슬라이드 꾸밈요소 모듈 */}
-      <Slide />
+      <SlideText />
 
       {/* (모듈) - 광고파트 (개별 구성 - 협의중) */}
       <AddCont />
 
       {/* 슬라이드 꾸밈요소 모듈 */}
-      <Slide />
+      <SlideText />
 
       {/* (모듈) - 학원시설 (공모) */}
       <Facility />
@@ -282,18 +283,13 @@ export function MainCont() {
 
       {/* (모듈) - 시간표 (공모) */}
       <TimeTable />
-
-      {/* 슬라이드 꾸밈요소 모듈 */}
-      <Slide />
+      {/*   <!-- 큰 로고 --> */}
+      <div className="image__logo">
+        <img className="img" src="./images/logo_kairos_w2300.png" alt="" />
+      </div>
 
       {/* (모듈) - 공지사항 (공모) */}
       <Notice />
-
-      <h7> [꾸] - 큰로고 </h7>
-      {/*   <!-- 큰 로고 --> */}
-      <div className="image__logo">
-        <img classNAme="img" src="./images/logo_kairos_w2300.png" alt="" />
-      </div>
 
       {/* (모듈) - 컨택트 (공모) */}
       <Contact />

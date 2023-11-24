@@ -446,7 +446,7 @@ function rotFn2(ele) {
 
 
 
-var swiper2 = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 3,
   spaceBetween: 30,
   centeredSlides: true,
@@ -474,7 +474,10 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
-var swiper = new Swiper(".mySwiper", {
+
+
+
+var swiper = new Swiper(".mySwiper2", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,

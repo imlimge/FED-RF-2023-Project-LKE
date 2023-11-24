@@ -1,0 +1,66 @@
+/* 광고 addcont.css */
+
+
+
+#cont{
+  background-color: var(--point-color);
+}
+
+.cont{
+  position: relative;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.cont__box{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cont__content{
+
+  top: 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.cont__title{
+
+  font-size: 3rem;
+  text-align: center;
+}
+.cont__title span{
+  font-family: 'GowunBatang-Regular';
+}
+
+.cont__btn{
+
+  /* text-align: center; */
+margin: 3vh 0;
+
+}
+.cont__btn button{
+  cursor: pointer;
+  width: 110px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid var(--bright-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cont__btn:hover button{
+
+  outline: 2px solid var(--bright-color);
+  font-size: 1.6rem;
+}

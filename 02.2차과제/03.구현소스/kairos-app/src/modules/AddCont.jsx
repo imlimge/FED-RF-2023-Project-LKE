@@ -1,14 +1,14 @@
 // AddCont - 광고파트 모듈
 
+// CSS
+import "../css/addcont.css"
 
 export function AddCont(){
 
 
   return(
       <>
-      
-      <h6> (모듈) - 광고파트 (개별 구성 - 협의중)</h6>
-      
+    
 
  {/* <!-- 중간광고 --> */}
 

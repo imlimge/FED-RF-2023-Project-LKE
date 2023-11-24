@@ -16,37 +16,43 @@ import "./css/swiper.css";
 import { Pagination,Navigation,Autoplay } from "swiper/modules";
 
 export function SwiperApp() {
-  // 불러올 이미지 리스트
-  const imgArr = [
+ 
+ 
 
-  ];
+
 
   return (
     <>
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}  
-        autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-        }}      
-        loop={true}
-        navigation={true}
-        /* 사용할 모듈을 여기에 적용시킨다 */
-        modules={[Pagination,Navigation,Autoplay]}
-        className="mySwiper"
-      >
-        {
-            imgArr.map((v,i)=>
-            <SwiperSlide key={i}>
-                <img src={"./images/"+v+".jpg"} alt="list image" />
-            </SwiperSlide>)
-        }        
+      <Swiper 
+     slidesPerView= {3}
+     spaceBetween= {30}
+     centeredSlides={ true}
+     pagination= {{
+       el: ".swiper-pagination",
+       clickable: true,
+     }}
+     modules={[Pagination]}
+     className="mySwiper"
+     breakpoints= {{
+       0: {
+         slidesPerView: 1.7,
+         spaceBetween: 20,
+       },
+       500: {
+         slidesPerView: 2,
+         spaceBetween: 20,
+       },
+       900: {
+         slidesPerView: 2.5,
+         spaceBetween: 20,
+       },
+       1000: {
+         slidesPerView: 3.5,
+         spaceBetween: 30,
+       }}
+     }     
        
-      </Swiper>
+      />
     </>
   );
 } /////////// SwiperApp 컴포넌트 ///////////

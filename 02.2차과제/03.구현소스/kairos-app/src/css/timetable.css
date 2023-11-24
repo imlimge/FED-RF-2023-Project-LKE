@@ -1,0 +1,175 @@
+/* 시간표 timetable.css */
+
+
+table {
+  width: 100%;
+  border: 1px solid #444444;
+  
+  border-collapse: collapse;
+}
+
+
+.Elementary{
+  padding-bottom: 3%;
+}
+
+#time_table{
+}
+
+.time_table_content{
+  width: 100%;
+  height: 90%;
+
+  text-align: center;
+  margin-bottom: 3%;
+
+  border-top: none; 
+  border-bottom: none; 
+  border-left: none;
+  border-right: none;
+  
+}
+
+.time_table__text {
+  width: 63%;
+  height: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 44;
+  font-size: 1.4rem;
+}
+
+/* 이미지 현재 없음 */
+.time_table_content img{
+  position: absolute;
+  transform: translate(-70%, -29%) scale(.8);
+  z-index: -1;
+}
+
+.time__table__radio{
+  position: relative;
+  text-align: right;
+  margin: 2% 0;
+}
+
+label{
+  font-size: 1.4rem;
+}
+.time_table__box{
+  position: relative;
+  width: 40%;
+  height: 75%;
+  box-sizing: border-box;
+
+
+  margin-right: var(--margin-right);
+  position: absolute;
+  right: 0;
+
+  font-size: 1.4rem;
+}
+
+
+.time_table_content .empty{
+  height: 2%;
+}
+
+
+
+.time_table_content .class-name{
+  border-radius: 20px 0 0 20px;
+  width: 30%;
+  background-color: var(--color1);
+  color: var(--bright-color);
+
+  font-family: 'GowunBatang-Regular';
+  font-weight: bold;
+}
+
+
+/* 시간표 각 파트 위에 호버하면
+배경백 바뀌는거 */
+.elementary.class-name:hover .time_table{
+ background-color: var(--ex1-color);
+}
+.middle:hover .time_table{
+  background-color: var(--ex2-color);
+}
+.high:hover .time_table{
+  background-color: var(--ex3-color);
+}
+
+.time:hover{
+  background-color: var(--point-color);
+}
+
+
+
+
+.time_table_content .class-part{
+  background-color: var(--color2);
+  color: var(--bright-color);
+  border: 1px dotted var(--dark-color);
+  position: relative;
+  width: 16%;
+
+  border-left: none;
+  border-right: none;
+  font-family: 'GowunBatang-Regular';
+  /* font-weight: bold; */
+}
+
+/* .class-part::after{
+  content: '';
+  height: 100%;
+  width: 115px;
+  background-color: var(--color2);
+  position: absolute;
+  left: -33px;
+  top: 0;
+  z-index: -1;
+
+} */
+
+.time_table_content .day{
+  background-color: var(--bright-color);
+  border: 1px solid var(--bright-color);
+  /* border-radius: 20px; */
+  width: 20%;
+  font-weight: bold;
+  background-color: #cdc9c3;
+  color: var(--dark-color);
+  
+
+}
+
+.time_table_content .time{
+  background-color: var(--bright-color);
+  border: 1px dashed var(--dark-color);
+  border-left: none;
+  width: 30%;
+  color: var(--dark-color);
+}
+
+
+
+.time_table_content .day.up{
+  /* border-radius:20px 20px 0 0; */
+  border-bottom: none;
+
+}
+.time_table_content .day.down{
+  border-top: none;
+  /* border-radius: 0 0 20px 20px; */
+}
+
+
+.time_table_content .time.up{
+  /* border-radius:0 20px 0 0; */
+  border-bottom: none;
+}
+.time_table_content .time.down{
+  /* border-radius:0 0 20px 0; */
+  border-top: none;
+}
+

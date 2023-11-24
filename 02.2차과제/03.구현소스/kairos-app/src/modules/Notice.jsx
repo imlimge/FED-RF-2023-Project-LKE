@@ -1,14 +1,22 @@
 // Notice - 공지사항 모듈
 
+// CSS
+import "../css/notice.css"
+
+import $ from 'jquery';
+window.jQuery = $;
+require('jquery-ui-dist/jquery-ui');
+require('jquery-ui-touch-punch/jquery.ui.touch-punch');
+
+
+
 
 export function Notice(){
 
 
   return(
       <>
-      
-      <h6> (모듈) - 공지사항 (공모) </h6>
-      
+    
   {/* <!-- 공지사항 --> */}
   <section id="notice" className="notice mp">
     <h2 className="tit tit2">공지사항</h2>

@@ -1,9 +1,12 @@
 // Contact - 컨택트 모듈
 
+// CSS
+import "../css/contact.css"
+
+
 export function Contact() {
   return (
     <>
-      <h6> (모듈) - 컨택트 (공모) </h6>
       {/* <!-- 컨택트 --> */}
       <section id="contact" className="contact mp">
         <h2 className="tit">컨택트</h2>

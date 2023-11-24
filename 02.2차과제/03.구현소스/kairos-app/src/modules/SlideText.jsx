@@ -1,9 +1,14 @@
 // Slide - 슬라이드 꾸밈요소 모듈
 
-export function Slide() {
+// CSS
+import "../css/slide_text.css"
+
+
+
+export function SlideText() {
   return (
     <>
-      <h7> -------- 슬라이드 꾸밈요소 모듈 -------- </h7>
+
       {/*    <!-- 움직임 효과 --> */}
       <div className="slide__wrap">
         <div className="slide_back"></div>

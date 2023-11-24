@@ -1,11 +1,4 @@
-@charset "utf-8";
 /* 카이로스 수학학원 사이트 - 메인 css */
-
-
-@import url(./reset.css);
-@import url(./core.css);
-@import url(./ani.css);
-
 
 
 
@@ -345,10 +338,7 @@ section{
 
 
 
-/* 챗지피티에서 응용 : 원하는 바에 가까우나 왼쪽으로 몰리는게
- 너무 궁금하고 이게 뭐지---------------------------------------- */
-
- /* li요소에 아래의 클래스를 추가함 */
+ /* 네비게이션 세로 줄에 추가 라인 */
  .vertical-lines {
   position: relative;
 }
@@ -358,22 +348,21 @@ section{
   content: "";
   position: absolute;
   width: 5%; 
-  /* 세로선의 가로폭을 설정 (전체 가로폭 대비 비율로) */
-  background-color: var(--dark-color); /* 세로선의 색상을 설정하세요. */
-  height: 100%; /* 세로선의 높이를 조절하세요. */
+  background-color: var(--dark-color); 
+  height: 100%;
 }
 
 .vertical-lines::before {
   left: 30%; 
-  /* 첫 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+
 }
 
 .vertical-lines::after {
   left: 60%;
-   /* 두 번째 세로선의 위치를 조절 (전체 가로폭 대비 비율로) */
+
 }
 
-/* 챗지피티에서 응용---------------------------------------- */
+/* --------------------------------------- */
 
 
 
@@ -470,32 +459,29 @@ section{
 
 .m-gnb__menu li a::before{
   content: '';
-  /* background: url(../images/nav_w.png) no-repeat; */
   position: absolute;
   left: 0;
   width: 90px;
   height: 30px;
   background-color: var(--bright-color);
-  /* outline: 1px solid var(--dark-color); */
   clip-path: polygon(26% 0 ,100% 0%, 88% 51%, 100% 144%, 0 100%, 0 50%, 0 99%);
   z-index: -1;
-  /* transform: rotate(2deg); */
+
 }
 
 
 .m-gnb__menu li a::after{
   content: '';
-  /* background: url(../images/nav_w.png) no-repeat; */
   position: absolute;
   left: 0;
   top: -1px;
   width: 91px;
   height: 32px;
   background-color: var(--dark-color);
-  /* outline: 1px solid var(--dark-color); */
+
   clip-path: polygon(27% 0 ,100% 0%, 88% 51%, 100% 144%, 0 100%, 0 50%, 0 99%);
   z-index: -2;
-  /* transform: rotate(2deg); */
+
 }
 
 
@@ -554,10 +540,6 @@ section{
 }
 
 
-/* _____________________  메인색  _________________________ */
-
-
-
 
 
 /* _____________________  상단 로고 및 토글버튼  _________________________ */
@@ -614,7 +596,7 @@ section{
 
 .logo img:nth-child(1){
   transform: scale(1);
-  animation: intro-rotate 8s linear infinite;
+  animation: rotate-ani 8s linear infinite;
   /* intro-scale 1.5s ease-in 1 ; */
 }
 
@@ -1109,17 +1091,6 @@ padding: 1vh 5% 1vh 0;
 }
 
 
-/* .about__history span::after{
-  content: '';
-  position: absolute;
-  height: 24px;
-
-  border-bottom: 1px solid var(--dark-color);
-  right: 0;
-  left: 52.5%;
-} */
-
-
 
 
 .about__history.part2 span{
@@ -1136,308 +1107,9 @@ padding: 1vh 0 1vh 15%;
   transform-origin: left;
 }
 
-/* .about__history.part2 span::after{
-  border-bottom: 1px solid var(--bright-color);
-  left: 0;
-  right: 47.5%;
-}
- */
 
-/* _____________________  슬라이드  _________________________ */
 
-.slide__wrap{
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  /* padding: 20vh 0; */
-}
-/* 오버프로우 히든하면 z인덱스 안먹히는거
-어떻게 해결하면 좋을까 */
 
-
-.slide{
-  height: 30px;
-  border:  1px solid var(--dark-color);
-  background-color: var(--point-color);
-  /* transform: scale(1.2) rotate(355deg) translate(2px, -40px); */
-}
-
-.slide__box{
-  position: relative;
-  /* JS에서 스크롤 시 레프트값 조절하여 이동 */
-  left: -300px; 
-
-  display: flex;
-
-  height: 100%;
-  width: 5500px;
-}
-
-.slide__box.box2{
-  left: 0; 
-  right: 0px;
-}
-
-.slide__text{
-  font-size: 3rem;
-  font-family: 'Merriweather', serif;
-  font-weight: bold;
-}
-
-.slide__text span{
-  font-family: 'Libre Baskerville', serif;
-  line-height: 1.3;
-}
-
-.slide__logo{
-  height: 100%;
-}
-.slide__logo img{
-    transform: scale(0.3);
-    transform-origin: top;
-}
-
-.slide_back{
-/* width: 100%;
-height: 37%;
-top: 0;
-background-color: var(--dark-color);
-position: absolute; */
-}
-
-.slide_back.slide2{
-  background-color: var(--bright-color);
-  position: absolute;
-  top: 34%;
-  /* transform: rotate(8deg); */
- }
-
-.slide.slide2{
-  /* transform: scale(1.2) rotate(10deg) translate(2px, -40px); */
-}
-
-
-
-
-/* _____________________  자동 움직이는 글자  _________________________ */
-
-.marquee {
-  height: 25px;
-  width: 100%;
-
-  overflow: hidden;
-  position: relative;
-
-}
-
-.marquee div {
-  display: block;
-  width: 200%;
-  height: 30px;
-
-  position: absolute;
-  overflow: hidden;
-  background-color: var(--bright-color);
-  animation: marquee 10s linear infinite;
-}
-
-.marquee span {
-  float: left;
-  width: 50%;
-  color: var(--point-color);
-  font-size: 1.2rem;
-  letter-spacing: .3rem;
-}
-
-@keyframes marquee {
-  0% { left: -100%; }
-  100% { left: 0%; }
-}
-
-
-
-
-/* _____________________  광고  _________________________ */
-
-
-#cont{
-  background-color: var(--point-color);
-}
-
-.cont{
-  position: relative;
-  width: 100%;
-  height: 100%;
- 
-}
-
-.cont__box{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.cont__content{
-
-  top: 100px;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.cont__title{
-
-  font-size: 3rem;
-  text-align: center;
-}
-.cont__title span{
-  font-family: 'GowunBatang-Regular';
-}
-
-.cont__btn{
-
-  /* text-align: center; */
-margin: 3vh 0;
-}
-.cont__btn button{
-  width: 110px;
-  height: 40px;
-  background-color: transparent;
-  border-radius: 20px;
-  border: 1px solid var(--bright-color);
-}
-
-
-/* _____________________  학원소개  _________________________ */
-
-#facility{
-  padding-left: 0%;
-  padding-right: 0%;
-}
-
-
-
-.photo{
-  position: relative;
-  overflow: hidden;
-  padding-top: 20vh;
-}
-
-.photo__box{
-  height: 100%;
-
-
-}
-
-
-.photo__item{
-  height: 44vh;
-  background-color: var(--dark-color);
-  position: relative;
-  border-radius: 20px;
-
-}
-
-.photo__item::before{
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: var(--point-color);
-  position: absolute;
-  border-radius: 20px;
-  top: 10px;
-  left: 10px;
-  mix-blend-mode: hue;
-}
-
-.photo__item:hover::before{
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  position: absolute;
-  border-radius: 20px;
-  top: 10px;
-  left: 10px;
-  transition: .3s;
-}
-
-.photo__item.on::before{
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  position: absolute;
-  border-radius: 20px;
-  top: 10px;
-  left: 10px;
-  transition: .3s;
-}
-
-.photo__item img{
-  border-radius: 20px;
-}
-
-.photo__title{
-  width: 100%;
-  height: 35px;
-  position: absolute;
-  bottom: 0;
-
-border-radius: 0 0 20px 20px;
-background: linear-gradient(transparent,#000);
-padding: 2% 0;
-}
-
-
-/* .photo__title::after{
-  content: '';
-  position: absolute;
-  width: 55%;
-  height: 1px;
-  background-color: var(--point-color);
-  top: 50%;
-  right: 5%;
-} */
-
-
-.photo__item h3{
-  bottom: 0;
-  color: var(--bright-color);
-
-  font-size: min(6vw,2rem);
-  text-align: left;
-  margin-left: 5%;
-}
-
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-
-.swiper-slide {
-
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-}
-
-.swiper-slide:hover img{
-
-}
 /* _____________________  반소개  _________________________ */
 
 #about__class{
@@ -1447,7 +1119,7 @@ padding: 2% 0;
   position: relative;
   height: auto;
   display: flex;
-  /* width: 100%; */
+
   margin-left: var(--margin-left);
   margin-right: var(--margin-right);
   padding: 5vh 0;
@@ -1459,9 +1131,7 @@ padding: 2% 0;
 
 .about__class__box {
   position: relative;
-  /* width: 24vw; */
-  /* height: 51vh; */
-  /* height: auto; */
+
   box-sizing: border-box;
   border: 1px solid var(--dark-color);
   background-color: var(--bright-color);
@@ -1506,23 +1176,6 @@ padding: 2% 0;
 
 
 
-.about__class__box.class1{
-  /* left: 19%;
-  top: 3%; */
-  }
-.about__class__box.class2{
-  /* left: 45%;
-  top: 10%; */
-  /* top: 13%; */
-  /* position: relative; */
-  /* transform: translateY(10%); */
-  }
-.about__class__box.class3{
-  /* left: 71%;
-  top: 17%; */
-  /* transform: translateY(21%); */
-  }
-
 .class__name__box{
   display: flex;
   flex-direction: column;
@@ -1546,180 +1199,6 @@ padding: 2% 0;
 
 
 
-/* _____________________  시간표  _________________________ */
-table {
-  width: 100%;
-  border: 1px solid #444444;
-  
-  border-collapse: collapse;
-}
-
-
-.Elementary{
-  padding-bottom: 3%;
-}
-
-#time_table{
-}
-
-.time_table_content{
-  width: 100%;
-  height: 90%;
-
-  text-align: center;
-  margin-bottom: 3%;
-
-  border-top: none; 
-  border-bottom: none; 
-  border-left: none;
-  border-right: none;
-  
-}
-
-.time_table__text {
-  width: 63%;
-  height: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 44;
-  font-size: 1.4rem;
-}
-
-/* 이미지 현재 없음 */
-.time_table_content img{
-  position: absolute;
-  transform: translate(-70%, -29%) scale(.8);
-  z-index: -1;
-}
-
-.time__table__radio{
-  position: relative;
-  text-align: right;
-  margin: 2% 0;
-}
-
-label{
-  font-size: 1.4rem;
-}
-.time_table__box{
-  position: relative;
-  width: 40%;
-  height: 75%;
-  box-sizing: border-box;
-
-
-  margin-right: var(--margin-right);
-  position: absolute;
-  right: 0;
-
-  font-size: 1.4rem;
-}
-
-
-.time_table_content .empty{
-  height: 2%;
-}
-
-
-
-.time_table_content .class-name{
-  border-radius: 20px 0 0 20px;
-  width: 30%;
-  background-color: var(--color1);
-  color: var(--bright-color);
-
-  font-family: 'GowunBatang-Regular';
-  font-weight: bold;
-}
-
-
-/* 시간표 각 파트 위에 호버하면
-배경백 바뀌는거 */
-.elementary.class-name:hover .time_table{
- background-color: var(--ex1-color);
-}
-.middle:hover .time_table{
-  background-color: var(--ex2-color);
-}
-.high:hover .time_table{
-  background-color: var(--ex3-color);
-}
-
-.time:hover{
-  background-color: var(--point-color);
-}
-
-
-
-
-.time_table_content .class-part{
-  background-color: var(--color2);
-  color: var(--bright-color);
-  border: 1px dotted var(--dark-color);
-  position: relative;
-  width: 16%;
-
-  border-left: none;
-  border-right: none;
-  font-family: 'GowunBatang-Regular';
-  /* font-weight: bold; */
-}
-
-/* .class-part::after{
-  content: '';
-  height: 100%;
-  width: 115px;
-  background-color: var(--color2);
-  position: absolute;
-  left: -33px;
-  top: 0;
-  z-index: -1;
-
-} */
-
-.time_table_content .day{
-  background-color: var(--bright-color);
-  border: 1px solid var(--bright-color);
-  /* border-radius: 20px; */
-  width: 20%;
-  font-weight: bold;
-  background-color: #cdc9c3;
-  color: var(--dark-color);
-  
-
-}
-
-.time_table_content .time{
-  background-color: var(--bright-color);
-  border: 1px dashed var(--dark-color);
-  border-left: none;
-  width: 30%;
-  color: var(--dark-color);
-}
-
-
-
-.time_table_content .day.up{
-  /* border-radius:20px 20px 0 0; */
-  border-bottom: none;
-
-}
-.time_table_content .day.down{
-  border-top: none;
-  /* border-radius: 0 0 20px 20px; */
-}
-
-
-.time_table_content .time.up{
-  /* border-radius:0 20px 0 0; */
-  border-bottom: none;
-}
-.time_table_content .time.down{
-  /* border-radius:0 0 20px 0; */
-  border-top: none;
-}
-
-
 
 /* _____________________  큰로고  _________________________ */
 
@@ -1735,176 +1214,6 @@ label{
   position: relative;
   width: 100%;
 }
-
-/* _____________________  공지사항  _________________________ */
-.notice{
-  background-color: var(--dark-color);
-
-}
-
-.notice .tit{
-  color: var(--point-color);
-}
-
-
-
-#notice{
-  position: relative;
- /*  padding-left: var(--margin-left);
-  padding-right: var(--margin-right);
-  box-sizing: border-box; */
-}
-
-.accordion{
-  text-align: right;
-}
-.accordion h3{
-  font-size: 1.6rem;
-  border-top: 1px solid var(--color1);
-  padding: 1% 2%;
-  cursor: pointer;
-}
-
-
-.accordion p,ul,ol,li{
-  font-size: 1.6rem;
-  line-height: 1.3;
-  color: var(--bright-color);
-}
-
-
-.notice__box{
-  width: 100%;
-  height: 70%;
-  /* margin-left: 5%; */
-  margin-top: 5%;
-}
-
-.notice__title{
-  background-color: var(--dark-color);
-  border-color: var(--bright-color);
-  color: var(--bright-color);
-
-}
-
-.notice__title:hover{
-  background-color: var(--point-color);
-  transition: .5s;
-}
-
-
-.notice_content{
-background-color: var(--point-color);
-height:auto;
-padding: 3% 2% 3% 30%;
-
-}
-
-/* _____________________  컨택트  _________________________ */
-.contact__box{
-  margin-left: var(--margin-left);
-  margin-right: var(--margin-right);
-  display: flex;
-  position: relative;
-  /* gap: 5%; */
-  flex-direction: column;
-  height: 77vh;
-}
-
-
-.contact__box_title{
-font-size: 1.6rem;
-margin: 3% 0;
-color: var(--dark-color);
-display: inline-block;
-border: 1px solid var(--dark-color);
-border-radius: 20px;
-padding: 1% 5%;
-}
-
-
-.contact__box p{
-  display: inline-block;
-  width: 100%;
-  font-size: 1.8rem;
-  margin-bottom: 3%;
-}
-.contact__box span{
-  display: inline-block;
-  width: 100%;
-  font-size: 2rem;
-  font-weight: bold;
-  /* margin-bottom: 9%; */
-  color: var(--point-color);
-}
-
-.contact__map{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  border-radius: 20px;
-
-}
-.contact__map iframe{
-border: 1px solid #000;
- 
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-
-
-.contact__time{
-  text-align: right;
-  flex: 1;
-  position: relative;
-  padding-right: 3%;
-}
-
-.contact__time::after{
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 1px;
-  top: 0;
-  right: 0;
-  background-color: var(--dark-color);
-}
-.contact__address{
-
-  flex: 1;
-}
-.contact__number{
-
-  flex: 1;
-}
-
-.wrap1{
-  padding-top: 5%;
-  /* flex: 1; */
-  width: 100%;
-  height: 300px;
-  position: relative;
-}
-
-.wrap2{
-  display: flex;
-  justify-content: space-around;
-
-  padding-top: 5%;
-  gap: 3%;
-
-  flex: 1;
-}
-
-.wrap3{
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
-
 
 
 
@@ -1938,4 +1247,32 @@ border: 1px solid #000;
 }
 
 
+
+.marquee {
+  height: 25px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+  background-color: var(--bright-color);
+  animation: marquee-ani 10s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+  color: var(--point-color);
+  font-size: 1.2rem;
+  letter-spacing: .3rem;
+}
 

@@ -6,8 +6,9 @@ export function MainArea() {
 
   return(
     <>
-    <h2> layout/MainArea.jsx : pages 의 MainCont를 불러온다 </h2>
+    {/* 원페이지 jsx */}
     <MainCont />
+
     </>
   
   );

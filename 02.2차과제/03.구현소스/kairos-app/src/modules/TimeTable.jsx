@@ -1,14 +1,14 @@
 // TimeTable - 시간표 모듈
 
+// CSS
+import "../css/timetable.css"
 
 export function TimeTable(){
 
 
   return(
       <>
-      
-      <h6> (모듈) - 시간표 (공모) </h6>
-      
+  
  {/*  <!-- 시간표 --> */}
   <section id="time_table" className="time_table mp">
     <h2 className="tit">시간표</h2>
@@ -50,7 +50,7 @@ export function TimeTable(){
  
           <tr className="middle">
           
-              <td className="class-name" rowspan="4">중등부</td>
+              <td className="class-name" rowSpan="4">중등부</td>
               <td className="class-part">1반</td>
               <td className="day">월수금</td>
               <td className="time">4:00~5:30</td>
@@ -61,7 +61,7 @@ export function TimeTable(){
               <td className="time">5:30~7:00</td>
             </tr>
             <tr>
-              <td className="class-part" rowspan="2">3반</td>
+              <td className="class-part" rowSpan="2">3반</td>
               <td className="day up">화목</td>
               <td className="time up">2:00~3:30</td>
             </tr>
@@ -78,8 +78,8 @@ export function TimeTable(){
           {/* <!-- 고등부 --> */}
       
           <tr className="high">
-              <td className="class-name" rowspan="5">고등부</td>
-              <td className="class-part" rowspan="2">예비고1</td>
+              <td className="class-name" rowSpan="5">고등부</td>
+              <td className="class-part" rowSpan="2">예비고1</td>
               
               <td className="day up">화목</td>
               <td className="time up">4:00~6:00</td>
@@ -90,7 +90,7 @@ export function TimeTable(){
             </tr>
 
             <tr>
-              <td className="class-part" rowspan="2">예비고2</td>
+              <td className="class-part" rowSpan="2">예비고2</td>
               <td className="day up">월수금</td>
               <td className="time up">12:00~2:00</td>
             </tr>
