@@ -1,6 +1,6 @@
 //Kairos - Layout 컴포넌트
 
-import React from "react";
+import React, { useState } from "react";
 
 
 import { GnbArea } from "./GnbArea";
@@ -8,7 +8,10 @@ import { MainArea } from "./MainArea";
 import { FooterArea } from "./FooterArea";
 import { TopArea } from "./TopArea";
 
+import { krCon } from "../modules/KairosContext";
+
 import $ from "jquery";
+
 window.jQuery = $;
 require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
@@ -19,18 +22,37 @@ require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
 export function Layout() {
 
+ 
+    const [site, setSite] = useState('siteH');
 
-      
-   React.useEffect(()=>{
-    /************************************************************
-     *  기능 : 토글 버튼 누르면 버튼 모양 변경 및 섹션 색상 변경
-     ***********************************************************/
+
+ /*    if(mBtn.text() == '혁신관'){
+        const [site, setSite] = useState('siteH');
+        
+    }
+    else if(mBtn.text() == '단계관'){
+        const [site, setSite] = useState('siteD');
+       
+    }
+
+ */
+
+    React.useEffect(()=>{
+     
+        
     const transBtnBox = $(".trans_btn__box");
     const mBtn = $(".btn.m_btn");
 
+    
+    /************************************************************
+     *  기능 : 
+     * 1. 토글 버튼 누르면 버튼 모양 변경 및 섹션 색상 변경
+     * 2. 토글 글자 읽고 주소 변경
+     ***********************************************************/
+ 
     // 클래스 dark 시 검은색으로 변해야 하는 파트
     const dark = $(
-     ".tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time,.marquee"
+     ".logo,.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time,.marquee"
     );
 
     // 클래스 dark 시  밝은 색으로 변해야 하는 파트
@@ -60,6 +82,10 @@ export function Layout() {
                 border: "1px solid var(--dark-color)",
             }).text("혁신관");
         }
+
+
+
+
     });
 
 
@@ -158,7 +184,7 @@ $(window).scroll(() => {
   if(i > 0) i = -30;
 
 
-  console.log(scTop,percentY,i)
+//   console.log(scTop,percentY,i)
 
   /*********************************************  
    * 파트마다 네비게이션 파트에 on
@@ -202,11 +228,11 @@ $(window).scroll(() => {
 
 
     return (
-        <>
-            <TopArea />
+        <krCon.Provider value={site}>
+            <TopArea  />
             <GnbArea />
             <MainArea />
             <FooterArea />
-        </>
+        </krCon.Provider>
     );
 }

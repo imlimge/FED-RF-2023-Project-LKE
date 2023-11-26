@@ -353,8 +353,8 @@ function rotFn2(ele) {
             <Facility />
 
             {/* <!-- 반소개 --> */}
-            <section id="about__class">
-                <div className="about__class mp">
+            <section id="about__class" className="mp">
+                <div className="about__class">
                     <div className="about__class__box class1">
                         <h2>초등부</h2>
                         <article>

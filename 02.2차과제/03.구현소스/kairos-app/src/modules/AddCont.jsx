@@ -12,8 +12,8 @@ export function AddCont(){
 
  {/* <!-- 중간광고 --> */}
 
-<section id="cont">
-<div className="cont mp">
+<section id="cont" className="mp">
+<div className="cont">
 
 
 

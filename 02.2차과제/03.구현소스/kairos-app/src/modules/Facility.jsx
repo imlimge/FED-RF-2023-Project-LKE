@@ -3,27 +3,19 @@
 import { SwiperApp } from "../plugin/SwiperApp";
 
 // CSS
-import "../css/facility.css"
+import "../css/facility.css";
 
 
-export function Facility(){
-
-
-
-  return(
-      <>
-     
-
-{/*   <!-- 학원시설 --> */}
-  <section id="facility">
-    <div className="facility mp">
-      <h2 className="tit">학원시설</h2>
-        <SwiperApp />
-    </div>
-  </section>
-
-      </>
-
-  );
-
-} 
+export function Facility() {
+    return (
+        <>
+            {/*   <!-- 학원시설 --> */}
+            <section id="facility" className="mp">
+                <div className="facility">
+                    <h2 className="tit">학원시설</h2>
+                    <SwiperApp />
+                </div>
+            </section>
+        </>
+    );
+}

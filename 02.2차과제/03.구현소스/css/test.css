@@ -355,3 +355,86 @@ function wheelFn(e) {
   
   text-align: left;
   margin-left: 5%;
+
+
+
+  0--------------------------
+
+
+  주소넣기
+  
+
+
+
+      let url = window.location.href;
+        console.log(url)
+        
+       let mBtnText = mBtn.text();
+        
+        console.log(mBtn.text())
+        
+        window.location.href = url+mBtnText;
+    
+
+     
+
+        function chgUrl(){
+        
+        
+          const mBtn = document.querySelector(".btn.m_btn");
+  
+  
+              let url = 'http://localhost:3000/#';
+              console.log(url)
+              
+              let mBtnText = mBtn.innerText;
+              
+              console.log(mBtnText)
+  
+              window.location.href = url+mBtnText;
+  
+      }
+     
+    
+        if(mBtnText ==='혁신관'){
+        
+           console.log('혁신')
+
+    
+        }
+        if(mBtnText ==='단계관'){
+        
+           console.log('단계')
+    
+        }
+
+
+
+    
+        chgUrl()
+        
+
+
+
+
+
+
+===================================
+mp로 페이지 이동
+
+
+const goP = (point, scTop, position) => {
+  if (scTop - 200 == position) {
+      window.scrollTo(0, point);
+  }
+};
+
+
+window.addEventListener("wheel", (e) => {
+  console.log("휠");
+  
+  // let delta = e.wheelDelta;
+  // console.log(delta);
+  })
+  
+
