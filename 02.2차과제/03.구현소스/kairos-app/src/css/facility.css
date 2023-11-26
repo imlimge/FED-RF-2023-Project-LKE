@@ -7,7 +7,9 @@
   padding-right: 0%;
 }
 
-
+.facility{
+  height: 100%;
+}
 
 .photo{
   position: relative;
@@ -17,7 +19,6 @@
 
 .photo__box{
   height: 100%;
-
 
 }
 
@@ -82,45 +83,19 @@ padding: 2% 0;
 }
 
 
-/* .photo__title::after{
-  content: '';
-  position: absolute;
-  width: 55%;
-  height: 1px;
-  background-color: var(--point-color);
-  top: 50%;
-  right: 5%;
-} */
-
 
 .photo__item h3{
   bottom: 0;
   color: var(--bright-color);
-
-  font-size: min(6vw,2rem);
+  font-family: 'SUIT-Regular';
+  font-weight: normal;
+  font-size: min(6vw,1.7rem);
+  
   text-align: left;
   margin-left: 5%;
 }
 
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-
-.swiper-slide {
-
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-}
-
-.swiper-slide:hover img{
-
+.swiper-slide{
+  margin-top: 5vh;
 }

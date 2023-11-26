@@ -2,7 +2,8 @@
 //Dom함수 모듈
 import dFn from "./dom.js";
 
-
+let keyValue = location.href;
+console.log(keyValue)
 
 
 

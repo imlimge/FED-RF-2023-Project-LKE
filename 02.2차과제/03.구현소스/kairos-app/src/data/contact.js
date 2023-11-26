@@ -1,6 +1,6 @@
 // 컨택트 데이터
 
-export const contact = {
+export const contactData = {
   /* 
     "sTime": "운영시간"
     "saddress" : "오시는길"

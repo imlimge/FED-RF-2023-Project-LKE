@@ -339,6 +339,19 @@ function wheelFn(e) {
   bottom: 0;
   color: var(--bright-color);
 
-  font-size: min(6vw,2rem);
+  font-size: min(6vw,1.7rem);
+  text-align: left;
+  margin-left: 5%;
+
+
+
+기존 폰트변경
+
+  bottom: 0;
+  color: var(--bright-color);
+  font-family: 'SUIT-Regular';
+  font-weight: normal;
+  font-size: min(6vw,1.7rem);
+  
   text-align: left;
   margin-left: 5%;

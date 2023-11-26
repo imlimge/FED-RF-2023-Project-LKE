@@ -1,6 +1,6 @@
 // 공지사항 데이터
 
-export const notice = {
+export const noticeData = {
   /* 
     "idx":"게시물 순번"
     "nTit":"공지사항 타이틀",

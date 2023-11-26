@@ -16,9 +16,9 @@ export function Contact() {
             <div className="contact__map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1121.7457918428909!2d127.97776334915255!3d37.32412802235737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sko!2skr!4v1700103825073!5m2!1sko!2skr"
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>

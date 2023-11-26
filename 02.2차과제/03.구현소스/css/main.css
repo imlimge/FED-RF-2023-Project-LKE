@@ -1420,8 +1420,10 @@ padding: 2% 0;
 .photo__item h3{
   bottom: 0;
   color: var(--bright-color);
-
-  font-size: min(6vw,2rem);
+  font-family: 'SUIT-Regular';
+  font-weight: normal;
+  font-size: min(6vw,1.7rem);
+  
   text-align: left;
   margin-left: 5%;
 }

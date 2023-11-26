@@ -1,6 +1,6 @@
 // 시간표 데이터
 
-export const time = {
+export const timeData = {
   /* 
   
           "site":"학원구분" -  (혁신관/단계관)

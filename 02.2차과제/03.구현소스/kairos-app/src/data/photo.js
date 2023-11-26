@@ -1,6 +1,6 @@
 // 학원시설 데이터
 
-export const photo = {
+export const photoData = {
 
 /* 
   "isrc":"이미지경로",
@@ -9,21 +9,26 @@ export const photo = {
 */
 
 혁신관: {
-  //배열로 해야할 지?
-  "isrc":["../../public/images/facility/siteH/photo1.png",
-  "../../public/images/facility/siteH/photo2.png"],
-  "tit":["학원전경", "강의실1", "강의실2"],
+siteH:[
+  {idx:1, tit:"학원 전경", isrc:"images/facility/siteH/photo1.png"},
+  {idx:2, tit:"자습실", isrc:"images/facility/siteH/photo2.png"},
+  {idx:3, tit:"카페", isrc:"images/facility/siteH/photo3.png"},
+  {idx:4, tit:"자습실 전경", isrc:"images/facility/siteH/photo4.png"},
+  {idx:5, tit:"강의실 1", isrc:"images/facility/siteH/photo5.png"},
+  {idx:6, tit:"강의실 2", isrc:"images/facility/siteH/photo6.png"},
+]
+}
 
-  //순번으로 해야할지?
-  idx:1, tit:"학원 전경", isrc:"../../public/images/facility/siteH/photo1.png",
-  idx:2, tit:"강의실1", isrc:"../../public/images/facility/siteH/photo2.png",
-  idx:3, tit:"강의실2", isrc:"../../public/images/facility/siteH/photo3.png",
-
-},
+  ,
 
 
 단계관: {
+  siteD:[
+    {idx:1, tit:"학원 전경", isrc:"images/facility/siteD/photo1.png"},
+    {idx:2, tit:"자습실", isrc:"images/facility/siteD/photo2.png"},
+    {idx:3, tit:"강의실1", isrc:"images/facility/siteD/photo3.png"},
  
+  ]
 },
 
 

@@ -2,12 +2,17 @@
 
 
 
+
+
 export function TopArea() {
 
+
+
+  
   return(
     <>
      {/* <!-- 상단 영역 --> */}
-    <div className="top-area">
+    <div className="top-area" style={{zIndex:'9999'}}>
       
         <a href="#">
           <div className="logo">
