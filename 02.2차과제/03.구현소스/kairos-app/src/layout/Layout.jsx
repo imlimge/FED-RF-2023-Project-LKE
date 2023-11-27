@@ -8,7 +8,7 @@ import { MainArea } from "./MainArea";
 import { FooterArea } from "./FooterArea";
 import { TopArea } from "./TopArea";
 
-import { krCon } from "../modules/KairosContext";
+// import { krCon } from "../modules/KairosContext";
 
 import $ from "jquery";
 
@@ -22,20 +22,37 @@ require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
 export function Layout() {
 
- 
-    const [site, setSite] = useState('siteH');
+
+  // 학원 후크변수
+  // const [site, setSite] = React.useState('0');
 
 
- /*    if(mBtn.text() == '혁신관'){
-        const [site, setSite] = useState('siteH');
-        
+  // 혁신관 후크변수
+  const [isH,setIsH] = React.useState(1);
+
+  
+  const isSite = React.useMemo(()=>{
+    // useMemo함수 내부에서 원래 객체를 리턴함
+    return{
+      지점: isH ? '혁신관' : '단계관'
+     }
+    },[isH]); // -> isH에 의존성을 심어준다
+  
+
+    console.log(isSite)
+    
+    
+    
+    if(isH){
+      console.log('혁신관')
     }
-    else if(mBtn.text() == '단계관'){
-        const [site, setSite] = useState('siteD');
-       
+    else{
+      
+      console.log('단계관')
     }
+   
 
- */
+
 
     React.useEffect(()=>{
      
@@ -73,7 +90,8 @@ export function Layout() {
                 color: "var(--dark-color)",
                 backgroundColor: "var(--point-color)",
                 border: "1px solid var(--bright-color)",
-            }).text("단계관");
+            }).text("단계관")
+            ;
         } else {
             mBtn.css({
                 left: "0px",
@@ -226,13 +244,15 @@ $(window).scroll(() => {
 });
 
 
-
     return (
-        <krCon.Provider value={site}>
+      <>
+        
             <TopArea  />
             <GnbArea />
             <MainArea />
             <FooterArea />
-        </krCon.Provider>
+             
+        </>
     );
-}
+
+  }

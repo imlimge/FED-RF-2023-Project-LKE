@@ -14,9 +14,14 @@ require('jquery-ui-touch-punch/jquery.ui.touch-punch');
 
 export function Notice(){
 
+
+
   $( function() {
     $( ".accordion" ).accordion();
   } );
+
+
+
 
 
 

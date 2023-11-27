@@ -31,6 +31,7 @@ export function TopArea() {
             <div className="btn b_btn2">
               <span>단계관</span>
             </div>
+            {/* 움직이는 토글 버튼 */}
             <div className="btn m_btn">
               <span>혁신관</span>
             </div>
