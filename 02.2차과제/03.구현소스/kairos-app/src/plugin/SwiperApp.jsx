@@ -14,7 +14,7 @@ import "./css/swiper.css";
 
 
 // 사용할 스와이퍼 모듈을 불러온다
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import { photoData } from "../data/photo";
 

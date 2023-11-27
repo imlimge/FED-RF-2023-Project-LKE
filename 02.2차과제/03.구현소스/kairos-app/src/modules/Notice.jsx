@@ -1,112 +1,83 @@
 // Notice - 공지사항 모듈
 
 // CSS
-import "../css/notice.css"
+import "../css/notice.css";
 
+import { noticeData } from "../data/notice";
 
-
-import $ from 'jquery';
+import $ from "jquery";
 window.jQuery = $;
-require('jquery-ui-dist/jquery-ui');
-require('jquery-ui-touch-punch/jquery.ui.touch-punch');
+require("jquery-ui-dist/jquery-ui");
+require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
+/* 
+    "idx":"게시물 순번"
+    "nTit":"공지사항 타이틀",
+    "nCont":"공지사항 내용",
+  */
 
+export function Notice() {
+    $(function () {
+        $(".accordion").accordion();
+    });
 
-export function Notice(){
-
-
-
-  $( function() {
-    $( ".accordion" ).accordion();
-  } );
-
-
-
-
-
-
-  return(
-      <>
     
-  {/* <!-- 공지사항 --> */}
-  <section id="notice" className="notice mp">
-    <h2 className="tit tit2">공지사항</h2>
-    <div className="notice__box">
-  
-       
-<div className="accordion">
-  <h3 className="notice__title">카이로스 중학교 3학년 시간표</h3>
-  <div className="notice_content">
-    <p>
-    카이로스 중학교 3학년 시간표 <br/> <br/>
-    중학교 3학년 시간표 (개학 방학 동일) 월수금 6:00 - 7:30 (차량운행x)<br/>
-    </p>
-  </div>
-  <h3 className="notice__title">2023 추석일정 - 휴무</h3>
-  <div className="notice_content">
-    <p>
-      휴강시간 <br/><br/>
-    초등부: ㅇㄹㄴㅇㄹㄴㅇ <br/>
-    중등부: ㅇㄹㄴㅇㄹㄴㅇ<br/>
-    중등부: ㅇㄹㄴㅇㄹㄴㅇ<br/>
-  
-    </p>
-  </div>
-
-  <h3 className="notice__title">2023 7월 학원 일정</h3>
-  <div className="notice_content">
-    <p>
-      휴강시간 <br/><br/>
-      초등부: ㅇㄹㄴㅇㄹㄴㅇ <br/>
-      중등부: ㅇㄹㄴㅇㄹㄴㅇ<br/>
-      중등부: ㅇㄹㄴㅇㄹㄴㅇ<br/>
+    let selData = noticeData;
     
-    </p>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
+    let site;
+    let isH = 1;
 
-  <h3 className="notice__title">2023 6월 방학 초등부 일정</h3>
-  <div className="notice_content">
-    <p>
-    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-    mauris vel est.
-    </p>
-    <p>
-    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos.
-    </p>
-  </div>
-  <h3 className="notice__title">2023 6월 방학 초등부 일정</h3>
-  <div className="notice_content">
-    <p>
-    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-    mauris vel est.
-    </p>
-    <p>
-    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos.
-    </p>
-  </div>
+    isH ? site = selData['혁신관'][0] : site = selData['단계관'][0];
+    
+    
 
 
-      </div>
+    // const siteData = selData["혁신관"];
+    // const siteHData = siteData["siteH"];
+    
+    console.log('이거뭐야',site)
+    
 
 
-      
-    </div>
-  </section>
-      </>
 
-  );
 
-} 
+    // 리스트만들기 함수
+    const makeList = () => {
+ 
+   let temp = [];
+
+   site.map((v, i) => {
+            temp[i] = (
+              <>
+              <h3 className="notice__title" >{v.nTit}</h3>
+              <div className="notice_content" >
+                <p>
+                {v.nCont}
+                </p>
+              </div>
+              </>
+            );
+        }); 
+
+        //배열을 리턴
+   return temp;
+
+
+  }; ////for///
+
+    return (
+        <>
+            {/* <!-- 공지사항 --> */}
+            <section id="notice" className="notice mp">
+                <h2 className="tit tit2">공지사항</h2>
+                <div className="notice__box">
+                    <div className="accordion">
+
+                      {/* {makeList()} */}
+
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+}
