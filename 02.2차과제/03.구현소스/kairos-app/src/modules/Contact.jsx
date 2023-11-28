@@ -10,7 +10,7 @@ export function Contact() {
  
  let selData = contactData;
  
- console.log(selData['혁신관'])
+//  console.log(selData['혁신관'])
  
 
   let site;

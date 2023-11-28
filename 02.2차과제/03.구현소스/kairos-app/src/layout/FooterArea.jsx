@@ -46,6 +46,16 @@ export function FooterArea() {
             </p>
           </div>
         </div>
+  
+        {/*자동 움직이는 글자 */}
+      <div className="marquee">
+        <div>
+          <span>Students are proud of KAIROS</span>
+          <span>Students are proud of KAIROS</span>
+      
+        </div>
+      </div>
+
       </footer>
     </>
   );

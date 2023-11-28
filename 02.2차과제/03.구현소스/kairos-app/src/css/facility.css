@@ -28,7 +28,20 @@
   background-color: var(--dark-color);
   position: relative;
   border-radius: 20px;
+  transition: .3s;
 
+}
+
+.photo__item:hover{
+
+  transform: scale(1.25);
+  z-index: 5;
+}
+
+.photo__item.on{
+
+  transform: scale(1.25);
+  z-index: 5;
 }
 
 .photo__item::before{
@@ -53,6 +66,7 @@
   top: 10px;
   left: 10px;
   transition: .3s;
+
 }
 
 .photo__item.on::before{

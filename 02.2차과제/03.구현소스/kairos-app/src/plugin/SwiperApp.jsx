@@ -14,7 +14,7 @@ import "./css/swiper.css";
 
 
 // 사용할 스와이퍼 모듈을 불러온다
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import { photoData } from "../data/photo";
 
@@ -31,6 +31,15 @@ export function SwiperApp() {
     
     
 
+  const photoFn = (ele)=>{
+
+    let aa = ele.currentTarget;
+  
+
+
+  }
+
+
 
 
     // 리스트만들기 함수
@@ -42,14 +51,14 @@ export function SwiperApp() {
         site.map((v,i)=>{
         temp[i]=
         <SwiperSlide key={i}>
-          <div className="photo__item swiper-slide">
+          <div className="photo__item swiper-slide" onClick={photoFn} >
   
-            <img src={v.isrc} alt="학원사진" />
+            <img src={v.isrc} alt="학원사진"/>
             <div className="photo__title">
                 <h3>{v.tit}</h3>
                 </div>
-         
-          </div>
+            </div>
+            
           </SwiperSlide>
               })
               
@@ -66,8 +75,14 @@ export function SwiperApp() {
                 slidesPerView={3}
                 spaceBetween={30}
                 centeredSlides={true}
-              
-                modules={[Pagination]}
+                grabCursor={true}
+                
+                // loop={true}
+                // autoplay={{
+                //   delay: 2000,
+                //   disableOnInteraction: false,
+                // }}
+                modules={[Pagination,Autoplay]}
                 breakpoints={{
                     0: {
                         slidesPerView: 1.7,

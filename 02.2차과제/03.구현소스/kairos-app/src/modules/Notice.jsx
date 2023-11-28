@@ -25,7 +25,7 @@ export function Notice() {
     let selData = noticeData;
     
     let site = selData['혁신관'] 
-    let isH = 1;
+    let isH = 0;
 
     isH ? site = selData['혁신관'] : site = selData['단계관'];
     
