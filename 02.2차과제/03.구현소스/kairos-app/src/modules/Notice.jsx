@@ -24,38 +24,33 @@ export function Notice() {
     
     let selData = noticeData;
     
-    let site;
+    let site = selData['혁신관'] 
     let isH = 1;
 
-    isH ? site = selData['혁신관'][0] : site = selData['단계관'][0];
+    isH ? site = selData['혁신관'] : site = selData['단계관'];
     
     
 
-
-    // const siteData = selData["혁신관"];
-    // const siteHData = siteData["siteH"];
-    
-    console.log('이거뭐야',site)
-    
-
+ 
 
 
 
     // 리스트만들기 함수
-    const makeList = () => {
+  const makeList = () => {
  
    let temp = [];
 
    site.map((v, i) => {
             temp[i] = (
               <>
-              <h3 className="notice__title" >{v.nTit}</h3>
-              <div className="notice_content" >
+              {/* 키값을 어떻게 넣나 */}
+              <h3 className="notice__title">{v.nTit}</h3>
+              <div className="notice_content">
                 <p>
                 {v.nCont}
                 </p>
               </div>
-              </>
+            </>
             );
         }); 
 
@@ -72,10 +67,8 @@ export function Notice() {
                 <h2 className="tit tit2">공지사항</h2>
                 <div className="notice__box">
                     <div className="accordion">
-
-                      {/* {makeList()} */}
-
-                    </div>
+                      {makeList()}
+                      </div>
                 </div>
             </section>
         </>

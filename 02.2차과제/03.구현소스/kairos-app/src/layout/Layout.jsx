@@ -39,7 +39,7 @@ export function Layout() {
     },[isH]); // -> isH에 의존성을 심어준다
   
 
-    console.log(isSite)
+    console.log('Layout>useMemo',isSite)
     
     
     

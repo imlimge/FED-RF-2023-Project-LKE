@@ -18,8 +18,6 @@ export function Contact() {
   isH ? site = selData['혁신관'] : site = selData['단계관'];
   
 
-console.log(site["오시는 길"])
-
 
 
   return (

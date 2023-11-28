@@ -24,12 +24,14 @@ export function SwiperApp() {
 
     const selData = photoData;
 
-    const siteData = selData["혁신관"];
-    const siteHData = siteData["siteH"];
+    let site = selData['혁신관'] 
+    let isH = 1;
 
-    const dataL = siteData["siteH"].length;
-
+    isH ? site = selData['혁신관'] : site = selData['단계관'];
     
+    
+
+
 
     // 리스트만들기 함수
     const makeList = () => {
@@ -37,7 +39,7 @@ export function SwiperApp() {
       
         let temp = [];
         
-        siteHData.map((v,i)=>{
+        site.map((v,i)=>{
         temp[i]=
         <SwiperSlide key={i}>
           <div className="photo__item swiper-slide">
