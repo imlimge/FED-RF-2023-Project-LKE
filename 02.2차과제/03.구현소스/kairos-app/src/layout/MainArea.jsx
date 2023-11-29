@@ -2,7 +2,7 @@
 
 import { MainCont } from "../pages/MainCont";
 
-export function MainArea() {
+export function MainArea({sts}) {
 
 
 
@@ -10,7 +10,7 @@ export function MainArea() {
   return(
     <>
     {/* 원페이지 jsx */}
-    <MainCont />
+    <MainCont sts={sts} />
 
     </>
   

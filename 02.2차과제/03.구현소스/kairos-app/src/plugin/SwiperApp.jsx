@@ -18,14 +18,14 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 import { photoData } from "../data/photo";
 
-export function SwiperApp() {
+export function SwiperApp({sts}) {
 
 
 
     const selData = photoData;
 
     let site = selData['혁신관'] 
-    let isH = 1;
+    let isH = sts;
 
     isH ? site = selData['혁신관'] : site = selData['단계관'];
     
