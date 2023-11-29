@@ -22,7 +22,7 @@
 .accordion h3{
   font-size: 1.6rem;
   border-top: 1px solid var(--color1);
-  padding: 1% 2%;
+  padding: 1% 5%;
   cursor: pointer;
 }
 
@@ -57,6 +57,6 @@
 .notice_content{
 background-color: var(--point-color) !important;
 height:auto;
-padding: 3% 2% 3% 30%;
+padding: 3% 5% 3% 30%;
 
 }

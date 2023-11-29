@@ -141,8 +141,8 @@ const makeRowNum = () =>{
                   
                   <td
                     className="class-name"
-                    colSpan="2"
-       
+                    colSpan="3"
+                    // colSpan={{tmv.반 == " " ? "2" : "1"}}
                     rowSpan="1"
                   >
                 
@@ -154,45 +154,18 @@ const makeRowNum = () =>{
                 {
                   time[tmv].map((v, i, arr) => (
                     <tr key={i}>
-                      {
-                       (
-
-                        (!Array.isArray(v.요일) &&
-                          <td className="class-part">
+                      { (
+                          <td className="class-part" >
                             {v.반}
-                          </td>) ||
-                        (Array.isArray(v.요일) &&
-                          <td className="class-part" colSpan={1}>
-                            {v.반}
-                          </td>)
+                          </td>
+                        ) }
 
-
-                        )
-                      }
-
-                      {
-                      
-                    (  !Array.isArray(v.요일) &&
-                       <>
                       <td className="day">{v.요일}</td>
                       <td className="time">{v.시간}</td>
-                       </>) ||
-                    (  Array.isArray(v.요일) &&
-                       <>
-                     <tr>
-                      <td className="day">{v.요일[0]}</td>
-                      <td className="time">{v.시간[0]}</td>
-                      </tr>
-                      <tr>
-                      <td className="day">{v.요일[1]}</td>
-                      <td className="time">{v.시간[1]}</td>
-                      </tr>
-                       
-                       </>)
 
-
-                    }
-                    
+                      {/*   <td className="day">{v.요일.split('^').map(v=>`${v}\n`)}</td>
+                      <td className="time">{v.시간.split('^').map(v=>`${v}\n`)}</td> */}
+                      
                     </tr>
                   ))
                 }
