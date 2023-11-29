@@ -29,7 +29,7 @@ export function TimeTable() {
 
 
   let site = selData["혁신관"];
-  let isH = 1;
+  let isH =1;
 
   isH ? (site = selData["혁신관"]) : (site = selData["단계관"]);
 
@@ -51,7 +51,7 @@ export function TimeTable() {
 //  ( 여기에 값을 라디오 체크값에 따라stime / wtime 로 변경)
  let time = rtime;
 
- 
+
   // 일반시간표
   let classEle = time.초등부;
   let classMid = time.중등부;
@@ -78,9 +78,8 @@ export function TimeTable() {
       
       console.log(e.currentTarget)
       
-      let radioV = e.currentTarget
-      
-      
+      // let radioV = e.currentTarget
+             
     })
 
 
