@@ -61,6 +61,8 @@ export function TimeTable({ sts }) {
     let radioV = e.currentTarget;
   });
 
+
+  
   const chgRdo = (e) => {
     let txt = $(e.target).val();
     console.log(e.target, txt);
