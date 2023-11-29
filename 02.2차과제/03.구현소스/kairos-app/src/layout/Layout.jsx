@@ -1,12 +1,13 @@
 //Kairos - Layout 컴포넌트
 
-import React, { useState } from "react";
+import React,{ useState } from "react";
 
 
 import { GnbArea } from "./GnbArea";
 import { MainArea } from "./MainArea";
 import { FooterArea } from "./FooterArea";
 import { TopArea } from "./TopArea";
+
 
 // import { krCon } from "../modules/KairosContext";
 
@@ -27,30 +28,26 @@ export function Layout() {
   // const [site, setSite] = React.useState('0');
 
 
-  // 혁신관 후크변수
-  const [isH,setIsH] = React.useState(1);
-
   
+  // 혁신관 후크변수
+  const [isH,setIsH] = useState(1);
+  
+
   const isSite = React.useMemo(()=>{
     // useMemo함수 내부에서 원래 객체를 리턴함
     return{
       지점: isH ? '혁신관' : '단계관'
      }
+
     },[isH]); // -> isH에 의존성을 심어준다
   
 
     console.log('Layout>useMemo',isSite)
     
+
+
     
-    
-    if(isH){
-      console.log('혁신관')
-    }
-    else{
-      
-      console.log('단계관')
-    }
-   
+    let siteNum;
 
 
 
@@ -91,6 +88,8 @@ export function Layout() {
                 backgroundColor: "var(--point-color)",
                 border: "1px solid var(--bright-color)",
             }).text("단계관")
+            siteNum = 0;
+            console.log('단계관',siteNum)
             ;
         } else {
             mBtn.css({
@@ -99,6 +98,8 @@ export function Layout() {
                 backgroundColor: "var(--point-color)",
                 border: "1px solid var(--dark-color)",
             }).text("혁신관");
+            siteNum = 1;
+            console.log('혁신관',siteNum)
         }
 
 
@@ -106,6 +107,9 @@ export function Layout() {
 
     });
 
+
+    
+   
 
 
 
@@ -246,12 +250,12 @@ $(window).scroll(() => {
 
     return (
       <>
-        
+      
             <TopArea  />
             <GnbArea />
             <MainArea />
             <FooterArea />
-             
+   
         </>
     );
 

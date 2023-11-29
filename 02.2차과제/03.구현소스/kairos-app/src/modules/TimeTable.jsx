@@ -202,15 +202,15 @@ export function TimeTable() {
 
               <tr>
 
-                <td className="class-part" rowSpan="2">{classMid[2].반}</td>
-                <td className="day up">{classMid[2].요일[0]}</td>
-                <td className="time up">{classMid[2].시간[0]}</td>
+                <td className="class-part" rowSpan="2">{classMid[0].반}</td>
+                <td className="day up">{classMid[0].요일[0]}</td>
+                <td className="time up">{classMid[0].시간[0]}</td>
               </tr>
 
               <tr>
 
-                <td className="day down">{classMid[2].요일[1]}</td>
-                <td className="time down">{classMid[2].시간[1]}</td> 
+                <td className="day down">{classMid[0].요일[1]}</td>
+                <td className="time down">{classMid[0].시간[1]}</td> 
                 </tr>
 
               <tr> 
@@ -262,9 +262,9 @@ export function TimeTable() {
                 <td className="time down">{classHigh[1].시간[1]}</td>
               </tr>
               <tr>
-                <td className="class-part"> {classHigh[2].반}</td>
-                <td className="day">{classHigh[2].요일}</td>
-                <td className="time">{classHigh[2].시간}</td>
+                <td className="class-part"> {classHigh[0].반}</td>
+                <td className="day">{classHigh[0].요일}</td>
+                <td className="time">{classHigh[0].시간}</td>
               </tr>
 
 

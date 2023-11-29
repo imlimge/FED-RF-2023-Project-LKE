@@ -3,7 +3,11 @@
 // CSS
 import "../css/notice.css";
 
+
+
+
 import { noticeData } from "../data/notice";
+
 
 import $ from "jquery";
 window.jQuery = $;
@@ -21,11 +25,11 @@ export function Notice() {
         $(".accordion").accordion();
     });
 
-    
+
     let selData = noticeData;
     
     let site = selData['혁신관'] 
-    let isH = 0;
+    let isH = 1;
 
     isH ? site = selData['혁신관'] : site = selData['단계관'];
     

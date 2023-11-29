@@ -4,6 +4,9 @@ import { MainCont } from "../pages/MainCont";
 
 export function MainArea() {
 
+
+
+
   return(
     <>
     {/* 원페이지 jsx */}

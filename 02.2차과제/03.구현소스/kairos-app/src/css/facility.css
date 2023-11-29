@@ -34,8 +34,7 @@
 
 .photo__item:hover{
 
-  transform: scale(1.25);
-  z-index: 5;
+  
 }
 
 .photo__item.on{
