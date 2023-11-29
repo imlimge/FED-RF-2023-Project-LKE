@@ -51,6 +51,7 @@ export function TimeTable() {
 //  ( 여기에 값을 라디오 체크값에 따라stime / wtime 로 변경)
  let time = rtime;
 
+ 
   // 일반시간표
   let classEle = time.초등부;
   let classMid = time.중등부;
@@ -70,10 +71,17 @@ export function TimeTable() {
   console.log('중딩반 0/',classMid[0].반);
 
 
-  let aq = $('.middle').parent().find('.class-part').find('.day')
 
- console.log('day',aq)
 
+  // 테이블 라디오 버튼 값 불러오기
+    $('input').click((e)=>{
+      
+      console.log(e.currentTarget)
+      
+      let radioV = e.currentTarget
+      
+      
+    })
 
 
 
@@ -104,6 +112,8 @@ export function TimeTable() {
        }; ////for///
 
  
+
+
 
   return (
     <>

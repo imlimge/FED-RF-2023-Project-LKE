@@ -103,10 +103,10 @@ export function Layout() {
         }
 
 
-
-
-    });
-
+        console.log('이거뭐야',siteNum)
+        
+      });
+      
 
     
    
