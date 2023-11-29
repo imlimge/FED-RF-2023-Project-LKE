@@ -10,7 +10,7 @@ export function MainArea({sts}) {
   return(
     <>
     {/* 원페이지 jsx */}
-    <MainCont sts={sts} />
+    <MainCont sts={sts}/>
 
     </>
   

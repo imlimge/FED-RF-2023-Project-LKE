@@ -20,7 +20,7 @@ require("jquery-ui-touch-punch/jquery.ui.touch-punch");
     "nCont":"공지사항 내용",
   */
 
-export function Notice() {
+export function Notice({ sts }) {
     $(function () {
         $(".accordion").accordion();
     });
@@ -29,7 +29,7 @@ export function Notice() {
     let selData = noticeData;
     
     let site = selData['혁신관'] 
-    let isH = 1;
+    let isH = sts;
 
     isH ? site = selData['혁신관'] : site = selData['단계관'];
     

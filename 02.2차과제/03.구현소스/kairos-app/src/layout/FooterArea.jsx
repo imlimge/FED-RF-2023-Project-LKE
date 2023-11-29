@@ -2,10 +2,10 @@
 
 
 
-export function FooterArea() {
+export function FooterArea({sts}) {
 
 
-  let isH = 1;
+  let isH = sts;
   // 1 혁신 , 0 단계
 
 

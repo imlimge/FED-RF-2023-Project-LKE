@@ -466,10 +466,10 @@ function rotFn2(ele) {
             </div>
 
             {/* (모듈) - 공지사항 (공모) */}
-            <Notice />
+            <Notice sts={sts} />
 
             {/* (모듈) - 컨택트 (공모) */}
-            <Contact />
+            <Contact sts={sts} />
         </>
     );
 }

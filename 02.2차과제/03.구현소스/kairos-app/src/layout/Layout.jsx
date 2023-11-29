@@ -33,33 +33,27 @@ export function Layout() {
   const [isH,setIsH] = useState(1);
   const chgIsH = v => setIsH(v);
   
-  console.log('isH는?????',isH);
+  // console.log('isH는?????',isH);
 
-  const isSite = React.useMemo(()=>{
-    // useMemo함수 내부에서 원래 객체를 리턴함
-    return{
-      지점: isH ? '혁신관' : '단계관'
-     }
+  // const isSite = React.useMemo(()=>{
 
-    },[isH]); // -> isH에 의존성을 심어준다
+  //   return{
+  //     지점: isH ? '혁신관' : '단계관'
+  //    }
+
+  //   },[isH]); 
   
 
-    console.log('Layout>useMemo',isSite)
+  //   console.log('Layout>useMemo',isSite)
     
 
-
-    
-    let siteNum;
 
 
 
     React.useEffect(()=>{
      
         
-    const transBtnBox = $(".trans_btn__box");
-    const mBtn = $(".btn.m_btn");
 
-    
     /************************************************************
      *  기능 : 
      * 1. 토글 버튼 누르면 버튼 모양 변경 및 섹션 색상 변경
@@ -208,8 +202,8 @@ $(window).scroll(() => {
       
             <TopArea chgThis={chgIsH}  />
             <GnbArea />
-            <MainArea sts={isH} />
-            <FooterArea />
+            <MainArea sts={isH}  />
+            <FooterArea sts={isH}  />
    
         </>
     );

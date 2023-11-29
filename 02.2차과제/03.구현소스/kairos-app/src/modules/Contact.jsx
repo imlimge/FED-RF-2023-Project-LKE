@@ -6,7 +6,7 @@ import "../css/contact.css"
 import { contactData } from "../data/contact";
 
 
-export function Contact() {
+export function Contact({ sts }) {
  
  let selData = contactData;
  
@@ -14,7 +14,7 @@ export function Contact() {
  
 
   let site;
-  let isH = 1;
+  let isH = sts;
   isH ? site = selData['혁신관'] : site = selData['단계관'];
   
 

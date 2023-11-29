@@ -55,7 +55,7 @@
 
 
 .notice_content{
-background-color: var(--point-color);
+background-color: var(--point-color) !important;
 height:auto;
 padding: 3% 2% 3% 30%;
 
