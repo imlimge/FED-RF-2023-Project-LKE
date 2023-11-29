@@ -31,7 +31,9 @@ export function Layout() {
   
   // 혁신관 후크변수
   const [isH,setIsH] = useState(1);
+  const chgIsH = v => setIsH(v);
   
+  console.log('isH는?????',isH);
 
   const isSite = React.useMemo(()=>{
     // useMemo함수 내부에서 원래 객체를 리턴함
@@ -64,53 +66,6 @@ export function Layout() {
      * 2. 토글 글자 읽고 주소 변경
      ***********************************************************/
  
-    // 클래스 dark 시 검은색으로 변해야 하는 파트
-    const dark = $(
-     ".logo,.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time,.marquee"
-    );
-
-    // 클래스 dark 시  밝은 색으로 변해야 하는 파트
-    const bright = $(
-        ".notice, .accordion h3,.notice__title,.tit2,.notice_content"
-    );
-
-    transBtnBox.click(function () {
-        dark.toggleClass("dark");
-        bright.toggleClass("bright");
-
-        transBtnBox.toggleClass("dark");
-
-        // 토글버튼 on off 변경
-        if (transBtnBox.hasClass("dark")) {
-            mBtn.css({
-                left: "73px",
-                color: "var(--dark-color)",
-                backgroundColor: "var(--point-color)",
-                border: "1px solid var(--bright-color)",
-            }).text("단계관")
-            siteNum = 0;
-            console.log('단계관',siteNum)
-            ;
-        } else {
-            mBtn.css({
-                left: "0px",
-                color: "var(--dark-color)",
-                backgroundColor: "var(--point-color)",
-                border: "1px solid var(--dark-color)",
-            }).text("혁신관");
-            siteNum = 1;
-            console.log('혁신관',siteNum)
-        }
-
-
-        console.log('이거뭐야',siteNum)
-        
-      });
-      
-
-    
-   
-
 
 
 /***************************************************************
@@ -251,9 +206,9 @@ $(window).scroll(() => {
     return (
       <>
       
-            <TopArea  />
+            <TopArea chgThis={chgIsH}  />
             <GnbArea />
-            <MainArea />
+            <MainArea sts={isH} />
             <FooterArea />
    
         </>

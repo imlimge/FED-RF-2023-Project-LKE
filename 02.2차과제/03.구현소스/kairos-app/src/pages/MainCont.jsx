@@ -11,7 +11,7 @@ import { SlideText } from "../modules/SlideText";
 
 
 
-export function MainCont() {
+export function MainCont({sts}) {
 
 
   React.useEffect(()=>{
@@ -350,7 +350,7 @@ function rotFn2(ele) {
             <SlideText />
 
             {/* (모듈) - 학원시설 (공모) */}
-            <Facility />
+            <Facility sts={sts} />
 
             {/* <!-- 반소개 --> */}
             <section id="about__class" className="mp">
@@ -455,7 +455,7 @@ function rotFn2(ele) {
             </section>
 
             {/* (모듈) - 시간표 (공모) */}
-            <TimeTable />
+            <TimeTable sts={sts} />
             {/*   <!-- 큰 로고 --> */}
             <div className="image__logo">
                 <img
