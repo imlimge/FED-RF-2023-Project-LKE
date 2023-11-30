@@ -5,7 +5,7 @@ import "../css/addcont.css"
 
 
 
-export function AddCont(){
+export function AddContH(){
 
 
   return(
@@ -14,10 +14,14 @@ export function AddCont(){
 
  {/* <!-- 중간광고 --> */}
 
-<section id="cont_content">
+<section id="cont__content-add">
+
+    <div className="cont__content-add">
 
 
 
+
+    </div>
 
 </section>
 
