@@ -218,7 +218,7 @@ function rotFn2(ele) {
                 <div className="intro__content__warp">
                     <div className="intro__content">
                         <div className="intro__item intro1 "></div>
-                        <div className="intro__item intro2 m-intro mp">
+                        <div className="intro__item intro2 m-intro">
                             <h4>
                                 초·중·고
                                 <br />
@@ -230,7 +230,7 @@ function rotFn2(ele) {
                                 카이로스
                             </h3>
                         </div>
-                        <div className="intro__item intro3 m-intro mp">
+                        <div className="intro__item intro3 m-intro">
                             <h3>
                                 입시전문
                                 <br />
@@ -246,7 +246,7 @@ function rotFn2(ele) {
                                 많은 고등학교의 학생들에게 수업을 진행했습니다.
                             </article>
                         </div>
-                        <div className="intro__item intro4 m-intro mp">
+                        <div className="intro__item intro4 m-intro">
                             <div className="about">
                                 <h3>
                                     실력에서
