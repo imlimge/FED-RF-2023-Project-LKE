@@ -2,6 +2,7 @@
 
 // CSS
 import "../css/addcont.css"
+import { AddContH } from "./AddCont_siteH";
 
 export function AddCont(){
 
@@ -31,10 +32,12 @@ export function AddCont(){
         <div className="cont__btn">
           <button>보러가기</button>
         </div>
-        
- </div>
-</div>
-</div>
+              
+      </div>
+      </div>
+  </div>
+{/* <AddContH /> */}
+
 </div>
 </section>
 
