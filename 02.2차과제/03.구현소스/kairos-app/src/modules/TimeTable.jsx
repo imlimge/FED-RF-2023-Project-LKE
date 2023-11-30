@@ -2,7 +2,7 @@
 
 import { timeData } from "../data/time2";
 
-import React, { useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 // CSS
 import "../css/time_table.css";
 
@@ -33,9 +33,20 @@ export function TimeTable({ sts }) {
   isH ? (site = selData["혁신관"]) : (site = selData["단계관"]);
 
 
+
   let rtime = site.일반시간표;
   let stime = site.여름방학;
   let wtime = site.겨울방학;
+
+  useEffect(()=>{
+
+    setTime(rtime);
+
+    let radioBtn = document.getElementById("d_radio");
+    radioBtn.checked = true;
+    
+
+  },[isH]);
 
 
 
@@ -103,10 +114,9 @@ export function TimeTable({ sts }) {
 
           {/* <!-- 시간표 테이블 --> */}
           <table className="time_table_content">
-            <thead></thead>
             <tbody>
-              {Object.keys(time).map((tmv) => (
-                <>
+              {Object.keys(time).map((tmv,i) => (
+                <Fragment key={i}>
                   <tr className="empty"></tr>
 
                   <tr className="class-box">
@@ -129,20 +139,20 @@ export function TimeTable({ sts }) {
                       {
                         <>
                           <td className="day">
-                            {v.요일.split("^").map((v) => (
-                              <p>{v}</p>
+                            {v.요일.split("^").map((v,i) => (
+                              <p key={i}>{v}</p>
                             ))}
                           </td>
                           <td className="time">
-                            {v.시간.split("^").map((v) => (
-                              <p>{v}</p>
+                            {v.시간.split("^").map((v,i) => (
+                              <p key={i}>{v}</p>
                             ))}
                           </td>
                         </>
                       }
                     </tr>
                   ))}
-                </>
+                </Fragment>
               ))}
             </tbody>
           </table>

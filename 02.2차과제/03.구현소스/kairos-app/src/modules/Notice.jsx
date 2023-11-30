@@ -1,6 +1,7 @@
 // Notice - 공지사항 모듈
 
 // CSS
+import { Fragment } from "react";
 import "../css/notice.css";
 
 
@@ -46,7 +47,7 @@ export function Notice({ sts }) {
 
    site.map((v, i) => {
             temp[i] = (
-              <>
+              <Fragment key={i}>
               {/* 키값을 어떻게 넣나 */}
               <h3 className="notice__title">{v.nTit}</h3>
               <div className="notice_content">
@@ -54,7 +55,7 @@ export function Notice({ sts }) {
                 {v.nCont}
                 </p>
               </div>
-            </>
+            </Fragment>
             );
         }); 
 

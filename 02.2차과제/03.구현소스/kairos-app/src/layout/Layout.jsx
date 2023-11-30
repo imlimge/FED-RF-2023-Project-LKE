@@ -59,9 +59,7 @@ export function Layout() {
 
     React.useEffect(()=>{
      
-        
-
-
+     
 
 
 // 페이지 요소
@@ -85,6 +83,32 @@ console.log("mp겟바운딩 BOTTOM ", mpPB);
 
 
 
+ // $('html,body').css({overflow:'hidden'});
+      let psts = 0;
+      let seq = 0;
+        
+function wheelFn(e){
+  e.preventDefault();
+
+  if(psts) return;
+  psts=1;
+  setTimeout(()=>psts=0,800);
+
+  $('html,body').stop().animate({scrollTop:mpPT[seq]+"px"},400)
+
+  if(e.wheelDelta<0)
+  seq++;
+  else seq--
+
+  seq<0?seq=0:seq>mp.length-1?seq=mp.length-1:seq=seq;
+
+
+  // let scTop = $(window).scrollTop();
+  console.log(seq,mpPT[seq]);
+
+} /////////// wheelFn ////////////
+
+window.addEventListener('wheel',wheelFn,{passive:false})
 
 
 
