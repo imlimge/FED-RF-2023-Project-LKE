@@ -8,6 +8,16 @@ require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
 export function TopArea({ chgThis }) {
 
+
+
+  const chgTable = () =>{
+    $('.time_table__box').load()
+    console.log('chgTable')
+
+  }
+
+
+
   const transBtn = (e) => {
     let tg = $(e.currentTarget).find(".m_btn");
     let txt = tg.text();
@@ -20,6 +30,7 @@ export function TopArea({ chgThis }) {
         border: "1px solid var(--bright-color)",
       }).text("단계관");
       chgThis(0);
+
 
     } else {
       tg.css({
@@ -35,9 +46,10 @@ export function TopArea({ chgThis }) {
     $(e.currentTarget).toggleClass("dark");
 
 
+
     // 클래스 dark 시 검은색으로 변해야 하는 파트
     const dark = $(
-     ".logo,.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.image__logo,.footer,.contact__time,.marquee"
+     ".logo,.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.bigtext__logo,.footer,.contact__time,.marquee"
    );
    // 클래스 dark 시  밝은 색으로 변해야 하는 파트
    const bright = $(
@@ -45,9 +57,11 @@ export function TopArea({ chgThis }) {
    );
    
 
+
    dark.toggleClass("dark");
   bright.toggleClass("bright");
     
+
   }  
 
 
@@ -73,7 +87,7 @@ export function TopArea({ chgThis }) {
         </a>
 
         {/* <!-- 학원 전환 버튼 --> */}
-        <div className="trans_btn__box" onClick={transBtn} >
+        <div className="trans_btn__box" onClick={transBtn} onChange={chgTable}>
           <div className="trans_btn">
             <div className="btn b_btn1">
               <span>혁신관</span>

@@ -45,7 +45,7 @@
   background-color: var(--dark-color);
   border-color: var(--bright-color);
   color: var(--bright-color);
-
+  font-weight: 300;
 }
 
 .notice__title:hover{

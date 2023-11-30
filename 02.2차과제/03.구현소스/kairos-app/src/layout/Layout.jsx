@@ -33,6 +33,8 @@ export function Layout() {
   const [isH,setIsH] = useState(1);
   const chgIsH = v => setIsH(v);
   
+
+
   // console.log('isH는?????',isH);
 
   // const isSite = React.useMemo(()=>{
@@ -50,16 +52,43 @@ export function Layout() {
 
 
 
+
+
+
+
+
     React.useEffect(()=>{
      
         
 
-    /************************************************************
-     *  기능 : 
-     * 1. 토글 버튼 누르면 버튼 모양 변경 및 섹션 색상 변경
-     * 2. 토글 글자 읽고 주소 변경
-     ***********************************************************/
- 
+
+
+
+// 페이지 요소
+const mp = document.querySelectorAll(".mp");
+
+let mpPT = [];
+let mpPB = [];
+
+mp.forEach((ele,idx) => {
+mpPT[ele,idx] = ele.getBoundingClientRect().top;
+mpPB[ele,idx] = ele.getBoundingClientRect().bottom;
+
+console.log("mp요소와 순번", ele,idx);
+});
+
+
+
+console.log("mp겟바운딩 TOP ", mpPT);
+console.log("mp겟바운딩 BOTTOM ", mpPB);
+
+
+
+
+
+
+
+
 
 
 /***************************************************************
@@ -78,6 +107,10 @@ const facilityP = $("#facility").offset().top;
 const timeTableP = $("#time_table").offset().top;
 const noticeP = $("#notice").offset().top;
 const contactP = $("#contact").offset().top;
+
+
+
+
 
 //console.log(introP,'/', aboutP,'/', facilityP,'/', timeTableP,'/', noticeP,'/', contactP);
 
@@ -126,11 +159,34 @@ const slideBox4 = $('.box4');
 
 /*------------------------- 스크롤 액션 ------------------------- */
 // 윈도우 높이값
-let winH = window.innerHeight;
+let winH = window.innerHeight; 
+const winH2 = winH /2; 
+
 // 문서 전체 높이값
 let docH =  document.body.clientHeight;
 // 스크롤 한계값 : 전체 document 높이 - 윈도우 높이값
 let scLimit = docH - winH;
+
+
+const bigTxt = $('.bigtext__logo')
+const bigTxtS = $('.bigtext__logo span')
+const bigTxtP = bigTxt.position().top;
+
+
+
+const showOn = (scTop) => {
+  
+  if(bigTxtP > scTop - winH && bigTxtP < scTop + winH  )
+  bigTxt.addClass("on")
+  
+  else bigTxt.removeClass("on")
+  
+  // console.log('텍스트포지션',bigTxtP,
+  // '스크롤위치보다 크거나', scTop - winH,' / 스크롤위치보다 작을때',scTop + winH,
+  // '스크롤위치',scTop)
+ 
+
+}
 
 
 
@@ -142,11 +198,17 @@ let scLimit = docH - winH;
   let i = -30;
 
 
+
+  
 $(window).scroll(() => {
   let scTop = $(window).scrollTop();
+
+  
   let scTop2 = winH*scTop/scLimit;
 
- 
+ showOn(scTop)
+
+
 
   const height = $(document).height() - $(window).height();
   const percentY = Math.floor(scTop / height * 100);
@@ -184,7 +246,11 @@ $(window).scroll(() => {
        slideBox4.css({
          left :i +'%'
        })
-   
+    
+ 
+  /*********************************************  
+   * 슬라이드 파트 스크롤 시 좌 우 이동
+  *********************************************/
 
 
 });
@@ -192,9 +258,8 @@ $(window).scroll(() => {
 
 
 
-
-
 });
+
 
 
     return (

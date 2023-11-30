@@ -163,8 +163,52 @@ const makeRowNum = () =>{
                       <td className="day">{v.요일}</td>
                       <td className="time">{v.시간}</td>
 
-                      {/*   <td className="day">{v.요일.split('^').map(v=>`${v}\n`)}</td>
-                      <td className="time">{v.시간.split('^').map(v=>`${v}\n`)}</td> */}
+                      {/*   
+                      
+
+       
+                    (  !Array.isArray(v.요일) &&
+                       <>
+                      <td className="day">{v.요일}</td>
+                      <td className="time">{v.시간}</td>
+                       </>) ||
+                    (  Array.isArray(v.요일) &&
+                       <>
+                     <tr>
+                      <td className="day">{v.요일[0]}</td>
+                      <td className="time">{v.시간[0]}</td>
+                      </tr>
+                      <tr>
+                      <td className="day">{v.요일[1]}</td>
+                      <td className="time">{v.시간[1]}</td>
+                      </tr>
+                       
+                       </>
+                       
+                       )
+
+
+
+                      
+                      
+                      
+                      
+                      <td className="day">{v.요일.split('^').map(v=>`${v}\n`)}</td>
+                      <td className="time">{v.시간.split('^').map(v=>`${v}\n`)}</td> 
+                      
+                      
+                      
+  const makeTable = () => {
+    $(".time_table_content");
+  };
+
+  const makeRowNum = () => {
+    console.log("makeRowNum", $(".class-box").find(".day").length);
+  };
+  makeRowNum();
+                      
+                      
+                      */}
                       
                     </tr>
                   ))

@@ -47,6 +47,36 @@ export function MainCont({sts}) {
     // console.log(hcode)
 
 
+    /*********************************************
+     * 메인 첫 인트로 텍스트 부드럽게 등장
+     *********************************************/
+
+    // 출력대상
+    const btl = document.querySelector(".bigtext__logo");
+    // 글자요소 span들
+    const btlTxt = 'kairos';
+
+    let xcode = "";
+    // 순번증가변수
+    let seqNum2 = 0;
+
+    // span들 추출
+    for (let x of btlTxt) {
+        xcode += `<span style=" transition-delay: ${seqNum2 * 0.2}s;">${x}</span>`;
+        seqNum2++;
+        // console.log(x)
+    }
+
+
+    btl.innerHTML = xcode;
+
+    setTimeout(() => {
+        btl.classList.add("on");
+    }, 500);
+
+    // console.log(hcode)
+
+
 
 
 
@@ -164,7 +194,7 @@ function rotFn2(ele) {
 
 
 
-  });
+  },[]);
 
 
 
@@ -457,12 +487,17 @@ function rotFn2(ele) {
             {/* (모듈) - 시간표 (공모) */}
             <TimeTable sts={sts} />
             {/*   <!-- 큰 로고 --> */}
-            <div className="image__logo">
+            {/* <div className="image__logo">
                 <img
                     className="img"
                     src="./images/logo_kairos_w2300.png"
                     alt=""
                 />
+            </div> */}
+
+
+            <div className="bigtext__logo">
+                <span>KAIROS</span>
             </div>
 
             {/* (모듈) - 공지사항 (공모) */}

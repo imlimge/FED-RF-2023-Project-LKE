@@ -70,6 +70,49 @@
 
 /*--------------  폰트   --------------*/
 
+
+/* CopperplateBold */
+@font-face {
+  font-family:'CopperplateBold';
+  src: url(../static/fonts/CopperplateBold.woff) format("woff");
+}
+
+/* CopperplateBold */
+@font-face {
+  font-family:'OPTICopperplate';
+  src: url(../static/fonts/OPTICopperplate.woff) format("woff");
+}
+
+/* CopperplateBold */
+@font-face {
+  font-family:'OPTICopperplate-Light';
+  src: url(../static/fonts/OPTICopperplate-Light.woff) format("woff");
+}
+
+
+/*LibreBaskerville-Regular */
+@font-face {
+  font-family:'OPTICopperplate-Heavy';
+  src: url(../static/fonts/OPTICopperplate-Heavy.woff) format("woff2");
+}
+
+
+/*LibreBaskerville-Bold */
+@font-face {
+  font-family:'LibreBaskerville-Bold';
+  src: url(../static/fonts/LibreBaskerville-Bold.woff2) format("woff2");
+}
+/*LibreBaskerville-Italic */
+@font-face {
+  font-family:'LibreBaskerville-Italic';
+  src: url(../static/fonts/LibreBaskerville-Italic.woff2) format("woff2");
+}
+
+
+
+
+
+
 /* 제목 - 코트라 도약*/
 @font-face {
   font-family: 'KOTRALEAP';

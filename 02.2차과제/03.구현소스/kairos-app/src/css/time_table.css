@@ -77,7 +77,7 @@ label{
 
 
 .time_table_content .class-name{
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px 20px 0 0;
   width: 30%;
   background-color: var(--color1);
   color: var(--bright-color);
@@ -111,7 +111,7 @@ label{
   color: var(--bright-color);
   border: 1px dotted var(--dark-color);
   position: relative;
-  width: 16%;
+  width: 33%;
 
   border-left: none;
   border-right: none;
@@ -145,7 +145,7 @@ label{
 
 .time_table_content .time{
   background-color: var(--bright-color);
-  border: 1px dashed var(--dark-color);
+  border: 1px dashed var(--color4);
   border-left: none;
   width: 30%;
   color: var(--dark-color);

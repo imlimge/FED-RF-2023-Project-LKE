@@ -85,6 +85,11 @@ section{
  
 }
 
+.bigtext__logo.dark{
+  background-color: var(--dark-color);
+  color: var(--bright-color);
+  
+}
 
 .tit2{
   color: var(--point-color);
@@ -103,6 +108,8 @@ section{
   filter: invert(1);
   mix-blend-mode: plus-lighter;
 }
+
+
 
 .contact.dark p{
   color: var(--bright-color);
@@ -130,6 +137,7 @@ section{
 .contact__box_title.dark{
   border: 1px solid var(--bright-color) !important;
   color: var(--bright-color);
+  font-weight: 300;
 
 }
 
@@ -154,17 +162,27 @@ section{
   color: var(--dark-color);
   border-color: var(--dark-color) ; 
 }
+
+
+
+
+
 .notice.tit{
   background-color: var(--bright-color);
   color: var(--dark-color);
+  
 }
+
 .notice.bright{
   background-color: var(--bright-color);
   color: var(--dark-color);
   border-color: var(--dark-color) ; 
 }
+
+
 .accordion h3.bright{
   border-top: 1px solid var(--color4);
+
 }
 
 
@@ -172,7 +190,7 @@ section{
   background-color: var(--bright-color);
   border-color: var(--dark-color);
   color: var(--dark-color);
-
+font-weight: bold;
 }
 
 
@@ -1076,6 +1094,7 @@ color: var(--bright-color);
 .about__history span{
 display: block;
 padding: 1vh 5% 1vh 0;
+font-weight: 300;
 }
 
 .about__history .line{
@@ -1137,7 +1156,15 @@ padding: 1vh 0 1vh 15%;
   text-align: center;
   padding: 2.9vh 2vw;
   flex: 1;
+  transition: .5s;
 }
+
+.about__class__box:hover {
+  transform: scale(1.05);
+  background-color: #f4f4f4;
+
+}
+
 
 
 .about__class__box h2{
@@ -1198,6 +1225,39 @@ padding: 1vh 0 1vh 15%;
 
 
 /* _____________________  큰로고  _________________________ */
+.bigtext__logo{
+  position: relative;
+  background-color: var(--bright-color);
+  width: 100%;
+  overflow: hidden;
+}
+
+.bigtext__logo span{
+  font-size: 25vw;
+  font-family:'CopperplateBold';
+
+    /* 글자등장 스타일 */
+    /* 트랜지션: 속시이지 */
+    transition: 0.3s ease-in;
+    /* 현재위치로 부터 이동 */
+    transform: translateY(10%);
+    /* 투명도 0 */
+    opacity: 0;
+}
+
+
+
+
+/* 등장클래스 .on */
+.bigtext__logo.on span{
+  /* 현재위치로 부터 이동 */
+  transform: translateY(0);
+  /* 투명도 0 */
+  opacity: 1;
+}
+
+
+
 
 
 
