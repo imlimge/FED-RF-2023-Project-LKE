@@ -1,0 +1,46 @@
+/* 슬라이드 텍스트 slide_text.css */
+
+
+
+.slide__text_black {
+  height: 25px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+
+}
+
+
+
+.slide__text_black div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+  background-color: var(--point-color);
+
+  animation: marquee-ani 15s linear infinite reverse;
+}
+
+.slide__text_black img{
+  transform: scale(0.3);
+  transform-origin: top;
+  filter: invert(1);
+  display: inline-block;
+}
+
+.slide__text_black span {
+  font-family:'CopperplateBold';
+  float: left;
+  width: 25%;
+  color: var(--bright-color);
+
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+  top: 20%;
+  position: relative;
+}
+

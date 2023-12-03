@@ -27,7 +27,7 @@ export function TimeTable({ sts }) {
 
   
   let isH = sts;
-  console.log("isH는?????", isH);
+  // console.log("isH는?????", isH);
 
 
   isH ? (site = selData["혁신관"]) : (site = selData["단계관"]);

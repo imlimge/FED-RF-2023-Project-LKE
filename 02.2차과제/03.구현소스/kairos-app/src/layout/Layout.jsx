@@ -35,80 +35,29 @@ export function Layout() {
 
   //   console.log('Layout>useMemo',isSite)
 
+  
 
 
 
 
-  let seq = useRef(0);
+
+
+
+
+    
+
+
+
+
+
+
 
 
 
   React.useEffect(() => {
 
-     let psts = 0;  
-   
-     
-    // 페이지 요소
-    const mp = document.querySelectorAll(".mp");
-
-    let mpPT = [];
-    let mpPB = [];
-
-    mp.forEach((ele,idx) => {
-    mpPT[ele,idx] = ele.getBoundingClientRect().top;
-    mpPB[ele,idx] = ele.getBoundingClientRect().bottom;
-
-    
-  });
-  
-  // console.log("mp요소와 순번", ele,idx);
-
-
-    // console.log("mp겟바운딩 TOP ", mpPT);
-    // console.log("mp겟바운딩 BOTTOM ", mpPB);
-
-
-
-    // $('html,body').css({overflow:'hidden'});
-
-
-    function wheelFn(e) {
-      let scTop = $(window).scrollTop();
-
-
-
-    e.preventDefault();
-      if (psts) return;
-      psts = 1;
-      setTimeout(() => (psts = 0), 800);
-
-      $("html,body")
-        .stop()
-        .animate({ scrollTop: mpPT[seq.current] + "px" }, 400);
-
-      if (e.wheelDelta < 0) seq.current++;
-      else seq.current--;
-
-      seq.current < 0
-        ? (seq.current = 0)
-        : seq.current > mp.length - 1
-        ? (seq.current = mp.length - 1)
-        : (seq.current = seq.current);
 
   
-        console.log(seq.current, mpPT[seq.current]);
-    } /////////// wheelFn ////////////
-
-    
-    window.addEventListener("wheel", wheelFn, { passive: false });
-
-
-})
-
-
-
-
-React.useEffect(() => {
 
     /***************************************************************
      *
@@ -180,7 +129,8 @@ React.useEffect(() => {
     const bigTxtS = $(".bigtext__logo span");
     const bigTxtP = bigTxt.position().top;
 
-    const showOn = (scTop) => {
+ 
+      const showOn = (scTop) => {
       if (bigTxtP > scTop - winH && bigTxtP < scTop + winH)
         bigTxt.addClass("on");
       else bigTxt.removeClass("on");
@@ -188,38 +138,69 @@ React.useEffect(() => {
       // console.log('텍스트포지션',bigTxtP,
       // '스크롤위치보다 크거나', scTop - winH,' / 스크롤위치보다 작을때',scTop + winH,
       // '스크롤위치',scTop)
+
     };
 
+
+
+  const line = document.querySelectorAll('.line');
+  const winW = window.innerHeight / 4*3;
+
+ 
+
+
+
+  window.addEventListener("scroll",()=>{
+
+    line.forEach((ele)=>{
+      if(ele.getBoundingClientRect().top < winW)ele.classList.add("on");
+      else ele.classList.remove("on");
+
+      console.log()
+
+
+     })
+
+})
+
+    
     /*********************************************
      * 슬라이드 파트 스크롤 시 좌 우 이동
      *********************************************/
     // 슬라이드 % 시작값 설정
     let i = -30;
 
-    $(window).scroll(() => {
-      let scTop = $(window).scrollTop();
 
+
+    $(window).scroll(() => {
+
+
+      let scTop = $(window).scrollTop();
       let scTop2 = (winH * scTop) / scLimit;
 
       showOn(scTop);
 
+
       const height = $(document).height() - $(window).height();
       const percentY = Math.floor((scTop / height) * 100);
 
-      i += 1;
-      if (i > 0) i = -30;
+//   console.log(scTop,percentY,i)
 
-      //   console.log(scTop,percentY,i)
 
+  
       /*********************************************
        * 파트마다 네비게이션 파트에 on
        *********************************************/
       for (let x = 0; x < 6; x++) addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
 
+
       /*********************************************
        * 슬라이드 파트 스크롤 시 좌 우 이동
        *********************************************/
+      i += 1;
+      if (i > 0) i = -30;
 
+      
       //왼쪽
       slideBox1.css({
         left: i + "%",
@@ -236,9 +217,11 @@ React.useEffect(() => {
         left: i + "%",
       });
 
-      /*********************************************
-       * 슬라이드 파트 스크롤 시 좌 우 이동
-       *********************************************/
+
+
+
+
+
     });
   });
 

@@ -5,10 +5,16 @@
 #facility{
   padding-left: 0%;
   padding-right: 0%;
+  
+
+
 }
 
 .facility{
   height: 100%;
+
+  background: url(../../public/images/back_letter.png) no-repeat fixed center;
+  background-size : 60%;
 }
 
 .photo{
@@ -24,7 +30,7 @@
 
 
 .photo__item{
-  height: 44vh;
+  height: 46vh;
   background-color: var(--dark-color);
   position: relative;
   border-radius: 20px;

@@ -1,5 +1,7 @@
 //Kairos - FooterArea 컴포넌트
 
+import { SlideTextBlack } from "../modules/SlideTextBlack";
+
 
 
 export function FooterArea({sts}) {
@@ -47,14 +49,18 @@ export function FooterArea({sts}) {
           </div>
         </div>
   
+       
+            {/* 슬라이드 꾸밈요소 모듈 */}
+            <SlideTextBlack/>
+
         {/*자동 움직이는 글자 */}
-      <div className="marquee">
+      {/* <div className="marquee">
         <div>
           <span>Students are proud of KAIROS</span>
           <span>Students are proud of KAIROS</span>
       
         </div>
-      </div>
+      </div> */}
 
       </footer>
     </>

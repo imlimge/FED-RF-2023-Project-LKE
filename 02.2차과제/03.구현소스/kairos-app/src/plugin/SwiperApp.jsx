@@ -76,7 +76,7 @@ export function SwiperApp({sts}) {
                 spaceBetween={30}
                 centeredSlides={true}
                 grabCursor={true}
-                
+         
                 // loop={true}
                 // autoplay={{
                 //   delay: 2000,

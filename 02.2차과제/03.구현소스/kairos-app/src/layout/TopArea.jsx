@@ -20,12 +20,15 @@ export function TopArea({ chgThis }) {
 
   const transBtn = (e) => {
     let tg = $(e.currentTarget).find(".m_btn");
+    tg.css({color:'var(--color3)'});
+
     let txt = tg.text();
+    
 
     if (txt === "혁신관") {
       tg.css({
         left: "73px",
-        color: "var(--dark-color)",
+        color: "var(--color3)",
         backgroundColor: "var(--point-color)",
         border: "1px solid var(--bright-color)",
       }).text("단계관");
@@ -35,7 +38,7 @@ export function TopArea({ chgThis }) {
     } else {
       tg.css({
           left: "0px",
-          color: "var(--dark-color)",
+          color: "var(--color3)",
           backgroundColor: "var(--point-color)",
           border: "1px solid var(--dark-color)",
         })
@@ -49,7 +52,7 @@ export function TopArea({ chgThis }) {
 
     // 클래스 dark 시 검은색으로 변해야 하는 파트
     const dark = $(
-     ".logo,.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.bigtext__logo,.footer,.contact__time,.marquee"
+     "#about__class,.logo,.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.bigtext__logo,.footer,.contact__time,.marquee"
    );
    // 클래스 dark 시  밝은 색으로 변해야 하는 파트
    const bright = $(
@@ -96,7 +99,7 @@ export function TopArea({ chgThis }) {
               <span>단계관</span>
             </div>
             {/* 움직이는 토글 버튼 */}
-            <div className="btn m_btn">
+            <div className="btn m_btn btncolor">
               <span>혁신관</span>
             </div>
           </div>

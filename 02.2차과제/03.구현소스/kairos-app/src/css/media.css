@@ -172,7 +172,7 @@
     .about__class {
         margin-left: 6%;
         margin-right: 6%;
-        margin-top: 10%;
+        padding-top: 10%;
     }
 
     #time_table {

@@ -6,6 +6,7 @@ table {
   border: 1px solid #444444;
   
   border-collapse: collapse;
+
 }
 
 
@@ -14,7 +15,17 @@ table {
 }
 
 #time_table{
+ 
 }
+
+.time_table{
+
+ 
+  background: url(../../public/images/back_letter.png) no-repeat fixed center;
+  background-size : 60%;
+  background-color: #f1f1f1;
+}
+
 
 .time_table_content{
   width: 100%;

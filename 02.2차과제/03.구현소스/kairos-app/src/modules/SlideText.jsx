@@ -46,6 +46,12 @@ export function SlideText() {
             <div className="slide__text">
               <span>Students are proud of KAIROS</span>
             </div>
+            <div className="slide__logo">
+              <img src="./images/logo_a_w100.png" alt="슬라이드 로고 이미지" />
+            </div>
+            <div className="slide__text">
+              <span>Students are proud of KAIROS</span>
+            </div>
           </div>
         </div>
       </div>

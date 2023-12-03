@@ -48,7 +48,6 @@ export function Notice({ sts }) {
    site.map((v, i) => {
             temp[i] = (
               <Fragment key={i}>
-              {/* 키값을 어떻게 넣나 */}
               <h3 className="notice__title">{v.nTit}</h3>
               <div className="notice_content">
                 <p>

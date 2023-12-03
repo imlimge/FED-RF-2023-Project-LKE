@@ -7,7 +7,7 @@
 
 .notice{
   background-color: var(--dark-color);
-  
+  /* border-radius: 20px; */
 }
 
 .notice .tit{

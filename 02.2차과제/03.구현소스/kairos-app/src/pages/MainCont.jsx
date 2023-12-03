@@ -8,6 +8,7 @@ import { Contact } from "../modules/Contact";
 import { TimeTable } from "../modules/TimeTable";
 import { Notice } from "../modules/Notice";
 import { SlideText } from "../modules/SlideText";
+import { SlideTextBlack } from "../modules/SlideTextBlack";
 
 
 
@@ -208,6 +209,7 @@ function rotFn2(ele) {
         <>
             {/* <!-- 학원소개 --> */}
             <section id="intro" className="intro">
+    
                 <div className="intro_op show-txt">
                     <span>Students</span>
                     <span>are</span>
@@ -246,7 +248,7 @@ function rotFn2(ele) {
                                 많은 고등학교의 학생들에게 수업을 진행했습니다.
                             </article>
                         </div>
-                        <div className="intro__item intro4 m-intro">
+                        <div className="intro__item intro4 m-intro ">
                             <div className="about">
                                 <h3>
                                     실력에서
@@ -500,11 +502,15 @@ function rotFn2(ele) {
                 <span>KAIROS</span>
             </div>
 
+           
+
             {/* (모듈) - 공지사항 (공모) */}
             <Notice sts={sts} />
 
+            
             {/* (모듈) - 컨택트 (공모) */}
             <Contact sts={sts} />
+       
         </>
     );
 }

@@ -107,6 +107,7 @@
 
 .trans_btn span{
   font-family: 'KOTRALEAP';
+  
 }
 
 
@@ -134,7 +135,15 @@
   background-color: var(--point-color);
   border: 1px solid var(--dark-color);
   transition: left .4s ease-in-out;
+  color: var(--color3);
+
 }
+
+
+.btncolor span{
+  color: white;
+}
+
 
 
 /* 혁신관 뒤글자 */
