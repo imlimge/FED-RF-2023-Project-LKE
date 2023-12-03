@@ -989,7 +989,7 @@ text-align: center;
 
   margin-left: var(--margin-left);
   margin-right: var(--margin-right);
-  padding: 5vh 0;
+  padding: 5vh 9vw;
   
   display: flex;
   gap: 1vw;

@@ -26,6 +26,9 @@ export function ShowCont() {
         cBtn.click(() => {
             showCont.hide();
         });
+        showCont.click(() => {
+            showCont.hide();
+        });
 
 
     });

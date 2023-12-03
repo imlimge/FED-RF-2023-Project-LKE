@@ -10,6 +10,10 @@
     .time_table__text {
         display: none;
     }
+
+    .show_cont{
+        padding: 20vw 10vw;
+       }
 }
 
 @media screen and (max-width: 750px) {
@@ -55,6 +59,8 @@
     .marquee span {
         width: 30%;
     }
+
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -84,6 +90,10 @@
       text-align: center;
    } */
 
+
+   .show_cont{
+    padding: 40vw 10vw;
+   }
     .gnb__box {
         display: none;
     }

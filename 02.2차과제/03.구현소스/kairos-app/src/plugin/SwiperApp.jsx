@@ -1,9 +1,9 @@
 // 스와이퍼 플러그인 컴포넌트
 
+import React, { useEffect } from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 
 // Import Swiper styles
 import "swiper/css";
@@ -39,7 +39,23 @@ export function SwiperApp({sts}) {
 
     isH ? site = selData['혁신관'] : site = selData['단계관'];
     
-    
+
+
+
+
+    useEffect(() => {
+
+      const photoItem = $(".photo__item");
+      const showCont = $(".show_cont");
+
+   
+      photoItem.click(() => {
+              showCont.show();
+          });
+  
+  
+
+    })
 
   const photoFn = (e)=>{
 
