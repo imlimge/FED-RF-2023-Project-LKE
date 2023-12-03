@@ -13,10 +13,20 @@ import "swiper/css/pagination";
 import "./css/swiper.css";
 
 
+
 // 사용할 스와이퍼 모듈을 불러온다
 import { Autoplay, Pagination } from "swiper/modules";
 
 import { photoData } from "../data/photo";
+import { ShowCont } from "./ShowCont";
+
+
+import $ from "jquery";
+window.jQuery = $;
+require("jquery-ui-dist/jquery-ui");
+require("jquery-ui-touch-punch/jquery.ui.touch-punch");
+
+
 
 export function SwiperApp({sts}) {
 
@@ -31,10 +41,11 @@ export function SwiperApp({sts}) {
     
     
 
-  const photoFn = (ele)=>{
+  const photoFn = (e)=>{
 
-    let aa = ele.currentTarget;
-  
+ 
+    let tg = $(e.currentTarget);
+    console.log(tg)
 
 
   }
@@ -51,7 +62,7 @@ export function SwiperApp({sts}) {
         site.map((v,i)=>{
         temp[i]=
         <SwiperSlide key={i}>
-          <div className="photo__item swiper-slide" onClick={photoFn} >
+          <div className="photo__item swiper-slide" onClick={photoFn(v.isrc,v.tit)} >
   
             <img src={v.isrc} alt="학원사진"/>
             <div className="photo__title">
@@ -111,8 +122,10 @@ export function SwiperApp({sts}) {
                             {makeList()}
                         </div>
                     </div>
+                    
                 }
             </Swiper>
+     
         </>
     );
 } /////////// SwiperApp 컴포넌트 ///////////

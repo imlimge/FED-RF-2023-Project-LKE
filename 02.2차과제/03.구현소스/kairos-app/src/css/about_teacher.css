@@ -1,0 +1,176 @@
+
+/* _____________________  강사소개  _________________________ */
+
+
+
+
+.about{
+  position: sticky;
+  top: 29vh;
+}
+
+
+.about__teacher{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* padding-left: var(--margin-left);
+  padding-right: var(--margin-right); */
+  box-sizing: border-box;
+  
+}
+
+
+.about__teacher.part1{
+  background-color: var(--bright-color);
+}
+
+
+
+.about__teacher.part2.on{
+
+  background-color: var(--dark-color);
+  color: var(--bright-color);
+}
+
+.about__box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+
+}
+
+
+.about__round{
+  position: relative;
+flex: 1;
+
+}
+
+.round__content{
+  top: 37%;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+}
+.about__round h4{
+  color: var(--dark-color); 
+  font-size: min(3.5vw,2rem);
+  text-align: center;
+}
+
+.about__round span{
+  text-align: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.round{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+
+  border-radius: 50%;
+  border: 1px solid var(--dark-color);
+}
+
+
+
+
+/* _____________________  강사소개 2 _________________________ */
+
+
+
+.round.part2{
+  border: 1px dashed var(--bright-color);
+}
+
+.small-round.round2{
+  border: 1px solid var(--dark-color);
+}
+
+.about__content{
+  flex: 1;
+}
+
+.about__round.part2 h4{
+  color: var(--bright-color);
+}
+
+.about__title h3,h4{
+  
+  font-size: min(3.8vw,4rem);
+}
+
+
+.about__title.part2 h3,h4{
+color: var(--bright-color);
+
+}
+
+.about__title.part2 h3{
+  text-align: right;
+}
+
+.about__title h4{
+  font-size: min(4.5vw,2rem);
+  color: var(--point-color);
+}
+.about__title.part2 h4{
+  text-align: right;
+}
+
+.about__history{
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+
+.about__history span{
+display: block;
+padding: 1vh 5% 1vh 0;
+font-weight: 300;
+}
+
+
+.line{
+  transition: 1s;
+  transform: scaleX(0%);
+}
+.line.on{
+
+  transform: scaleX(100%);
+}
+
+.about__history .line{
+  margin-top: -8.1px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid var(--dark-color);
+
+  transform-origin: right;
+
+}
+
+
+
+
+.about__history.part2 span{
+text-align: right;
+padding: 1vh 0 1vh 15%;
+}
+
+.about__history.part2 .line{
+  margin-top: -8.1px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid var(--bright-color);
+
+  transform-origin: left;
+}
+
+

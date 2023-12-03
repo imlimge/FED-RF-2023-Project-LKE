@@ -27,7 +27,7 @@
     }
 
     #about__class {
-        /* height: 260vh; */
+        height: auto;
     }
 
     .about__class {
@@ -37,6 +37,12 @@
     .about__class__box {
         margin: 0;
     }
+
+    .about__class__box_2{
+       opacity: 1;
+       position: relative;
+    }
+
 
     .about__title h3 {
         font-size: min(5.9vw, 2.8rem);

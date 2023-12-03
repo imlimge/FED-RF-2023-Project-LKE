@@ -551,3 +551,66 @@ $(elm).each(function (index) {
   });
 });
 
+
+-----
+
+
+React.useEffect(() => {
+  let seq = 0;
+   let psts = 0;  
+ 
+
+  // 페이지 요소
+const mp = document.querySelectorAll(".mp");
+
+  let mpPT = [];
+
+  mp.forEach((ele,idx) => {
+  mpPT[ele,idx] = ele.getBoundingClientRect().top;
+
+  
+});
+
+// console.log("mp요소와 순번", ele,idx);
+
+
+  // console.log("mp겟바운딩 TOP ", mpPT);
+  // console.log("mp겟바운딩 BOTTOM ", mpPB);
+
+
+
+  // $('html,body').css({overflow:'hidden'});
+
+
+  function wheelFn(e) {
+    let scTop = $(window).scrollTop();
+
+
+
+  e.preventDefault();
+    if (psts) return;
+    psts = 1;
+    setTimeout(() => (psts = 0), 800);
+
+    $("html,body")
+      .stop()
+      .animate({ scrollTop: mpPT[seq] + "px" }, 400);
+
+    if (e.wheelDelta < 0) seq++;
+    else seq--;
+
+    seq < 0
+      ? (seq = 0)
+      : seq > mp.length - 1
+      ? (seq = mp.length - 1)
+      : (seq = seq);
+
+
+      console.log(seq, mpPT[seq]);
+  } /////////// wheelFn ////////////
+
+  
+  window.addEventListener("wheel", wheelFn, { passive: false });
+
+
+}) 

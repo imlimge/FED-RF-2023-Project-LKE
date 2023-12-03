@@ -90,7 +90,7 @@ label{
 .time_table_content .class-name{
   border-radius: 20px 20px 0 0;
   width: 30%;
-  background-color: var(--color1);
+  background-color: var(--point-color);
   color: var(--bright-color);
 
   font-family: 'GowunBatang-Regular';

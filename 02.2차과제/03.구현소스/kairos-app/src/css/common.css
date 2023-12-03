@@ -682,6 +682,8 @@ font-weight: bold;
   font-family:var(--bold-font);
   box-sizing: border-box;
     font-family: 'KOTRALEAP';
+
+
 }
 
 
@@ -695,6 +697,7 @@ font-weight: bold;
   background-color: var(--point-color);
   border: 1px solid var(--dark-color);
   transition: left .4s ease-in-out;
+  color: var(--color3);
 }
 
 
@@ -970,187 +973,11 @@ text-align: center;
 
 
 
-/* _____________________  강사소개  _________________________ */
-
-
-
-
-.about{
-  position: sticky;
-  top: 29vh;
-}
-
-
-.about__teacher{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  /* padding-left: var(--margin-left);
-  padding-right: var(--margin-right); */
-  box-sizing: border-box;
-  
-}
-
-
-.about__teacher.part1{
-  background-color: var(--bright-color);
-}
-
-
-
-.about__teacher.part2.on{
-
-  background-color: var(--dark-color);
-  color: var(--bright-color);
-}
-
-.about__box{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-
-}
-
-
-.about__round{
-  position: relative;
-flex: 1;
-
-}
-
-.round__content{
-  top: 37%;
-  position: absolute;
-  left: 0;
-  right: 0;
-
-}
-.about__round h4{
-  color: var(--dark-color); 
-  font-size: min(3.5vw,2rem);
-  text-align: center;
-}
-
-.about__round span{
-  text-align: center;
-  left: 0;
-  right: 0;
-  position: absolute;
-}
-
-.round{
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-
-  border-radius: 50%;
-  border: 1px solid var(--dark-color);
-}
-
-
-
-
-/* _____________________  강사소개 2 _________________________ */
-
-
-
-.round.part2{
-  border: 1px dashed var(--bright-color);
-}
-
-.small-round.round2{
-  border: 1px solid var(--dark-color);
-}
-
-.about__content{
-  flex: 1;
-}
-
-.about__round.part2 h4{
-  color: var(--bright-color);
-}
-
-.about__title h3,h4{
-  
-  font-size: min(3.8vw,4rem);
-}
-
-
-.about__title.part2 h3,h4{
-color: var(--bright-color);
-
-}
-
-.about__title.part2 h3{
-  text-align: right;
-}
-
-.about__title h4{
-  font-size: min(4.5vw,2rem);
-  color: var(--point-color);
-}
-.about__title.part2 h4{
-  text-align: right;
-}
-
-.about__history{
-  line-height: 1.5;
-  font-size: 1.6rem;
-}
-
-
-.about__history span{
-display: block;
-padding: 1vh 5% 1vh 0;
-font-weight: 300;
-}
-
-
-.line{
-  transition: 1s;
-  transform: scaleX(0%);
-}
-.line.on{
-
-  transform: scaleX(100%);
-}
-
-.about__history .line{
-  margin-top: -8.1px;
-  width: 100%;
-  height: 1px;
-  border-bottom: 1px solid var(--dark-color);
-
-  transform-origin: right;
-
-}
-
-
-
-
-.about__history.part2 span{
-text-align: right;
-padding: 1vh 0 1vh 15%;
-}
-
-.about__history.part2 .line{
-  margin-top: -8.1px;
-  width: 100%;
-  height: 1px;
-  border-bottom: 1px solid var(--bright-color);
-
-  transform-origin: left;
-}
-
-
-
 
 /* _____________________  반소개  _________________________ */
 
 #about__class{
-  height: auto;
+  /* height: auto; */
   background: url(../../public/images/back_letter.png) no-repeat fixed center;
   background-size : 60%;
   background-color: #f1f1f1;
@@ -1159,13 +986,14 @@ padding: 1vh 0 1vh 15%;
 .about__class {
   position: relative;
   height: auto;
-  display: flex;
 
   margin-left: var(--margin-left);
   margin-right: var(--margin-right);
   padding: 5vh 0;
-  gap: 2vw;
-  align-items: flex-start
+  
+  display: flex;
+  gap: 1vw;
+
 }
 
 
@@ -1184,10 +1012,46 @@ padding: 1vh 0 1vh 15%;
   transition: .5s;
 }
 
-.about__class__box:hover {
-  transform: scale(1.05);
-  background-color: #f4f4f4;
+.about__class__box_2{
+  /* display: none; */
+position: absolute;
+/* height: 0; */
+opacity: 0;
 
+box-sizing: border-box;
+border: 1px solid var(--color4);
+background-color: var(--dark-color);
+color: var(--bright-color);
+border-radius: 20px;
+margin: 3vh 0;
+text-align: center;
+padding: 2.9vh 2vw;
+top: 0;
+left: 0;
+
+/* transition: .5s; */
+
+}
+
+.about__class__box_2 h3{
+  color: var(--bright-color);
+}
+.about__class__box_2 h4{
+  color: var(--bright-color);
+}
+.about__class__box_2 p{
+  color: var(--bright-color);
+}
+
+
+ .about__class__box:hover {
+  /* transform: scale(1.02); */
+ 
+}
+
+.about__class__box:hover .about__class__box_2{
+  height: auto;
+  opacity: 1;
 }
 
 
@@ -1220,7 +1084,8 @@ padding: 1vh 0 1vh 15%;
   font-size: 1.7rem;
 }
 .about__class__box p{
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
 }
 
 
@@ -1231,15 +1096,17 @@ padding: 1vh 0 1vh 15%;
   justify-content: center;
   
 }
-
+.class__name {
+  margin: 0 1vw;
+}
 .class__name h4{
- 
+  font-size: 1.5rem;
   display: inline-block;
   border: 1px solid var(--dark-color);
   border-radius: 20px;
   padding: 1% 5%;
   background-color: var(--point-color);
-  color: var(--dark-color);
+  color: var(--color3);
 }
 
 .class__name p{
@@ -1260,19 +1127,17 @@ padding: 1vh 0 1vh 15%;
   background: url(../../public/images/back_letter.png) no-repeat fixed center;
   background-size : 60%;;
   background-color: #f1f1f1;
+  text-align: center;
 }
 
 .bigtext__logo span{
-  font-size: 25vw;
-  font-family:'CopperplateBold';
-
-    /* 글자등장 스타일 */
-    /* 트랜지션: 속시이지 */
-    transition: 0.3s ease-in;
-    /* 현재위치로 부터 이동 */
-    transform: translateY(10%);
-    /* 투명도 0 */
-    opacity: 0;
+  font-size: 14vw;
+  font-family: 'CopperplateBold';
+  transition: 0.3s ease-in;
+  transform: translateY(10%);
+  opacity: 0;
+  letter-spacing: 5vw;
+  padding-left: 3vw;
 }
 
 
