@@ -22,7 +22,7 @@
 
 html{
   scroll-behavior: smooth;
-
+  cursor: none;
 }
 
 h3,h4,p{
