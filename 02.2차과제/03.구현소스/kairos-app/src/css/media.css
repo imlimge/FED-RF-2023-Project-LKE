@@ -268,4 +268,10 @@
     .footer__logo img {
         width: 60vw;
     }
+
+    .slide__text span {
+        font-size: 1.4rem;
+        top: 26.3%;
+
+    }
 } /*************** 500px 이하 ***************/
