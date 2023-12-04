@@ -16,34 +16,10 @@ require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
 export function Layout() {
-  // 학원 후크변수
-  // const [site, setSite] = React.useState('0');
-
+ 
   // 혁신관 후크변수
   const [isH, setIsH] = useState(1);
   const chgIsH = (v) => setIsH(v);
-
-  // console.log('isH는?????',isH);
-
-  // const isSite = React.useMemo(()=>{
-
-  //   return{
-  //     지점: isH ? '혁신관' : '단계관'
-  //    }
-
-  //   },[isH]);
-
-  //   console.log('Layout>useMemo',isSite)
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -57,18 +33,11 @@ export function Layout() {
     // (2)이벤트 대상: document.body
     const myBody = document.body;
       
-    // 무버 크기의 절반계산
-    // let gap = mover.clientWidth/2;
-    // 선택요소의 크기  JS
-    // width는 clientWidth, height는 clientHeight
-    console.log('무버width');
 
     myBody.onmousemove = e => {  
       let posx = e.pageX;
       let posy = e.clientY;
-      // let posy = e.clientY - gap;  
-      // move포지션이 fixed일때 clientY로 사용 X는 상관없음
-  
+
       // 2. 무버에 위치값 적용하기
       mover.style.top = posy + 'px';
       mover.style.left = posx + 'px';

@@ -20,17 +20,7 @@ export function ShowCont() {
   
 
     useEffect(() => {
-      
-    const showCont = $(".show_cont");
-    const cBtn = $(".cbtn");
-        cBtn.click(() => {
-            showCont.hide();
-        });
-
-        showCont.click(() => {
-            showCont.hide();
-        });
-
+    
 
 
 
@@ -51,7 +41,7 @@ export function ShowCont() {
                     icon={faXmark} />
                 <div className="show_cont_box">
                 <img src="" alt="" />
-                <h2>제목들어감</h2>
+                <h2>학원</h2>
                 </div>    
             </div>
         </>

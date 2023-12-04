@@ -17,9 +17,7 @@
 }
 
 @media screen and (max-width: 750px) {
-    .cont__content {
-        flex-direction: column;
-    }
+  
 
     .cont__title {
         font-size: 2rem;
@@ -177,9 +175,17 @@
         right: 5.3%;
     }
 
-    .cont__img {
-        flex: 1;
+   
+    /* 광고박스 */
+    #cont{
+        display: none;
     }
+
+
+    #m-cont{
+        display: block;
+      }
+
 
     .photo {
         padding-top: 20vh;

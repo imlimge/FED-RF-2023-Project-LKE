@@ -112,12 +112,40 @@ export function AdCont() {
                 </span>
               </div>
             </div>
-           
-
           </div>
-          {/* <AdCont /> */}
-        </div>
+         </div>
       </section>
+
+    {/* 모바일 광고 */}
+      <section id="m-cont">
+        <div className="m-cont">
+          <div className="m-cont__box">
+
+            <div className="m-cont__content">
+
+              <div className="m-cont__title">
+                <span>
+                  202?년도 서울대 ‘인문 사회’
+                  <br />
+                </span>
+           
+                <span>
+                  정시합격자 <br />
+                </span>
+           
+                <span>
+                  44% 가 이과생!! <br />
+                </span>
+            
+                <span>
+                  이제는 수학이 정답입니다. <br />
+                </span>
+              </div>
+            </div>
+          </div>
+         </div>
+      </section>
+      
     </>
   );
 }

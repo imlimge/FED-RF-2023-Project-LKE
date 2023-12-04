@@ -335,7 +335,7 @@ font-weight: bold;
 }
 
 .gnb__menu li a.gnb__item.on {
-  color: var(--color3);
+  color: var(--dark-color);
 }
 
 
@@ -384,7 +384,7 @@ font-weight: bold;
   background-color: var(--point-color);
 }
 .gnb__item.on.gnb__item::after{
-  background-color: var(--bright-color);
+  background-color: var(--point-color2);
 }
 
 

@@ -34,15 +34,32 @@ export function SwiperApp({ sts }) {
   isH ? (site = selData["혁신관"]) : (site = selData["단계관"]);
 
   useEffect(() => {
+
+
+
     const photoItem = $(".photo__item");
+
     const showCont = $(".show_cont");
+
+    const cBtn = $(".cbtn");
+
+    
+        cBtn.click(() => {
+            showCont.hide();
+        });
+
+        showCont.click(() => {
+            showCont.hide();
+        });
+
 
 
     photoItem.click((e) => {
       let tg = e.currentTarget;
-      console.log($(tg).find('img').attr('src'))
+      console.log(tg,$(tg).find('h3').text())
 
       $(".show_cont img").attr('src',$(tg).find('img').attr('src'));
+      $(".show_cont_box h2").text($(tg).find('h3').text());
 
       showCont.show();
 
@@ -67,9 +84,8 @@ export function SwiperApp({ sts }) {
       temp[i] = (
         <SwiperSlide key={i}>
           <div
-            className="photo__item swiper-slide" /* onClick={photoFn(v.isrc,v.tit)} */
-          >
-            <img src={v.isrc} alt="학원사진" />
+            className="photo__item swiper-slide" >
+             <img src={v.isrc} alt="학원사진" />
             <div className="photo__title">
               <h3>{v.tit}</h3>
             </div>
@@ -120,62 +136,10 @@ export function SwiperApp({ sts }) {
         {
           <div className="photo swiper mySwiper">
             <div className="photo__box swiper-wrapper">{makeList()}</div>
-            <>
-              {/* <!-- 중간광고 --> */}
-
-              <div className="show_cont">
-                <FontAwesomeIcon className="cbtn" icon={faXmark} />
-                <div className="show_cont_box">
-                  <h2>내용들어감</h2>
-                  <img src="" alt="" />
-                </div>
-              </div>
-            </>
+       
           </div>
         }
       </Swiper>
     </>
   );
 } /////////// SwiperApp 컴포넌트 ///////////
-
-{
-  /*     <div className="photo__item swiper-slide">
-      <img src="../../public/images/facility/siteH/photo1.png" alt="학원사진" />
-          <div className="photo__title">
-          <h3>학원전경</h3>
-        </div>
-    </div>
-
-
-    <div className="photo__item swiper-slide">
-      <img src="../../public/images/facility/siteH/photo2.png" alt="학원사진" />
-      <div className="photo__title">
-        <h3>강의실</h3>
-      </div>
-    </div>
-    <div className="photo__item swiper-slide">
-      <img src="../../public/images/facility/siteH/photo3.png" alt="학원사진" />
-      <div className="photo__title">
-        <h3>강의실</h3>
-      </div>
-    </div>
-    <div className="photo__item swiper-slide">
-      <img src="../../public/images/facility/siteH/photo4.png" alt="학원사진" />
-      <div className="photo__title">
-        <h3>강의실</h3>
-       
-      </div>    
-    </div>
-    <div className="photo__item swiper-slide">
-      <img src="../../public/images/facility/siteH/photo5.png" alt="학원사진" />
-      <div className="photo__title">
-        <h3>강의실</h3>
-      </div>      
-    </div>
-    <div className="photo__item swiper-slide">
-      <img src="../../public/images/facility/siteH/photo6.png" alt="학원사진" />
-      <div className="photo__title">
-        <h3>마지막 강의실</h3>
-      </div>      
-    </div> */
-}

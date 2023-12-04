@@ -76,58 +76,43 @@
   font-family: 'GowunBatang-Regular';
 }
 
-.cont__btn{
-
-  /* text-align: center; */
-margin: 3vh 0;
-
-}
-.cont__btn button{
-  cursor: pointer;
-  width: 110px;
-  height: 40px;
-  background-color: transparent;
-  border-radius: 20px;
-  border: 1px solid var(--bright-color);
-  font-size: 1.5rem;
-  font-weight: bold;
-
-  color: var(--color3);
-}
-
-.cont__btn:hover button{
-
-  outline: 2px solid var(--bright-color);
-  font-size: 1.6rem;
-}
 
 
 
-/* ____________________ 추가 모듈 _______________________ */
+/* ____________________ 모바일버전 _______________________ */
 
-
-#cont__content-ad{
-
+#m-cont{
   display: none;
-
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 100vh;
-  width: 100%;
-  padding: 10vw;
-  background-color: rgba(0, 0, 0, 0.555);
-  z-index: 99999;
+  background-color: var(--point-color);
+}
+.m-cont__box{
+  top: 0;
 
+  height: 100vh; 
+  position: relative;
 }
 
-.cbtn{
-  cursor: pointer;
+.m-cont__content{
+  top: 50%;
+  position: relative;
+
+  transform: translateY(-50%);
 }
 
-.ad_box{
-position: absolute;
-width: 200px;
-height: 600px;
-border: 1px dotted red;
+.m-cont__title{
+  position: relative;
+
+
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  color: var(--dark-color);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.m-cont__title span{
+  font-family: 'GowunBatang-Regular';
 }

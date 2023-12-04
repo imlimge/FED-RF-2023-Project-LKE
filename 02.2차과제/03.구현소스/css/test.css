@@ -614,3 +614,31 @@ const mp = document.querySelectorAll(".mp");
 
 
 }) 
+
+
+---------------
+광고파트 버튼
+.cont__btn{
+
+  /* text-align: center; */
+margin: 3vh 0;
+
+}
+.cont__btn button{
+  cursor: pointer;
+  width: 110px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid var(--bright-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  color: var(--color3);
+}
+
+.cont__btn:hover button{
+
+  outline: 2px solid var(--bright-color);
+  font-size: 1.6rem;
+}
