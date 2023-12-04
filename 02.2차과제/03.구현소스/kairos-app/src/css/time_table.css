@@ -66,6 +66,7 @@ table {
 label{
   font-size: 1.4rem;
 }
+
 .time_table__box{
   position: relative;
   width: 40%;
@@ -184,3 +185,7 @@ label{
   border-top: none;
 }
 
+
+.time__table__radio label{
+  
+}

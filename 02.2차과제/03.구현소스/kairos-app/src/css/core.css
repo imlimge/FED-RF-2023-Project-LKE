@@ -51,14 +51,14 @@
 /* 라디오 */
 [type="radio"] {
   appearance: none;
-  border: max(2px, 0.1em) solid var(--dark-color);
+  border: max(1px, 0.1em) solid var(--dark-color);
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
 
 }
 [type="radio"]:checked {
-  border: max(2px, 0.1em) solid var(--dark-color);
+  border: max(1px, 0.1em) solid var(--dark-color);
   background-color: var(--point-color);
   
 }

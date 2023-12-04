@@ -39,7 +39,7 @@ h2{
 h3,h4{
   font-family: 'GowunBatang-Regular';
 }
-article,p,span{
+article,p,span,label{
   font-family: 'SUIT-Regular';
 }
 
@@ -572,7 +572,7 @@ font-weight: bold;
 }
 
 .m-gnb__menu li a.m-gnb__item.on {
-  color: var(--bright-color);
+  color: var(--dark-color);
 }
 
 .m-gnb__menu li:nth-child(1){
@@ -1026,7 +1026,7 @@ text-align: center;
   position: relative;
 
   box-sizing: border-box;
-  border: 1px solid var(--dark-color);
+  border: 1px solid var(--color4);
   background-color: var(--bright-color);
   border-radius: 20px;
   margin: 3vh 0;

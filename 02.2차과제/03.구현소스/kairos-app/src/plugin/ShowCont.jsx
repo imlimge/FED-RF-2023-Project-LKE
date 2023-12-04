@@ -32,7 +32,7 @@ export function ShowCont() {
         });
 
 
-        
+
 
 
 
@@ -50,8 +50,8 @@ export function ShowCont() {
                     className="cbtn"
                     icon={faXmark} />
                 <div className="show_cont_box">
-                <h2>내용들어감</h2>
                 <img src="" alt="" />
+                <h2>제목들어감</h2>
                 </div>    
             </div>
         </>
