@@ -48,20 +48,28 @@ export function SwiperApp({sts}) {
       const photoItem = $(".photo__item");
       const showCont = $(".show_cont");
 
-   
-      photoItem.click(() => {
-              showCont.show();
-          });
+      photoItem.click((e) => {
+        let tg = $(e.currentTarget);
+        showCont.show();
+
+
+        console.log('tg',tg)
+        console.log('e.isrc,e.tit',e.isrc,e.tit)
   
-  
+        photoFn(e.isrc,e.tit)
+
+    });
 
     })
 
-  const photoFn = (e)=>{
 
+
+
+  const photoFn = (isrc,tit)=>{
  
-    let tg = $(e.currentTarget);
-    console.log(tg)
+
+    console.log('isrc,tit',isrc,tit)
+
 
 
   }

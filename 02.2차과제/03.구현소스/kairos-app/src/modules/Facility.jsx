@@ -15,7 +15,7 @@ export function Facility({sts}) {
                 <div className="facility">
                     <h2 className="tit">학원시설</h2>
                     <SwiperApp sts={sts} />
-                    <ShowCont />
+                    <ShowCont sts={sts}/>
                 </div>
             </section>
         </>

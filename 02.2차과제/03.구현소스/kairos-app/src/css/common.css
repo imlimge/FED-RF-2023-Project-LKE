@@ -210,7 +210,7 @@ font-weight: bold;
 
 #header{
   position: relative;
-  z-index: 999;
+  z-index: 99999;
 }
 
 
@@ -881,14 +881,14 @@ letter-spacing:-0.7rem;
 /* 인트로 내용 파트1 */
 .intro__item.intro2{
   position: sticky;
-  top: 8vh;
+  top: 23vh;
   background-color: var(--color1);
 }
 
 /* 인트로 내용 파트2 */
 .intro__item.intro3{
   position: sticky;
-  top: 11vh;
+  top: 25vh;
   background-color: var(--color2);
 }
 
@@ -905,7 +905,7 @@ letter-spacing:-0.7rem;
 .intro__item.intro4{
   position: sticky;
   background-color: var(--color3);
-  height: 111vh;
+  height: 120vh;
 }
 
 
