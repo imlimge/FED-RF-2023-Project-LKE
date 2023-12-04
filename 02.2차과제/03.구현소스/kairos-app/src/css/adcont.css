@@ -14,7 +14,7 @@
 /* tpg */
 .cont{
 
-  height: calc(100vh + 2000px);
+  height: calc(100vh + 2100px);
      /* 타겟 박스는 보이는 화면 맨윗줄부터
      시작해서 아래로 마지막 박스 끝라인까지
     총 이동거리는 3000px이다!!! */
@@ -41,7 +41,7 @@
   position: relative;
   left: 0;
   display: flex;
-  width: calc(100vw + 2000px);
+  width: calc(100% + 2100px);
   /* 가로크기는 타겟박스가 이동하는크기인
   3000px에 맞도록 100vw에 더하여 잡아준다!
   이유는 JS의 getBoundingClientRect().top
@@ -60,10 +60,9 @@
 }
 
 .cont__title{
-  border: 1px dotted red ;
   /* flex-shrink: 0; */
   position: relative;
-  width: 100%;
+  /* width: 100%; */
 
   left: 0;
   right: 0;
