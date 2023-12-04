@@ -40,8 +40,9 @@ export function SwiperApp({ sts }) {
 
     photoItem.click((e) => {
       let tg = e.currentTarget;
-      console.log(tg)
+      console.log($(tg).find('img').attr('src'))
 
+      $(".show_cont img").attr('src',$(tg).find('img').attr('src'));
 
       showCont.show();
 

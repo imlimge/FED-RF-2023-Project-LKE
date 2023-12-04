@@ -5,9 +5,9 @@
 
 
 #cont{
-  height: 100vh;
+  height: auto;
   background-color: var(--point-color);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
