@@ -47,7 +47,7 @@
   line-height: 1.3;
   position: relative;
   top: 7%;
-  color: var(--color3);
+  color: var(--dark-color);
 }
 
 .slide__logo{
@@ -56,7 +56,7 @@
 .slide__logo img{
   transform: scale(0.3);
   transform-origin: top;
-  filter: invert(1);
+
 
 }
 

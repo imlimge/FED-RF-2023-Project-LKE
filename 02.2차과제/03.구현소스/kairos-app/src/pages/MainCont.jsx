@@ -417,6 +417,10 @@ export function MainCont({ sts }) {
 
             {/* (모듈) - 컨택트 (공모) */}
             <Contact sts={sts} />
+
+
+            {/* 커서용이미지 */}
+            <img src="./images/cursor_pen.png" alt="커서" id="cs-img" />
         </>
     );
 }

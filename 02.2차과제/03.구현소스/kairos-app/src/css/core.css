@@ -5,22 +5,23 @@
   /* 색상 */
   --bright-color: #f1f1f1;
   /* 미색 FAF7F5 */
-  /* --dark-color: #161616; */
-  --dark-color: rgb(39, 61, 138);
+  --dark-color: #252525;
+  /* --dark-color: rgb(39, 61, 138); */
 
-  --color1: rgb(59, 83, 170);
+  /* --color1: rgb(59, 83, 170);
   --color2: rgb(74, 100, 194);
   --color3: rgb(97, 127, 235);
-  --color4: rgb(156, 177, 255);
-/* 
+  --color4: rgb(156, 177, 255); */
+
   --color1: #2d2d2d;
   --color2: #3f3f3f;
   --color3: #5b5b5b;
-  --color4: #b4b4b4; */
+  --color4: #b4b4b4;
 
   /* 포인트컬러 */
-  /* --point-color: rgb(65 105 250); */
-  --point-color: #161616;
+  --point-color: #fff345;
+  /* --point-color: #161616; */
+  --point-color2:rgb(134, 132, 96)5;
 
   /* 기타컬러 */
   --ex1-color: rgb(95, 167, 255);

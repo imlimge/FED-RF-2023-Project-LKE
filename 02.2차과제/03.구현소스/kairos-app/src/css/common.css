@@ -1,6 +1,24 @@
 /* 카이로스 수학학원 사이트 - 메인 css */
 
 
+::selection {
+  background-color: yellow;
+  color:var(--dark-color)
+}
+
+/* 커서 */
+#cs-img{
+  position: fixed;
+  width: 8vw;
+  z-index: 9999;
+  /* transition: width .3s ease-out; */
+  pointer-events: none;
+
+}
+
+
+
+
 
 html{
   scroll-behavior: smooth;
@@ -14,6 +32,7 @@ h3,h4,p{
 h2{
   font-family:var(--bold-font);
   /* color: var(--point-color); */
+  
   
 }
 
@@ -40,7 +59,7 @@ section{
   padding-top: 10vh;
   font-size: var(--bold-font-size);
   text-align: right;
-  color: var(--point-color);
+  color: var(--dark-color);
 }
 
 
@@ -81,12 +100,12 @@ section{
 
 .dark{
   background-color: var(--dark-color);
-  color: var(--point-color);
+  color: var(--bright-color);
   border-color: var(--bright-color) ; 
  
 }
 .dark.tit{
-  color: var(--point-color);
+  color: var(--dark-color);
   background-color: transparent;
  }
 
@@ -172,7 +191,12 @@ section{
 }
 
 
+.notice__title:hover.bright{
+  background-color: var(--point-color);
 
+  color: var(--dark-color);
+font-weight: bold;
+}
 
 
 .notice.tit{
@@ -694,10 +718,10 @@ font-weight: bold;
   
   position: absolute;
   left: 0px;
-  background-color: var(--point-color);
+  background-color: var(--bright-color);
   border: 1px solid var(--dark-color);
   transition: left .4s ease-in-out;
-  color: var(--color3);
+  color: var(--dark-color);
 }
 
 
@@ -1020,8 +1044,8 @@ opacity: 0;
 
 box-sizing: border-box;
 border: 1px solid var(--color4);
-background-color: var(--dark-color);
-color: var(--bright-color);
+background-color: var(--color4);
+color: var(--dark-color);
 border-radius: 20px;
 margin: 3vh 0;
 text-align: center;
@@ -1034,13 +1058,13 @@ left: 0;
 }
 
 .about__class__box_2 h3{
-  color: var(--bright-color);
+  color: var(--dark-color);
 }
 .about__class__box_2 h4{
-  color: var(--bright-color);
+  color: var(--dark-color);
 }
 .about__class__box_2 p{
-  color: var(--bright-color);
+  color: var(--dark-color);
 }
 
 

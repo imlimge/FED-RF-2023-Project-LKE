@@ -105,7 +105,7 @@ padding: 2% 0;
 
 .photo__item h3{
   bottom: 0;
-  color: var(--bright-color);
+  color: var(--point-color);
   font-family: 'SUIT-Regular';
   font-weight: normal;
   font-size: min(6vw,1.7rem);

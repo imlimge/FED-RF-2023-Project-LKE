@@ -28,7 +28,7 @@
 
 
 .accordion p,ul,ol,li{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.3;
   color: var(--bright-color);
 }
@@ -50,12 +50,14 @@
 
 .notice__title:hover{
   background-color: var(--point-color);
+  color: var(--dark-color);
   transition: .5s;
+  font-weight: bold;
 }
 
 
 .notice_content{
-background-color: var(--point-color) !important;
+background-color: var( --color3) !important;
 height:auto;
 padding: 3% 5% 3% 30%;
 

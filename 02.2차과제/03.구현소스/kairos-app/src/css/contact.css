@@ -26,7 +26,7 @@ padding: 1% 5%;
 .contact__box p{
   display: inline-block;
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 3%;
 }
 .contact__box span{
@@ -35,7 +35,7 @@ padding: 1% 5%;
   font-size: 2rem;
   font-weight: bold;
   /* margin-bottom: 9%; */
-  color: var(--point-color);
+  color: var(--color4);
 }
 
 .contact__map{
@@ -44,6 +44,7 @@ padding: 1% 5%;
   height: 100%;
   background-color: black;
   border-radius: 20px;
+  filter: grayscale(1);
 
 }
 .contact__map iframe{

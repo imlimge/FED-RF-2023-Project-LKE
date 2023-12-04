@@ -29,7 +29,7 @@ export function AdCont() {
 
     // tpg.style.height = lTop+"px"
 
-    
+
 
 
   /*  스티키 박스 싸고있는 부모박스 */
@@ -42,7 +42,7 @@ export function AdCont() {
     // 1. 스티키 부모박스 바운딩 top값
   
     let bTop = tpg.getBoundingClientRect().top;
-      console.log('나야나',bTop);
+    //   console.log('나야나',bTop);
   
   
    // 2. 바운딩값으로 대상 left위치 변경하기
@@ -56,13 +56,13 @@ export function AdCont() {
   }
   
   
-   else if(bTop<=0  && bTop >= -3000){
+   else if(bTop<=0  && bTop >= -2000){
     target.style.left = bTop + 'px';
    }////if///
   
   
   else{
-    target.style.left = '-3000px';
+    target.style.left = '-2000px';
   }
   
   }///moveSlide함수////////////

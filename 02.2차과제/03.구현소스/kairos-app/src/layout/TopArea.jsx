@@ -20,7 +20,7 @@ export function TopArea({ chgThis }) {
 
   const transBtn = (e) => {
     let tg = $(e.currentTarget).find(".m_btn");
-    tg.css({color:'var(--color3)'});
+
 
     let txt = tg.text();
     
@@ -28,8 +28,8 @@ export function TopArea({ chgThis }) {
     if (txt === "혁신관") {
       tg.css({
         left: "73px",
-        color: "var(--color3)",
-        backgroundColor: "var(--point-color)",
+        color: "var(--bright-color)",
+        backgroundColor: "var(--dark-color)",
         border: "1px solid var(--bright-color)",
       }).text("단계관");
       chgThis(0);
@@ -38,8 +38,8 @@ export function TopArea({ chgThis }) {
     } else {
       tg.css({
           left: "0px",
-          color: "var(--color3)",
-          backgroundColor: "var(--point-color)",
+          color: "var(--dark-color)",
+          backgroundColor: "var(--bright-color)",
           border: "1px solid var(--dark-color)",
         })
         .text("혁신관");

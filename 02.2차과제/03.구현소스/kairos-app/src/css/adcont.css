@@ -2,6 +2,8 @@
 
 
 
+
+
 #cont{
   height: 100vh;
   background-color: var(--point-color);
@@ -27,6 +29,9 @@
   left: 0;
   height: 100vh;
 }
+
+
+
 
 /* 실제로 가로이동할 박스 */
 /* JS > target */
@@ -55,14 +60,16 @@
 }
 
 .cont__title{
+  border: 1px dotted red ;
+  /* flex-shrink: 0; */
   position: relative;
-  width: 100vw;
+  width: 100%;
 
   left: 0;
   right: 0;
   margin: 0 auto;
 
-  color: var(--color3);
+  color: var(--dark-color);
   font-size: 3rem;
   text-align: center;
 }
