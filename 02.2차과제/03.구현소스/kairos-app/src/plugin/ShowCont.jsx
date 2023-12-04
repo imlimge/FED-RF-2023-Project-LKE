@@ -40,6 +40,7 @@ export function ShowCont() {
                     className="cbtn"
                     icon={faXmark} />
                 <div className="show_cont_box">
+                <p>화면을 누르면 홈으로 돌아갑니다</p>
                 <img src="" alt="" />
                 <h2>학원</h2>
                 </div>    
