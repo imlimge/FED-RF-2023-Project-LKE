@@ -421,6 +421,9 @@ export function MainCont({ sts }) {
 
             {/* 커서용이미지 */}
             <img src="./images/cursor_pen.png" alt="커서" id="cs-img" />
+        
+        
+        
         </>
     );
 }

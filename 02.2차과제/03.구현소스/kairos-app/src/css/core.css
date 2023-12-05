@@ -19,7 +19,7 @@
   --color4: #b4b4b4;
 
   /* 포인트컬러 */
-  --point-color: #fff345;
+  --point-color: #4facfb;
   /* --point-color: #161616; */
   --point-color2:#cbad4b;
   --point-color3:#897142;
@@ -161,7 +161,7 @@
 
 /* 본문- 나눔바른고딕 */
 @font-face {
-  font-family: 'NanumBarunGothic';
+  font-family: 'NanumBarunGothic400';
   font-style: normal;
   font-weight: 400;
   src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
@@ -169,7 +169,7 @@
  }
  
  @font-face {
-  font-family: 'NanumBarunGothic';
+  font-family: 'NanumBarunGothic700';
   font-style: normal;
   font-weight: 700;
   src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
@@ -177,7 +177,7 @@
  }
  
  @font-face {
-  font-family: 'NanumBarunGothic';
+  font-family: 'NanumBarunGothic300';
   font-style: normal;
   font-weight: 300;
   src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');

@@ -42,8 +42,18 @@ export function Layout() {
       mover.style.top = posy + 'px';
       mover.style.left = posx + 'px';
   
-
     }
+
+
+
+    const mbtn = document.querySelector('.m_btn');
+    console.log(mbtn)
+      mbtn.mouseenter = e => {
+      mbtn.style.backgroundColor = 'yellow';
+      
+    }
+
+
 
     /***************************************************************
      *

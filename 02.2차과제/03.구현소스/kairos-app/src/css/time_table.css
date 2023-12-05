@@ -67,6 +67,12 @@ label{
   font-size: 1.4rem;
 }
 
+
+label:hover{
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
 .time_table__box{
   position: relative;
   width: 40%;
@@ -99,23 +105,10 @@ label{
 }
 
 
-/* 시간표 각 파트 위에 호버하면
-배경백 바뀌는거 */
-.elementary.class-name:hover .time_table{
- background-color: var(--ex1-color);
-}
-.middle:hover .time_table{
-  background-color: var(--ex2-color);
-}
-.high:hover .time_table{
-  background-color: var(--ex3-color);
-}
 
-.time:hover{
+td:hover {
   background-color: var(--point-color);
 }
-
-
 
 
 .time_table_content .class-part{

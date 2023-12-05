@@ -94,6 +94,16 @@
 }
 
 
+.trans_btn__box:hover{
+transform: scale(1.1);
+}
+
+.trans_btn__box:hover .m_btn{
+ border: 1px solid var(--point-color);
+}
+
+
+
 .trans_btn__box.dark{
   background-color: var(--bright-color);
   border: 1px solid var(--dark-color);
@@ -127,7 +137,7 @@
 
 
 
-/* 혁신관 */
+/* 움직이는버튼 */
 .btn.m_btn{
   
   position: absolute;
@@ -138,6 +148,7 @@
   color: var(--color3);
 
 }
+
 
 
 .btncolor span{

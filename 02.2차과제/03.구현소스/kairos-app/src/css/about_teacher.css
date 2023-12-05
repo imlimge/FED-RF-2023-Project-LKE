@@ -120,7 +120,7 @@ color: var(--bright-color);
 
 .about__title h4{
   font-size: min(4.5vw,2rem);
-  color: var(--color4);
+  color: var(--point-color);
 }
 .about__title.part2 h4{
   text-align: right;
