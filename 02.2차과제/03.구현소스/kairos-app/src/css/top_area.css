@@ -94,13 +94,7 @@
 }
 
 
-.trans_btn__box:hover{
-transform: scale(1.1);
-}
 
-.trans_btn__box:hover .m_btn{
- border: 1px solid var(--point-color);
-}
 
 
 
@@ -145,17 +139,18 @@ transform: scale(1.1);
   background-color: var(--point-color);
   border: 1px solid var(--dark-color);
   transition: left .4s ease-in-out;
-  color: var(--color3);
+  color: var(--dark-color);
+  transition: left .4s ease-in-out;
 
 }
 
 
 
-.btncolor span{
-  color: white;
-}
+.m_btn:hover {
 
+ }
 
+ 
 
 /* 혁신관 뒤글자 */
 .btn.b_btn1{

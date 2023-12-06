@@ -2,6 +2,8 @@
 
 import $ from "jquery";
 
+import "../css/top_area.css"
+
 window.jQuery = $;
 require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
@@ -28,8 +30,8 @@ export function TopArea({ chgThis }) {
     if (txt === "혁신관") {
       tg.css({
         left: "73px",
-        color: "var(--bright-color)",
-        backgroundColor: "var(--dark-color)",
+        color: "var(--dark-color)",
+        backgroundColor: "var(--point-color)",
         border: "1px solid var(--bright-color)",
       }).text("단계관");
       chgThis(0);
@@ -39,7 +41,7 @@ export function TopArea({ chgThis }) {
       tg.css({
           left: "0px",
           color: "var(--dark-color)",
-          backgroundColor: "var(--bright-color)",
+          backgroundColor: "var(--point-color)",
           border: "1px solid var(--dark-color)",
         })
         .text("혁신관");
