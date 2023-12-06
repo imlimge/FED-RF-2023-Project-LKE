@@ -23,6 +23,18 @@
         font-size: 2rem;
     }
 
+    .show_cont_box p {
+        text-align: center;
+        font-weight: lighter;
+        color: var(--color4);
+        font-family: 'SUIT-Regular';
+        font-size: 1.3rem;
+        padding-bottom: 1vh;
+        padding-top: 2vh;
+        position: relative;
+        right: 0;
+    }
+
     .photo__item h3 {
         font-size: min(5.7vw, 1.7rem);
         line-height: 2;
@@ -41,11 +53,24 @@
     }
 
     .about__class__box_2{
-       opacity: 1;
-       position: relative;
+        opacity: 1;
+        position: relative;
+        height: auto;
+        background-color: var(--color4);
     }
 
-
+    .about__class__box:hover {
+        transform: none;
+        
+         
+        }
+        
+        .about__class__box:hover .about__class__box_2{
+          transform: none;
+        
+        
+        }
+        
     .about__title h3 {
         font-size: min(5.9vw, 2.8rem);
     }
@@ -92,6 +117,9 @@
    .show_cont{
     padding: 40vw 10vw;
    }
+
+
+
     .gnb__box {
         display: none;
     }
@@ -261,7 +289,7 @@
     .contact__time::after {
         content: "";
         position: absolute;
-        height: 70%;
+        height: 64%;
         width: 1px;
         top: 0;
         right: 0;
@@ -280,4 +308,9 @@
         top: 26.3%;
 
     }
+
+    .slide__text_black span {
+        width: 50%;
+    }
+
 } /*************** 500px 이하 ***************/
