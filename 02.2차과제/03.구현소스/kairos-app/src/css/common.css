@@ -2,15 +2,16 @@
 
 
 ::selection {
-  background-color: #84c6ff;
-  color:var(--dark-color)
+  background-color: #6dbbff;
+  color:var(--dark-color);
+  font-weight: bold;
 }
 
 /* 커서 */
 #cs-img{
   position: fixed;
   width: 8vw;
-  z-index: 9999;
+  z-index: 9999999;
   /* transition: width .3s ease-out; */
   pointer-events: none;
 
@@ -61,6 +62,16 @@ section{
   color: var(--dark-color);
 }
 
+/* 각 파트 제목 */
+.tit2{
+  padding-left: var(--margin-left);
+  padding-right: var(--margin-right);
+  padding-top: 10vh;
+  font-size: var(--bold-font-size);
+  text-align: right;
+  color: var(--bright-color);
+}
+
 
 
 .back__line{
@@ -104,28 +115,32 @@ section{
  
 }
 .dark.tit{
-  color: var(--dark-color);
+  color: var(--bright-color);
   background-color: transparent;
  }
 
  #about__class.dark{
   background-color: var(--dark-color);
  }
+
+
 .bigtext__logo.dark{
   background-color: var(--dark-color);
   color: var(--bright-color);
   
 }
 
-.tit2{
-  color: var(--point-color);
-}
+
 
 .intro.dark .intro_op span{
   color: var(--bright-color) !important;
 }
 
 
+.notice.dark{
+
+  color: var(--dark-color);
+}
 
 .logo .dark{
   filter: invert(1);
@@ -1109,13 +1124,18 @@ transform: translateY(-10px);
 .about__class__box h3{
   font-size: 2rem;
   padding: 2vw 0;
+  color: var(--dark-color);
+}
+.about__class__box h2{
+  color: var(--dark-color);
 }
 .about__class__box h4{
   font-size: 1.7rem;
 }
 .about__class__box p{
-  font-size: 1.5rem;
-  line-height: 1.6;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: bold;
 }
 
 
@@ -1127,7 +1147,7 @@ transform: translateY(-10px);
   
 }
 .class__name {
-  margin: 0 1vw;
+  margin: 1vh 1vw;
 }
 .class__name h4{
   font-size: 1.5rem;
@@ -1169,7 +1189,9 @@ transform: translateY(-10px);
   letter-spacing: 5vw;
   padding-left: 3vw;
 }
-
+.bigtext__logo:hover{
+  color:var(--point-color);
+}
 
 
 

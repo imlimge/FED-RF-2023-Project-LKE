@@ -25,10 +25,15 @@
   cursor: pointer;
 
   position: absolute;
-  top: 5%;
-  right: 25%;
+  top: 0;
+  right: 5%;
   color: rgb(255, 255, 255);
-  font-size: 50px;
+  font-size: 4rem;
+  transition: scale .2s;
+}
+
+.cbtn:hover{
+  scale: 1.1;
 }
 
 
@@ -36,33 +41,52 @@
 position: absolute;
 width: 66%;
 height: 50%;
-
+text-align: center;
 }
 
 .show_cont_box p{
-  text-align: center;
+  text-align: right;
   font-weight: lighter;
-  color: var(--bright-color);
+  color: var(--color4);
   font-family: 'SUIT-Regular';
-  font-size: 1.4rem;
-  padding-bottom: 2vh;
+  font-size: 1.3rem;
+  padding-bottom: 1vh;
+  right: 10%;
+  top: -2.8%;
+  position: relative;
 }
 
 .show_cont_box h2{
   text-align: center;
   color: var(--point-color);
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-family: 'SUIT-Regular';
   font-weight: lighter;
 
-  margin: 1vw 0;
 }
 .show_cont_box img{
- 
-  border-radius: 20px;
-  width: 100%;
-  height: 100%;
+   border-radius: 20px;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
+  box-shadow: 1px 1px 6px black;
 }
 
+.nbtn{
+  font-size: 4rem;
+  color: var(--point-color);
+  position: absolute;
+  top: 50%;
+  transition: scale .2s ease-out;
+  
+}
 
+.nbtn:hover{
+scale: 1.1;
+}
+.nbtn.right{
+  right: 0;
+}
+.nbtn.left{
+left: 0;
+}

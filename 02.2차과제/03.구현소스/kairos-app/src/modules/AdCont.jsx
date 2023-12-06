@@ -56,13 +56,13 @@ export function AdCont() {
   }
   
   
-   else if(bTop<=0  && bTop >= -2100){
+   else if(bTop<=0  && bTop >= -2600){
     target.style.left = bTop + 'px';
    }////if///
   
   
   else{
-    target.style.left = '-2100px';
+    target.style.left = '-2600px';
   }
   
   }///moveSlide함수////////////

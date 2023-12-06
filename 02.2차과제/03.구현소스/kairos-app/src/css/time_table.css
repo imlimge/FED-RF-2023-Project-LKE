@@ -50,12 +50,6 @@ table {
   font-size: 1.4rem;
 }
 
-/* 이미지 현재 없음 */
-.time_table_content img{
-  position: absolute;
-  transform: translate(-70%, -29%) scale(.8);
-  z-index: -1;
-}
 
 .time__table__radio{
   position: relative;
@@ -106,8 +100,14 @@ label:hover{
 
 
 
-td:hover {
-  background-color: var(--point-color);
+td.class-part:hover {
+  color: var(--point-color);
+}
+td.day:hover p{
+  color: var(--point-color2);
+}
+td.time:hover p{
+  color: var(--point-color2);
 }
 
 

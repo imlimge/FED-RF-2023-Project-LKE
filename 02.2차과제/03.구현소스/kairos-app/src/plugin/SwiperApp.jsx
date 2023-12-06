@@ -40,18 +40,45 @@ export function SwiperApp({ sts }) {
     const photoItem = $(".photo__item");
 
     const showCont = $(".show_cont");
+    const showContImg = $(".show_cont img");
 
+    // 닫기버튼
     const cBtn = $(".cbtn");
+    // 방향키
+    const nBtn = $(".nbtn");
 
     
         cBtn.click(() => {
             showCont.hide();
         });
 
-        showCont.click(() => {
+        showContImg.click(() => {
             showCont.hide();
         });
 
+
+
+
+        nBtn.click((e)=>{
+          let ng = e.currentTarget;
+          console.log(ng)
+
+          if($(e.currentTarget).find('.right')){
+          console.log('오')
+
+          $(".facility").find('photo__item').next().attr('src',$(ng).find('img').attr('src'));
+          $(".show_cont_box h2").text($(ng).find('h3').text());
+          }
+
+
+          else if($(e.currentTarget).find('.left')){
+            console.log('왼')
+          }
+
+
+
+        })
+  
 
 
     photoItem.click((e) => {
@@ -68,11 +95,11 @@ export function SwiperApp({ sts }) {
   });
 
 
-  // const photoFn = (isrc,tit)=>{
+      const photoFn = (isrc,tit)=>{
 
-  //   console.log('isrc,tit',isrc,tit)
+      console.log('isrc,tit',isrc,tit)
 
-  // }
+      }
 
 
 

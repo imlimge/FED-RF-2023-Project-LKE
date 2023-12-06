@@ -4,7 +4,7 @@
 import "./css/show_cont.css";
 
 import React, { useEffect } from "react";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark,faChevronRight,faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import $ from "jquery";
@@ -36,13 +36,18 @@ export function ShowCont() {
             {/* <!-- 중간광고 --> */}
 
             <div className="show_cont">
-                <FontAwesomeIcon
+          
+                <div className="show_cont_box">      
+              
+               <FontAwesomeIcon
                     className="cbtn"
                     icon={faXmark} />
-                <div className="show_cont_box">
-                <p>화면을 누르면 홈으로 돌아갑니다</p>
-                <img src="" alt="" />
                 <h2>학원</h2>
+                <p>사진을 누르면 홈으로 돌아갑니다</p>
+                
+                <FontAwesomeIcon icon={faChevronLeft} className="nbtn left" />
+                <img src="" alt="" />
+                <FontAwesomeIcon icon={faChevronRight} className="nbtn right" />
                 </div>    
             </div>
         </>

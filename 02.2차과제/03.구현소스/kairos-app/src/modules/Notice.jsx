@@ -68,7 +68,7 @@ export function Notice({ sts }) {
         <>
             {/* <!-- 공지사항 --> */}
             <section id="notice" className="notice mp">
-                <h2 className="tit tit2">공지사항</h2>
+                <h2 className="tit2">공지사항</h2>
                 <div className="notice__box">
                     <div className="accordion">
                       {makeList()}

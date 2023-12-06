@@ -78,12 +78,12 @@ export function TopArea({ chgThis }) {
           <div className="logo">
             <img
               className="img"
-              src="./images/logo_letter_text_w4000.png"
+              src="./images/logo_letter_text_w2000.png"
               alt="메인 로고"
             />
             <img
               className="img"
-              src="./images/logo_letter_book_w4000.png"
+              src="./images/logo_letter_book_w2000.png"
               alt="메인 로고"
             />
           </div>
