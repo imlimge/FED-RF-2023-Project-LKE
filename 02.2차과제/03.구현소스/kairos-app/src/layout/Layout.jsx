@@ -30,9 +30,11 @@ export function Layout() {
      * 커서 움직임
     **************************************/
     const mover = document.querySelector('#cs-img');
+    const btnBox = document.querySelector('.trans_btn__box');
     // (2)이벤트 대상: document.body
     const myBody = document.body;
-      
+
+    
 
     myBody.onmousemove = e => {  
       let posx = e.pageX;
@@ -42,16 +44,47 @@ export function Layout() {
       mover.style.top = posy + 'px';
       mover.style.left = posx + 'px';
   
-    }
+
+    
+// myA.mouseover = () =>{
+//   mover.style.rotate = '-20deg';
+// }
+
+const mover2 = $('#cs-img');
+// 특정 요소 안에서 마우스 커서 각도 변경
+$('a,.trans_btn__box,label,.photo__item,.about__class__box,.notice__title,.contact__map,.cbtn').on('mouseenter', ()=>{
+  mover2.css({
+    rotate:'-20deg'
+
+  })
+})
+
+// 특정 요소 안에서 마우스 커서 각도 변경 해제
+$('a,.trans_btn__box,label,.photo__item,.about__class__box,.notice__title,.contact__map,.cbtn').on('mouseleave', ()=>{
+  mover2.css({
+    rotate:'0deg'
+
+  })
+})
+
+$('html').on('mousedown', ()=>{
+  mover2.css({
+    rotate:'-20deg'
+  })
+})
+
+$('html').on('mouseup', ()=>{
+  mover2.css({
+    rotate:'0deg'
+  })
+})
 
 
 
-    const mbtn = document.querySelector('.m_btn');
-    console.log(mbtn)
-      mbtn.mouseenter = e => {
-      mbtn.style.backgroundColor = 'yellow';
-      
-    }
+
+
+
+} // useEffect //
 
 
 

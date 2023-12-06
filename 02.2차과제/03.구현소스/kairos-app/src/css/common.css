@@ -14,10 +14,20 @@
   z-index: 9999999;
   /* transition: width .3s ease-out; */
   pointer-events: none;
-
+  rotate:0;
+  transition: rotate .2s ease-out;
+  transform-origin: left top;
 }
 
-
+a:hover{
+  cursor: none;
+}
+input:hover{
+  cursor: none;
+}
+label:hover{
+  cursor: none;
+}
 
 
 html{
@@ -117,6 +127,7 @@ section{
 .dark.tit{
   color: var(--bright-color);
   background-color: transparent;
+  font-weight: lighter;
  }
 
  #about__class.dark{
@@ -887,7 +898,7 @@ text-align: center;
 .about__class__box_2{
   /* display: none; */
 position: absolute;
-height: 0;
+/* height: 0; */
 opacity: 0;
 
 box-sizing: border-box;
