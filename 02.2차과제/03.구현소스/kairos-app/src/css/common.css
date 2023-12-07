@@ -28,6 +28,9 @@ input:hover{
 label:hover{
   cursor: none;
 }
+.cbtn:hover{
+  cursor: none;
+}
 
 
 html{
@@ -35,9 +38,7 @@ html{
   cursor: none;
 }
 
-h3,h4,p{
-  color: var(--dark-color);
-}
+
 
 h2{
   font-family:var(--bold-font);
@@ -50,8 +51,11 @@ h3,h4{
   font-family: 'GowunBatang-Regular';
 }
 article,p,span,label{
-  font-family: 'SUIT-Regular';
+	font-family: 'SUIT Variable-m';
+
 }
+
+
 
 
 
@@ -124,6 +128,8 @@ section{
   border-color: var(--bright-color) ; 
  
 }
+
+
 .dark.tit{
   color: var(--bright-color);
   background-color: transparent;
@@ -165,10 +171,25 @@ section{
 
 .contact.dark p{
   color: var(--bright-color);
+  font-family: 'SUIT Variable-l';
 }
 
 .time_table.dark .time_table_content .day{
   border: 1px solid var(--dark-color);
+}
+
+
+.time__table__radio.dark label{
+  font-family: 'SUIT Variable';
+font-weight: 100;
+}
+
+
+.time__table__radio.dark label:hover {
+  font-family: 'SUIT Variable-m';
+
+
+
 }
 
 .contact.dark span{
@@ -196,13 +217,18 @@ section{
 .footer.dark{
   background-color: var(--dark-color);
   color: var(--bright-color);
+  
 }
 
 .footer.dark p{
   color: var(--bright-color);
+	font-family: 'SUIT Variable-l';
 }
+
 .footer.dark address{
   color: var(--bright-color);
+	font-family: 'SUIT Variable-l';
+  
 }
 
 
@@ -750,8 +776,7 @@ letter-spacing:-0.7rem;
   color: var(--point-color)
 }
 .intro__item h4{
-	font-family: 'SUIT Variable';
-
+	font-family: 'SUIT Variable-m';
   font-size: 3vw;
   line-height: 4vw;
   margin-bottom: 5vh;
@@ -780,11 +805,14 @@ letter-spacing:-0.7rem;
 }
 
 .intro__item article{
+  font-family: 'SUIT Variable-l';
     line-height: 1.5;
     font-size: 1.4rem;
    text-align: center;
    display: inline-block;
    margin: 3vh 0;
+
+
  }
 
 
@@ -1079,6 +1107,8 @@ transform: translateY(-10px);
   padding-top: 10%;
   text-align: center;
   color: var(--dark-color);
+
+  
 }
 
 .footer__logo{
@@ -1101,6 +1131,16 @@ transform: translateY(-10px);
 
 
 
+.footer p{
+	font-family: 'SUIT Variable-m';
+
+}
+
+.footer address{
+
+	font-family: 'SUIT Variable-m';
+  
+}
 .marquee {
   height: 25px;
   width: 100%;

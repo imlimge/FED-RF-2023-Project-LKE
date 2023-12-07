@@ -58,13 +58,15 @@ table {
 }
 
 label{
+  font-family: 'SUIT Variable-l';
   font-size: 1.4rem;
 }
 
 
 label:hover{
+  font-family: 'SUIT Variable-b';
   font-size: 1.4rem;
-  font-weight: bold;
+
 }
 
 .time_table__box{
@@ -94,8 +96,7 @@ label:hover{
   background-color: var(--color2);
   color: var(--bright-color);
 
-  font-family: 'GowunBatang-Regular';
-  font-weight: bold;
+  font-family: 'GowunBatang-Bold';
 }
 
 

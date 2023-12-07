@@ -120,7 +120,7 @@ export function AdCont() {
 
               <div className="cont__title">
                 <span>
-                  202?년도 서울대 ‘인문 사회’
+                  2022년도 서울대 ‘인문 사회’
                   <br />
                 </span>
               </div>
@@ -156,7 +156,7 @@ export function AdCont() {
 
               <div className="m-cont__title">
                 <span>
-                  202?년도 서울대 ‘인문 사회’
+                  2022년도 서울대 ‘인문 사회’
                   <br />
                 </span>
            

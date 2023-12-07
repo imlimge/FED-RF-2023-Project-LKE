@@ -28,6 +28,7 @@
 
 
 .accordion p,ul,ol,li{
+  font-family: 'SUIT Variable-l';
   font-size: 1.4rem;
   line-height: 1.3;
   color: var(--bright-color);

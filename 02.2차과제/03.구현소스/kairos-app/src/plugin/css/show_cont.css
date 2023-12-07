@@ -48,7 +48,7 @@ text-align: center;
   text-align: right;
   font-weight: lighter;
   color: var(--color4);
-  font-family: 'SUIT-Regular';
+  font-family: 'SUIT Variable-m';
   font-size: 1.3rem;
   padding-bottom: 1vh;
   right: 8.8%;
@@ -60,8 +60,8 @@ text-align: center;
   text-align: center;
   color: var(--point-color);
   font-size: 2.3rem;
-  font-family: 'SUIT-Regular';
-  font-weight: lighter;
+  font-family: 'SUIT Variable-m';
+
 
 }
 .show_cont_box img{

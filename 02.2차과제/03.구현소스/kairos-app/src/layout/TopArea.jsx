@@ -54,7 +54,7 @@ export function TopArea({ chgThis }) {
 
     // 클래스 dark 시 검은색으로 변해야 하는 파트
     const dark = $(
-     "#about__class,.logo,.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.bigtext__logo,.footer,.contact__time,.marquee"
+     "#about__class,.logo,.tit,.back__line,.intro,.intro_op,.facility,.time_table,.contact,.time__table__radio input,.contact__box_title,.bigtext__logo,.footer,.contact__time,.marquee,.time__table__radio"
    );
    // 클래스 dark 시  밝은 색으로 변해야 하는 파트
    const bright = $(

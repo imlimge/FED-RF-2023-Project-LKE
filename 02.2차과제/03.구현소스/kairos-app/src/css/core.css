@@ -68,12 +68,12 @@
   outline-offset: max(2px, 0.1em);
 }
 [type="radio"]:hover {
-  box-shadow: 0 0 0 max(2px, 0.2em) lightgray;
+  box-shadow: 0 0 0 max(1px, 0.1em) var(--point-color);
   /* cursor: pointer; */
 }
 
 [type="radio"]:hover + span {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 
@@ -174,19 +174,35 @@
 
 /* 본문 - 스위트 */
 @font-face {
-  font-family: 'SUIT-Regular';
-  src: url('../static/fonts/SUIT-Regular.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'SUIT Variable';
+  src: url('../static/fonts/SUIT-Variable.woff2') format('woff2');
   font-style: normal;
 }
 
+
+/* 본문 - 스위트 */
+@font-face {
+  font-family: 'SUIT Variable-l';
+  src: url('../static/fonts/SUIT-Variable.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
  /* 본문 - 스위트 */
 @font-face {
-	font-family: 'SUIT Variable';
-	font-weight: 100 900;
+	font-family: 'SUIT Variable-m';
+	font-weight: 600;
 	src: url('../static/fonts/SUIT-Variable.woff2') format('woff2-variations');
 }
 
+
+ /* 본문 - 스위트 */
+ @font-face {
+	font-family: 'SUIT Variable-b';
+	font-weight: 900;
+	src: url('../static/fonts/SUIT-Variable.woff2') format('woff2-variations');
+}
 
 /* 본문 - 프리텐다드 */
 @font-face {

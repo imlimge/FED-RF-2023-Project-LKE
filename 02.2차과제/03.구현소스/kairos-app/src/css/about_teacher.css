@@ -135,7 +135,7 @@ color: var(--bright-color);
 .about__history span{
 display: block;
 padding: 1vh 5% 1vh 0;
-font-weight: 300;
+
 }
 
 
@@ -164,6 +164,7 @@ font-weight: 300;
 .about__history.part2 span{
 text-align: right;
 padding: 1vh 0 1vh 15%;
+font-family: 'SUIT Variable-l';
 }
 
 .about__history.part2 .line{
