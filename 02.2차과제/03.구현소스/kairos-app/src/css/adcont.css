@@ -108,11 +108,21 @@
   right: 0;
   margin: 0 auto;
 
-  color: var(--dark-color);
-  font-size: 3rem;
   text-align: center;
+
 }
 
 .m-cont__title span{
   font-family: 'GowunBatang-Regular';
+  opacity: 0;
+  color: var(--dark-color);
+  font-size: 2.3rem;
+
+  display: inline-block;
+}
+
+.m-cont__title.on span{
+transition: 1s;
+  opacity: 1;
+  line-height: 3;
 }

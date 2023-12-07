@@ -1,6 +1,6 @@
 // TimeTable - 시간표 모듈
 
-import { timeData } from "../data/time2";
+import { timeData } from "../data/time";
 
 import React, { Fragment, useEffect, useRef, useState } from "react";
 // CSS

@@ -25,6 +25,8 @@ window.jQuery = $;
 require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
+
+
 export function SwiperApp({ sts }) {
   const selData = photoData;
 
@@ -33,97 +35,80 @@ export function SwiperApp({ sts }) {
 
   isH ? (site = selData["혁신관"]) : (site = selData["단계관"]);
 
+
+
   useEffect(() => {
-
-
-
     const photoItem = $(".photo__item");
 
     const showCont = $(".show_cont");
     const showContImg = $(".show_cont img");
 
+
+    
     // 닫기버튼
     const cBtn = $(".cbtn");
     // 방향키
     const nBtn = $(".nbtn");
 
-    
-        cBtn.click(() => {
-            showCont.hide();
-        });
+    // 버튼 누르면 닫기 함수
+    cBtn.click(() => {
+      showCont.hide();
+    });
 
-        showContImg.click(() => {
-            showCont.hide();
-        });
+    // 이미지 누르면 닫기 함수
+    showContImg.click(() => {
+      showCont.hide();
+    });
 
-
-
-
-        nBtn.click((e)=>{
-          let ng = e.currentTarget;
-          console.log(ng)
-
-          if($(e.currentTarget).find('.right')){
-          console.log('오')
-
-          $(".facility").find('photo__item').next().attr('src',$(ng).find('img').attr('src'));
-          $(".show_cont_box h2").text($(ng).find('h3').text());
-          }
-
-
-          else if($(e.currentTarget).find('.left')){
-            console.log('왼')
-          }
-
-
-
-        })
   
 
 
+/************************************
+ * 스와이퍼 항목에서 사진 src 불러와서 
+ * 상세보기박스에 보이기 
+************************************/
+
     photoItem.click((e) => {
       let tg = e.currentTarget;
-      console.log(tg,$(tg).find('h3').text())
+      console.log(tg, $(tg).find(".photo__title-idx").text());
 
-      $(".show_cont img").attr('src',$(tg).find('img').attr('src'));
-      $(".show_cont_box h2").text($(tg).find('h3').text());
 
+      $(".show_cont img").attr("src", $(tg).find("img").attr("src"));
+      $(".show_cont_box h2").text($(tg).find("h3").text());
+      $(".show_cont-idx").text($(tg).find(".photo__title-idx").text());
+
+     
       showCont.show();
 
-
     });
-  });
+    });
 
-
-      const photoFn = (isrc,tit)=>{
-
-      console.log('isrc,tit',isrc,tit)
-
-      }
+  
 
 
 
   // 리스트만들기 함수
-  const makeList = () => {
+  const makeList = (idx) => {
     let temp = [];
 
     site.map((v, i) => {
       temp[i] = (
         <SwiperSlide key={i}>
-          <div
-            className="photo__item swiper-slide" >
-             <img src={v.isrc} alt="학원사진" />
+          <div className="photo__item swiper-slide">
+            <img src={v.isrc} alt="학원사진" />
             <div className="photo__title">
+              <div className="photo__title-idx">{v.idx}</div>
               <h3>{v.tit}</h3>
             </div>
           </div>
         </SwiperSlide>
       );
     });
-
-    //배열을 리턴
     return temp;
   }; ////for///
+
+
+
 
   return (
     <>
@@ -163,10 +148,9 @@ export function SwiperApp({ sts }) {
         {
           <div className="photo swiper mySwiper">
             <div className="photo__box swiper-wrapper">{makeList()}</div>
-       
           </div>
         }
-      </Swiper>
+      </Swiper >
     </>
   );
 } /////////// SwiperApp 컴포넌트 ///////////

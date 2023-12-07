@@ -17,7 +17,7 @@ export function Facility({sts}) {
                     <SwiperApp sts={sts} />
                 </div>
             </section>
-                    <ShowCont/>
+                    <ShowCont sts={sts} />
         </>
     );
 }

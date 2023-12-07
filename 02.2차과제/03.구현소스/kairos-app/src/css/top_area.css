@@ -58,24 +58,16 @@
 
 .logo img:nth-child(1){
   transform: scale(1);
-  animation: intro-rotate 8s linear infinite;
-  /* intro-scale 1.5s ease-in 1 ; */
+  animation: rotate-ani 8s linear infinite;
+
 }
 
 .logo img:nth-child(2){
   transform: scale(1);
-  /* animation: intro-scale2 1.5s ease-in 1 forwards ; */
 
 }
 
 
-/* .top-area .logo img:nth-child(2){
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  mix-blend-mode: difference;
-
-} */
 
 
 

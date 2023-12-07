@@ -16,21 +16,57 @@ export function AdCont() {
 
 
 
+  React.useEffect(() => {
+  /*********************************************
+   * 모바일 광고 글자 부드럽게 등장
+   *********************************************/
+
+
+   // 출력대상
+   const adCont = document.querySelector(".m-cont__title");
+   // 글자요소 span들
+   const sTxt = document.querySelectorAll(".m-cont__title span");
+
+
+   let hcode = "";
+   // 순번증가변수
+   let seqNum = 0;
+
+   // span들 추출
+   for (let x of sTxt) {
+       hcode += `<span style=" transition-delay: ${seqNum * 0.3}s;">${
+           x.innerText
+       }</span><br />`;
+       seqNum++;
+      
+   }
+
+   adCont.innerHTML = hcode;
+
+   setTimeout(() => {
+    adCont.classList.add("on");
+   }, 500);
+
+
+  const winW = window.innerHeight / 4*3;
+
+
+  window.addEventListener("scroll",()=>{
+
+      if(adCont.getBoundingClientRect().top < winW)adCont.classList.add("on");
+      else adCont.classList.remove("on");
+
+
+})
+
+  })
+
+
 
 
 
 
   function moveSlide(){
-
-
-    
-    // const limitT = document.querySelector("#facility")
-    // const lTop = limitT.getBoundingClientRect().top;
-
-    // tpg.style.height = lTop+"px"
-
-
-
 
   /*  스티키 박스 싸고있는 부모박스 */
   const tpg = document.querySelector('.cont');
@@ -44,19 +80,14 @@ export function AdCont() {
     let bTop = tpg.getBoundingClientRect().top;
     //   console.log('나야나',bTop);
   
-  
-   // 2. 바운딩값으로 대상 left위치 변경하기
-   // 움직일대상: 스티키박스 -> .sldiePg>ul
-   // 움직이기시작은 바운딩값이 0이하일때부터
-   
-  
+
+ 
    //윗쪽 (0초과)일때 처음 위치 재설정
    if(bTop > 0){
     target.style.left = '0px';
   }
   
-  
-   else if(bTop<=0  && bTop >= -2600){
+     else if(bTop<=0  && bTop >= -2600){
     target.style.left = bTop + 'px';
    }////if///
   

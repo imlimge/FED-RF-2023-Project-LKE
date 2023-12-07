@@ -104,7 +104,7 @@ flex: 1;
 }
 
 .about__title h3,h4{
-  
+  margin-bottom: 1vw;
   font-size: min(3.8vw,4rem);
 }
 

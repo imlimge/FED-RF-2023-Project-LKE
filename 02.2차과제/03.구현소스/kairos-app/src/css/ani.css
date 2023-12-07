@@ -26,3 +26,10 @@
   100% { left: 0%; }
 }
 
+
+/* 등장애니 */
+@keyframes show-ani {
+  0% { opacity: 0; }
+  100% { opacity: 1;  }
+}
+

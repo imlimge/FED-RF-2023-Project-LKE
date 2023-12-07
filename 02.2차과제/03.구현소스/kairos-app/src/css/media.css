@@ -87,6 +87,15 @@
 }
 
 @media screen and (max-width: 500px) {
+
+    html{
+        cursor: default;
+      }
+      
+    #cs-img{
+        display: none;
+    }
+
     section,
     #intro {
         padding-left: 2%;

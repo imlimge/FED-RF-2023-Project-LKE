@@ -139,10 +139,8 @@ $('html').on('mouseup', ()=>{
     };
 
     // 슬라이드 대상 박스  >> 모듈화 해야함
-    const slideBox1 = $(".box1");
-    const slideBox2 = $(".box2");
-    const slideBox3 = $(".box3");
-    const slideBox4 = $(".box4");
+    const slideBox = $(".box1");
+
 
     /*------------------------- 스크롤 액션 ------------------------- */
     // 윈도우 높이값
@@ -223,31 +221,20 @@ $('html').on('mouseup', ()=>{
       for (let x = 0; x < 6; x++) addOn(x, scTop, bumwee[x][0], bumwee[x][1]);
 
 
+
+
       /*********************************************
        * 슬라이드 파트 스크롤 시 좌 우 이동
        *********************************************/
       i += 1;
-      if (i > 0) i = -30;
+      if (i > 0) i = -60;
+      if (i>59 && i < 60) i = 0;
 
-      
+    
       //왼쪽
-      slideBox1.css({
+      slideBox.css({
         left: i + "%",
       });
-
-      //오른쪽
-      slideBox2.css({
-        left: -30 - i + "%",
-      });
-      slideBox3.css({
-        left: i + "%",
-      });
-      slideBox4.css({
-        left: i + "%",
-      });
-
-
-
 
 
 

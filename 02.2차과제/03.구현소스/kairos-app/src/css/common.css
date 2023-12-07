@@ -2,7 +2,7 @@
 
 
 ::selection {
-  background-color: #6dbbff;
+  background-color: #8bc9ff;
   color:var(--dark-color);
   font-weight: bold;
 }
@@ -10,7 +10,7 @@
 /* 커서 */
 #cs-img{
   position: fixed;
-  width: 8vw;
+  width: 6rem;
   z-index: 9999999;
   /* transition: width .3s ease-out; */
   pointer-events: none;
@@ -656,6 +656,8 @@ display: inline-block;
   /* 투명도 0 */
   opacity: 0;
 
+  padding-right:2vw;
+
 }
 
 /* 등장클래스 .on */
@@ -672,20 +674,29 @@ display: inline-block;
 
 .intro_op span:nth-child(1){
   font-family: 'KOTRALEAP';
-font-size: max(10vw,5.8rem);
+  font-size: max(10vw,5.8rem);
+
 }
+
 .intro_op span:nth-child(2){
-  font-family: 'Merriweather', serif;
+	font-family: 'SUIT Variable';
 font-size: max(10vw,5.8rem);
+font-weight: 100;
+
 }
+
 .intro_op span:nth-child(3){
-  font-family: 'Danjo-bold-Regular';
+  font-family:'LibreBaskerville-Bold';
 font-size: max(10vw,5.8rem);
+letter-spacing:-0.7rem;
 }
+
 .intro_op span:nth-child(4){
-  font-family: 'Libre Baskerville', serif;
+  font-family:'LibreBaskerville-Italic';
 font-size: max(10vw,5.8rem);
+font-weight: 100;
 }
+
 .intro_op span:nth-child(5){
   font-family:'CopperplateBold';
 font-size: max(10vw,5.8rem);
@@ -714,13 +725,6 @@ letter-spacing:-0.7rem;
 
 
 
-.intro__content__warp{
-  
-}
-
-.intro__content{
-
-}
 
 .intro__item{
   left: 0;
@@ -746,6 +750,8 @@ letter-spacing:-0.7rem;
   color: var(--point-color)
 }
 .intro__item h4{
+	font-family: 'SUIT Variable';
+
   font-size: 3vw;
   line-height: 4vw;
   margin-bottom: 5vh;

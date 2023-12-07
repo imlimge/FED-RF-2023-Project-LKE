@@ -28,7 +28,7 @@
   top: 0;
   right: 5%;
   color: rgb(255, 255, 255);
-  font-size: 4rem;
+  font-size: 3rem;
   transition: scale .2s;
 }
 
@@ -51,8 +51,8 @@ text-align: center;
   font-family: 'SUIT-Regular';
   font-size: 1.3rem;
   padding-bottom: 1vh;
-  right: 10%;
-  top: -2.8%;
+  right: 8.8%;
+  top: -4.2%;
   position: relative;
 }
 
@@ -89,4 +89,9 @@ scale: 1.1;
 }
 .nbtn.left{
 left: 0;
+}
+
+
+.show_cont-idx{
+  display: none;
 }
