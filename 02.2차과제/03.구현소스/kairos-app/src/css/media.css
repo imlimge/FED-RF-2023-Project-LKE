@@ -30,7 +30,7 @@
         font-family: 'SUIT Variable';
         font-size: 1.3rem;
         padding-bottom: 1vh;
-        padding-top: 2vh;
+        padding-top: 3vh;
         position: relative;
         right: 0;
     }
@@ -163,7 +163,7 @@
     }
 
     .logo img:nth-child(1) {
-        animation: intro-rotate 8s linear infinite;
+        animation: rotate-ani 8s linear infinite;
         transform: scale(0.7);
     }
 

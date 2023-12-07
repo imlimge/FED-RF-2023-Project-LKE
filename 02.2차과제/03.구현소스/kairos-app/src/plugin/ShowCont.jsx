@@ -88,9 +88,9 @@ console.log(site.length)
           <h2>학원</h2>
           <p>사진을 누르면 홈으로 돌아갑니다</p>
 
-          <FontAwesomeIcon icon={faChevronLeft} className="nbtn left" />
+          {/* <FontAwesomeIcon icon={faChevronLeft} className="nbtn left" /> */}
           <img src="" alt="" />
-          <FontAwesomeIcon icon={faChevronRight} className="nbtn right" />
+          {/* <FontAwesomeIcon icon={faChevronRight} className="nbtn right" />  */}
         </div>
       </div>
     </>

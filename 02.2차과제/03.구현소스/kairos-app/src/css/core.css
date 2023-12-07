@@ -154,20 +154,6 @@
 }
 
 
-/* 본문 - 제주(고딕) */
-@font-face {
-  font-family: 'JejuGothic';
-  src: url('../static/fonts/JejuGothic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-/* 본문 - 제주(바탕) */
-@font-face {
-  font-family: 'JejuMyeongjo';
-  src: url('../static/fonts/JejuMyeongjo.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
 
 
 
