@@ -111,6 +111,14 @@
         padding-top: 34%;
         font-size: 3rem;
     }
+    .tit2 {
+        padding-left: 2%;
+        padding-right: 4%;
+        text-align: right;
+        /* display: none; */
+        padding-top: 34%;
+        font-size: 3rem;
+    }
 
     .intro__item {
         width: 70vw;
