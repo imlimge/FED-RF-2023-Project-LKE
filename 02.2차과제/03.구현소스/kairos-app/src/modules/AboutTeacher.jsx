@@ -8,9 +8,11 @@ import "../css/about_teacher.css"
 
 export function AboutTeacher(){
 
+    
+    
 return(
 
-     <>
+ <>
      
   {/* <!-- 강사소개 part1 --> */}
   <div id="about" className="about__teacher part1 on">
