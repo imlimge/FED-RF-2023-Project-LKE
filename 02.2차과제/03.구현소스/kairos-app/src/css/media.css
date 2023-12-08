@@ -272,11 +272,12 @@
     }
 
     .notice_content {
-        padding: 3% 7%;
+        padding: 3% 5%;
     }
     
     .accordion h3 {
         font-size: 1.5rem;
+        padding: 3% 5%;
     }
 
     .contact__box {
@@ -289,11 +290,11 @@
     }
 
     .contact__box p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .contact__box span {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .wrap1 {
