@@ -56,7 +56,7 @@ export function TimeTable({ sts }) {
 
   const chgRdo = (e) => {
     let txt = $(e.target).val();
-    console.log(e.target, txt);
+    // console.log(e.target, txt);
 
     if (txt === "여름방학") setTime(stime);
     if (txt === "일반시간표") setTime(rtime);

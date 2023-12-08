@@ -70,7 +70,7 @@ export function SwiperApp({ sts }) {
 
     photoItem.click((e) => {
       let tg = e.currentTarget;
-      console.log(tg, $(tg).find(".photo__title-idx").text());
+      // console.log(tg, $(tg).find(".photo__title-idx").text());
 
 
       $(".show_cont img").attr("src", $(tg).find("img").attr("src"));

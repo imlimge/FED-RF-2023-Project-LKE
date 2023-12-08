@@ -30,7 +30,7 @@ export function ShowCont({ sts }) {
 
   isH ? (site = selData["혁신관"]) : (site = selData["단계관"]);
 
-console.log(site.length)
+// console.log(site.length)
 
 // console.log(site)
 
@@ -48,13 +48,13 @@ console.log(site.length)
     let num = $(".show_cont-idx").text();
 
 
-    console.log(num);
+    // console.log(num);
     
 
     // 왼쪽버튼 누름
     lBtn.click(() => {
-        console.log('왼쪽')
-      console.log(num);
+        // console.log('왼쪽')
+      // console.log(num);
       num--;
 
       if(num < 1) num = site.length;
@@ -64,8 +64,8 @@ console.log(site.length)
 
     // 오른쪽버튼 누름
     rBtn.click(() => {
-    console.log('오른쪽')
-      console.log(num);
+    // console.log('오른쪽')
+    //   console.log(num);
 
       num++;
       if(num > site.length ) num = 1;
