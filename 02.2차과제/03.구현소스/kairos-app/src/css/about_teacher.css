@@ -19,7 +19,9 @@
   box-sizing: border-box;
   
 }
+.about__teacher h3{
 
+}
 
 .about__teacher.part1{
   background-color: var(--bright-color);

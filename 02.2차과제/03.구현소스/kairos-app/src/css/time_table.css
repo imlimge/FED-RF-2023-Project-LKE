@@ -96,7 +96,7 @@ label:hover{
   background-color: var(--color2);
   color: var(--bright-color);
 
-  font-family: 'GowunBatang-Bold';
+	font-family: 'SUIT Variable-m';
 }
 
 
@@ -121,7 +121,7 @@ td.time:hover p{
 
   border-left: none;
   border-right: none;
-  font-family: 'GowunBatang-Regular';
+	font-family: 'SUIT Variable-l';
   /* font-weight: bold; */
 }
 
