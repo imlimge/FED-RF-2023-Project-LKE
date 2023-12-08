@@ -10,7 +10,7 @@
 /* 커서 */
 #cs-img{
   position: fixed;
-  width: 6rem;
+  width: 7rem;
   z-index: 9999999;
   /* transition: width .3s ease-out; */
   pointer-events: none;
