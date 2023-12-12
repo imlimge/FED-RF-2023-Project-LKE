@@ -60,7 +60,7 @@ export function Contact({ sts }) {
               </div>
               <div className="contact__number">
                 <h4 className="contact__box_title">전화번호</h4>
-                <p> 0507-1357-4174</p>
+                <p>{site["전화번호"]}</p>
               </div>
             </div>
           </div>

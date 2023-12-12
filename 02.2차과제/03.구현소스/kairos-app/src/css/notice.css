@@ -63,7 +63,7 @@
 
 .notice_content{
 background-color: var( --color3) !important;
-height:auto;
+height:auto !important;
 padding: 3% 5% 3% 30%;
 white-space: pre-wrap;
 }
