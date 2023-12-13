@@ -1,6 +1,8 @@
 //Kairos - TopArea 컴포넌트
 
 import $ from "jquery";
+import { useNavigate } from 'react-router-dom';
+
 
 import "../css/top_area.css"
 
@@ -23,9 +25,9 @@ export function TopArea({ chgThis }) {
   const transBtn = (e) => {
     let tg = $(e.currentTarget).find(".m_btn");
 
-
+ 
     let txt = tg.text();
-    
+  
 
     if (txt === "혁신관") {
       tg.css({
@@ -36,6 +38,8 @@ export function TopArea({ chgThis }) {
       }).text("단계관");
       chgThis(0);
 
+     
+     
 
     } else {
       tg.css({
@@ -46,6 +50,8 @@ export function TopArea({ chgThis }) {
         })
         .text("혁신관");
         chgThis(1)
+      
+      
     }
 
     $(e.currentTarget).toggleClass("dark");
