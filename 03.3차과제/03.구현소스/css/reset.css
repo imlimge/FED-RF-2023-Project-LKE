@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* 리셋 CSS - reset.css */
+/* 기본 초기화 셋팅 */
+
+
+
+/* html (ROOT) 의 글자크기설정(rem,em,% 상대단위의 기준) */
+html{
+  font-size: 10px;
+}
+
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl, dt, dd, p,
+figure, figcaption
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+}
+
+
+a{
+  color: #222;
+  text-decoration: none;
+}
+
+
+img {
+  border: none;
+  /* 이미지 링크시 테두리없앰 */
+}
+
+
+address{
+  font-style: normal;
+}
+
+
+
+
+
+
+
+/* 페이지 채우기 임시 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* width: 100%;
+  height: 100%; */
+  /* 보이는 화면기준 채우기 */
+  /* body하위 요소의 높이값 %의 기준이됨! */
+  /* overflow: hidden; */
+  /* 스크롤바 없애기(스크롤안됨!) */
+
+}
+
+
+
+
+/* 페이지 공통 class */
+.page {
+  /* 한페이지 보이는 화면 채우기 */
+  /* width: 100%; */
+  height: 100vh;
+  overflow: hidden;
+  /* 
+              width: 100vw;
+              height: 100vh;
+              보이는 화면 기준의 뷰포트단위를 쓰면
+              body의 height 100%가 필요없다!
+              왜냐하면 보이는 화면을 기준하니까!
+              단, vw단위는 스크롤바 트랙까지 포함한
+              화면 전체를 기준하므로
+              데스트탑에서는 100%를 사용하는게 좋다!
+              (이유는 가로스크롤바가 생기게 되므로!)
+           */
+}
