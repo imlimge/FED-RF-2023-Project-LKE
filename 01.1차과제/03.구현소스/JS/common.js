@@ -202,6 +202,17 @@ function showSub() {
         ele.classList.remove("on");
       }
 
+<<<<<<< Updated upstream
+=======
+
+        if (!result) {
+          // false일때만 들어옴
+
+         
+          target.style.height = "0px";
+
+       /*    isBtn.classList.remove("on");
+>>>>>>> Stashed changes
      
 
     }); /////forEach///////////
