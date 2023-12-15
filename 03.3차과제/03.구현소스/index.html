@@ -7,41 +7,143 @@
 
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+      var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
 
-  </head>
 
-
+</head>
+  
 
   <body>
-    <header id="header">
+    <header id="top-area">
       <div class="header inbox">
-        
-<div class="header-box">
-        <div class="logo"></div>
+        <div class="header-box">
+          <div class="logo">
+            <a href="#">logo</a>
+          </div>
 
-        <nav class="gnb">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">게시판</a>
-            </li>
-          </ul>
-        </nav>
+          <nav class="gnb">
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">게시판</a>
+              </li>
+            </ul>
+          </nav>
 
-        <div class="search"></div>
-        <div class="cart"></div>
-        <div class="login"></div>
-
-
+          <div class="login-box">
+            <div class="search"></div>
+            <div class="cart"></div>
+            <div class="login"></div>
+          </div>
+        </div>
       </div>
-    </div> <!-- header-box -->
-
+      <!-- header-box -->
     </header>
 
     <main id="main">
-      <div class="main inbox"></div>
+      <div class="main">
+        <div class="banner">
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/banner1.png" alt="배너사진">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/banner1.png" alt="배너사진">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/banner1.png" alt="배너사진">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/banner1.png" alt="배너사진">
+              </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+        </div>
+
+        <div class="shop inbox">
+
+          <!-- 상품아이템 상단탭 -->
+          <div class="shop__item__top">
+   
+              <div class="shop__item__title">
+                오늘의 상품
+              </div>
+
+              <div class="shop__item__category">
+                <span>카테1</span>
+                <span>카테카테2</span>
+                <span>카카테3</span>
+              </div>
+              <div class="shop__item__order">
+                <div class="shop__item__count">
+                 <span>00</span>
+                 <span>개의 상품이 있습니다.</span>
+                </div>
+                <div class="shop__item__listup">
+                <span>인기순</span>
+                <span>신상품순</span>
+                <span>추천리뷰순</span>
+                <span>낮은가격순</span>
+                <span>높은가격순</span>
+                </div>
+              </div>
+
+          </div><!-- shop__item__top -->
+   
+
+            <div class="shop__item__list">
+              <div class="shop__item">
+                <div class="shop__item__photo">
+                  <img src="./images/photo1.jpg" alt="상품사진" />
+                </div>
+                <div class="shop__item__content">
+                  <span class="shop__item__content-name"> 상품명 </span>
+                  <span class="shop__item__content-cont">
+                    이거이거상품설명
+                  </span>
+                  <span class="shop__item__content-price"> 1,000원 </span>
+                 
+                  <span class="shop__item__content-review"> 리뷰 </span>
+                </div>
+              </div>
+              <div class="shop__item"></div>
+              <div class="shop__item"></div>
+              <div class="shop__item"></div>
+            </div>
+          </div>
+        </div>
+        <!-- shop -->
+      </div>
     </main>
 
     <footer id="footer">
