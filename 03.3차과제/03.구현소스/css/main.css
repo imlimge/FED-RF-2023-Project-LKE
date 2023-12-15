@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+:root {
+  --swiper-theme-color: #cfcfcf;
+}
 
 .swiper {
   width: 100%;
@@ -31,24 +34,37 @@ body *{
 }
 
 
+body{
+   padding-top: 90px; 
+}
 
 .inbox {
-  max-width: 1000px;
- 
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+
 #top-area{
-  height: 50px;
+  height: 90px;
   width: 100%;
-  box-shadow: 1px 1px 3px rgb(213, 213, 213);
+  box-shadow: 0 3px 7px 1px rgba(0,0,0,0.05);;
+  background-color: #fff;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+
 }
+
 
 .header{
-width: 100%;
-height: 100%;
-
+  width: 100%;
 }
+
+
 .header-box{
   display: flex;
   justify-content: space-between
@@ -86,9 +102,7 @@ height: 100%;
 
 
 
-.login-box{
-  display: flex;
-}
+
 
 .logo{
   width: 100px;
@@ -96,26 +110,35 @@ height: 100%;
 
 }
 
+.login-box{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.login-box i{
+font-size: 1.8rem;
+color: #272a2d;
+}
+
+
 .search{
-  width: 50px;
-  height: 50px;
+
 }
 
 .cart{
-  width: 50px;
-  height: 50px;
+
 
 }
 
 .login{
-  width: 50px;
-  height: 50px;
+
 }
 
 
 .banner{
 height: 50vh;
-background-color: orange;
+/* background-color: orange; */
 }
 
 
@@ -139,11 +162,11 @@ height: 150vh;
 
 }
 
-.shop__item__category span{
+.item__category{
   padding: 5px 12px;
   box-sizing: border-box;
-  background-color: black;
-  color: white;
+  background-color: #f7f7f7;
+  color: #111;
   font-size: 1.5rem;
 
   min-width: 50px;
@@ -158,6 +181,11 @@ height: 150vh;
   position: relative;
 
 }
+
+.item__category.on{
+  background-color: black;
+  color: white;
+ }
 
 .shop__item__order{
   display: flex;
@@ -192,13 +220,14 @@ height: 150vh;
 
 
 .shop__item__list{
-
 display: flex;
+gap: 1vw;
+margin-bottom: 1vw;
 }
 
 
 .shop__item{
-margin: .5vw;
+
 height: 400px;
 
 background-color: #f8f8f8;
@@ -263,4 +292,12 @@ flex: 1;
   display: block;
   padding-top: 8px;
   color: #999999;
+}
+
+
+#footer{
+  background-color: #eeeeee;
+  height: 30vh;
+  width: 100%;
+  color: #fff;
 }

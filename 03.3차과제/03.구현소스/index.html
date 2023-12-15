@@ -4,41 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+  </head>
 
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+
+     <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <!-- 폰트어썸 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+   <!-- CSS -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
-     <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
-      var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    </script>
 
-
-</head>
-  
 
   <body>
+
     <header id="top-area">
+      
       <div class="header inbox">
         <div class="header-box">
           <div class="logo">
-            <a href="#">logo</a>
+            <a href="#">Logo</a>
           </div>
 
           <nav class="gnb">
@@ -53,9 +42,9 @@
           </nav>
 
           <div class="login-box">
-            <div class="search"></div>
-            <div class="cart"></div>
-            <div class="login"></div>
+           <i class="search fa-solid fa-magnifying-glass"></i>
+            <i class="cart fa-solid fa-cart-shopping"></i>
+           <i class="login fa-solid fa-user"></i>
           </div>
         </div>
       </div>
@@ -66,9 +55,9 @@
       <div class="main">
         <div class="banner">
 
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
+          <div class="swiper mySwiper ">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide ">
                 <img src="./images/banner1.png" alt="배너사진">
               </div>
               <div class="swiper-slide">
@@ -82,8 +71,8 @@
               </div>
 
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
             <div class="swiper-pagination"></div>
           </div>
 
@@ -100,9 +89,9 @@
               </div>
 
               <div class="shop__item__category">
-                <span>카테1</span>
-                <span>카테카테2</span>
-                <span>카카테3</span>
+                <span class="item__category on">카테1</span>
+                <span class="item__category">카테카테2</span>
+                <span class="item__category">카카테3</span>
               </div>
               <div class="shop__item__order">
                 <div class="shop__item__count">
@@ -139,7 +128,31 @@
               <div class="shop__item"></div>
               <div class="shop__item"></div>
               <div class="shop__item"></div>
-            </div>
+              
+            </div><!-- shop__item__list -->
+
+            <div class="shop__item__list">
+              <div class="shop__item">
+                <div class="shop__item__photo">
+                  <img src="./images/photo1.jpg" alt="상품사진" />
+                </div>
+                <div class="shop__item__content">
+                  <span class="shop__item__content-name"> 상품명 </span>
+                  <span class="shop__item__content-cont">
+                    이거이거상품설명
+                  </span>
+                  <span class="shop__item__content-price"> 1,000원 </span>
+                 
+                  <span class="shop__item__content-review"> 리뷰 </span>
+                </div>
+              </div>
+              <div class="shop__item"></div>
+              <div class="shop__item"></div>
+              <div class="shop__item"></div>
+              
+            </div><!-- shop__item__list -->
+
+
           </div>
         </div>
         <!-- shop -->
@@ -147,7 +160,11 @@
     </main>
 
     <footer id="footer">
-      <div class="footer inbox"></div>
+      <div class="footer inbox">
+
+        
+ 
+      </div>
     </footer>
   </body>
 </html>
