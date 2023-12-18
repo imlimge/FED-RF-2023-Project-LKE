@@ -11,7 +11,7 @@ export function FooterArea() {
     <>
     
     <footer id="footer">
-      <div class="footer inbox">
+      <div className="footer inbox">
 
         
  

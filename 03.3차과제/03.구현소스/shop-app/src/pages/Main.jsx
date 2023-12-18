@@ -13,32 +13,16 @@ export function Main() {
      <div id="main">
       <div className="main">
         <div className="banner">
-          <SwiperBanner />
-{/* 
-          <div className="swiper mySwiper ">
-            <div className="swiper-wrapper ">
-              <div className="swiper-slide ">
-                <img src="./images/banner1.png" alt="배너사진" />
-              </div>
-              <div className="swiper-slide">
-                <img src="./images/banner1.png" alt="배너사진" />
-              </div>
-              <div className="swiper-slide">
-                <img src="./images/banner1.png" alt="배너사진" />
-              </div>
-              <div className="swiper-slide">
-                <img src="./images/banner1.png" alt="배너사진" />
-              </div>
-
-            </div>
-       
-            <div className="swiper-pagination"></div>
-          </div> */}
-
+          {/* <SwiperBanner /> */}
 
         </div>
 
         <div className="shop inbox">
+
+
+
+
+
 
           {/* <!-- 상품아이템 상단탭 --> */}
           <div className="shop__item__top">

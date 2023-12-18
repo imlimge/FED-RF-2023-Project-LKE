@@ -1,51 +1,64 @@
 //shop - TopArea 컴포넌트
 
+// 폰트어썸 불러오기
+import {
+  faCartShopping,
+  faMagnifyingGlass,
+  faSearch,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import $ from "jquery";
-import { useNavigate } from 'react-router-dom';
-
-
-
 window.jQuery = $;
 require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
 export function TopArea() {
-
-
-  
-  return(
+  return (
     <>
       <header id="top-area">
-      
-      <div className="header inbox">
-        <div className="header-box">
-          <div className="logo">
-            <a href="#">Logo</a>
-          </div>
+        <div className="header inbox">
+          <div className="header-box">
+            <div className="logo">
+              <a href="#">Logo</a>
+            </div>
 
-          <nav className="gnb">
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">게시판</a>
-              </li>
-            </ul>
-          </nav>
+            <nav className="gnb">
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">게시판</a>
+                </li>
+              </ul>
+            </nav>
 
-          <div className="login-box">
-           <i className="search fa-solid fa-magnifying-glass"></i>
-            <i className="cart fa-solid fa-cart-shopping"></i>
-           <i className="login fa-solid fa-user"></i>
+            <div className="login-box">
+              <div className="searchingGnb">
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  className="schbtnBtb"
+                  title="Open search"
+                />
+                <input
+                  id="schinGnb"
+                  type="text"
+                  placeholder="Filter by Keyword"
+                />
+              </div>
+
+              <a href="#">
+                <FontAwesomeIcon icon={faCartShopping} />
+              </a>
+              <a href="#">
+                <FontAwesomeIcon icon={faUser} />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-    </header>
-
-
-
+      </header>
     </>
   );
 } //// TopArea 컴포넌트 ////
