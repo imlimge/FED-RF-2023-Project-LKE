@@ -1,0 +1,34 @@
+/* search_list.css */
+
+
+
+.search__list{
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.search__list h2{
+  font-size: 2.8rem;
+  height: 80px;
+}
+
+.search__list__count{
+
+}
+
+
+.search__list__count{
+  font-weight: bold;
+  color: #111;
+  padding: 1vh 0 5vh 0;
+}
+
+
+.search__list__count span:nth-child(1){
+  font-size: 2rem;
+
+}
+.search__list__count span:nth-child(2){
+  font-size: 1.8rem;
+
+}

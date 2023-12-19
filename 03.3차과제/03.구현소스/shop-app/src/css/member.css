@@ -1,0 +1,40 @@
+
+.login__title{
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.login__title h2{
+  font-size: 2.8rem;
+  height: 80px;
+}
+
+.login__box{
+  max-width: 500px;
+  min-height: 400px;
+  padding: 15px;
+  border: 1px solid #ababab;
+  margin: 0 auto;
+  margin-top: 10vh;
+  border-radius: 10px;
+}
+
+
+
+
+.login__box label{
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+
+
+.login__box input{
+  width: 60%;
+  height: 3vh;
+  margin-left: 5%;
+  font-size: 1.5rem;
+  vertical-align: baseline;
+}

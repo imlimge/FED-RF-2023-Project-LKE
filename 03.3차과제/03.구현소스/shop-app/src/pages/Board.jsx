@@ -29,63 +29,63 @@ export function Board() {
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>게시글제목제목</td>
                 <td>관리자</td>
                 <td>23-12-19</td>
-                <td>Hits</td>
+                <td>0</td>
             </tr>
 
            </tbody>

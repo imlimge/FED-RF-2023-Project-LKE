@@ -42,10 +42,12 @@ export function FooterArea() {
 
 <div className="footer__info__cont">
 				사업자명 : ㈜이투컬렉션<span>I</span>대표 : 이용철, 이창만<span>I</span>사업자 등록번호: 514-81-83305 <span>I</span>FAX : 053-651-2309<br />
-				주소 : 대구시 남구 대명남로 192<span>I</span>통신판매업 신고번호: 제 2012-대구남구-0241호 <span>I</span>개인정보 보호책임자 : 이창만<br />제안/제휴문의 :  e2co@dailylike.co.kr<span>I</span> Overseas business : dailylike@e2collection.com<span>I</span>대표전화: 1644-2309<br /><br />
-				(주) 이투컬렉션의 모든 사진과 디자인은 (주) 이투컬렉션에게 있으며 이를 무단으로 도용할 시 법적 처벌을 받을 수 있습니다. 
+				주소 : 대구시 남구 대명남로 192<span>I</span>통신판매업 신고번호: 제 2012-대구남구-0241호 <span>I</span>개인정보 보호책임자 : 이창만<br />제안/제휴문의 :  e2co@dailylike.co.kr<span>I</span> Overseas business : dailylike@e2collection.com<span>I</span>대표전화: 1644-2309<br />
 
-<p>Copyright 2021 Dailylike All Rights Reserved.</p>
+
+<p>(주) 이투컬렉션의 모든 사진과 디자인은 (주) 이투컬렉션에게 있으며 이를 무단으로 도용할 시 법적 처벌을 받을 수 있습니다. <br />
+
+Copyright 2021 Dailylike All Rights Reserved.</p>
 </div>
 
 

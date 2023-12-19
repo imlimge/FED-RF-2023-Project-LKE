@@ -288,14 +288,15 @@ height: 50vh;
 
 .footer__info li{
   font-size: 1.3rem;
-  margin-right: 10px;
+  margin-right: 26px;
+  cursor: pointer;
 }
 
 .footer__info__cont{
   font-size: 1.2rem;
   color: #888;
   padding: 3vh 0;
-  line-height: 1;
+  line-height: 1.4;
 }
 .footer__info__cont span{
   padding: 0px 10px;
