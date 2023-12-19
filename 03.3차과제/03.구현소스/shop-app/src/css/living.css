@@ -1,0 +1,121 @@
+
+
+.shop.sell{
+  display: flex;
+  height: 150vh;
+  }
+
+
+  .shop__list__left{
+    padding: 4vh 4vw 4vh 2vw;
+    flex: 1;
+  }
+  .shop__list__left h2{
+
+    font-size: 2.4rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadada;
+  }
+
+  .shop__list__left li{
+    position: relative;
+    padding-top: 10px;
+    font-size: 1.5rem;
+  }
+
+
+
+input[type="checkbox"]{
+        display: none;
+      }
+
+input[type="checkbox"] + label{
+        display: inline-block;
+        
+        width: 10px;
+        height: 10px;
+        border:1px solid #c1c1c1;
+        position: absolute;
+        right: 0;
+
+      }
+input[id="check1"]:checked + label::after{
+  content: 'L';
+    font-size: 15px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    position: absolute;
+    left: 4px;
+    top: -7px;
+    transform: scalex(-1) rotate(317deg);
+}
+
+
+
+
+
+
+  .shop__item{
+    flex: 4;
+  }
+  .shop__item__top{ 
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 10px;
+  }
+  
+  .shop__item__title{
+    font-size: 2.8rem;
+    height: 80px;
+  }
+ 
+
+
+
+
+
+  .shop__item__order{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  
+  .shop__item__count{
+    font-weight: bold;
+    color: #111;
+  }
+  
+  .shop__item__count span:nth-child(1){
+    font-size: 1.8rem;
+  
+  }
+  .shop__item__count span:nth-child(2){
+    font-size: 1.3rem;
+  
+  }
+  
+  
+  .shop__item__orderlist{
+    font-size: 1.3rem;
+    margin: auto 0;
+  }
+
+  .orderlist{
+    display: inline;
+    margin-left: 9px;
+    color: #a0a0a0;
+    cursor: pointer;
+  }
+  
+  .orderlist.on{
+    margin-left: 9px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  
+  

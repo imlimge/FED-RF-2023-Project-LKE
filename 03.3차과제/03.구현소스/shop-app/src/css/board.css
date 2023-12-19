@@ -1,0 +1,66 @@
+/* board.css */
+
+.board_title{
+  text-align: center;
+  padding-top: 5vh;
+}
+.board_title h2{
+  font-size: 2.8rem;
+  height: 80px;
+}
+.board_title p{
+  font-size: 1.4rem;
+  height: 80px;
+}
+
+.board__box{
+  width: 100%;
+  position: relative;
+
+}
+
+
+.board{
+  text-align: center;
+  border-collapse: collapse;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto 7vh;
+  font-size: 1.4rem;
+  }
+
+  /*각 th별 가로크기지정 */
+.board th:nth-child(1){
+  width: 50px;
+}
+.board th:nth-child(2){
+  width: 420px;
+
+
+}
+.board th:nth-child(3){
+  width: 100px;
+}
+.board th:nth-child(4){
+  width: 100px;
+}
+.board th:nth-child(5){
+  width: 80px;
+}
+
+.board thead{
+  /*머리줄 th 윗줄*/
+  border-top: 2px solid #999;
+  /*두종색*/
+  border-bottom: 1px solid #999;
+}
+
+.board tbody tr:last-child td {
+  /*테이블본문의 마지막 줄 tr 의 td 밑줄변경*/
+  border-bottom: 2px solid #999;
+}
+.board tbody tr td:nth-child(2) {
+  text-align: left;
+  padding: 0 3vw;
+}
+

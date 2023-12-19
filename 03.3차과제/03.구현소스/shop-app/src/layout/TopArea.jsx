@@ -1,4 +1,5 @@
 //shop - TopArea 컴포넌트
+import { Link } from "react-router-dom";
 
 // 폰트어썸 불러오기
 import {
@@ -21,40 +22,44 @@ export function TopArea() {
         <div className="header inbox">
           <div className="header-box">
             <div className="logo">
-              <a href="#">Logo</a>
+              <Link to="/">ShopLogo</Link>
             </div>
 
             <nav className="gnb">
               <ul>
                 <li>
-                  <a href="#">Home</a>
+                  <Link to="/living">리빙</Link>
                 </li>
                 <li>
-                  <a href="#">게시판</a>
+                  <Link to="/office">문구</Link>
+                </li>
+                <li>
+                  <Link to="/kids">키즈</Link>
+                </li>
+                <li>
+                  <Link to="/board">게시판</Link>
                 </li>
               </ul>
             </nav>
 
             <div className="login-box">
               <div className="searchingGnb">
-                <FontAwesomeIcon
-                  icon={faMagnifyingGlass}
-                  className="schbtnBtb"
-                  title="Open search"
-                />
-                <input
-                  id="schinGnb"
-                  type="text"
-                  placeholder="Filter by Keyword"
-                />
+                <Link to="/searchlist">
+                  <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    className="schbtnBtb"
+                    title="Open search"
+                  />
+                </Link>
+                <input id="schinGnb" type="text" placeholder="상품 검색" />
               </div>
 
-              <a href="#">
+              <Link to="/cart">
                 <FontAwesomeIcon icon={faCartShopping} />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/login">
                 <FontAwesomeIcon icon={faUser} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
