@@ -7,6 +7,8 @@ export function ItemList() {
     <>
 
 <div className="shop__item__list">
+             
+             
               <div className="shop__item">
                 <div className="shop__item__photo">
                   <img src="./images/main/photo1.jpg" alt="상품사진" />
@@ -21,6 +23,10 @@ export function ItemList() {
                   <span className="shop__item__content-review"> 리뷰 </span>
                 </div>
               </div>
+
+
+
+              
               <div className="shop__item">
                 <div className="shop__item__photo">
                   <img src="./images/main/photo1.jpg" alt="상품사진" />

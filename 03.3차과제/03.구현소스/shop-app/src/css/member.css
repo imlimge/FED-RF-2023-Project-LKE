@@ -11,30 +11,78 @@
 
 .login__box{
   max-width: 500px;
-  min-height: 400px;
   padding: 15px;
   border: 1px solid #ababab;
-  margin: 0 auto;
-  margin-top: 10vh;
+  margin: 10vh auto;
+
   border-radius: 10px;
+  text-align: center;
 }
 
 
 
+.form__box{
+  position: relative;
+  margin-bottom: 12px;
+  
+}
 
-.login__box label{
-  display: inline-block;
-  width: 25%;
-  text-align: right;
-  font-size: 1.6rem;
-  white-space: nowrap;
+.form__box label{
+  position: absolute;
+  font-size:  1.5rem;
+  padding: 0 16px;
+  line-height: 15px;
+  letter-spacing: -0.05em;
+  color: #999;
+  font-weight: 300;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+
 }
 
 
-.login__box input{
-  width: 60%;
-  height: 3vh;
-  margin-left: 5%;
+.form__box input{
+  width: 80%;
+  padding: 18px 10px 19px 80px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
   font-size: 1.5rem;
-  vertical-align: baseline;
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: -0.05em;
+}
+
+
+
+
+
+.security{
+  position: relative;
+  text-align: left;
+  padding-bottom: 1vh;
+}
+.security li{
+  display: inline-block;
+  font-size: 1.3rem;
+
+}
+
+.security li:nth-child(3){
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+
+.login__btn{
+  width: 98%;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  height: 50px;
+  cursor: pointer;
 }

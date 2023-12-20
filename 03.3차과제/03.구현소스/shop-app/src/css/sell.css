@@ -25,11 +25,11 @@
 
 
 
-input[type="checkbox"]{
+.sell input[type="checkbox"]{
         display: none;
       }
 
-input[type="checkbox"] + label{
+.sell input[type="checkbox"] + label{
         display: inline-block;
         
         width: 10px;
@@ -39,7 +39,8 @@ input[type="checkbox"] + label{
         right: 0;
 
       }
-input[id="check1"]:checked + label::after{
+
+.sell input:checked + label::after{
   content: 'L';
     font-size: 15px;
     width: 10px;
@@ -50,8 +51,6 @@ input[id="check1"]:checked + label::after{
     top: -7px;
     transform: scalex(-1) rotate(317deg);
 }
-
-
 
 
 
