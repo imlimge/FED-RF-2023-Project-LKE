@@ -1,26 +1,25 @@
 import { ItemList } from "../modules/ItemList";
 
-
+import "../css/item_list.css";
 import "../css/sell.css";
-import"../css/item_list.css"
 
 import { categoryData } from "../data/category";
+import { shopData } from "../data/shop";
 
 export function Living() {
-
-
-  const selData = categoryData.리빙;
+  const selCat = categoryData.리빙;
+  const selData = shopData.리빙;
 
   const makeList = () => {
     let temp = [];
 
-    selData.map((v, i) => {
+    selCat.map((v, i) => {
       temp[i] = (
         <>
           <li>
             {v}
-            <input type="checkbox" id={"check"+i} />
-            <label htmlFor={"check"+i} ></label>
+            <input type="checkbox" id={"check" + i} />
+            <label htmlFor={"check" + i}></label>
           </li>
         </>
       );
@@ -29,24 +28,39 @@ export function Living() {
     return temp;
   };
 
+  const makeItem = () => {
+    let temp = [];
 
-  const makeItem = ()=> {
+    selData.map((v, i) => {
+      temp[i] = (
+        <div className="shop__item">
+          <div className="shop__item__photo">
+            <img src={v.isrc} alt="상품사진" />
+          </div>
+          <div className="shop__item__content">
+            <span className="shop__item__content-name"> {v.name} </span>
+            <span className="shop__item__content-cont">{v.cont}</span>
+            <span className="shop__item__content-price"> {v.price} </span>
 
-    
-  }
-
-
+            <span className="shop__item__content-review"> 리뷰 </span>
+          </div>
+        </div>
+      );
+    });
+    return temp;
+  };
 
   return (
     <>
-      <div className="shop sell inbox">
+      <div className="shop inbox">
+      <div className="shop__box">
         <div className="shop__list__left">
           <h2>리빙</h2>
 
           <ol>{makeList()}</ol>
         </div>
 
-        <div className="shop__item">
+        <div className="shop__item__right">
           {/* <!-- 상품아이템 상단탭 --> */}
           <div className="shop__item__top">
             <div className="shop__item__order">
@@ -64,9 +78,8 @@ export function Living() {
             </div>
           </div>
           {/* <!-- shop__item__top --> */}
-
-          <ItemList />
-          <ItemList />
+          <div className="shop__item__list">{makeItem()}</div>
+        </div>
         </div>
       </div>
     </>

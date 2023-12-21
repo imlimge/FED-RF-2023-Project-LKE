@@ -1,15 +1,19 @@
 import { ItemList } from "../modules/ItemList";
 
+import "../css/item_list.css";
 import "../css/sell.css";
+
 import { categoryData } from "../data/category";
+import { shopData } from "../data/shop";
 
 export function Kids() {
-  const selData = categoryData.키즈;
+  const selCat = categoryData.키즈;
+  const selData = shopData.키즈;
 
   const makeList = () => {
     let temp = [];
 
-    selData.map((v, i) => {
+    selCat.map((v, i) => {
       temp[i] = (
         <>
           <li>
@@ -24,15 +28,39 @@ export function Kids() {
     return temp;
   };
 
+  const makeItem = () => {
+    let temp = [];
+
+    selData.map((v, i) => {
+      temp[i] = (
+        <div className="shop__item">
+          <div className="shop__item__photo">
+            <img src={v.isrc} alt="상품사진" />
+          </div>
+          <div className="shop__item__content">
+            <span className="shop__item__content-name"> {v.name} </span>
+            <span className="shop__item__content-cont">{v.cont}</span>
+            <span className="shop__item__content-price"> {v.price} </span>
+
+            <span className="shop__item__content-review"> 리뷰 </span>
+          </div>
+        </div>
+      );
+    });
+    return temp;
+  };
+
   return (
     <>
-      <div className="shop sell inbox">
+      <div className="shop inbox">
+      <div className="shop__box">
         <div className="shop__list__left">
           <h2>키즈</h2>
+
           <ol>{makeList()}</ol>
         </div>
 
-        <div className="shop__item">
+        <div className="shop__item__right">
           {/* <!-- 상품아이템 상단탭 --> */}
           <div className="shop__item__top">
             <div className="shop__item__order">
@@ -50,9 +78,8 @@ export function Kids() {
             </div>
           </div>
           {/* <!-- shop__item__top --> */}
-
-          <ItemList />
-          <ItemList />
+          <div className="shop__item__list">{makeItem()}</div>
+        </div>
         </div>
       </div>
     </>
