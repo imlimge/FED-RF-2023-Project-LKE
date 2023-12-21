@@ -4,6 +4,12 @@ import { ItemList } from "../modules/ItemList";
 import { SwiperBanner } from "../plugin/SwiperBanner";
 
 export function Main() {
+
+
+
+  
+
+
   return (
     <>
       <div id="main">

@@ -11,11 +11,40 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import $ from "jquery";
+import { shopGnbData } from "../data/shop_gnb";
+import { useState } from "react";
 window.jQuery = $;
 require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
-export function TopArea() {
+export function TopArea(props) {
+
+
+   // 페이지변경 상태변수 업데이트 함수
+   const chgPgName2 = (txt) => {
+    props.chgPgFn(txt);
+  }; ///////// chgPgName 함수 //////
+
+
+  const selCat = shopGnbData;
+
+
+  const makeShopGnb = () => {
+    let temp = [];
+
+    selCat.map((v, i) => {
+      temp[i] = (
+        <li key={i}>
+          <Link to={v.link}  onClick={()=>chgPgName2(v.cat)}>{v.cat}</Link>
+        </li>
+      );
+    });
+
+    return temp;
+  };
+
+
+
   return (
     <>
       <header id="top-area">
@@ -26,20 +55,7 @@ export function TopArea() {
             </div>
 
             <nav className="gnb">
-              <ul>
-                <li>
-                  <Link to="/living">리빙</Link>
-                </li>
-                <li>
-                  <Link to="/office">문구</Link>
-                </li>
-                <li>
-                  <Link to="/kids">키즈</Link>
-                </li>
-                <li>
-                  <Link to="/board">게시판</Link>
-                </li>
-              </ul>
+              <ul>{makeShopGnb()}</ul>
             </nav>
 
             <div className="login-box">

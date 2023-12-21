@@ -6,6 +6,7 @@ import { MainArea } from "./MainArea";
 import { FooterArea } from "./FooterArea";
 import { TopArea } from "./TopArea";
 
+import { sCon } from "../modules/shopContext";
 
 
 import $ from "jquery";
@@ -15,14 +16,28 @@ require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
 export function Layout() {
- 
+
+    // 후크상태변수 설정 : 페이지변경
+    const [pgName, setPgName] = useState(null);
+    console.log('레이아웃',pgName)
+  
+    // 페이지변경 상태변수 업데이트 함수
+    const chgPgName = (txt) => {
+      setPgName(txt);
+
+    }; ///////// chgPgName 함수 //////
+  
+  
+  
 
 
   return (
     <>
-      <TopArea />
-      <MainArea />
+
+      <TopArea chgPgFn={chgPgName}/>
+      <MainArea page={pgName} />
       <FooterArea />
+
     </>
   );
 }
