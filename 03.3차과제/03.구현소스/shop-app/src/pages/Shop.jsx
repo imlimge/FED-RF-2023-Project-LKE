@@ -13,7 +13,7 @@ export function Shop() {
   const selData = shopData.리빙;
 
   
-  const makeList = () => {
+  const makeList = () => {                                              
     let temp = [];
 
     selCat.map((v, i) => {
