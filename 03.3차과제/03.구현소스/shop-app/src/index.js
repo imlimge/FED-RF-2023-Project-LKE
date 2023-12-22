@@ -10,7 +10,7 @@ import "./css/index.css";
 import { Layout } from "./layout/Layout";
 import { Main } from "./pages/Main";
 import { Board } from "./pages/Board";
-import { Shop } from "./pages/Shop";
+import { Shop } from "./modules/Shop";
 
 import { Living } from "./pages/Living";
 import { Office } from "./pages/Office";
@@ -23,13 +23,14 @@ import { SearchList } from "./pages/SearchList";
 
 export default function App() {
 
-  
+
   return (
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-   
+    
           <Route path="living" element={<Living />} />
           <Route path="office" element={<Office />} />
           <Route path="kids" element={<Kids />} />

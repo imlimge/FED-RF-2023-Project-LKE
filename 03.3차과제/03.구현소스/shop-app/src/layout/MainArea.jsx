@@ -4,14 +4,14 @@ import { Outlet } from "react-router-dom";
 
 import { Main } from "../pages/Main";
 
-export function MainArea(props) {
+export function MainArea() {
 
 
 
 
   return(
     <main className="main">
-      <Outlet cat={props.cat}/>
+      <Outlet />
     </main>
   
   );

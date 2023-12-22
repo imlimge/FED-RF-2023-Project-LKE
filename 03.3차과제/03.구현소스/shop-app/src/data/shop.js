@@ -7,6 +7,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
+      review:"5"
     },
     {
       idx: 2,
@@ -15,6 +16,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "키친",
+      review:"6"
     },
     {
       idx: 3,
@@ -23,6 +25,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "키친",
+      review:"34"
     },
     {
       idx: 4,
@@ -31,6 +34,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "키친",
+      review:"38"
     },
     {
       idx: 5,
@@ -39,6 +43,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"7"
     },
     {
       idx: 6,
@@ -47,6 +52,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "키친",
+      review:"177"
     },
     {
       idx: 7,
@@ -55,6 +61,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "키친",
+      review:"26"
     },
     {
       idx: 8,
@@ -63,6 +70,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "데코",
+      review:"254"
     },
     {
       idx: 9,
@@ -71,6 +79,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "키친",
+      review:"45"
     },
     {
       idx: 10,
@@ -79,6 +88,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "키친",
+      review:"789"
     },
     {
       idx: 11,
@@ -87,6 +97,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
+      review:"11"
     },
     {
       idx: 12,
@@ -95,6 +106,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
+      review:"34"
     },
     {
       idx: 13,
@@ -103,6 +115,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "키친",
+      review:"97"
     },
     {
       idx: 14,
@@ -111,6 +124,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "키친",
+      review:"54"
     },
     {
       idx: 15,
@@ -119,6 +133,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "키친",
+      review:"65"
     },
     {
       idx: 16,
@@ -127,6 +142,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"785"
     },
     {
       idx: 17,
@@ -135,6 +151,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "키친",
+      review:"75"
     },
     {
       idx: 18,
@@ -143,6 +160,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "키친",
+      review:"24"
     },
     {
       idx: 19,
@@ -151,6 +169,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "인형",
+      review:"34"
     },
     {
       idx: 20,
@@ -159,6 +178,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "키친",
+      review:"4"
     },
     {
       idx: 21,
@@ -167,6 +187,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "인형",
+      review:"1"
     },
     {
       idx: 22,
@@ -175,6 +196,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
+      review:"7"
     },
     {
       idx: 23,
@@ -183,6 +205,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
+      review:"88"
     },
     {
       idx: 24,
@@ -191,6 +214,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "인형",
+      review:"77"
     },
     {
       idx: 25,
@@ -199,6 +223,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "키친",
+      review:"345"
     },
     {
       idx: 26,
@@ -207,6 +232,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "키친",
+      review:"78"
     },
     {
       idx: 27,
@@ -215,6 +241,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"99"
     },
     {
       idx: 28,
@@ -223,6 +250,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "키친",
+      review:"37"
     },
     {
       idx: 29,
@@ -231,6 +259,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "키친",
+      review:"67"
     },
     {
       idx: 30,
@@ -239,6 +268,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "데코",
+      review:"57"
     },
     {
       idx: 31,
@@ -247,6 +277,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "키친",
+      review:"5"
     },
     {
       idx: 32,
@@ -255,6 +286,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "키친",
+      review:"79"
     },
     {
       idx: 33,
@@ -263,6 +295,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
+      review:"56"
     },
     {
       idx: 34,
@@ -271,6 +304,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
+      review:"56"
     },
     {
       idx: 35,
@@ -279,6 +313,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "키친",
+      review:"775"
     },
     {
       idx: 36,
@@ -287,6 +322,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "키친",
+      review:"9"
     },
     {
       idx: 37,
@@ -295,6 +331,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "키친",
+      review:"33"
     },
     {
       idx: 38,
@@ -303,6 +340,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"16"
     },
     {
       idx: 39,
@@ -311,6 +349,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "키친",
+      review:"111"
     },
     {
       idx: 40,
@@ -319,6 +358,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "키친",
+      review:"222"
     },
     {
       idx: 41,
@@ -327,6 +367,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "데코",
+      review:"333"
     },
     {
       idx: 42,
@@ -335,6 +376,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "키친",
+      review:"24"
     },
     {
       idx: 43,
@@ -343,6 +385,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "키친",
+      review:"25"
     },
     {
       idx: 44,
@@ -351,6 +394,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
+      review:"26"
     },
     {
       idx: 45,
@@ -359,6 +403,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
+      review:"27"
     },
     {
       idx: 46,
@@ -367,6 +412,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "키친",
+      review:"29"
     },
     {
       idx: 47,
@@ -375,6 +421,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "키친",
+      review:"35"
     },
     {
       idx: 48,
@@ -383,6 +430,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "키친",
+      review:"53"
     },
     {
       idx: 49,
@@ -391,6 +439,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"36"
     },
     {
       idx: 50,
@@ -399,6 +448,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "키친",
+      review:"63"
     },
     {
       idx: 51,
@@ -407,6 +457,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "키친",
+      review:"73"
     },
     {
       idx: 52,
@@ -415,6 +466,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "데코",
+      review:"38"
     },
     {
       idx: 53,
@@ -423,6 +475,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "키친",
+      review:"39"
     },
     {
       idx: 54,
@@ -431,6 +484,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "키친",
+      review:"43"
     },
     {
       idx: 55,
@@ -439,6 +493,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
+      review:"47"
     },
     {
       idx: 56,
@@ -447,6 +502,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "데코",
+      review:"4"
     },
     {
       idx: 57,
@@ -455,6 +511,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "키친",
+      review:"66"
     },
     {
       idx: 58,
@@ -463,6 +520,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "키친",
+      review:"68"
     },
     {
       idx: 59,
@@ -471,6 +529,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
+      review:"69"
     },
     {
       idx: 60,
@@ -479,6 +538,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "키친",
+      review:"76"
     },
     {
       idx: 61,
@@ -487,6 +547,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
+      review:"5"
     },
   ],
  
@@ -498,6 +559,7 @@ export const shopData = {
       cont: "테이프 증정",
       price: "2000",
       category: "달력",
+      review:"76"
     },
     {
       idx: 2,
@@ -506,6 +568,7 @@ export const shopData = {
       cont: "",
       price: "11000",
       category: "필통/파우치",
+      review:"5"
     },
     {
       idx: 3,
@@ -514,6 +577,7 @@ export const shopData = {
       cont: "[무료증정] 펜증정",
       price: "9000",
       category: "노트/다이어리",
+      review:"45"
     },
     {
       idx: 4,
@@ -522,6 +586,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "노트/다이어리",
+      review:"88"
     },
     {
       idx: 5,
@@ -530,6 +595,7 @@ export const shopData = {
       cont: "2+1 / 2개사면 한개 더 증정",
       price: "14000",
       category: "볼펜",
+      review:"46"
     },
     {
       idx: 6,
@@ -538,6 +604,7 @@ export const shopData = {
       cont: "3가지 색상",
       price: "13000",
       category: "달력",
+      review:"64"
     },
     {
       idx: 7,
@@ -546,6 +613,7 @@ export const shopData = {
       cont: "",
       price: "6000",
       category: "달력",
+      review:"72"
     },
     {
       idx: 8,
@@ -554,6 +622,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "데코",
+      review:"12"
     },
     {
       idx: 9,
@@ -562,6 +631,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "달력",
+      review:"34"
     },
     {
       idx: 10,
@@ -570,6 +640,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "달력",
+      review:"43"
     },
     {
       idx: 11,
@@ -578,6 +649,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "볼펜",
+      review:"86"
     },
     {
       idx: 12,
@@ -586,6 +658,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "달력",
+      review:"35"
     },
     {
       idx: 13,
@@ -594,6 +667,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "달력",
+      review:"435"
     },
     {
       idx: 14,
@@ -602,6 +676,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "달력",
+      review:"11"
     },
     {
       idx: 15,
@@ -610,6 +685,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "달력",
+      review:"14"
     },
     {
       idx: 16,
@@ -618,6 +694,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"9"
     },
     {
       idx: 17,
@@ -626,6 +703,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "달력",
+      review:"76"
     },
     {
       idx: 18,
@@ -634,6 +712,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "달력",
+      review:"65"
     },
     {
       idx: 19,
@@ -642,6 +721,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "스티커",
+      review:"133"
     },
     {
       idx: 20,
@@ -650,6 +730,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "달력",
+      review:"25"
     },
     {
       idx: 21,
@@ -658,6 +739,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "달력",
+      review:"34"
     },
     {
       idx: 22,
@@ -666,6 +748,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "볼펜",
+      review:"78"
     },
     {
       idx: 23,
@@ -674,6 +757,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "달력",
+      review:"97"
     },
     {
       idx: 24,
@@ -682,6 +766,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "스티커",
+      review:"9"
     },
     {
       idx: 25,
@@ -690,6 +775,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "필통/파우치",
+      review:"34"
     },
     {
       idx: 26,
@@ -698,6 +784,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "필통/파우치",
+      review:"35"
     },
     {
       idx: 27,
@@ -706,6 +793,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"25"
     },
     {
       idx: 28,
@@ -714,6 +802,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "달력",
+      review:"36"
     },
     {
       idx: 29,
@@ -722,6 +811,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "필통/파우치",
+      review:"73"
     },
     {
       idx: 30,
@@ -730,6 +820,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "데코",
+      review:"35"
     },
     {
       idx: 31,
@@ -738,6 +829,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "달력",
+      review:"59"
     },
     {
       idx: 32,
@@ -746,6 +838,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "달력",
+      review:"55"
     },
     {
       idx: 33,
@@ -754,6 +847,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "볼펜",
+      review:"6"
     },
     {
       idx: 34,
@@ -762,6 +856,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "달력",
+      review:"7"
     },
     {
       idx: 35,
@@ -770,6 +865,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "달력",
+      review:"8"
     },
     {
       idx: 36,
@@ -778,6 +874,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "달력",
+      review:"40"
     },
     {
       idx: 37,
@@ -786,6 +883,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "달력",
+      review:"15"
     },
     {
       idx: 38,
@@ -794,6 +892,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"35"
     },
     {
       idx: 39,
@@ -802,6 +901,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "달력",
+      review:"55"
     },
     {
       idx: 40,
@@ -810,6 +910,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "달력",
+      review:"75"
     },
     {
       idx: 41,
@@ -818,6 +919,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "데코",
+      review:"85"
     },
     {
       idx: 42,
@@ -826,6 +928,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "달력",
+      review:"22"
     },
     {
       idx: 43,
@@ -834,6 +937,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "달력",
+      review:"32"
     },
     {
       idx: 44,
@@ -842,6 +946,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "볼펜",
+      review:"42"
     },
     {
       idx: 45,
@@ -850,6 +955,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "달력",
+      review:"52"
     },
     {
       idx: 46,
@@ -858,6 +964,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "달력",
+      review:"33"
     },
     {
       idx: 47,
@@ -866,6 +973,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "달력",
+      review:"42"
     },
     {
       idx: 48,
@@ -874,6 +982,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "달력",
+      review:"72"
     },
     {
       idx: 49,
@@ -882,6 +991,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "데코",
+      review:"27"
     },
     {
       idx: 50,
@@ -890,6 +1000,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "달력",
+      review:"56"
     },
     {
       idx: 51,
@@ -898,6 +1009,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "달력",
+      review:"120"
     },
   
   ],
@@ -909,6 +1021,7 @@ export const shopData = {
       cont: "2세트",
       price: "12000",
       category: "양말",
+      review:"12"
     },
     {
       idx: 2,
@@ -917,6 +1030,7 @@ export const shopData = {
       cont: "",
       price: "7000",
       category: "양말",
+      review:"120"
     },
     {
       idx: 3,
@@ -925,6 +1039,7 @@ export const shopData = {
       cont: "",
       price: "7000",
       category: "양말",
+      review:"34"
     },
     {
       idx: 4,
@@ -933,6 +1048,7 @@ export const shopData = {
       cont: "미끄럼방지 기능",
       price: "8000",
       category: "양말",
+      review:"55"
     },
     {
       idx: 5,
@@ -941,6 +1057,7 @@ export const shopData = {
       cont: "택 1",
       price: "5000",
       category: "유아식기",
+      review:"66"
     },
     {
       idx: 6,
@@ -949,6 +1066,7 @@ export const shopData = {
       cont: "10종 택 1",
       price: "3000",
       category: "양말",
+      review:"73"
     },
     {
       idx: 7,
@@ -957,6 +1075,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "유아식기",
+      review:"34"
     },
     {
       idx: 8,
@@ -965,6 +1084,7 @@ export const shopData = {
       cont: "2+1 사은품 증정",
       price: "2500",
       category: "양말",
+      review:"2"
     },
     {
       idx: 9,
@@ -973,6 +1093,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "유아식기",
+      review:"82"
     },
     {
       idx: 10,
@@ -981,6 +1102,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "유아식기",
+      review:"14"
     },
     {
       idx: 11,
@@ -989,6 +1111,7 @@ export const shopData = {
       cont: "[구성]소품과 소품",
       price: "20000",
       category: "기타소품",
+      review:"34"
     },
     {
       idx: 12,
@@ -997,6 +1120,7 @@ export const shopData = {
       cont: "캐릭터 2종류",
       price: "6500",
       category: "유아식기",
+      review:"80"
     },
     {
       idx: 13,
@@ -1005,6 +1129,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "유아식기",
+      review:"45"
     },
     {
       idx: 14,
@@ -1013,6 +1138,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "유아식기",
+      review:"67"
     },
     {
       idx: 15,
@@ -1021,6 +1147,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "유아식기",
+      review:"56"
     },
     {
       idx: 16,
@@ -1029,6 +1156,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "양말",
+      review:"7"
     },
     {
       idx: 17,
@@ -1037,6 +1165,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "유아식기",
+      review:"55"
     },
     {
       idx: 18,
@@ -1045,6 +1174,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "유아식기",
+      review:"75"
     },
     {
       idx: 19,
@@ -1053,6 +1183,8 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "유아식기",
+      review:"136"
+      
     },
     {
       idx: 20,
@@ -1061,6 +1193,7 @@ export const shopData = {
       cont: "",
       price: "5000",
       category: "유아식기",
+      review:"24"
     },
     {
       idx: 21,
@@ -1069,6 +1202,7 @@ export const shopData = {
       cont: "키즈 구성식기",
       price: "12000",
       category: "유아식기",
+      review:"25"
     },
     {
       idx: 22,
@@ -1077,6 +1211,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "기타소품",
+      review:"46"
     },
     {
       idx: 23,
@@ -1085,6 +1220,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "유아식기",
+      review:"57"
     },
     {
       idx: 24,
@@ -1093,6 +1229,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "유아식기",
+      review:"45"
     },
     {
       idx: 25,
@@ -1101,6 +1238,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "욕실 소품",
+      review:"31"
     },
     {
       idx: 26,
@@ -1109,6 +1247,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "욕실 소품",
+      review:"6"
     },
     {
       idx: 27,
@@ -1117,6 +1256,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "양말",
+      review:"86"
     },
     {
       idx: 28,
@@ -1125,6 +1265,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "유아식기",
+      review:"13"
     },
     {
       idx: 29,
@@ -1133,6 +1274,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "욕실 소품",
+      review:"75"
     },
     {
       idx: 30,
@@ -1141,6 +1283,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "양말",
+      review:"35"
     },
     {
       idx: 31,
@@ -1149,6 +1292,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "유아식기",
+      review:"45"
     },
     {
       idx: 32,
@@ -1157,6 +1301,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "유아식기",
+      review:"68"
     },
     {
       idx: 33,
@@ -1165,6 +1310,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "기타소품",
+      review:"79"
     },
     {
       idx: 34,
@@ -1173,6 +1319,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "유아식기",
+      review:"96"
     },
     {
       idx: 35,
@@ -1181,6 +1328,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "유아식기",
+      review:"6"
     },
     {
       idx: 36,
@@ -1189,6 +1337,7 @@ export const shopData = {
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "유아식기",
+      review:"65"
     },
     {
       idx: 37,
@@ -1197,6 +1346,7 @@ export const shopData = {
       cont: "",
       price: "14000",
       category: "유아식기",
+      review:"23"
     },
     {
       idx: 38,
@@ -1205,6 +1355,7 @@ export const shopData = {
       cont: "택 1",
       price: "14000",
       category: "양말",
+      review:"42"
     },
     {
       idx: 39,
@@ -1213,6 +1364,7 @@ export const shopData = {
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "유아식기",
+      review:"75"
     },
     {
       idx: 40,
@@ -1221,6 +1373,7 @@ export const shopData = {
       cont: "",
       price: "15900",
       category: "유아식기",
+      review:"6"
     },
     {
       idx: 41,
@@ -1229,6 +1382,7 @@ export const shopData = {
       cont: "01-02",
       price: "14000",
       category: "양말",
+      review:"7"
     },
     {
       idx: 42,
@@ -1237,6 +1391,7 @@ export const shopData = {
       cont: "",
       price: "28900",
       category: "유아식기",
+      review:"86"
     },
     {
       idx: 43,
@@ -1245,6 +1400,7 @@ export const shopData = {
       cont: "",
       price: "12000",
       category: "유아식기",
+      review:"4"
     },
     {
       idx: 44,
@@ -1253,6 +1409,7 @@ export const shopData = {
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "기타소품",
+      review:"12"
     },
     {
       idx: 45,
@@ -1261,6 +1418,7 @@ export const shopData = {
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "유아식기",
+      review:"34"
     },
     {
       idx: 46,
@@ -1269,6 +1427,7 @@ export const shopData = {
       cont: "",
       price: "6800",
       category: "유아식기",
+      review:"75"
     },
 
   ],
