@@ -46,6 +46,7 @@ export function Shop() {
   // useState로 셋팅된 값을 바꿔줌
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    window.scrollTo(0, 0);
   };
 
 

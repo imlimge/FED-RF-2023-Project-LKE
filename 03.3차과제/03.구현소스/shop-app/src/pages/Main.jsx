@@ -1,11 +1,11 @@
 //shop - Main 컴포넌트
 
-import { useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { categoryData } from "../data/category";
 
-import { ItemList } from "../modules/ItemList";
 import { SwiperBanner } from "../plugin/SwiperBanner";
 
+import "../css/item_list.css"
 
 import $ from "jquery";
 import { shopData } from "../data/shop";
@@ -13,6 +13,22 @@ window.jQuery = $;
 
 
 export function Main() {
+
+
+  useEffect(()=>{
+
+   $('.item__category').eq(0).addClass("on");
+
+   $('.item__category').click((e)=>{
+    $(e.currentTarget).addClass("on");
+
+        $(e.currentTarget).siblings(".item__category").removeClass("on");
+   });
+  },[])
+
+
+
+
   // 후크상태변수 설정 : 페이지변경
   const [todayItem, settodayItem] = useState("리빙");
 
@@ -62,7 +78,7 @@ export function Main() {
             <img src={v.isrc} alt="상품사진" />
           </div>
           <div className="shop__item__content">
-            <span className="shop__item__content-name"> {v.name} </span>
+            <span className="shop__item__content-name">{v.name}</span>
             <span className="shop__item__content-cont">{v.cont}</span>
             <span className="shop__item__content-price"> {v.price} </span>
 
@@ -93,8 +109,10 @@ export function Main() {
               <div className="shop__item__category">{makeMainCat()}</div>
 
 
+              <div className="shop__item__list">
+              {makeItem()}
+              </div>
 
-          {makeItem()}
             </div>
           </div>
         </div>

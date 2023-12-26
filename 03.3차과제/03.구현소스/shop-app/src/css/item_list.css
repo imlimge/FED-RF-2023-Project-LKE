@@ -4,18 +4,15 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1vw;
   margin-bottom: 1vw;
-  }
+}
   
   
   .shop__item{
-  
-  height: 400px;
-  cursor: pointer;
-
-
-  
+    height: 400px;
+    cursor: pointer;
   }
   
+
   .shop__item__photo{
     /* background-color: orange; */
     /* border-radius: 10px; */
