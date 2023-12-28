@@ -3,6 +3,6 @@ export const bannerData = {
     "./images/banner/banner1.png",
     "./images/banner/banner2.jpg",
     "./images/banner/banner1.png",
-    "./images/banner/banner1.png",
+    "./images/banner/banner2.png",
   ],
 };

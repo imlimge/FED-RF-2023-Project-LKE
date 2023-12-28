@@ -25,7 +25,9 @@ padding: 4vh 4vw 4vh 2vw;
     font-size: 1.5rem;
   }
 
-
+.shop__item__right{
+  flex: 1;
+}
 
 .shop input[type="checkbox"]{
         display: none;

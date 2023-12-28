@@ -15,6 +15,10 @@ import $ from "jquery";
 window.jQuery = $;
 
 export function Shop() {
+
+
+
+
   const myCon = useContext(sCon);
   let cat = myCon.pgName;
 
@@ -33,8 +37,8 @@ export function Shop() {
 
   const [cnt, setCnt] = useState(datacnt);
 
-  // 한 페이지당 갯수
-  const itemsPerPage = 20;
+  // 한 페이지당 갯수 
+  const itemsPerPage = 4;
   // 초기 페이지 번호 셋팅 1로 시작
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -49,14 +53,16 @@ export function Shop() {
     
 
   // 시작,끝(startIndex, endIndex) 숫자만큼 데이터를 slice로 잘라서 paginatedData 에 다시 담음   (selDataList 원래는 selData)
+  //맵돌리는 중
   const paginatedData = selDataList.slice(startIndex, endIndex);
 
   // 전체 데이터 갯수 / 20개로 나누면 페이지갯수(소수점 이하 올림)
   const totalPages = Math.ceil(selDataList.length / itemsPerPage);
 
 
-  // 맵 돌리는 중 
-  const [paginatedList, setPaginatedList] = useState(paginatedData)
+  // 이전 명칭 paginatedList 심지어 페이지네이션과 관련하려고 셋팅한건데 
+  // 전혀 관련이 없는 전선택 상태변수가 됨
+  const [lastLastList, setLastLastList] = useState(paginatedData)
 
 
 
@@ -81,6 +87,9 @@ export function Shop() {
 
 
    const chkSearch = (e) => {
+
+    setCurrentPage(1);
+
     const cid = e.target.id;
 
     // 2. 체크박스 체크여부 : checked (true/false)
@@ -109,7 +118,7 @@ export function Shop() {
       // 체크개수가 1초과일때 배열합치기
       if(num>1){ // 스프레드 연산자(...)사용! 
         // ** lastList가 계속 업데이트가 안돼서 paginatedList 이게 계속 전에 선택한 내용이 들어가길래.. 넣었더니 합쳐진다..........
-        lastList = [...paginatedList, ...selList];
+        lastList = [...lastLastList, ...selList];
         console.log('selList 현재선택',selList,cid)
         console.log('lastList 하나이상 이전전택',lastList)
 
@@ -127,7 +136,8 @@ export function Shop() {
     }
      else{
 
-
+      // ㅠ... 이해해보기**
+      lastList = lastLastList.filter((v) => v.category !== cid);
   
 
       if(num<1){
@@ -143,8 +153,8 @@ export function Shop() {
 
     
     //왜 전 선택 배열이 들어있는지 모르겟네
-    setPaginatedList(lastList);
-    console.log('setPaginatedList(lastList) / paginatedList',paginatedList)
+    setLastLastList(lastList);
+    console.log('setPaginatedList(lastList) / paginatedList',setLastLastList)
     setCnt(lastList.length);
 
     //맵돌리는 배열 > 슬라이스 배열도 여기로 담음
@@ -186,7 +196,7 @@ export function Shop() {
   const makeItem = () => {
     let temp = [];
 
-    paginatedList.map((v, i) => {
+    paginatedData.map((v, i) => {
       temp[i] = (
         <Fragment key={i}>
           <div className="shop__item" onClick={() => goItemDetail()}>
