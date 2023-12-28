@@ -9,6 +9,7 @@ import "../css/item_list.css"
 
 import $ from "jquery";
 import { shopData } from "../data/shop";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 window.jQuery = $;
 
 
@@ -49,6 +50,15 @@ export function Main() {
   };
 
 
+  // 아이템 디테일 이동함수
+  const navigate = useNavigate();
+
+  const goItemDetail = () => {
+
+    navigate('itemdetail');
+  
+  };
+
 
   // 페이지변경 상태변수 업데이트 함수
   const chgName = (txt) => {
@@ -63,7 +73,7 @@ export function Main() {
   // 상품데이터
   const selData = shopData[todayItem];
   const selDataPick = selData.slice(0, 4);
-  console.log(selDataPick);
+  // console.log(selDataPick);
 
 
   
@@ -73,7 +83,8 @@ export function Main() {
     selDataPick.map((v, i) => {
       temp[i] = (
         <Fragment key={i}>
-        <div className="shop__item">
+        <div className="shop__item" onClick={()=>goItemDetail()}>
+       
           <div className="shop__item__photo">
             <img src={v.isrc} alt="상품사진" />
           </div>
@@ -90,6 +101,10 @@ export function Main() {
     });
     return temp;
   };
+
+
+
+
 
 
 

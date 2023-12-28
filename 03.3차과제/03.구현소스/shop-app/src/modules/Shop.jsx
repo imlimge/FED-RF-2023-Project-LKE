@@ -9,25 +9,29 @@ import { Fragment, useEffect, useState } from "react";
 import { useContext } from "react";
 
 import { sCon } from "../modules/shopContext";
+import { useNavigate } from "react-router-dom";
 
+import $ from "jquery";
+window.jQuery = $;
 
 export function Shop() {
-
-  
   const myCon = useContext(sCon);
-  let cat = myCon.pgName
-  
+  let cat = myCon.pgName;
 
   // 상품 카테고리
   const selCat = categoryData[cat];
   // 상품데이터
-  const selData = shopData[cat];
+  
+  let selData = shopData[cat];
+
+
+  // console.log("selData", selData);
 
 
   // 상품 전체 수
   let datacnt = selData.length;
 
-
+  const [cnt, setCnt] = useState(datacnt);
 
   // 한 페이지당 갯수
   const itemsPerPage = 20;
@@ -43,19 +47,98 @@ export function Shop() {
   // 전체 데이터 갯수 / 20개로 나누면 페이지갯수(소수점 이하 올림)
   const totalPages = Math.ceil(selData.length / itemsPerPage);
 
+
+
+  const [selDataList, setSelDataList] = useState(selData)
+  const [paginated, setPaginated] = useState(paginatedData)
+
+
+
   // useState로 셋팅된 값을 바꿔줌
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
     window.scrollTo(0, 0);
   };
 
+  // 아이템 디테일 이동함수
+  const navigate = useNavigate();
+
+  const goItemDetail = () => {
+    navigate("/itemdetail");
+  };
+
+
+  ////////////////////////
+  // 체크박스검색 함수 ////
+  ////////////////////////
 
 
 
+   const chkSearch = (e) => {
+    const cid = e.target.id;
+
+    // 2. 체크박스 체크여부 : checked (true/false)
+    const chked = e.target.checked;
+    console.log("아이디:", cid, chked);
+
+    let temp = selData;
+    
+    console.log("temp", temp);
+
+    // 결과집합배열변수 : 최종결과배열
+    let lastList = [];
 
 
+    // 4.체크박스 체크개수세기 : 1개초과시 배열합치기!
+    let num = $(".checkbtn:checked").length;
+    console.log("체크개수:", num);
 
-  const makeList = () => {                                              
+    if (chked) {
+      // 현재데이터 변수에 담기
+      const selList = selData.filter((v) => {
+        if (v.category === cid) return true;
+      }); /////////// filter //////////
+
+
+      // 체크개수가 1초과일때 배열합치기
+      if(num>1){ // 스프레드 연산자(...)사용!
+
+        lastList = [...lastList,...selList];    
+ 
+        console.log('selList',selList,cid)
+        console.log('lastList 하나이상',lastList)
+
+        
+        
+      } //// if /////
+
+      else if(num===1){ // 하나일때
+        lastList = selList;
+        console.log('selList 하나',lastList,cid)
+ 
+      }
+      
+
+    }
+     else{
+       
+      lastList = temp;
+        
+      console.log('다해제된상태 temp넣기',lastList)
+
+    } /// else ////
+
+
+    
+
+    setPaginated(lastList)
+    setCnt(lastList.length);
+
+    console.log('lastList 최종',lastList,paginated)
+
+  };
+
+  const makeList = () => {
     let temp = [];
 
     selCat.map((v, i) => {
@@ -63,8 +146,13 @@ export function Shop() {
         <Fragment key={i}>
           <li>
             {v}
-            <input type="checkbox" id={"check" + i} />
-            <label htmlFor={"check" + i}></label>
+            <input
+              className="checkbtn"
+              type="checkbox"
+              id={v}
+              onChange={chkSearch}
+            />
+            <label htmlFor={v}></label>
           </li>
         </Fragment>
       );
@@ -76,64 +164,64 @@ export function Shop() {
   const makeItem = () => {
     let temp = [];
 
-    paginatedData.map((v, i) => {
+    paginated.map((v, i) => {
       temp[i] = (
         <Fragment key={i}>
-        <div className="shop__item">
-          <div className="shop__item__photo">
-            <img src={v.isrc} alt="상품사진" />
-          </div>
-          <div className="shop__item__content">
-            <span className="shop__item__content-name"> {v.name} </span>
-            <span className="shop__item__content-cont">{v.cont}</span>
-            <span className="shop__item__content-price"> {v.price} </span>
+          <div className="shop__item" onClick={() => goItemDetail()}>
+            <div className="shop__item__photo">
+              <img src={v.isrc} alt="상품사진" />
+            </div>
+            <div className="shop__item__content">
+              <span className="shop__item__content-name"> {v.name} </span>
+              <span className="shop__item__content-cont">{v.cont}</span>
+              <span className="shop__item__content-price"> {v.price} </span>
 
-            <span className="shop__item__content-review"> 리뷰 {v.review} </span>
+              <span className="shop__item__content-review">
+                리뷰 {v.review}
+              </span>
+            </div>
           </div>
-        </div>
-      </Fragment>
+        </Fragment>
       );
     });
     return temp;
   };
 
-
-
   return (
     <>
       <div className="shop inbox">
-      <div className="shop__box">
-        <div className="shop__list__left">
-          <h2>{cat}</h2>
+        <div className="shop__box">
+          <div className="shop__list__left">
+            <h2>{cat}</h2>
 
-          <ol>{makeList()}</ol>
-        </div>
+            <ol>{makeList()}</ol>
+          </div>
 
-        <div className="shop__item__right">
-          {/* <!-- 상품아이템 상단탭 --> */}
-          <div className="shop__item__top">
-            <div className="shop__item__order">
-              <div className="shop__item__count">
-                <span>{datacnt}</span>
-                <span>개의 상품이 있습니다.</span>
-              </div>
-              <div className="shop__item__orderlist">
-                <span className="orderlist on">인기순</span>
-                <span className="orderlist">추천리뷰순</span>
-                <span className="orderlist">낮은가격순</span>
-                <span className="orderlist">높은가격순</span>
+          <div className="shop__item__right">
+            {/* <!-- 상품아이템 상단탭 --> */}
+            <div className="shop__item__top">
+              <div className="shop__item__order">
+                <div className="shop__item__count">
+                  <span>{cnt}</span>
+                  <span>개의 상품이 있습니다.</span>
+                </div>
+                <div className="shop__item__orderlist">
+                  <span className="orderlist on">인기순</span>
+                  <span className="orderlist">추천리뷰순</span>
+                  <span className="orderlist">낮은가격순</span>
+                  <span className="orderlist">높은가격순</span>
+                </div>
               </div>
             </div>
-          </div>
-          {/* <!-- shop__item__top --> */}
-          <div className="shop__item__list">{makeItem()}</div>
-        
-          <div className="pagination">
+            {/* <!-- shop__item__top --> */}
+            <div className="shop__item__list">{makeItem()}</div>
+
+            <div className="pagination">
               {Array.from({ length: totalPages }, (_, index) => index + 1).map(
                 (pageNumber) => (
                   <span
                     key={pageNumber}
-                    className={pageNumber === currentPage ? 'active' : ''}
+                    className={pageNumber === currentPage ? "active" : ""}
                     onClick={() => handlePageChange(pageNumber)}
                   >
                     {pageNumber}
@@ -141,8 +229,7 @@ export function Shop() {
                 )
               )}
             </div>
-        
-        </div>
+          </div>
         </div>
       </div>
     </>

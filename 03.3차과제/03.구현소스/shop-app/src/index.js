@@ -20,6 +20,7 @@ import { Login } from "./pages/Login";
 import { Member } from "./pages/Member";
 import { Cart } from "./pages/Cart";
 import { SearchList } from "./pages/SearchList";
+import { ItemDetail } from "./pages/ItemDetial";
 
 export default function App() {
 
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="living" element={<Living />} />
           <Route path="office" element={<Office />} />
           <Route path="kids" element={<Kids />} />
+          <Route path="itemdetail" element={<ItemDetail />} />
 
           <Route path="board" element={<Board />} />
           <Route path="login" element={<Login />} />

@@ -1,0 +1,14 @@
+.itemdetail *{
+  border: 1px dotted orange;
+ 
+}
+
+.itemdetail{
+  height: 100vh;
+  position: relative;
+}
+
+.main_photo{
+  width: 600px;
+  height: 600px;
+}

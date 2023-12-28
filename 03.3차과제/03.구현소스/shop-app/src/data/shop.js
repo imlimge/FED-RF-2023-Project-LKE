@@ -24,7 +24,7 @@ export const shopData = {
       name: "데일리 브런치 세트",
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
-      category: "키친",
+      category: "욕실",
       review:"34"
     },
     {
@@ -33,7 +33,7 @@ export const shopData = {
       name: "카밍 캣 플레이트",
       cont: "",
       price: "14000",
-      category: "키친",
+      category: "데코",
       review:"38"
     },
     {
@@ -60,7 +60,7 @@ export const shopData = {
       name: "브레드 캣 플레이트 2P 세트",
       cont: "",
       price: "15900",
-      category: "키친",
+      category: "욕실",
       review:"26"
     },
     {
@@ -87,7 +87,7 @@ export const shopData = {
       name: "와플 플레이트",
       cont: "",
       price: "12000",
-      category: "키친",
+      category: "데코",
       review:"789"
     },
     {
@@ -132,7 +132,7 @@ export const shopData = {
       name: "카밍 캣 플레이트",
       cont: "",
       price: "14000",
-      category: "키친",
+      category: "데코",
       review:"65"
     },
     {
@@ -159,7 +159,7 @@ export const shopData = {
       name: "브레드 캣 플레이트 2P 세트",
       cont: "",
       price: "15900",
-      category: "키친",
+      category: "데코",
       review:"24"
     },
     {
