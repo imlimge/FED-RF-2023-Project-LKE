@@ -7,8 +7,9 @@
 
 
   .shop__list__left{
-    padding: 4vh 4vw 4vh 2vw;
-    width: 270px;
+padding: 4vh 4vw 4vh 2vw;
+    min-width: 220px;
+    box-sizing: border-box;
   }
   
   .shop__list__left h2{

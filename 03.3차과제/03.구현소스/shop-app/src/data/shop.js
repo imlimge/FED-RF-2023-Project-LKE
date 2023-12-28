@@ -24,7 +24,7 @@ export const shopData = {
       name: "데일리 브런치 세트",
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
-      category: "욕실",
+      category: "키친",
       review:"34"
     },
     {
@@ -42,7 +42,7 @@ export const shopData = {
       name: "코일 매트",
       cont: "택 1",
       price: "14000",
-      category: "데코",
+      category: "욕실",
       review:"7"
     },
     {
@@ -60,7 +60,7 @@ export const shopData = {
       name: "브레드 캣 플레이트 2P 세트",
       cont: "",
       price: "15900",
-      category: "욕실",
+      category: "데코",
       review:"26"
     },
     {
@@ -102,7 +102,7 @@ export const shopData = {
     {
       idx: 12,
       isrc: "./images/shop/living/thum/living12.jpg",
-      name: "플랫 플레이트&볼 햄버거 세트",
+      name: "키친 - 제목12",
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
@@ -111,7 +111,7 @@ export const shopData = {
     {
       idx: 13,
       isrc: "./images/shop/living/thum/living13.jpg",
-      name: "수저받침세트 - 01 프렌치프라이",
+      name: "키친 - 제목13",
       cont: "",
       price: "6800",
       category: "키친",
@@ -120,16 +120,16 @@ export const shopData = {
     {
       idx: 14,
       isrc: "./images/shop/living/thum/living14.jpg",
-      name: "데일리 브런치 세트",
+      name: "인형 - 제목14",
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
-      category: "키친",
+      category: "인형",
       review:"54"
     },
     {
       idx: 15,
       isrc: "./images/shop/living/thum/living15.jpg",
-      name: "카밍 캣 플레이트",
+      name: "데코 - 제목15",
       cont: "",
       price: "14000",
       category: "데코",
@@ -138,7 +138,7 @@ export const shopData = {
     {
       idx: 16,
       isrc: "./images/shop/living/thum/living16.jpg",
-      name: "코일 매트",
+      name: "데코 - 제목16",
       cont: "택 1",
       price: "14000",
       category: "데코",
@@ -147,7 +147,7 @@ export const shopData = {
     {
       idx: 17,
       isrc: "./images/shop/living/thum/living17.jpg",
-      name: "버터브레드 볼&우드나이프 세트",
+      name: "키친 - 제목17",
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "키친",
@@ -156,7 +156,7 @@ export const shopData = {
     {
       idx: 18,
       isrc: "./images/shop/living/thum/living18.jpg",
-      name: "브레드 캣 플레이트 2P 세트",
+      name: "데코 - 제목18",
       cont: "",
       price: "15900",
       category: "데코",
@@ -165,7 +165,7 @@ export const shopData = {
     {
       idx: 19,
       isrc: "./images/shop/living/thum/living19.jpg",
-      name: "위드 미 발매트",
+      name: "인형 - 제목19",
       cont: "01-02",
       price: "14000",
       category: "인형",
@@ -174,16 +174,16 @@ export const shopData = {
     {
       idx: 20,
       isrc: "./images/shop/living/thum/living20.jpg",
-      name: "데일리 프릴 에이프런 - 02 Blurry garden",
+      name: "욕실 - 제목 20",
       cont: "",
       price: "28900",
-      category: "키친",
+      category: "욕실",
       review:"4"
     },
     {
       idx: 21,
       isrc: "./images/shop/living/thum/living21.jpg",
-      name: "와플 플레이트",
+      name: "인형 - 제목21",
       cont: "",
       price: "12000",
       category: "인형",
@@ -192,7 +192,7 @@ export const shopData = {
     {
       idx: 22,
       isrc: "./images/shop/living/thum/living22.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "욕실 - 제목22",
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
@@ -201,7 +201,7 @@ export const shopData = {
     {
       idx: 23,
       isrc: "./images/shop/living/thum/living23.jpg",
-      name: "플랫 플레이트&볼 햄버거 세트",
+      name: "키친 - 제목23",
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
@@ -210,7 +210,7 @@ export const shopData = {
     {
       idx: 24,
       isrc: "./images/shop/living/thum/living24.jpg",
-      name: "수저받침세트 - 01 프렌치프라이",
+      name: "인형 - 제목24",
       cont: "",
       price: "6800",
       category: "인형",
@@ -219,7 +219,7 @@ export const shopData = {
     {
       idx: 25,
       isrc: "./images/shop/living/thum/living25.jpg",
-      name: "데일리 브런치 세트",
+      name: "키친 - 제목25",
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "키친",
@@ -228,7 +228,7 @@ export const shopData = {
     {
       idx: 26,
       isrc: "./images/shop/living/thum/living26.jpg",
-      name: "카밍 캣 플레이트",
+      name: "키친 - 제목26",
       cont: "",
       price: "14000",
       category: "키친",
@@ -237,7 +237,7 @@ export const shopData = {
     {
       idx: 27,
       isrc: "./images/shop/living/thum/living27.jpg",
-      name: "코일 매트",
+      name: "데코 - 제목26",
       cont: "택 1",
       price: "14000",
       category: "데코",
@@ -246,7 +246,7 @@ export const shopData = {
     {
       idx: 28,
       isrc: "./images/shop/living/thum/living28.jpg",
-      name: "버터브레드 볼&우드나이프 세트",
+      name: "키친 - 제목28",
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "키친",
@@ -255,7 +255,7 @@ export const shopData = {
     {
       idx: 29,
       isrc: "./images/shop/living/thum/living29.jpg",
-      name: "브레드 캣 플레이트 2P 세트",
+      name: "키친 - 제목29",
       cont: "",
       price: "15900",
       category: "키친",
@@ -264,7 +264,7 @@ export const shopData = {
     {
       idx: 30,
       isrc: "./images/shop/living/thum/living30.jpg",
-      name: "위드 미 발매트",
+      name: "데코 - 제목30",
       cont: "01-02",
       price: "14000",
       category: "데코",
@@ -273,7 +273,7 @@ export const shopData = {
     {
       idx: 31,
       isrc: "./images/shop/living/thum/living31.jpg",
-      name: "데일리 프릴 에이프런 - 02 Blurry garden",
+      name: "키친 - 제목31",
       cont: "",
       price: "28900",
       category: "키친",
@@ -282,7 +282,7 @@ export const shopData = {
     {
       idx: 32,
       isrc: "./images/shop/living/thum/living32.jpg",
-      name: "와플 플레이트",
+      name: "키친 - 제목32",
       cont: "",
       price: "12000",
       category: "키친",
@@ -291,7 +291,7 @@ export const shopData = {
     {
       idx: 33,
       isrc: "./images/shop/living/thum/living33.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "욕실 - 제목33",
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
@@ -300,7 +300,7 @@ export const shopData = {
     {
       idx: 34,
       isrc: "./images/shop/living/thum/living34.jpg",
-      name: "플랫 플레이트&볼 햄버거 세트",
+      name: "키친 - 제목34",
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
@@ -309,7 +309,7 @@ export const shopData = {
     {
       idx: 35,
       isrc: "./images/shop/living/thum/living35.jpg",
-      name: "수저받침세트 - 01 프렌치프라이",
+      name: "키친 - 제목35",
       cont: "",
       price: "6800",
       category: "키친",
@@ -318,7 +318,7 @@ export const shopData = {
     {
       idx: 36,
       isrc: "./images/shop/living/thum/living36.jpg",
-      name: "데일리 브런치 세트",
+      name: "키친 - 제목 36",
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "키친",
@@ -327,7 +327,7 @@ export const shopData = {
     {
       idx: 37,
       isrc: "./images/shop/living/thum/living37.jpg",
-      name: "카밍 캣 플레이트",
+      name: "키친 - 제목37",
       cont: "",
       price: "14000",
       category: "키친",
@@ -336,7 +336,7 @@ export const shopData = {
     {
       idx: 38,
       isrc: "./images/shop/living/thum/living38.jpg",
-      name: "코일 매트",
+      name: "데코 - 제목38",
       cont: "택 1",
       price: "14000",
       category: "데코",
@@ -345,7 +345,7 @@ export const shopData = {
     {
       idx: 39,
       isrc: "./images/shop/living/thum/living39.jpg",
-      name: "버터브레드 볼&우드나이프 세트",
+      name: "키친 - 제목39",
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
       category: "키친",
@@ -354,7 +354,7 @@ export const shopData = {
     {
       idx: 40,
       isrc: "./images/shop/living/thum/living40.jpg",
-      name: "브레드 캣 플레이트 2P 세트",
+      name: "키친 - 제목 40",
       cont: "",
       price: "15900",
       category: "키친",
@@ -363,7 +363,7 @@ export const shopData = {
     {
       idx: 41,
       isrc: "./images/shop/living/thum/living41.jpg",
-      name: "위드 미 발매트",
+      name: "데코 - 제목 41",
       cont: "01-02",
       price: "14000",
       category: "데코",
@@ -372,16 +372,16 @@ export const shopData = {
     {
       idx: 42,
       isrc: "./images/shop/living/thum/living42.jpg",
-      name: "데일리 프릴 에이프런 - 02 Blurry garden",
+      name: "욕실 - 제목 42",
       cont: "",
       price: "28900",
-      category: "키친",
+      category: "욕실",
       review:"24"
     },
     {
       idx: 43,
       isrc: "./images/shop/living/thum/living43.jpg",
-      name: "와플 플레이트",
+      name: "키친 - 제목 43",
       cont: "",
       price: "12000",
       category: "키친",
@@ -390,7 +390,7 @@ export const shopData = {
     {
       idx: 44,
       isrc: "./images/shop/living/thum/living44.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "욕실 - 제목44",
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
@@ -399,7 +399,7 @@ export const shopData = {
     {
       idx: 45,
       isrc: "./images/shop/living/thum/living45.jpg",
-      name: "플랫 플레이트&볼 햄버거 세트",
+      name: "치킨 - 제목45",
       cont: "[사은품] 마스킹 테이프 - 햄버거",
       price: "35800",
       category: "키친",
@@ -408,7 +408,7 @@ export const shopData = {
     {
       idx: 46,
       isrc: "./images/shop/living/thum/living46.jpg",
-      name: "수저받침세트 - 01 프렌치프라이",
+      name: "키친 - 제목46",
       cont: "",
       price: "6800",
       category: "키친",
@@ -417,7 +417,7 @@ export const shopData = {
     {
       idx: 47,
       isrc: "./images/shop/living/thum/living47.jpg",
-      name: "데일리 브런치 세트",
+      name: "키친 - 제목47",
       cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
       price: "16900",
       category: "키친",
@@ -426,16 +426,16 @@ export const shopData = {
     {
       idx: 48,
       isrc: "./images/shop/living/thum/living48.jpg",
-      name: "카밍 캣 플레이트",
+      name: "욕실 - 제목48",
       cont: "",
       price: "14000",
-      category: "키친",
+      category: "욕실",
       review:"53"
     },
     {
       idx: 49,
       isrc: "./images/shop/living/thum/living49.jpg",
-      name: "코일 매트",
+      name: "데코 - 제목49",
       cont: "택 1",
       price: "14000",
       category: "데코",
@@ -444,16 +444,16 @@ export const shopData = {
     {
       idx: 50,
       isrc: "./images/shop/living/thum/living50.jpg",
-      name: "버터브레드 볼&우드나이프 세트",
+      name: "데코 - 제목50",
       cont: "[구성] 미니볼 1P + 볼&리드 1P + 나이프 1P",
       price: "23000",
-      category: "키친",
+      category: "데코",
       review:"63"
     },
     {
       idx: 51,
       isrc: "./images/shop/living/thum/living51.jpg",
-      name: "브레드 캣 플레이트 2P 세트",
+      name: "키친 - 제목51",
       cont: "",
       price: "15900",
       category: "키친",
@@ -462,7 +462,7 @@ export const shopData = {
     {
       idx: 52,
       isrc: "./images/shop/living/thum/living52.jpg",
-      name: "위드 미 발매트",
+      name: "데코 - 제목52",
       cont: "01-02",
       price: "14000",
       category: "데코",
@@ -471,7 +471,7 @@ export const shopData = {
     {
       idx: 53,
       isrc: "./images/shop/living/thum/living53.jpg",
-      name: "데일리 프릴 에이프런 - 02 Blurry garden",
+      name: "키친 - 제목53",
       cont: "",
       price: "28900",
       category: "키친",
@@ -480,7 +480,7 @@ export const shopData = {
     {
       idx: 54,
       isrc: "./images/shop/living/thum/living54.jpg",
-      name: "와플 플레이트",
+      name: "키친 - 제목54",
       cont: "",
       price: "12000",
       category: "키친",
@@ -489,7 +489,7 @@ export const shopData = {
     {
       idx: 55,
       isrc: "./images/shop/living/thum/living55.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "욕실 - 제목55",
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
@@ -498,7 +498,7 @@ export const shopData = {
     {
       idx: 56,
       isrc: "./images/shop/living/thum/living56.jpg",
-      name: "위드 미 발매트",
+      name: "데코 - 제목56",
       cont: "01-02",
       price: "14000",
       category: "데코",
@@ -507,7 +507,7 @@ export const shopData = {
     {
       idx: 57,
       isrc: "./images/shop/living/thum/living57.jpg",
-      name: "데일리 프릴 에이프런 - 02 Blurry garden",
+      name: "키친 - 제목57",
       cont: "",
       price: "28900",
       category: "키친",
@@ -516,7 +516,7 @@ export const shopData = {
     {
       idx: 58,
       isrc: "./images/shop/living/thum/living58.jpg",
-      name: "와플 플레이트",
+      name: "키친 - 제목58",
       cont: "",
       price: "12000",
       category: "키친",
@@ -525,7 +525,7 @@ export const shopData = {
     {
       idx: 59,
       isrc: "./images/shop/living/thum/living59.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "욕실 - 제목59",
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",
@@ -534,7 +534,7 @@ export const shopData = {
     {
       idx: 60,
       isrc: "./images/shop/living/thum/living60.jpg",
-      name: "와플 플레이트",
+      name: "키친 - 제목 60",
       cont: "",
       price: "12000",
       category: "키친",
@@ -543,7 +543,7 @@ export const shopData = {
     {
       idx: 61,
       isrc: "./images/shop/living/thum/living61.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "욕실 - 제목61",
       cont: "일반 거품 / 발바닥 거품",
       price: "14000",
       category: "욕실",

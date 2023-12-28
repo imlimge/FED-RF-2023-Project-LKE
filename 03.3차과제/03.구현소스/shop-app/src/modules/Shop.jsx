@@ -42,15 +42,21 @@ export function Shop() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   // 끝 번호는 1*20= 20까지  / 2*20 = 40까지
   const endIndex = currentPage * itemsPerPage;
-  // 시작,끝(startIndex, endIndex) 숫자만큼 데이터를 slice로 잘라서 paginatedData 에 다시 담음
-  const paginatedData = selData.slice(startIndex, endIndex);
-  // 전체 데이터 갯수 / 20개로 나누면 페이지갯수(소수점 이하 올림)
-  const totalPages = Math.ceil(selData.length / itemsPerPage);
 
-
-
+  // 기본으로 원본 셀데이타를 가져가지만 setSelDataList에서 배열이 바뀌면 아래
+  // 페이지 네이션 슬라이스 하려는 데이터를 바꾸려고..
   const [selDataList, setSelDataList] = useState(selData)
-  const [paginated, setPaginated] = useState(paginatedData)
+    
+
+  // 시작,끝(startIndex, endIndex) 숫자만큼 데이터를 slice로 잘라서 paginatedData 에 다시 담음   (selDataList 원래는 selData)
+  const paginatedData = selDataList.slice(startIndex, endIndex);
+
+  // 전체 데이터 갯수 / 20개로 나누면 페이지갯수(소수점 이하 올림)
+  const totalPages = Math.ceil(selDataList.length / itemsPerPage);
+
+
+  // 맵 돌리는 중 
+  const [paginatedList, setPaginatedList] = useState(paginatedData)
 
 
 
@@ -81,12 +87,13 @@ export function Shop() {
     const chked = e.target.checked;
     console.log("아이디:", cid, chked);
 
+    // temp는 temp = 현재카테의 셀데이타
     let temp = selData;
-    
-    console.log("temp", temp);
+    console.log("temp = 현재카테의 셀데이타", temp);
 
-    // 결과집합배열변수 : 최종결과배열
-    let lastList = [];
+
+  // 함수 외부에서 lastList 선언 **
+  let lastList = [];
 
 
     // 4.체크박스 체크개수세기 : 1개초과시 배열합치기!
@@ -99,20 +106,18 @@ export function Shop() {
         if (v.category === cid) return true;
       }); /////////// filter //////////
 
-
       // 체크개수가 1초과일때 배열합치기
-      if(num>1){ // 스프레드 연산자(...)사용!
-
-        lastList = [...lastList,...selList];    
- 
-        console.log('selList',selList,cid)
-        console.log('lastList 하나이상',lastList)
+      if(num>1){ // 스프레드 연산자(...)사용! 
+        // ** lastList가 계속 업데이트가 안돼서 paginatedList 이게 계속 전에 선택한 내용이 들어가길래.. 넣었더니 합쳐진다..........
+        lastList = [...paginatedList, ...selList];
+        console.log('selList 현재선택',selList,cid)
+        console.log('lastList 하나이상 이전전택',lastList)
 
         
         
       } //// if /////
 
-      else if(num===1){ // 하나일때
+      else if(num === 1){ // 하나일때
         lastList = selList;
         console.log('selList 하나',lastList,cid)
  
@@ -121,8 +126,15 @@ export function Shop() {
 
     }
      else{
-       
-      lastList = temp;
+
+
+  
+
+      if(num<1){
+        lastList = temp;
+      }
+
+      
         
       console.log('다해제된상태 temp넣기',lastList)
 
@@ -130,13 +142,23 @@ export function Shop() {
 
 
     
-
-    setPaginated(lastList)
+    //왜 전 선택 배열이 들어있는지 모르겟네
+    setPaginatedList(lastList);
+    console.log('setPaginatedList(lastList) / paginatedList',paginatedList)
     setCnt(lastList.length);
 
-    console.log('lastList 최종',lastList,paginated)
+    //맵돌리는 배열 > 슬라이스 배열도 여기로 담음
+    setSelDataList(lastList);
+    console.log('lastList 최종',lastList,)
+
+
 
   };
+
+
+
+
+
 
   const makeList = () => {
     let temp = [];
@@ -164,7 +186,7 @@ export function Shop() {
   const makeItem = () => {
     let temp = [];
 
-    paginated.map((v, i) => {
+    paginatedList.map((v, i) => {
       temp[i] = (
         <Fragment key={i}>
           <div className="shop__item" onClick={() => goItemDetail()}>
