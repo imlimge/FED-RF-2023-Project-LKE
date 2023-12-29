@@ -24,12 +24,16 @@ export function Shop() {
   // 상품데이터
   let selData = shopData[cat];
 
+
+
+
   // console.log("selData", selData);
 
   // 상품 전체 수
   let datacnt = selData.length;
-
   const [cnt, setCnt] = useState(datacnt);
+
+
 
   // 한 페이지당 갯수
   const itemsPerPage = 16;
@@ -51,6 +55,9 @@ export function Shop() {
 
   // 전체 데이터 갯수 / 20개로 나누면 페이지갯수(소수점 이하 올림)
   const totalPages = Math.ceil(selDataList.length / itemsPerPage);
+
+
+
 
   // 이전 명칭 paginatedList 심지어 페이지네이션과 관련하려고 셋팅한건데
   // 전혀 관련이 없는 전선택 상태변수가 됨
@@ -146,11 +153,11 @@ export function Shop() {
 
     $('.orderlist').eq(0).addClass("on");
  
-    // $('.orderlist').click((e)=>{
-    //  $(e.currentTarget).addClass("on");
-    //     $(e.currentTarget).siblings(".orderlist").removeClass("on");
+    $('.orderlist').click((e)=>{
+     $(e.currentTarget).addClass("on");
+        $(e.currentTarget).siblings(".orderlist").removeClass("on");
         
-    // });
+    });
 
    },[])
  
@@ -161,57 +168,43 @@ export function Shop() {
   //////////////////////
   // 리스트 정렬 함수 ///
   //////////////////////
-
   const sortList = (e) => {
-    setSortData(e)
 
-    let temp = selDataList;
-
-    console.log(e,temp)
-
-
-    $('.orderlist').addClass("on");
-    $('.orderlist').siblings().removeClass("on");
-
-    let x=1
-    temp.sort((a,b)=>{
-
-        if(e===0){
-          console.log('인기순',temp)
-          return temp = selData;
-
-          
-        }
-        else if(e===1){ 
-          console.log(x=x+1)
-          console.log('추천리뷰순',temp)
-          return Number(a.review)==Number(b.review)?0:Number(a.review)>Number(b.review)?-1:1;
-          
-        }
-        else if(e===2){
-          console.log('낮은가격순',temp)
-          return Number(a.price)==Number(b.price)?0:Number(a.price)>Number(b.price)?-1:1;
-          
-
-
-        }
-        else if(e===3){
-          console.log('높은가격순',temp)
-          return Number(a.price)==Number(b.price)?0:Number(a.price)>Number(b.price)?1:-1;
-          
-        }
-
-  }) // sort ///
-
-
-  setSelDataList(temp)
  
-
+  
+    let temp = [...selDataList];
+  
+    console.log('뭐야',e, temp);
+  
+    let x = 1;
+    temp.sort((a, b) => {
+      if (e === 0) {
+        console.log('인기순', temp);
+        return selData; // selData로 바로 반환
+      } else if (e === 1) { 
+        console.log(x = x + 1);
+        console.log('추천리뷰순', temp);
+        return Number(a.review) === Number(b.review) ? 0 : Number(a.review) > Number(b.review) ? -1 : 1;
+      } else if (e === 2) {
+        console.log('낮은가격순', temp);
+        return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? -1 : 1;
+      } else if (e === 3) {
+        console.log('높은가격순', temp);
+        return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? 1 : -1;
+      }
+    });
+  
+    setSelDataList(temp);
+  };
+  
+  const sortList2 = () => {
 
   }
 
-  
 
+  useEffect(() => {
+    sortList();  
+}, []);
 
 
 
@@ -283,10 +276,10 @@ export function Shop() {
                   <span>개의 상품이 있습니다.</span>
                 </div>
                 <div className="shop__item__orderlist">
-                  <span className="orderlist" onClick={()=>sortList(0)} >인기순</span>
-                  <span className="orderlist" onClick={()=>sortList(1)}> 추천리뷰순</span>
-                  <span className="orderlist" onClick={()=>sortList(2)}>낮은가격순</span>
-                  <span className="orderlist" onClick={()=>sortList(3)}>높은가격순</span>
+                  <span className="orderlist" onClick={()=>sortList()}>인기순</span>
+                  <span className="orderlist" onClick={()=>sortList()}> 추천리뷰순</span>
+                  <span className="orderlist" onClick={()=>sortList()}>낮은가격순</span>
+                  <span className="orderlist" onClick={()=>sortList()}>높은가격순</span>
                 </div>
               </div>
             </div>
