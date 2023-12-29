@@ -26,7 +26,7 @@ export function Layout() {
     // 페이지변경 상태변수 업데이트 함수
     const chgPgName = (txt) => {
       setPgName(txt);
-
+      console.log(txt)
     }; ///////// chgPgName 함수 //////
   
   

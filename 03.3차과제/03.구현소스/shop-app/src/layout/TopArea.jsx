@@ -23,7 +23,7 @@ export function TopArea(props) {
    // 페이지변경 상태변수 업데이트 함수
    const chgPgName2 = (txt) => {
     props.chgPgName3(txt);
-    
+     console.log(txt)
   }; ///////// chgPgName 함수 //////
 
 
