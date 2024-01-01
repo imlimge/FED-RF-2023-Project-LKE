@@ -1,6 +1,6 @@
 //shop - Main 컴포넌트
 
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { categoryData } from "../data/category";
 
 import { SwiperBanner } from "../plugin/SwiperBanner";
@@ -10,6 +10,7 @@ import "../css/item_list.css"
 import $ from "jquery";
 import { shopData } from "../data/shop";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { sCon } from "../modules/shopContext";
 window.jQuery = $;
 
 
@@ -53,19 +54,24 @@ export function Main() {
   // 아이템 디테일 이동함수
   const navigate = useNavigate();
 
-  const goItemDetail = () => {
+      // 후크상태변수 설정 : 아이템변경
+      const [Item, setItem] = useState();
 
+   
+  const goItemDetail = (e) => {
+    console.log( 'main의 goItemDetail',e)
     navigate('itemdetail');
-  
+    setItem(e);
   };
+
 
 
   // 페이지변경 상태변수 업데이트 함수
   const chgName = (txt) => {
     settodayItem(txt);
 
- 
   }; ///////// chgPgName 함수 //////
+
 
 
   console.log("카테변경", todayItem);
@@ -83,7 +89,7 @@ export function Main() {
     selDataPick.map((v, i) => {
       temp[i] = (
         <Fragment key={i}>
-        <div className="shop__item" onClick={()=>goItemDetail()}>
+        <div className="shop__item" onClick={()=>goItemDetail(v)}>
        
           <div className="shop__item__photo">
             <img src={v.isrc} alt="상품사진" />

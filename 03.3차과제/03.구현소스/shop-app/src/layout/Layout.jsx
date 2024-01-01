@@ -20,16 +20,15 @@ export function Layout() {
     // 후크상태변수 설정 : 페이지변경
     const [pgName, setPgName] = useState('리빙');
 
-    console.log('레이아웃',pgName)
-
   
+
     // 페이지변경 상태변수 업데이트 함수
     const chgPgName = (txt) => {
       setPgName(txt);
       console.log(txt)
     }; ///////// chgPgName 함수 //////
   
-  
+
   
 
 

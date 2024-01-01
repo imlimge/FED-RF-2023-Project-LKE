@@ -5,11 +5,14 @@ import "../css/sell.css";
 import { categoryData } from "../data/category";
 import { shopData } from "../data/shop";
 
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import { useContext } from "react";
 
 import { sCon } from "../modules/shopContext";
 import { useNavigate } from "react-router-dom";
+
+
+
 
 import $ from "jquery";
 window.jQuery = $;
@@ -17,6 +20,9 @@ window.jQuery = $;
 export function Shop() {
   const myCon = useContext(sCon);
   let cat = myCon.pgName;
+
+
+
 
   // 상품 카테고리
   const selCat = categoryData[cat];
@@ -75,11 +81,19 @@ export function Shop() {
     window.scrollTo(0, 0);
   };
 
+
+   // 후크상태변수 설정 : 아이템변경
+   const [Item, setItem] = useState();
+
+
   // 아이템 디테일 이동함수
   const navigate = useNavigate();
 
-  const goItemDetail = () => {
+  const goItemDetail = (e) => {
     navigate("/itemdetail");
+
+    console.log( 'shop의 goItemDetail',e)
+    setItem(e);
   };
 
   ////////////////////////
@@ -168,43 +182,63 @@ export function Shop() {
   //////////////////////
   // 리스트 정렬 함수 ///
   //////////////////////
-  const sortList = (e) => {
+ const sortList = (e) => {
+  setSortData(e);
+  const temp = [...selDataList];
+  const otemp = [...selDataList];
 
- 
-  
-    let temp = [...selDataList];
-  
-    console.log('뭐야',e, temp);
-  
-    let x = 1;
-    temp.sort((a, b) => {
-      if (e === 0) {
-        console.log('인기순', temp);
-        return selData; // selData로 바로 반환
-      } else if (e === 1) { 
-        console.log(x = x + 1);
-        console.log('추천리뷰순', temp);
-        return Number(a.review) === Number(b.review) ? 0 : Number(a.review) > Number(b.review) ? -1 : 1;
-      } else if (e === 2) {
-        console.log('낮은가격순', temp);
-        return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? -1 : 1;
-      } else if (e === 3) {
-        console.log('높은가격순', temp);
-        return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? 1 : -1;
-      }
-    });
-  
-    setSelDataList(temp);
-  };
-  
-  const sortList2 = () => {
+console.log(temp)
 
-  }
+  temp.sort((a, b) => {
+    if (e === 0) {
+      console.log('인기순', temp);
+      return otemp; 
+    } else if (e === 1) {
+      console.log('추천리뷰순', temp);
+      return Number(a.review) === Number(b.review) ? 0 : Number(a.review) > Number(b.review) ? -1 : 1;
+    } else if (e === 2) {
+      console.log('낮은가격순', temp);
+      return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? 1 : -1;
+    } else if (e === 3) {
+      console.log('높은가격순', temp);
+      return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? -1 : 1;
+    }
+  });
+
+  setSelDataList(temp);
+ }; // selDataList를 의존성 배열에 추가
 
 
-  useEffect(() => {
-    sortList();  
-}, []);
+
+//  let tg = $(e.currentTarget).text();
+//   console.log('뭐야1',tg);
+
+//     let temp = selDataList;
+  
+//     console.log('뭐야',e, temp);
+  
+//     let x = 1;
+//     temp.sort((a, b) => {
+//       if (tg === '인기순') {
+//         console.log('인기순', temp);
+//         return selData; // selData로 바로 반환
+//       } else if (tg === '추천리뷰순') { 
+//         console.log(x = x + 1);
+//         console.log('추천리뷰순', temp);
+//         return Number(a.review) === Number(b.review) ? 0 : Number(a.review) > Number(b.review) ? -1 : 1;
+//       } else if (tg === '낮은가격순') {
+//         console.log('낮은가격순', temp);
+//         return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? -1 : 1;
+//       } else if (tg === '높은가격순') {
+//         console.log('높은가격순', temp);
+//         return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? 1 : -1;
+//       }
+//     });
+  
+//     setSelDataList(temp);
+//   };
+  
+
 
 
 
@@ -237,7 +271,7 @@ export function Shop() {
     paginatedData.map((v, i) => {
       temp[i] = (
         <Fragment key={i}>
-          <div className="shop__item" onClick={() => goItemDetail()}>
+          <div className="shop__item" onClick={() => goItemDetail(v)}>
             <div className="shop__item__photo">
               <img src={v.isrc} alt="상품사진" />
             </div>
@@ -276,10 +310,14 @@ export function Shop() {
                   <span>개의 상품이 있습니다.</span>
                 </div>
                 <div className="shop__item__orderlist">
-                  <span className="orderlist" onClick={()=>sortList()}>인기순</span>
-                  <span className="orderlist" onClick={()=>sortList()}> 추천리뷰순</span>
-                  <span className="orderlist" onClick={()=>sortList()}>낮은가격순</span>
-                  <span className="orderlist" onClick={()=>sortList()}>높은가격순</span>
+                  {/* <span className="orderlist" >인기순</span>
+                  <span className="orderlist" > 추천리뷰순</span>
+                  <span className="orderlist" >낮은가격순</span>
+                  <span className="orderlist" >높은가격순</span> */}
+                  <span className="orderlist" onClick={()=>sortList(0)}>인기순</span>
+                  <span className="orderlist" onClick={()=>sortList(1)}> 추천리뷰순</span>
+                  <span className="orderlist" onClick={()=>sortList(2)}>낮은가격순</span>
+                  <span className="orderlist" onClick={()=>sortList(3)}>높은가격순</span>
                 </div>
               </div>
             </div>
