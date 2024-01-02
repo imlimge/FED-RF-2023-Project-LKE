@@ -14,7 +14,7 @@ import { sCon } from "../modules/shopContext";
 window.jQuery = $;
 
 
-export function Main() {
+export function Main(props) {
 
 
   useEffect(()=>{
@@ -52,16 +52,18 @@ export function Main() {
 
 
   // 아이템 디테일 이동함수
-  const navigate = useNavigate();
+  const navigate = useNavigate(props);
 
       // 후크상태변수 설정 : 아이템변경
-      const [Item, setItem] = useState();
+    const [Item, setItem] = useState();
 
    
   const goItemDetail = (e) => {
-    console.log( 'main의 goItemDetail',e)
-    navigate('itemdetail');
+    console.log('main의 goItemDetail',e)
     setItem(e);
+    navigate('itemdetail' , {state: e});
+  
+
   };
 
 

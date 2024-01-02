@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 window.jQuery = $;
 
-export function Shop() {
+export function Shop(props) {
   const myCon = useContext(sCon);
   let cat = myCon.pgName;
 
@@ -82,18 +82,17 @@ export function Shop() {
   };
 
 
+  // 아이템 디테일 이동함수
+  const navigate = useNavigate(props);
    // 후크상태변수 설정 : 아이템변경
    const [Item, setItem] = useState();
 
 
-  // 아이템 디테일 이동함수
-  const navigate = useNavigate();
-
   const goItemDetail = (e) => {
-    navigate("/itemdetail");
-
+    
     console.log( 'shop의 goItemDetail',e)
     setItem(e);
+    navigate("/itemdetail", {state: e});
   };
 
   ////////////////////////

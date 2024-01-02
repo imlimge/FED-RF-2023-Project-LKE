@@ -1,6 +1,11 @@
 import "../css/cart.css";
 
 export function Cart() {
+
+
+  
+
+
   return (
     <>
       <section id="cart">

@@ -1,22 +1,25 @@
 
 
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import "../css/search_list.css"
 import { shopData } from "../data/shop";
 import { ItemList } from "../modules/ItemList"
 import { useNavigate } from "react-router-dom";
 
 
-export function SearchList() {
+export function SearchList(props) {
 
+      // 후크상태변수 설정 : 아이템변경
+      const [Item, setItem] = useState();
 
 
  // 아이템 디테일 이동함수
- const navigate = useNavigate();
+ const navigate = useNavigate(props);
 
- const goItemDetail = () => {
-
-   navigate('/itemdetail');
+ const goItemDetail = (e) => {
+  console.log('main의 goItemDetail',e)
+  setItem(e);
+   navigate('/itemdetail' , {state: e});
  
  };
 
@@ -34,7 +37,7 @@ export function SearchList() {
     selData.map((v, i) => {
       temp[i] = (
         <Fragment key={i}>
-        <div className="shop__item" onClick={()=>goItemDetail()}>
+        <div className="shop__item" onClick={()=>goItemDetail(v)}>
           <div className="shop__item__photo">
             <img src={v.isrc} alt="상품사진" />
           </div>

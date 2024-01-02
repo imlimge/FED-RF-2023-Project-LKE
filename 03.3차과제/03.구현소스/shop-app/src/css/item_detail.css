@@ -39,11 +39,17 @@
     color: #8d8d8d;
 }
 
-.itemdetail__price {
+.itemdetail__price{
     color: #1a1a1a;
-    font-size: 2.8rem;
-    font-weight: 700;
+    font-size: 2.6rem;
+
 }
+
+.itemdetail__price span{
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
 
 .itemdetail__notice__box {
     display: flex;
@@ -72,6 +78,8 @@
     display: inline-block;
 }
 
+
+
 .itemdetail__sell__title {
     color: #333;
     font-size: 1.4rem;
@@ -87,19 +95,20 @@
     color: #333;
     font-size: 1.3rem;
     font-weight: 300;
-    display: flex;
+    /* display: flex; */
 }
 
 .sell__button__box {
-  position: relative;
-  width: 35px;
-  height: 35px;
-  padding: 0 35px;
-  border: 1px solid #e6e6e6;
-  background: #fff;
-  font-size: 2.5rem;
-  text-align: center;
-  left: 46px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    padding: 0 35px;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    right: 126px;
+    top: 13px;
 }
 
 .sell__button {
@@ -153,15 +162,21 @@
 
 }
 
-.itemdetail__sell__price {
+.itemdetail__sell__price{
      right: 45px;
 
     top: 16px;
     color: #333;
-    font-size: 1.5rem;
-    font-weight: 600;
+
     position: absolute;
 }
+
+
+.itemdetail__sell__price span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 
 .itemdetail__total__box {
     padding: 20px 0;
@@ -175,16 +190,22 @@
     color: #0e0e0e;
 }
 
-.itemdetail__total__price {
+.itemdetail__total__price{
     position: absolute;
     right: 0;
     display: inline-block;
     margin-top: -4px;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: #000;
     vertical-align: middle;
+
+}
+
+.itemdetail__total__price span{
+    font-size: 2rem;
     font-weight: bold;
 }
+
 
 .itemdetail__button__box{
   text-align: right;
