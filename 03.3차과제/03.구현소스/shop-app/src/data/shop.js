@@ -593,7 +593,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office5.jpg",
       name: "보라색 볼펜",
       cont: "2+1 / 2개사면 한개 더 증정",
-      price: "14000",
+      price: "4000",
       category: "볼펜",
       review:"46"
     },
@@ -620,7 +620,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office8.jpg",
       name: "위드 미 발매트",
       cont: "01-02",
-      price: "14000",
+      price: "12500",
       category: "데코",
       review:"12"
     },
@@ -645,9 +645,9 @@ export const shopData = {
     {
       idx: 11,
       isrc: "./images/shop/office/thum/office11.jpg",
-      name: "마이 버디 버블 디스펜서",
-      cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      name: "파란색 볼펜",
+      cont: "2+1",
+      price: "300",
       category: "볼펜",
       review:"86"
     },
@@ -683,7 +683,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office15.jpg",
       name: "카밍 캣 플레이트",
       cont: "",
-      price: "14000",
+      price: "16000",
       category: "달력",
       review:"14"
     },
@@ -692,7 +692,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office16.jpg",
       name: "코일 매트",
       cont: "택 1",
-      price: "14000",
+      price: "27300",
       category: "데코",
       review:"9"
     },
@@ -717,9 +717,9 @@ export const shopData = {
     {
       idx: 19,
       isrc: "./images/shop/office/thum/office19.jpg",
-      name: "위드 미 발매트",
+      name: "감자 스티커",
       cont: "01-02",
-      price: "14000",
+      price: "12000",
       category: "스티커",
       review:"133"
     },
@@ -744,9 +744,9 @@ export const shopData = {
     {
       idx: 22,
       isrc: "./images/shop/office/thum/office22.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "노란색 볼펜",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "1000",
       category: "볼펜",
       review:"78"
     },
@@ -762,7 +762,7 @@ export const shopData = {
     {
       idx: 24,
       isrc: "./images/shop/office/thum/office24.jpg",
-      name: "수저받침세트 - 01 프렌치프라이",
+      name: "고구마 스티커",
       cont: "",
       price: "6800",
       category: "스티커",
@@ -771,8 +771,8 @@ export const shopData = {
     {
       idx: 25,
       isrc: "./images/shop/office/thum/office25.jpg",
-      name: "데일리 브런치 세트",
-      cont: "[무료증정] 2P 세트 구매시 커트러리 1개",
+      name: "데일리 브런치 필통",
+      cont: "[무료증정] 필통1",
       price: "16900",
       category: "필통/파우치",
       review:"34"
@@ -780,9 +780,9 @@ export const shopData = {
     {
       idx: 26,
       isrc: "./images/shop/office/thum/office26.jpg",
-      name: "카밍 캣 플레이트",
+      name: "필통 2",
       cont: "",
-      price: "14000",
+      price: "3600",
       category: "필통/파우치",
       review:"35"
     },
@@ -791,7 +791,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office27.jpg",
       name: "코일 매트",
       cont: "택 1",
-      price: "14000",
+      price: "6000",
       category: "데코",
       review:"25"
     },
@@ -807,7 +807,7 @@ export const shopData = {
     {
       idx: 29,
       isrc: "./images/shop/office/thum/office29.jpg",
-      name: "브레드 캣 플레이트 2P 세트",
+      name: "분리 필통",
       cont: "",
       price: "15900",
       category: "필통/파우치",
@@ -818,7 +818,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office30.jpg",
       name: "위드 미 발매트",
       cont: "01-02",
-      price: "14000",
+      price: "36500",
       category: "데코",
       review:"35"
     },
@@ -843,9 +843,9 @@ export const shopData = {
     {
       idx: 33,
       isrc: "./images/shop/office/thum/office33.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "검은색 볼펜",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "2500",
       category: "볼펜",
       review:"6"
     },
@@ -881,7 +881,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office37.jpg",
       name: "카밍 캣 플레이트",
       cont: "",
-      price: "14000",
+      price: "16500",
       category: "달력",
       review:"15"
     },
@@ -890,7 +890,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office38.jpg",
       name: "코일 매트",
       cont: "택 1",
-      price: "14000",
+      price: "11000",
       category: "데코",
       review:"35"
     },
@@ -917,7 +917,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office41.jpg",
       name: "위드 미 발매트",
       cont: "01-02",
-      price: "14000",
+      price: "13000",
       category: "데코",
       review:"85"
     },
@@ -942,9 +942,9 @@ export const shopData = {
     {
       idx: 44,
       isrc: "./images/shop/office/thum/office44.jpg",
-      name: "마이 버디 버블 디스펜서",
+      name: "하얀색 볼펜",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "3500",
       category: "볼펜",
       review:"42"
     },
@@ -980,7 +980,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office48.jpg",
       name: "카밍 캣 플레이트",
       cont: "",
-      price: "14000",
+      price: "36000",
       category: "달력",
       review:"72"
     },
@@ -989,7 +989,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office49.jpg",
       name: "코일 매트",
       cont: "택 1",
-      price: "14000",
+      price: "16000",
       category: "데코",
       review:"27"
     },
@@ -1145,7 +1145,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids15.jpg",
       name: "카밍 캣 플레이트",
       cont: "",
-      price: "14000",
+      price: "32600",
       category: "유아식기",
       review:"56"
     },
@@ -1154,7 +1154,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids16.jpg",
       name: "코일 매트",
       cont: "택 1",
-      price: "14000",
+      price: "3000",
       category: "양말",
       review:"7"
     },
@@ -1245,7 +1245,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids26.jpg",
       name: "카밍 캣 플레이트",
       cont: "",
-      price: "14000",
+      price: "12300",
       category: "욕실 소품",
       review:"6"
     },
@@ -1254,7 +1254,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids27.jpg",
       name: "코일 매트",
       cont: "택 1",
-      price: "14000",
+      price: "14700",
       category: "양말",
       review:"86"
     },
@@ -1281,7 +1281,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids30.jpg",
       name: "위드 미 발매트",
       cont: "01-02",
-      price: "14000",
+      price: "13000",
       category: "양말",
       review:"35"
     },
@@ -1308,7 +1308,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids33.jpg",
       name: "마이 버디 버블 디스펜서",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "18000",
       category: "기타소품",
       review:"79"
     },

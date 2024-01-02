@@ -7,7 +7,7 @@
 
 
   .shop__list__left{
-padding: 4vh 4vw 4vh 2vw;
+padding: 4vh 4vw 4vh 0;
     min-width: 220px;
     box-sizing: border-box;
   }
@@ -64,7 +64,7 @@ padding: 4vh 4vw 4vh 2vw;
   }
   .shop__item__top{ 
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 12vh;
     padding-bottom: 10px;
   }
   

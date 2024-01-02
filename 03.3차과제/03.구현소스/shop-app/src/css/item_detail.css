@@ -16,6 +16,9 @@
     flex: 1;
     height: 600px;
 }
+.main_photo img{
+width: 100%;
+}
 
 .itemdetail__info {
     flex: 1;

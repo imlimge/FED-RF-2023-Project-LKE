@@ -13,7 +13,7 @@ export function SearchList(props) {
 
   const totalData = [...selDataL,...selDataO,...selDataK]
 
-  console.log('searchList totalData',totalData)
+  // console.log('searchList totalData',totalData)
 
 
 
@@ -25,16 +25,17 @@ console.log('SearchList state',state)
 
 
 
+let dataResult = [];
 
 
-
-let dataResult = totalData.filter((v) =>{ 
-  return (v.name.indexOf(state))
-}
-  )
+ dataResult = totalData.filter((v)=>{ 
+ if (v.name.toLowerCase().indexOf(state)!==-1) return true;
+})
 
 
-console.log('검색어에서 결과 뽑음',dataResult)
+console.log('검색어에서 결과 뽑음 SearchList',dataResult)
+
+
 
 
 
@@ -67,7 +68,7 @@ console.log('검색어에서 결과 뽑음',dataResult)
 
     if(datacnt != 0 ){
 
-    selDataL.map((v, i) => {
+    dataResult.map((v, i) => {
       temp[i] = (
         <Fragment key={i}>
           <div className="shop__item" onClick={() => goItemDetail(v)}>
@@ -111,7 +112,7 @@ console.log('검색어에서 결과 뽑음',dataResult)
   return (
     <>
       <section id="search__list">
-        <div className="search__list">
+        <div className="search__list inbox">
           <h2> 검색결과 </h2>
 
           <div className="search__list__count">

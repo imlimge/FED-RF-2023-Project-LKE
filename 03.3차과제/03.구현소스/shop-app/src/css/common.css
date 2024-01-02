@@ -153,7 +153,7 @@ cursor: pointer;
 
 
 .banner{
-height: 50vh;
+height: 60vh;
 /* background-color: orange; */
 }
 
@@ -174,8 +174,7 @@ height: 50vh;
   height: 80px;
 }
 .shop__item__category{
-
-
+  padding-bottom: 10px;
 }
 
 .item__category{
