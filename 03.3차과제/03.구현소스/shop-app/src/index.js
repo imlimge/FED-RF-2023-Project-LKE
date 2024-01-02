@@ -20,7 +20,7 @@ import { Login } from "./pages/Login";
 import { Member } from "./pages/Member";
 import { Cart } from "./pages/Cart";
 import { SearchList } from "./pages/SearchList";
-import { ItemDetail } from "./pages/ItemDetial";
+import { ItemDetail } from "./pages/ItemDetail";
 
 export default function App() {
 

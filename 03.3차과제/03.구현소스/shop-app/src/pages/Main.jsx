@@ -85,6 +85,16 @@ export function Main(props) {
 
 
   
+
+    //정규식함수(숫자 세자리마다 콤마해주는 기능)
+    function addComma(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+  
+
+
+
+  
   const makeItem = () => {
     let temp = [];
 
@@ -99,7 +109,10 @@ export function Main(props) {
           <div className="shop__item__content">
             <span className="shop__item__content-name">{v.name}</span>
             <span className="shop__item__content-cont">{v.cont}</span>
-            <span className="shop__item__content-price"> {v.price} </span>
+            <div className="shop__item__content-price"> 
+             <span> {addComma(v.price)} </span>
+                원
+              </div>
 
             <span className="shop__item__content-review"> 리뷰 {v.review} </span>
           </div>

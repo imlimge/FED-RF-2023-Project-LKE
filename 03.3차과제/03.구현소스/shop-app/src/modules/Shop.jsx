@@ -1,4 +1,4 @@
-import { ItemList } from "./ItemList";
+
 import "../css/item_list.css";
 import "../css/sell.css";
 
@@ -18,6 +18,16 @@ import $ from "jquery";
 window.jQuery = $;
 
 export function Shop(props) {
+
+
+  //정규식함수(숫자 세자리마다 콤마해주는 기능)
+  function addComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+
+
+
   const myCon = useContext(sCon);
   let cat = myCon.pgName;
 
@@ -277,7 +287,11 @@ console.log(temp)
             <div className="shop__item__content">
               <span className="shop__item__content-name"> {v.name} </span>
               <span className="shop__item__content-cont">{v.cont}</span>
-              <span className="shop__item__content-price"> {v.price} </span>
+              <div className="shop__item__content-price"> 
+             <span> {addComma(v.price)} </span>
+                원
+              </div>
+            
 
               <span className="shop__item__content-review">
                 리뷰 {v.review}

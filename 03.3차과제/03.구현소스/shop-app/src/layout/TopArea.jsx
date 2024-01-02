@@ -1,5 +1,5 @@
 //shop - TopArea 컴포넌트
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // 폰트어썸 불러오기
 import {
@@ -23,11 +23,64 @@ export function TopArea(props) {
    // 페이지변경 상태변수 업데이트 함수
    const chgPgName2 = (txt) => {
     props.chgPgName3(txt);
-     console.log(txt)
+    //  console.log(txt)
   }; ///////// chgPgName 함수 //////
 
 
   const selCat = shopGnbData;
+
+
+
+
+  const enterKey = e => {
+    // console.log('topArea 검색',e.target);
+
+    
+    if(e.key === 'Enter'){ 
+      // 입력창의 입력값 읽어오기 : val() 사용!
+      let txt = $(e.target).val().trim();
+      console.log(txt);
+      // 빈값이 아니면 검색함수 호출(검색어전달!)
+      // if(txt!=''){         
+        // 입력창 비우기 + 부모박스 닫기
+        // $(e.target).val('').parent().hide();
+        // 검색 보내기
+        goSearch(txt);
+      // } //// if ///////
+    } ///////// if ///////
+  }
+
+  
+  const clickKey = () => {
+    let txt = $('#schInput').val().trim();
+    console.log('이거뭐야',txt)
+    if(txt) 
+    goSearch(txt);
+
+
+   
+    // let txt = $(e.target).val().trim();
+    // console.log(txt);
+    // goSearch(txt);
+  }
+
+
+
+  // 아이템 결과 이동함수
+  const navigate = useNavigate(props);
+
+const goSearch = (txt) => { // txt - 검색어
+  console.log('검색페이지 이동 txt' ,txt);
+  // 라우터 이동함수로 이동하기 : 컨텍스트 API 사용
+   navigate('/searchlist',{state : txt})
+
+   let deltxt = $('#schInput');
+   deltxt.val('');
+}; //////////// goSearch 함수 /////////////
+
+
+
+
 
 
   const makeShopGnb = () => {
@@ -46,6 +99,10 @@ export function TopArea(props) {
 
 
 
+
+
+
+
   return (
     <>
       <header id="top-area">
@@ -61,14 +118,19 @@ export function TopArea(props) {
 
             <div className="login-box">
               <div className="searchingGnb">
-                <Link to="/searchlist">
+              
                   <FontAwesomeIcon
                     icon={faMagnifyingGlass}
                     className="schbtnBtb"
                     title="Open search"
+                    onClick={()=>clickKey()}
                   />
-                </Link>
-                <input id="schinGnb" type="text" placeholder="상품 검색" />
+         
+                <input 
+                id="schInput" 
+                type="text" 
+                placeholder="상품 검색" 
+                onKeyUp={enterKey} />
               </div>
 
               <Link to="/cart">
