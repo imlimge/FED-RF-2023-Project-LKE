@@ -12,7 +12,7 @@ export function Kids() {
 
   return (
     <>
-    <Shop />
+    <Shop cat="키즈" />
     </>
   );
 }

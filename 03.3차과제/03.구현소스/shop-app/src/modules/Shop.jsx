@@ -5,7 +5,7 @@ import "../css/sell.css";
 import { categoryData } from "../data/category";
 import { shopData } from "../data/shop";
 
-import { Fragment, useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import { useContext } from "react";
 
 import { sCon } from "../modules/shopContext";
@@ -27,7 +27,8 @@ export function Shop(props) {
 
 
   const myCon = useContext(sCon);
-  let cat = myCon.pgName;
+  // myCon.setPgName(props.cat);
+  let cat = props.cat;//myCon.pgName;
 
 
 
@@ -51,13 +52,11 @@ export function Shop(props) {
 
   // 한 페이지당 갯수
   const itemsPerPage = 16;
-  // 초기 페이지 번호 셋팅 1로 시작
-  const [currentPage, setCurrentPage] = useState(1);
 
   // 처음 시작 번호는 1-1 > 0*20 = 0부터 시작 / 2-1*20 = 20번부터 시작
-  const startIndex = (currentPage - 1) * itemsPerPage;
+  const startIndex = (myCon.currentPage - 1) * itemsPerPage;
   // 끝 번호는 1*20= 20까지  / 2*20 = 40까지
-  const endIndex = currentPage * itemsPerPage;
+  const endIndex = myCon.currentPage * itemsPerPage;
 
   // 기본으로 원본 셀데이타를 가져가지만 setSelDataList에서 배열이 바뀌면 아래
   // 페이지 네이션 슬라이스 하려는 데이터를 바꾸려고..
@@ -78,14 +77,16 @@ export function Shop(props) {
   const [lastLastList, setLastLastList] = useState(paginatedData);
 
 
-  const [sortDate,setSortData] = useState(0);
+  // const [sortDate,setSortData] = useState(0);
+
+  const sortData = useRef(0);
 
  
 
   
   // useState로 셋팅된 값을 바꿔줌
   const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
+    myCon.setCurrentPage(pageNumber);
     window.scrollTo(0, 0);
   };
 
@@ -107,7 +108,7 @@ export function Shop(props) {
   // 체크박스검색 함수 ////
   ////////////////////////
   const chkSearch = (e) => {
-    setCurrentPage(1);
+    myCon.setCurrentPage(1);
   
 
     const cid = e.target.id;
@@ -165,9 +166,14 @@ export function Shop(props) {
     // console.log("setPaginatedList(lastList) / paginatedList", setLastLastList);
     setCnt(lastList.length);
 
+
+
     //맵돌리는 배열 > 슬라이스 배열도 여기로 담음
     setSelDataList(lastList);
     // console.log("lastList 최종", lastList);
+
+    // console.log($('.orderlist.on').index());
+    setTimeout(()=>$('.orderlist.on').trigger('click'),0);
   }; // chkSearch 체크박스검색 함수 ////
 
 
@@ -192,7 +198,7 @@ export function Shop(props) {
   // 리스트 정렬 함수 ///
   //////////////////////
  const sortList = (e) => {
-  setSortData(e);
+  sortData.current = e;
   const temp = [...selDataList];
 
   console.log(temp)
@@ -212,6 +218,8 @@ export function Shop(props) {
       return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? -1 : 1;
     }
   });
+
+  console.log("sort구역");
 
   setSelDataList(temp);
  }; // selDataList를 의존성 배열에 추가
@@ -347,7 +355,7 @@ export function Shop(props) {
                 (i) => (
                   <span
                     key={i}
-                    className={i === currentPage ? "active" : ""}
+                    className={i === myCon.currentPage ? "active" : ""}
                     onClick={() => handlePageChange(i)}>{i}</span>
                 )
               )}

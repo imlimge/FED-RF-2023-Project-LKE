@@ -12,7 +12,7 @@ export function Office() {
 
   return (
     <>
-    <Shop />
+    <Shop cat="문구" />
     </>
   );
 }

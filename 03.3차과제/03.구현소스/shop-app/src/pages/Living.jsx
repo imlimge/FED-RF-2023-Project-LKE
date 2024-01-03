@@ -13,7 +13,7 @@ export function Living() {
 
   return (
     <>
-    <Shop />
+    <Shop cat="리빙" />
     </>
   );
 }
