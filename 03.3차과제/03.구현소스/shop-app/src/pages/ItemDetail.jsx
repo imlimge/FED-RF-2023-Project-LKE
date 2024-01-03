@@ -14,10 +14,12 @@ export function ItemDetail() {
       window.scrollTo(0, 0);
     },[])
 
+
+
 const location = useLocation();
 const { state } = location;
 
-// console.log('item-detail페이지 state',state)
+console.log('item-detail페이지 state',state)
 // console.log('item-detail페이지 state',state.idx)
 // console.log('item-detail페이지 state',state.name)
 
@@ -27,8 +29,6 @@ const { state } = location;
   }
 
 
-
-const [num,setNum] = useState(1)
 
 
 

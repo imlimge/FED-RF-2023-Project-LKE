@@ -32,7 +32,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living4.jpg",
       name: "카밍 캣 플레이트",
       cont: "",
-      price: "14000",
+      price: "12200",
       category: "데코",
       review:"38"
     },
@@ -41,7 +41,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living5.jpg",
       name: "코일 매트",
       cont: "택 1",
-      price: "14000",
+      price: "13000",
       category: "욕실",
       review:"7"
     },
@@ -68,7 +68,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living8.jpg",
       name: "위드 미 발매트",
       cont: "01-02",
-      price: "14000",
+      price: "12300",
       category: "데코",
       review:"254"
     },
@@ -95,7 +95,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living11.jpg",
       name: "마이 버디 버블 디스펜서",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "13500",
       category: "욕실",
       review:"11"
     },
@@ -131,7 +131,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living15.jpg",
       name: "데코 - 제목15",
       cont: "",
-      price: "14000",
+      price: "12000",
       category: "데코",
       review:"65"
     },
@@ -140,7 +140,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living16.jpg",
       name: "데코 - 제목16",
       cont: "택 1",
-      price: "14000",
+      price: "17000",
       category: "데코",
       review:"785"
     },
@@ -167,7 +167,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living19.jpg",
       name: "인형 - 제목19",
       cont: "01-02",
-      price: "14000",
+      price: "13200",
       category: "인형",
       review:"34"
     },
@@ -194,7 +194,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living22.jpg",
       name: "욕실 - 제목22",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "12100",
       category: "욕실",
       review:"7"
     },
@@ -230,7 +230,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living26.jpg",
       name: "키친 - 제목26",
       cont: "",
-      price: "14000",
+      price: "16000",
       category: "키친",
       review:"78"
     },
@@ -266,7 +266,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living30.jpg",
       name: "데코 - 제목30",
       cont: "01-02",
-      price: "14000",
+      price: "10200",
       category: "데코",
       review:"57"
     },
@@ -293,7 +293,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living33.jpg",
       name: "욕실 - 제목33",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "14800",
       category: "욕실",
       review:"56"
     },
@@ -329,7 +329,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living37.jpg",
       name: "키친 - 제목37",
       cont: "",
-      price: "14000",
+      price: "8700",
       category: "키친",
       review:"33"
     },
@@ -338,7 +338,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living38.jpg",
       name: "데코 - 제목38",
       cont: "택 1",
-      price: "14000",
+      price: "96000",
       category: "데코",
       review:"16"
     },
@@ -365,7 +365,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living41.jpg",
       name: "데코 - 제목 41",
       cont: "01-02",
-      price: "14000",
+      price: "3200",
       category: "데코",
       review:"333"
     },
@@ -392,7 +392,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living44.jpg",
       name: "욕실 - 제목44",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "35800",
       category: "욕실",
       review:"26"
     },
@@ -428,7 +428,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living48.jpg",
       name: "욕실 - 제목48",
       cont: "",
-      price: "14000",
+      price: "3500",
       category: "욕실",
       review:"53"
     },
@@ -437,7 +437,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living49.jpg",
       name: "데코 - 제목49",
       cont: "택 1",
-      price: "14000",
+      price: "6900",
       category: "데코",
       review:"36"
     },
@@ -491,7 +491,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living55.jpg",
       name: "욕실 - 제목55",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "55000",
       category: "욕실",
       review:"47"
     },
@@ -527,7 +527,7 @@ export const shopData = {
       isrc: "./images/shop/living/thum/living59.jpg",
       name: "욕실 - 제목59",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "13900",
       category: "욕실",
       review:"69"
     },
@@ -584,7 +584,7 @@ export const shopData = {
       isrc: "./images/shop/office/thum/office4.jpg",
       name: "캐릭터 다이어리",
       cont: "",
-      price: "14000",
+      price: "16400",
       category: "노트/다이어리",
       review:"88"
     },
@@ -1181,7 +1181,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids19.jpg",
       name: "위드 미 발매트",
       cont: "01-02",
-      price: "14000",
+      price: "16600",
       category: "유아식기",
       review:"136"
       
@@ -1209,7 +1209,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids22.jpg",
       name: "마이 버디 버블 디스펜서",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "32000",
       category: "기타소품",
       review:"46"
     },
@@ -1344,7 +1344,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids37.jpg",
       name: "카밍 캣 플레이트",
       cont: "",
-      price: "14000",
+      price: "23000",
       category: "유아식기",
       review:"23"
     },
@@ -1353,7 +1353,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids38.jpg",
       name: "코일 매트",
       cont: "택 1",
-      price: "14000",
+      price: "34000",
       category: "양말",
       review:"42"
     },
@@ -1380,7 +1380,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids41.jpg",
       name: "위드 미 발매트",
       cont: "01-02",
-      price: "14000",
+      price: "12300",
       category: "양말",
       review:"7"
     },
@@ -1407,7 +1407,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids44.jpg",
       name: "마이 버디 버블 디스펜서",
       cont: "일반 거품 / 발바닥 거품",
-      price: "14000",
+      price: "17800",
       category: "기타소품",
       review:"12"
     },

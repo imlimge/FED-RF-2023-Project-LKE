@@ -39,7 +39,7 @@ export function SwiperBanner() {
         // initialSlide={0}
 
         spaceBetween={30}
-        slidesPerView={1.5}
+        slidesPerView={2.5}
         centeredSlides={true}
 
         loop={true}

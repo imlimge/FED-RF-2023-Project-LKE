@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 
 
 
-
 import $ from "jquery";
 window.jQuery = $;
 
@@ -49,9 +48,10 @@ export function Shop(props) {
   const [cnt, setCnt] = useState(datacnt);
 
 
-
   // 한 페이지당 갯수
   const itemsPerPage = 16;
+
+
 
   // 처음 시작 번호는 1-1 > 0*20 = 0부터 시작 / 2-1*20 = 20번부터 시작
   const startIndex = (myCon.currentPage - 1) * itemsPerPage;
@@ -62,24 +62,22 @@ export function Shop(props) {
   // 페이지 네이션 슬라이스 하려는 데이터를 바꾸려고..
   const [selDataList, setSelDataList] = useState(selData);
 
-  // 시작,끝(startIndex, endIndex) 숫자만큼 데이터를 slice로 잘라서 paginatedData 에 다시 담음   (selDataList 원래는 selData)
-  //맵돌리는 중
-  const paginatedData = selDataList.slice(startIndex, endIndex);
-
-  // 전체 데이터 갯수 / 20개로 나누면 페이지갯수(소수점 이하 올림)
+    // 전체 데이터 갯수 / 20개로 나누면 페이지갯수(소수점 이하 올림)
   const totalPages = Math.ceil(selDataList.length / itemsPerPage);
+  
 
-
-
+  // 시작,끝(startIndex, endIndex) 숫자만큼 데이터를 slice로 잘라서 paginatedData 에 다시 담음   (selDataList 원래는 selData)
+  // 맵돌리는 중
+  const paginatedData = selDataList.slice(startIndex, endIndex);
 
   // 이전 명칭 paginatedList 심지어 페이지네이션과 관련하려고 셋팅한건데
   // 전혀 관련이 없는 전선택 상태변수가 됨
   const [lastLastList, setLastLastList] = useState(paginatedData);
 
 
+  // 나중에 쓰려고 했으나 필요없는 셋팅이었음
   // const [sortDate,setSortData] = useState(0);
-
-  const sortData = useRef(0);
+  // const sortData = useRef(0);
 
  
 
@@ -93,16 +91,19 @@ export function Shop(props) {
 
   // 아이템 디테일 이동함수
   const navigate = useNavigate(props);
+
    // 후크상태변수 설정 : 아이템변경
    const [Item, setItem] = useState();
 
 
   const goItemDetail = (e) => {
-    
     console.log( 'shop의 goItemDetail',e)
     setItem(e);
     navigate("/itemdetail", {state: e});
   };
+
+
+
 
   ////////////////////////
   // 체크박스검색 함수 ////
@@ -198,7 +199,8 @@ export function Shop(props) {
   // 리스트 정렬 함수 ///
   //////////////////////
  const sortList = (e) => {
-  sortData.current = e;
+  // 필요없는 셋팅이었음
+  // sortData.current = e;
   const temp = [...selDataList];
 
   console.log(temp)
