@@ -305,6 +305,12 @@ export function Shop(props) {
     return temp;
   };
 
+  //페이지 배열
+  let pageNumArr = Array.from({ length: totalPages }, (_, i) => i + 1)
+  // console.log(pageNumArr)
+
+
+
   return (
     <>
       <div className="shop inbox">
@@ -339,15 +345,12 @@ export function Shop(props) {
             <div className="shop__item__list">{makeItem()}</div>
 
             <div className="pagination">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                (pageNumber) => (
+              {pageNumArr.map(
+                (i) => (
                   <span
-                    key={pageNumber}
-                    className={pageNumber === currentPage ? "active" : ""}
-                    onClick={() => handlePageChange(pageNumber)}
-                  >
-                    {pageNumber}
-                  </span>
+                    key={i}
+                    className={i === currentPage ? "active" : ""}
+                    onClick={() => handlePageChange(i)}>{i}</span>
                 )
               )}
             </div>
