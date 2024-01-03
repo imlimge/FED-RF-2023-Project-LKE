@@ -18,8 +18,6 @@ import $ from "jquery";
 window.jQuery = $;
 
 export function Shop(props) {
-
-
   //정규식함수(숫자 세자리마다 콤마해주는 기능)
   function addComma(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

@@ -4,18 +4,23 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// 사용할 스와이퍼 모듈
+import { Autoplay, Pagination, Keyboard, Navigation  } from "swiper/modules";
+import { bannerData } from "../data/banner";
+
 // Import Swiper styles
 import "swiper/css";
 import 'swiper/css/navigation';
 import "swiper/css/pagination";
 
 
-
 import "./css/swiper_banner.css";
 
-// 사용할 스와이퍼 모듈
-import { Autoplay, Pagination, Keyboard, Navigation  } from "swiper/modules";
-import { bannerData } from "../data/banner";
+
+import $ from "jquery";
+window.jQuery = $;
+
+
 
 export function SwiperBanner() {
   const selData = bannerData.main;
@@ -26,21 +31,28 @@ export function SwiperBanner() {
     <>
       <Swiper
 
+        observer= {true}
+        observeParents= {true}
+
         spaceBetween={30}
-        slidesPerView={2}
+        slidesPerView={1.5}
         centeredSlides={true}
+        initialSlide={0}
         loop={true}
+        loopSlides={1}
         navigation={true}
         pagination={true}
         keyboard={true}
 
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: false,
+        // }}
+
         modules={[Pagination, Autoplay, Keyboard, Navigation]}
         className="mySwiper"
       >
+        
         {selData.map((v, i) => (
           <SwiperSlide key={i}>
             <div className="banner__tit">
