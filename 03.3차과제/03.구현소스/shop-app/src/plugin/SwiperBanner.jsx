@@ -29,15 +29,19 @@ export function SwiperBanner() {
 
   return (
     <>
-      <Swiper
+    
+      <Swiper 
 
-        observer= {true}
-        observeParents= {true}
+        // observer= {true}
+        // observeParents= {true}
+        // watchSlidesVisibility={true}
+        // watchSlidesProgress={true}
+        // initialSlide={0}
 
         spaceBetween={30}
         slidesPerView={1.5}
         centeredSlides={true}
-        initialSlide={0}
+
         loop={true}
         loopSlides={1}
         navigation={true}
@@ -50,9 +54,9 @@ export function SwiperBanner() {
         // }}
 
         modules={[Pagination, Autoplay, Keyboard, Navigation]}
-        className="mySwiper"
+        className="swiper-container"
       >
-        
+
         {selData.map((v, i) => (
           <SwiperSlide key={i}>
             <div className="banner__tit">

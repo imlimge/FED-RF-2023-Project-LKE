@@ -134,9 +134,9 @@ height: 60vh;
 /* height: 150vh; */
 }
 
-.shop__item__top{
+.shop__item__top.main_item{
   text-align: center;
-  padding-top: 4vh;
+  padding-top: 12vh;
 }
 
 .shop__item__title{

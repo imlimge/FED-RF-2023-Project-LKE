@@ -139,7 +139,7 @@ export function Main(props) {
 
           <div className="shop inbox">
             {/* <!-- 상품아이템 상단탭 --> */}
-            <div className="shop__item__top">
+            <div className="shop__item__top main_item">
               <div className="shop__item__title">오늘의 상품</div>
 
               <div className="shop__item__category">{makeMainCat()}</div>
