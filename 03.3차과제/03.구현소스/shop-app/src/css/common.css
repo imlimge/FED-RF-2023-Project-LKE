@@ -80,6 +80,28 @@ body{
 
 }
 
+.cart__logo{
+  position: relative;
+
+}
+
+.cart_state{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-color: orange;
+  border-radius: 10px;
+  top: 11px;
+  right: -7px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4;
+
+}
+
+
+
 .login-box{
   display: flex;
   align-items: center;

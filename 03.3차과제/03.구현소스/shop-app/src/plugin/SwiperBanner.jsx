@@ -43,7 +43,7 @@ export function SwiperBanner() {
         centeredSlides={true}
 
         loop={true}
-        loopSlides={1}
+        // loopSlides={1}
         navigation={true}
         pagination={true}
         keyboard={true}

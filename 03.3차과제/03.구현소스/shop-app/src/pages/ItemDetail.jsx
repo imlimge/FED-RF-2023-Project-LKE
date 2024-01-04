@@ -1,6 +1,8 @@
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import "../css/item_detail.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { sCon } from "../modules/shopContext";
+
 
 import $ from "jquery";
 window.jQuery = $;
@@ -15,9 +17,25 @@ export function ItemDetail() {
     },[])
 
 
+const itemCnt = useRef(1)
 
 const location = useLocation();
 const { state } = location;
+
+
+
+let itemCnt2;
+
+
+const navigate = useNavigate();
+const goCart = () => {
+    navigate("/cart", {state: {state: state, itemCnt: itemCnt2}});
+
+    console.log( 'ItemDetail의 바로구매',state, itemCnt2)
+    
+};
+
+
 
 console.log('item-detail페이지 state',state)
 // console.log('item-detail페이지 state',state.idx)
@@ -88,6 +106,10 @@ useEffect(()=>{
 
         let price2 = cnt * price1
         $(".total-price span").text(addComma(price2));
+
+        itemCnt.current = cnt
+        itemCnt2 = cnt
+        console.log('물건갯수 ref',cnt)
         
     });
     
@@ -161,7 +183,7 @@ useEffect(()=>{
                                 <button className="itemdetail__button ib_cart">
                                   장바구니 담기
                                 </button>
-                                <button className="itemdetail__button ib_buy">
+                                <button className="itemdetail__button ib_buy" onClick={()=>goCart()}>
                                   바로 구매하기
                                 </button>
                             </div>

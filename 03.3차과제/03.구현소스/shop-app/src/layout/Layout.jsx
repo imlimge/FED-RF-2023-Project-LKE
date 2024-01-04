@@ -18,10 +18,11 @@ require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 export function Layout() {
 
 
-    // 후크상태변수 설정 : 페이지변경
-    const [pgName, setPgName] = useState('리빙');
+  // 후크상태변수 설정 : 페이지변경
+  const [pgName, setPgName] = useState('리빙');
 
-    
+  
+  //////////////// Shop 상태변수 //////////////////////////////////
   // 모듈 shop 초기 페이지 번호 셋팅 1로 시작
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -29,14 +30,17 @@ export function Layout() {
 
 
 
+
+
+
   
 
-    // 페이지변경 상태변수 업데이트 함수
+  // 페이지변경 상태변수 업데이트 함수
     const chgPgName = (txt) => {
       setPgName(txt);
       // console.log(txt)
       setCurrentPage(1);
-    }; ///////// chgPgName 함수 //////
+  }; ///////// chgPgName 함수 //////
   
 
   

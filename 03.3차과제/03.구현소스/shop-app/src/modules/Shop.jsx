@@ -39,10 +39,12 @@ export function Shop(props) {
   let selData = shopData[cat];
 
 
-
-
   // console.log("selData", selData);
 
+
+
+
+  
   // 상품 전체 수
   let datacnt = selData.length;
   const [cnt, setCnt] = useState(datacnt);

@@ -1110,7 +1110,7 @@ export const shopData = {
       name: "기타 소품입니다",
       cont: "[구성]소품과 소품",
       price: "20000",
-      category: "기타소품",
+      category: "기타 소품",
       review:"34"
     },
     {
@@ -1210,7 +1210,7 @@ export const shopData = {
       name: "마이 버디 버블 디스펜서",
       cont: "일반 거품 / 발바닥 거품",
       price: "32000",
-      category: "기타소품",
+      category: "기타 소품",
       review:"46"
     },
     {
@@ -1309,7 +1309,7 @@ export const shopData = {
       name: "마이 버디 버블 디스펜서",
       cont: "일반 거품 / 발바닥 거품",
       price: "18000",
-      category: "기타소품",
+      category: "기타 소품",
       review:"79"
     },
     {
@@ -1408,7 +1408,7 @@ export const shopData = {
       name: "마이 버디 버블 디스펜서",
       cont: "일반 거품 / 발바닥 거품",
       price: "17800",
-      category: "기타소품",
+      category: "기타 소품",
       review:"12"
     },
     {

@@ -125,9 +125,16 @@ export function TopArea(props) {
                 />
               </div>
 
+                
               <Link to="/cart">
-                <FontAwesomeIcon icon={faCartShopping} />
+                <div className="cart__logo">
+                  <FontAwesomeIcon icon={faCartShopping}/>
+                    <div className="cart_state">
+                      <span id="cart_state_num">1</span>
+                    </div>
+                </div>
               </Link>
+
               <Link to="/login">
                 <FontAwesomeIcon icon={faUser} />
               </Link>
