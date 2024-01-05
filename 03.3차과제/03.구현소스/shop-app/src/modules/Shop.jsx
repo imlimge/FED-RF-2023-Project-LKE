@@ -90,12 +90,12 @@ export function Shop(props) {
     window.scrollTo(0, 0);
   };
 
-
-  // 아이템 디테일 이동함수
-  const navigate = useNavigate(props);
-
-   // 후크상태변수 설정 : 아이템변경
-   const [Item, setItem] = useState();
+  
+  // 후크상태변수 설정 : 아이템변경
+  const [Item, setItem] = useState();
+  
+    // 아이템 디테일 이동함수
+    const navigate = useNavigate(props);
 
 
   const goItemDetail = (e) => {

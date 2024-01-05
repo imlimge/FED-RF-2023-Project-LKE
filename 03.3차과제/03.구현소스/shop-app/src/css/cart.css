@@ -128,3 +128,13 @@ margin: 0 1vw;
   color: #fff;
 
 }
+
+
+
+.go_item{
+  cursor: pointer;
+}
+
+.go_item:hover{
+ font-weight: bold;
+}

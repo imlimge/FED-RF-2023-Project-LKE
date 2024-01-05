@@ -24,7 +24,7 @@ const { state } = location;
 
 
 
-let itemCnt2;
+let itemCnt2 = 1;
 
 
 const navigate = useNavigate();
