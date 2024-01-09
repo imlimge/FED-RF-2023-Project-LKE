@@ -35,11 +35,13 @@ const goCart = () => {
     
 };
 
-
-
 console.log('item-detail페이지 state',state)
 // console.log('item-detail페이지 state',state.idx)
 // console.log('item-detail페이지 state',state.name)
+
+
+
+
 
   //정규식함수(숫자 세자리마다 콤마해주는 기능)
   function addComma(x) {
@@ -61,7 +63,7 @@ useEffect(()=>{
  
 
 
-    console.log(price1)
+    // console.log(price1)
 
  
     const sum = $("#sum");

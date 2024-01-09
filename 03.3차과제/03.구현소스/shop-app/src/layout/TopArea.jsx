@@ -93,6 +93,16 @@ export function TopArea(props) {
 
 
 
+  let state = {
+    idx: null,
+    isrc: null,
+    name: null,
+    cont: null,
+    price: null,
+    category: null,
+    review:null
+}  
+
 
 
   return (
@@ -126,7 +136,7 @@ export function TopArea(props) {
               </div>
 
                 
-              <Link to="/cart">
+              <Link to="/cart" state={state}>
                 <div className="cart__logo">
                   <FontAwesomeIcon icon={faCartShopping}/>
                     <div className="cart_state">

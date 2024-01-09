@@ -1,12 +1,12 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "../css/cart.css";
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 
 
 export function Cart() {
 
-
+ 
      
   //정규식함수(숫자 세자리마다 콤마해주는 기능) //////////////
   function addComma(x) {
@@ -26,22 +26,44 @@ export function Cart() {
   };
 
 
+  let nullState = {
+    idx: null,
+    isrc: null,
+    name: null,
+    cont: null,
+    price: 0,
+    category: null,
+    review:null
+}  
+
+
+
+  const location = useLocation();  
+  const { state } = location;
+  console.log('장바구니 state',state.state,state.itemCnt)
   
 
-const location = useLocation();  
-const { state } = location;
-console.log('장바구니 state',state.state,state.itemCnt)
+  // const itemData = useRef(null)
+ 
+  const [itemData, setItemData] = useState(nullState);
+  console.log('itemData',itemData)
 
 
-// item detail 받아온 객체
-let itemData = state.state;
-console.log(itemData,itemData.length)
-
-
-
-const [itemState, setItemState] = useState();
+  
+const [itemState, setItemState] = useState(state);
 
 const [ calPrice, setCalPrice ] = useState();
+
+
+
+useEffect(() => {
+  if (state.idx !== null ) {
+    let stateState = state.state
+    setItemData(stateState);
+    console.log('useEffect후 itemData',itemData,stateState);
+  }
+  console.log('useEffect후 itemData2',itemData);
+}, [itemState]);
 
 
 
@@ -59,22 +81,25 @@ let totalPrice = Number(dPrice) + Number(itemtotalprice);
 
 
 const makeList = () => {
+  
+  if(itemData.idx !== null ){
+  // itemData.current = state.state
+  // let itemData = state.state
+  // setItemData(state.state);
+    
 
-  itemtotalprice = Number(itemData.price) * Number(state.itemCnt);
 
+  
   //아이템 배열에 넣기
   totalList.push(itemData);
   console.log('아이템 배열에 넣기',totalList)
 
 
-  if(totalList.length === 0){
-  return( <>
-        <tr>
-          <td colSpan="6">장바구니가 비었습니다</td>
-        </tr>
-      </>)
-  }
-  else{
+
+   console.log('장바구니 state있음')
+
+    itemtotalprice = Number(itemData.price) * Number(state.itemCnt);
+
     return(
       <Fragment key={itemData.name}>
         <tr>
@@ -112,6 +137,15 @@ const makeList = () => {
           
       </Fragment>)
    
+  }
+  else{ 
+    console.log('장바구니 null')
+  return ( <>
+        <tr>
+          <td colSpan="8">장바구니가 비었습니다</td>
+        </tr>
+      </>)
+    
 
 }
 } /// else ///
