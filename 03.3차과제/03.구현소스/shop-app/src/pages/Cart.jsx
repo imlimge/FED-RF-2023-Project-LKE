@@ -31,7 +31,7 @@ export function Cart() {
     isrc: null,
     name: null,
     cont: null,
-    price: 0,
+    price: null,
     category: null,
     review:null
 }  
@@ -42,28 +42,43 @@ export function Cart() {
   const { state } = location;
   console.log('장바구니 state',state.state,state.itemCnt)
   
-
-  // const itemData = useRef(null)
- 
-  const [itemData, setItemData] = useState(nullState);
-  console.log('itemData',itemData)
-
-
   
-const [itemState, setItemState] = useState(state);
+  // const [itemData, setItemData] = useState(nullState);
+  const itemData = useRef(null);
+  console.log('itemData',itemData)
+ 
+  let shopCart = JSON.parse(localStorage.getItem("shop_cart"))
+  console.log('shopCart',shopCart)
+
+  console.log('shopCart',shopCart)
+  // console.log('shopCart.addList',shopCart[0].addList)
+
+
+
+
+  // 2. 변경 데이터 변수 : 전달된 데이터로 초기셋팅
+  const [cartData, setCartData] = useState(shopCart);
+  
+//  const itemCntState = useRef(1);
+//  itemCntState.current = state.itemCnt;
+
+const [itemCntState, setItemCntState] = useState(state.itemCnt);
+console.log('cart itemState',itemCntState,cartData)
+
 
 const [ calPrice, setCalPrice ] = useState();
 
 
 
 useEffect(() => {
-  if (state.idx !== null ) {
-    let stateState = state.state
-    setItemData(stateState);
-    console.log('useEffect후 itemData',itemData,stateState);
+  if (shopCart !== undefined && shopCart !== null) {
+    // let stateState = state.state
+    // setItemData(cartData);
+
+    console.log('useEffect후 itemData',cartData);
   }
-  console.log('useEffect후 itemData2',itemData);
-}, [itemState]);
+  console.log('useEffect후 itemData2',cartData);
+}, [cartData]);
 
 
 
@@ -82,26 +97,26 @@ let totalPrice = Number(dPrice) + Number(itemtotalprice);
 
 const makeList = () => {
   
-  if(itemData.idx !== null ){
+  if(shopCart !== undefined  && shopCart !== null){
   // itemData.current = state.state
   // let itemData = state.state
   // setItemData(state.state);
     
 
-
-  
   //아이템 배열에 넣기
   totalList.push(itemData);
   console.log('아이템 배열에 넣기',totalList)
 
 
-
+  
    console.log('장바구니 state있음')
+    console.log(cartData[0].addList)
 
-    itemtotalprice = Number(itemData.price) * Number(state.itemCnt);
+    itemtotalprice = Number(cartData.price) * Number(itemCntState);
 
     return(
-      <Fragment key={itemData.name}>
+     
+      <Fragment key={cartData.name}>
         <tr>
               <th></th>
               <th></th>
@@ -118,13 +133,13 @@ const makeList = () => {
               </td>
               <td>
                 <img
-                  src={itemData.isrc}
+                  src={cartData.isrc}
                   alt="item"
                 />
               </td>
 
-              <td className="go_item" onClick={()=>goItemDetail(itemData)}>{itemData.name}</td>
-              <td>{state.itemCnt}</td>
+              <td className="go_item" onClick={()=>goItemDetail(cartData)}>{cartData.name}</td>
+              <td>{itemCntState}</td>
               <td><span>{addComma(dPrice)}</span>원</td>
               <td><span>{addComma(itemtotalprice)}</span>원</td>
               <td>

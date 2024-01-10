@@ -25,10 +25,46 @@ export function TopArea(props) {
     //  console.log(txt)
   }; ///////// chgPgName 함수 //////
 
-
   const selCat = shopGnbData;
+ 
+  let shopCart = JSON.parse(localStorage.getItem("shop_cart"))
+
+  let shopCartList = [];
 
   
+  shopCartList.push(shopCart);
+
+
+
+  
+  const [cartListState,setCartListState] = useState(shopCart.length);
+  if (shopCart !== undefined  && shopCart !== null) {
+
+    // setCartListState(shopCart.length)
+    console.log("topArea shop-cart 로컬스", shopCart,shopCart.length);
+  }
+  console.log("topArea shop-cart 로컬스", shopCart,shopCartList);
+  
+  // console.log("topArea shop-cart length", shopCartList.length);
+
+
+
+
+  // 카트에 아이템 있으면 숫자 넣기
+  const makeCartNum = () => {
+
+    if (shopCart !== undefined  && shopCart !== null) {
+      return (
+        <div className="cart_state">
+          <span id="cart_state_num">{cartListState}</span>
+        </div>
+      );
+    } ///if ///
+    else {
+      return <></>;
+    }
+  };
+
 
   // 검색 시 엔터키 작동
   const enterKey = (e) => {
@@ -42,7 +78,6 @@ export function TopArea(props) {
     } ///////// if ///////
   };
 
-
   // 검색 시 마우스 클릭 작동
   const clickKey = () => {
     let txt = $("#schInput").val().trim();
@@ -54,8 +89,6 @@ export function TopArea(props) {
     // console.log(txt);
     // goSearch(txt);
   };
-
-
 
   // 아이템 결과 이동함수
   const navigate = useNavigate(props);
@@ -70,9 +103,6 @@ export function TopArea(props) {
     let deltxt = $("#schInput");
     deltxt.val("");
   }; //////////// goSearch 함수 /////////////
-
-
-
 
   /// 상단 Gnb 생성
   const makeShopGnb = () => {
@@ -91,8 +121,6 @@ export function TopArea(props) {
     return temp;
   };
 
-
-
   let state = {
     idx: null,
     isrc: null,
@@ -100,10 +128,8 @@ export function TopArea(props) {
     cont: null,
     price: null,
     category: null,
-    review:null
-}  
-
-
+    review: null,
+  };
 
   return (
     <>
@@ -135,13 +161,10 @@ export function TopArea(props) {
                 />
               </div>
 
-                
               <Link to="/cart" state={state}>
                 <div className="cart__logo">
-                  <FontAwesomeIcon icon={faCartShopping}/>
-                    <div className="cart_state">
-                      <span id="cart_state_num">1</span>
-                    </div>
+                  <FontAwesomeIcon icon={faCartShopping} />
+                  {makeCartNum()}
                 </div>
               </Link>
 

@@ -22,22 +22,60 @@ const itemCnt = useRef(1)
 const location = useLocation();
 const { state } = location;
 
-
+console.log('ItemDetail state',state)
 
 let itemCnt2 = 1;
 
 
+// 총 배열
+
+let totalList = [];
+const [atotalList, setATotalList] = useState(totalList)
+
+// console.log('총배열',totalList)
+ 
+
+// let shopCart = JSON.parse(localStorage.getItem("shop_cart"))
+
+// console.log('샵카트',shopCart)
+
+
 const navigate = useNavigate();
+
 const goCart = () => {
+    console.log("goCart 함수 호출됨");
+
     navigate("/cart", {state: {state: state, itemCnt: itemCnt2}});
 
-    console.log( 'ItemDetail의 바로구매',state, itemCnt2)
-    
+    totalList.push(state)
+    console.log( 'ItemDetail의 바로구매',state, itemCnt2,totalList)
+    // localStorage.setItem('shop_cart',JSON.stringify(state))
 };
 
-console.log('item-detail페이지 state',state)
+
+// console.log('item-detail페이지 state',state)
 // console.log('item-detail페이지 state',state.idx)
 // console.log('item-detail페이지 state',state.name)
+
+
+
+const addList = (e) => {
+
+    console.log("addList 함수 호출됨");
+    let addList = e
+    totalList.push({addList,itemCnt2})
+
+    console.log( 'ItemDetail의 장바구니담기 addList',addList,'아이템수',itemCnt2,'\ntotalList',totalList)
+    
+    // 현재 아이템 로컬스에 추가
+
+    
+    localStorage.setItem('shop_cart',JSON.stringify(totalList))
+    JSON.parse(localStorage.getItem('shop_cart')).push(totalList);
+
+
+
+  }
 
 
 
@@ -90,7 +128,7 @@ useEffect(()=>{
         // 숫자 증가 버튼
         if(isUP){
             cnt++;
-            console.log('i',cnt);
+            // console.log('i',cnt);
                 
         }
 
@@ -99,7 +137,8 @@ useEffect(()=>{
             
             if(cnt>1){
             cnt--;
-            console.log('i',cnt)}
+            // console.log('i',cnt)
+            }
             else if(cnt<1)
             cnt = 1;
         }
@@ -111,7 +150,7 @@ useEffect(()=>{
 
         itemCnt.current = cnt
         itemCnt2 = cnt
-        console.log('물건갯수 ref',cnt)
+        // console.log('물건갯수 ref',cnt)
         
     });
     
@@ -182,7 +221,7 @@ useEffect(()=>{
                                 </div>
                             </div>
                             <div className="itemdetail__button__box">
-                                <button className="itemdetail__button ib_cart">
+                                <button className="itemdetail__button ib_cart" onClick={()=>addList(state)}>
                                   장바구니 담기
                                 </button>
                                 <button className="itemdetail__button ib_buy" onClick={()=>goCart()}>

@@ -126,10 +126,7 @@ margin: 0 1vw;
 #cart .cart__bottom__button button:nth-child(1){
   background-color: #222;
   color: #fff;
-
 }
-
-
 
 .go_item{
   cursor: pointer;

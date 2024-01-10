@@ -1,11 +1,12 @@
 
 import "../css/item_list.css";
 import "../css/sell.css";
+import { ItemListDetail } from "./ItemListDetail";
 
 import { categoryData } from "../data/category";
 import { shopData } from "../data/shop";
 
-import { Fragment, useCallback, useEffect, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useContext } from "react";
 
 import { sCon } from "../modules/shopContext";
@@ -94,14 +95,19 @@ export function Shop(props) {
   // 후크상태변수 설정 : 아이템변경
   const [Item, setItem] = useState();
   
-    // 아이템 디테일 이동함수
-    const navigate = useNavigate(props);
+  // 아이템 디테일 이동함수
+  const navigate = useNavigate(props);
 
 
   const goItemDetail = (e) => {
     console.log( 'shop의 goItemDetail',e)
     setItem(e);
     navigate("/itemdetail", {state: e});
+
+      //  return(
+      //   <ItemListDetail />
+      //  )
+  
   };
 
 
@@ -175,9 +181,19 @@ export function Shop(props) {
     setSelDataList(lastList);
     // console.log("lastList 최종", lastList);
 
+  
     // console.log($('.orderlist.on').index());
     setTimeout(()=>$('.orderlist.on').trigger('click'),0);
   }; // chkSearch 체크박스검색 함수 ////
+
+
+
+
+
+
+  const chk = useMemo(() =>{
+
+  },[selDataList])
 
 
 
@@ -230,35 +246,8 @@ export function Shop(props) {
 
 
 
-//  let tg = $(e.currentTarget).text();
-//   console.log('뭐야1',tg);
 
-//     let temp = selDataList;
   
-//     console.log('뭐야',e, temp);
-  
-//     let x = 1;
-//     temp.sort((a, b) => {
-//       if (tg === '인기순') {
-//         console.log('인기순', temp);
-//         return selData; // selData로 바로 반환
-//       } else if (tg === '추천리뷰순') { 
-//         console.log(x = x + 1);
-//         console.log('추천리뷰순', temp);
-//         return Number(a.review) === Number(b.review) ? 0 : Number(a.review) > Number(b.review) ? -1 : 1;
-//       } else if (tg === '낮은가격순') {
-//         console.log('낮은가격순', temp);
-//         return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? -1 : 1;
-//       } else if (tg === '높은가격순') {
-//         console.log('높은가격순', temp);
-//         return Number(a.price) === Number(b.price) ? 0 : Number(a.price) > Number(b.price) ? 1 : -1;
-//       }
-//     });
-  
-//     setSelDataList(temp);
-//   };
-  
-
 
 
 
@@ -363,10 +352,14 @@ export function Shop(props) {
                     onClick={() => handlePageChange(i)}>{i}</span>
                 )
               )}
+
+
+
             </div>
           </div>
         </div>
       </div>
+
     </>
   );
 }
