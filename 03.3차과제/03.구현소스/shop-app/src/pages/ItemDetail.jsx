@@ -28,7 +28,8 @@ export function ItemDetail() {
 
   // 로컬스에서 데이터 가져오기
   let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
-  const [aShopCart, setAShopCart] = useState(shopCart);
+
+//   const [aShopCart, setAShopCart] = useState(shopCart);
 
   console.log("샵카트 최초 aShopCart", shopCart);
 
@@ -38,7 +39,9 @@ export function ItemDetail() {
     // console.log(' 로컬스 데이터가 있다면 totalList에 shopCart넣기 totalList',totalList)
   }
   else{
-
+    // 로컬스 데이터 없으면 자동 업데이트 되게 하려고 했는데 안 됨
+    // 한번만 새로고침 하는 기능..없나..
+    // myCon.setCartListNumL(null)
   }
 
 
@@ -49,10 +52,13 @@ export function ItemDetail() {
     //   console.log("addList 함수 호출됨");
     let addList = e;
 
-    // 장바구니담기 클릭 시 빈배열에 해당 상품 넣기
-    // 같은 값이 있다면 넣지 않는다
-    // 메시지와 함께 넣지 않는다!
+    // 장바구니담기 클릭 시 totalList 배열에 해당 addList 넣기
+    // 같은 값이 있다면 메시지와 함께 넣지 않기.
+    // 같은 값은 addList에 idx , cat 두가지 확인 &&
+ 
+    
 
+    // 배열에 현재 아이템 상태값 넣기
     totalList.push({ addList, itemCnt });
 
     console.log(
@@ -68,32 +74,32 @@ export function ItemDetail() {
     localStorage.setItem("shop_cart", JSON.stringify(totalList));
     let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
     // shopCart state에 셋팅
-    setAShopCart(shopCart);
+    // setAShopCart(shopCart);
 
 
     // 레이아웃에 상태변수 있음
     myCon.setCartListNumL(shopCart.length)
 
 
-    // 아이템 카운트 초기화
-    // setItemCnt(1);
+    // 아이템 카운트 초기화 _ 작동 안 함
+    setItemCnt(1);
     
-    // setTimeout(() => {
-    //     $("#sum").text(itemCnt);
-    // }, 10);
+    setTimeout(() => {
+        $("#sum").text(itemCnt);
+    }, 10);
 
  
   };
 
 
 
-  console.log(
-    "addList후 최종",
-    "\ntotalList",
-    totalList,
-    "\naShopCart",
-    aShopCart
-  );
+//   console.log(
+//     "addList후 최종",
+//     "\ntotalList",
+//     totalList,
+//     "\naShopCart",
+//     aShopCart
+//   );
 
 
 
@@ -133,11 +139,13 @@ export function ItemDetail() {
   useEffect(() => {
     //금액 출력
     const price1 = $(".itemdetail__price span").text();
+    // 제품 총 합계
     $(".itemdetail__price").text(addComma(price1));
-
+    // 총 합계 
     $(".total-price span").text(addComma(price1));
 
-    // console.log(price1)
+    // console.log('price1',price1)
+
 
     const sum = $("#sum");
     const sumVal = $("#sum").text();
