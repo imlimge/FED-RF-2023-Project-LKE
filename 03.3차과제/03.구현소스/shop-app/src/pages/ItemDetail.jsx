@@ -83,6 +83,9 @@ export function ItemDetail() {
 
     // 아이템 카운트 초기화 _ 작동 안 함
     setItemCnt(1);
+
+    let price2 = itemCnt * price1;
+    $(".total-price span").text(addComma(price2));
     
     setTimeout(() => {
         $("#sum").text(itemCnt);
@@ -134,60 +137,68 @@ export function ItemDetail() {
   // 상품 수량 기본 셋팅 및 증감에 따른 셋팅
   const [itemCnt, setItemCnt] = useState(1);
 
-
+let price1;
   // 상품 수량 증감 버튼 셋팅 //////////
   useEffect(() => {
-    //금액 출력
-    const price1 = $(".itemdetail__price span").text();
-    // 제품 총 합계
-    $(".itemdetail__price").text(addComma(price1));
-    // 총 합계 
-    $(".total-price span").text(addComma(price1));
-
-    // console.log('price1',price1)
-
-
-    const sum = $("#sum");
-    const sumVal = $("#sum").text();
-    const cBtn = $(".count__button");
-
-    let cnt = Number(sumVal);
-
-    // console.log(sum,sumVal,cBtn)
-
-    cBtn.on("click", (e) => {
-      let isUP = $(e.currentTarget).hasClass("sb_up");
-      // console.log(e.currentTarget)
-      // console.log(isUP)
-
-      // 숫자 증가 버튼
-      if (isUP) {
-        cnt++;
-        // console.log('i',cnt);
-      }
-
-      // 숫자 감소 버튼
-      else {
-        if (cnt > 1) {
-          cnt--;
-          // console.log('i',cnt)
-        } else if (cnt < 1) cnt = 1;
-      }
-
-      $("#sum").text(cnt);
-
-      let price2 = cnt * price1;
-      $(".total-price span").text(addComma(price2));
-
-      // 현재 갯수 itemCnt에 담기
-      setItemCnt(cnt);
-
-      // console.log('물건갯수 cnt,itemCnt',cnt,itemCnt)
-    });
+   
+     //금액 출력
+     price1 = $(".itemdetail__price span").text();
+     // 제품 총 합계
+     $(".itemdetail__price").text(addComma(price1));
+     // 총 합계 
+     $(".total-price span").text(addComma(price1));
+ 
   }, []);
+
+  // useEffect(()=>{
+  //   setItemCnt(1);
+  // });
 
   console.log("물건갯수 itemCnt", itemCnt);
 
+
+  const chgNum =  (e) => {
+
+     // console.log('price1',price1)
+ 
+ 
+    //  const sum = $("#sum");
+    //  const cBtn = $(".count__button");
+ 
+     
+ 
+     // console.log(sum,sumVal,cBtn)
+ 
+    const sumVal = $("#sum").text();
+    let cnt = Number(sumVal);
+    let isUP = $(e.currentTarget).hasClass("sb_up");
+    // console.log(e.currentTarget)
+    // console.log(isUP)
+
+    // 숫자 증가 버튼
+    if (isUP) {
+      cnt++;
+      // console.log('i',cnt);
+    }
+
+    // 숫자 감소 버튼
+    else {
+      if (cnt > 1) {
+        cnt--;
+        // console.log('i',cnt)
+      } else if (cnt < 1) cnt = 1;
+    }
+
+    $("#sum").text(cnt);
+
+    let price2 = cnt * price1;
+    $(".total-price span").text(addComma(price2));
+
+    // 현재 갯수 itemCnt에 담기
+    // setItemCnt(cnt);
+
+    // console.log('물건갯수 cnt,itemCnt',cnt,itemCnt)
+  }; //////////// chgNum함수 ////////////
 
 
 
@@ -224,13 +235,13 @@ export function ItemDetail() {
               <div className="itemdetail__sell__box">
                 <span className="itemdetail__sell__title">{state.name}</span>
                 <div className="sell__button__box">
-                  <button className="count__button sb_down">－</button>
+                  <button className="count__button sb_down" onClick={chgNum}>－</button>
                   {/* <input type="text" id="sum" defaultValue="1" />
                     <b className="chg_num sb_total"></b> */}
                   <div id="sum" className="chg_num sb_total ">
                     1
                   </div>
-                  <button className="count__button sb_up">＋</button>
+                  <button className="count__button sb_up" onClick={chgNum}>＋</button>
                 </div>
                 <div className="itemdetail__sell__price total-price">
                   <span></span>원

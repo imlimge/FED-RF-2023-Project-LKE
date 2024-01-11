@@ -83,43 +83,43 @@ const makeList = () => {
   // itemtotalprice = Number(cartData.price) * Number(itemCntState);
 
     return(
+      // console.log(v,i)
       totalList.map((v,i)=>
-      console.log(v,i)
-      // <Fragment key={cartData.name}>
-      //   <tr>
-      //         <th></th>
-      //         <th></th>
-      //         <th>상품정보</th>
-      //         <th>수량</th>
-      //         <th>배송비</th>
-      //         <th>가격</th>
-      //         <th>삭제</th>
-      //       </tr>
+      <Fragment key={i}>
+        <tr>
+              <th></th>
+              <th></th>
+              <th>상품정보</th>
+              <th>수량</th>
+              <th>배송비</th>
+              <th>가격</th>
+              <th>삭제</th>
+            </tr>
 
-      //       <tr>
-      //         <td>
-      //         <input type="checkbox" id="itemcheck" />
-      //         </td>
-      //         <td>
-      //           <img
-      //             src={cartData.isrc}
-      //             alt="item"
-      //           />
-      //         </td>
+            <tr>
+              <td>
+              <input type="checkbox" id="itemcheck" />
+              </td>
+              <td>
+                <img
+                  src={v.addList.isrc}
+                  alt="item"
+                />
+              </td>
 
-      //         <td className="go_item" onClick={()=>goItemDetail(cartData)}>{cartData.name}</td>
-      //         <td>{itemCntState}</td>
-      //         <td><span>{addComma(dPrice)}</span>원</td>
-      //         <td><span>{addComma(itemtotalprice)}</span>원</td>
-      //         <td>
-      //           <button className="cfn" >
-      //             ×
-      //           </button>
-      //         </td>
-      //       </tr>
+              <td className="go_item" onClick={()=>goItemDetail(v.addList.name)}>{v.addList.name}</td>
+              <td>{v.itemCnt}</td>
+              <td><span>{addComma(dPrice)}</span>원</td>
+              <td><span>{addComma(Number(v.addList.price)*Number(v.itemCnt)+Number(dPrice))}</span>원</td>
+              <td>
+                <button className="cfn" >
+                  ×
+                </button>
+              </td>
+            </tr>
 
           
-      // </Fragment>
+      </Fragment>
       ))
    
   }
