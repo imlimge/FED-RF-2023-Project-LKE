@@ -12,51 +12,59 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import $ from "jquery";
 import { shopGnbData } from "../data/shop_gnb";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { shopData } from "../data/shop";
 window.jQuery = $;
 require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
 
 export function TopArea(props) {
+
   // 페이지변경 상태변수 업데이트 함수
   const chgPgName2 = (txt) => {
     props.chgPgName3(txt);
     //  console.log(txt)
   }; ///////// chgPgName 함수 //////
 
+
+  // 상단 카테고리 데이터
   const selCat = shopGnbData;
- 
-  let shopCart = JSON.parse(localStorage.getItem("shop_cart"))
-
+  // 로컬스에서 데이터 가져오기
+  let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
+  // 배열 생성
   let shopCartList = [];
-
-  
+  // 배열에 데이터 추가
   shopCartList.push(shopCart);
 
 
 
-  
-  const [cartListState,setCartListState] = useState(shopCart.length);
-  if (shopCart !== undefined  && shopCart !== null) {
+  // 리랜더링 강제적용 상태변수
+  const [force, setForce] = useState(null);
+  // setForce(Math.random());
 
-    // setCartListState(shopCart.length)
-    console.log("topArea shop-cart 로컬스", shopCart,shopCart.length);
-  }
-  console.log("topArea shop-cart 로컬스", shopCart,shopCartList);
-  
-  // console.log("topArea shop-cart length", shopCartList.length);
 
+  // 장바구니 아이콘 숫자 state
+  const [cartListNum, setCartListNum] = useState(null);
+
+
+  // 장바구니 아이콘에 배열 있는만큼 숫자 useState셋팅
+  useEffect(() => {
+    if (shopCart !== undefined && shopCart !== null) {
+      // setForce(Math.random());
+      setCartListNum(shopCart.length);
+
+      console.log("topArea shop-cart 로컬스", shopCart, shopCart.length);
+    }
+  },[]);
 
 
 
   // 카트에 아이템 있으면 숫자 넣기
   const makeCartNum = () => {
-
-    if (shopCart !== undefined  && shopCart !== null) {
+    if (shopCart !== undefined && shopCart !== null) {
       return (
         <div className="cart_state">
-          <span id="cart_state_num">{cartListState}</span>
+          <span id="cart_state_num">{cartListNum}</span>
         </div>
       );
     } ///if ///
@@ -64,6 +72,7 @@ export function TopArea(props) {
       return <></>;
     }
   };
+
 
 
   // 검색 시 엔터키 작동
@@ -77,6 +86,7 @@ export function TopArea(props) {
       goSearch(txt);
     } ///////// if ///////
   };
+
 
   // 검색 시 마우스 클릭 작동
   const clickKey = () => {
@@ -104,6 +114,8 @@ export function TopArea(props) {
     deltxt.val("");
   }; //////////// goSearch 함수 /////////////
 
+
+  
   /// 상단 Gnb 생성
   const makeShopGnb = () => {
     let temp = [];
@@ -121,6 +133,9 @@ export function TopArea(props) {
     return temp;
   };
 
+
+  // cart.jsx에 null일때 state값이 필요해서 임의 생성
+  // topArea에서 바로 장바구니 아이콘을 누를 때 필요함
   let state = {
     idx: null,
     isrc: null,
@@ -130,6 +145,8 @@ export function TopArea(props) {
     category: null,
     review: null,
   };
+
+
 
   return (
     <>

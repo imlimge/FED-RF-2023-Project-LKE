@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import "../css/cart.css";
 import { Fragment, useEffect, useRef, useState } from "react";
+import "../css/cart.css";
 
 
 
@@ -15,29 +15,17 @@ export function Cart() {
 
 
 
-
   // 아이템 디테일 이동함수 //////////////
   const navigate = useNavigate();
 
-  const goItemDetail = (e) => {
-    console.log( 'shop의 goItemDetail',e)
-    // setItem(e);
+    const goItemDetail = (e) => {
     navigate("/itemdetail", {state: e});
+    console.log( 'shop의 goItemDetail',e)
   };
 
 
-  let nullState = {
-    idx: null,
-    isrc: null,
-    name: null,
-    cont: null,
-    price: null,
-    category: null,
-    review:null
-}  
 
-
-
+  // navigate로 보내준 state값 받기
   const location = useLocation();  
   const { state } = location;
   console.log('장바구니 state',state.state,state.itemCnt)
@@ -47,21 +35,18 @@ export function Cart() {
   const itemData = useRef(null);
   console.log('itemData',itemData)
  
+  // 로컬스 데이터 가져오기
   let shopCart = JSON.parse(localStorage.getItem("shop_cart"))
   console.log('shopCart',shopCart)
 
-  console.log('shopCart',shopCart)
-  // console.log('shopCart.addList',shopCart[0].addList)
 
-
-
-
-  // 2. 변경 데이터 변수 : 전달된 데이터로 초기셋팅
+  // 변경 데이터 변수 : 전달된 데이터로 초기셋팅
   const [cartData, setCartData] = useState(shopCart);
-  
-//  const itemCntState = useRef(1);
+  //  const itemCntState = useRef(1);
 //  itemCntState.current = state.itemCnt;
 
+
+// 상품 상세페이지에서 보내준 item수량 state.itemCnt
 const [itemCntState, setItemCntState] = useState(state.itemCnt);
 console.log('cart itemState',itemCntState,cartData)
 
