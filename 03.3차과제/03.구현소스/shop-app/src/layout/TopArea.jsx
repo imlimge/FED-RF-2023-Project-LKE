@@ -45,21 +45,13 @@ export function TopArea(props) {
   const [force, setForce] = useState(null);
   // setForce(Math.random());
 
-
+  console.log('이거뭐야2',props.cartListNumL)
   // 장바구니 아이콘 숫자 state
-  const [cartListNumT, setCartListNumT] = useState(null);
+  // const [cartListNumT, setCartListNumT] = useState(props.cartListNumL);
+  // console.log('이거뭐야3',cartListNumT)
 
 
-  // 장바구니 아이콘에 배열 있는만큼 숫자 useState셋팅
-  useEffect(() => {
-    if (shopCart !== undefined && shopCart !== null) {
-      // setForce(Math.random());
-      // props.cntNum(shopCart.length);
-      setCartListNumT(shopCart.length)
 
-      console.log("topArea shop-cart 로컬스,갯수", shopCart, shopCart.length);
-    }
-  },[]);
 
 
 
@@ -68,7 +60,7 @@ export function TopArea(props) {
     if (shopCart !== undefined && shopCart !== null) {
       return (
         <div className="cart_state">
-          <span id="cart_state_num">{cartListNumT}</span>
+          <span id="cart_state_num">{props.cartListNumL}</span>
         </div>
       );
     } ///if ///

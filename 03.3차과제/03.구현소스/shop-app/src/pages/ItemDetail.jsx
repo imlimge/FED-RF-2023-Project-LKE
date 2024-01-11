@@ -7,6 +7,11 @@ import $ from "jquery";
 window.jQuery = $;
 
 export function ItemDetail() {
+
+
+  const myCon = useContext(sCon);
+
+
   // 상단으로 이동
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,6 +37,12 @@ export function ItemDetail() {
     totalList = [...shopCart];
     // console.log(' 로컬스 데이터가 있다면 totalList에 shopCart넣기 totalList',totalList)
   }
+  else{
+
+  }
+
+
+
 
   // 상품만 추가 화면 유지 //////////////////
   const addList = (e) => {
@@ -60,15 +71,16 @@ export function ItemDetail() {
     setAShopCart(shopCart);
 
 
-    // sCon.setCartListNum(itemCnt)
+    // 레이아웃에 상태변수 있음
+    myCon.setCartListNumL(shopCart.length)
 
 
     // 아이템 카운트 초기화
-    setItemCnt(1);
+    // setItemCnt(1);
     
-    setTimeout(() => {
-        $("#sum").text(itemCnt);
-    }, 10);
+    // setTimeout(() => {
+    //     $("#sum").text(itemCnt);
+    // }, 10);
 
  
   };

@@ -78,6 +78,7 @@ const makeList = () => {
  
   console.log('장바구니 shopCart 있음')
 
+
   // console.log(cartData[0].addList)
   // itemtotalprice = Number(cartData.price) * Number(itemCntState);
 
