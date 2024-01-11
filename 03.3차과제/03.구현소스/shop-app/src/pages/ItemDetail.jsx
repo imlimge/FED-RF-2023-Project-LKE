@@ -7,10 +7,7 @@ import $ from "jquery";
 window.jQuery = $;
 
 export function ItemDetail() {
-
-
   const myCon = useContext(sCon);
-
 
   // 상단으로 이동
   useEffect(() => {
@@ -29,7 +26,7 @@ export function ItemDetail() {
   // 로컬스에서 데이터 가져오기
   let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
 
-//   const [aShopCart, setAShopCart] = useState(shopCart);
+  //   const [aShopCart, setAShopCart] = useState(shopCart);
 
   console.log("샵카트 최초 aShopCart", shopCart);
 
@@ -37,15 +34,11 @@ export function ItemDetail() {
   if (shopCart) {
     totalList = [...shopCart];
     // console.log(' 로컬스 데이터가 있다면 totalList에 shopCart넣기 totalList',totalList)
-  }
-  else{
+  } else {
     // 로컬스 데이터 없으면 자동 업데이트 되게 하려고 했는데 안 됨
     // 한번만 새로고침 하는 기능..없나..
     // myCon.setCartListNumL(null)
   }
-
-
-
 
   // 상품만 추가 화면 유지 //////////////////
   const addList = (e) => {
@@ -55,8 +48,6 @@ export function ItemDetail() {
     // 장바구니담기 클릭 시 totalList 배열에 해당 addList 넣기
     // 같은 값이 있다면 메시지와 함께 넣지 않기.
     // 같은 값은 addList에 idx , cat 두가지 확인 &&
- 
-    
 
     // 배열에 현재 아이템 상태값 넣기
     totalList.push({ addList, itemCnt });
@@ -76,36 +67,27 @@ export function ItemDetail() {
     // shopCart state에 셋팅
     // setAShopCart(shopCart);
 
-
     // 레이아웃에 상태변수 있음
-    myCon.setCartListNumL(shopCart.length)
-
+    myCon.setCartListNumL(shopCart.length);
 
     // 아이템 카운트 초기화 _ 작동 안 함
     setItemCnt(1);
 
     let price2 = itemCnt * price1;
     $(".total-price span").text(addComma(price2));
-    
-    setTimeout(() => {
-        $("#sum").text(itemCnt);
-    }, 10);
 
- 
+    // setTimeout(() => {
+    //     $("#sum").text(itemCnt);
+    // }, 10);
   };
 
-
-
-//   console.log(
-//     "addList후 최종",
-//     "\ntotalList",
-//     totalList,
-//     "\naShopCart",
-//     aShopCart
-//   );
-
-
-
+  //   console.log(
+  //     "addList후 최종",
+  //     "\ntotalList",
+  //     totalList,
+  //     "\naShopCart",
+  //     aShopCart
+  //   );
 
   // 카트로 가기위한 navigate
   const navigate = useNavigate();
@@ -130,45 +112,43 @@ export function ItemDetail() {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  
+
 
 
 
   // 상품 수량 기본 셋팅 및 증감에 따른 셋팅
   const [itemCnt, setItemCnt] = useState(1);
+  console.log("물건갯수 itemCnt", itemCnt);
+  
 
-let price1;
-  // 상품 수량 증감 버튼 셋팅 //////////
+
+  
+  // 최초 가격 불러오기
+  let price1 = state.price;
+
   useEffect(() => {
-   
-     //금액 출력
-     price1 = $(".itemdetail__price span").text();
      // 제품 총 합계
-     $(".itemdetail__price").text(addComma(price1));
-     // 총 합계 
-     $(".total-price span").text(addComma(price1));
- 
+    $(".itemdetail__price").text(addComma(price1));
+    // 총 합계
+    $(".total-price span").text(addComma(price1));
   }, []);
+
+
 
   // useEffect(()=>{
   //   setItemCnt(1);
   // });
 
-  console.log("물건갯수 itemCnt", itemCnt);
+
+  
+  // 상품 수량 증감 버튼 셋팅 //////////
 
 
-  const chgNum =  (e) => {
+  const chgNum = (e) => {
+    //금액 출력
+    price1 = state.price
+    console.log('price1',price1)
 
-     // console.log('price1',price1)
- 
- 
-    //  const sum = $("#sum");
-    //  const cBtn = $(".count__button");
- 
-     
- 
-     // console.log(sum,sumVal,cBtn)
- 
     const sumVal = $("#sum").text();
     let cnt = Number(sumVal);
     let isUP = $(e.currentTarget).hasClass("sb_up");
@@ -192,16 +172,16 @@ let price1;
     $("#sum").text(cnt);
 
     let price2 = cnt * price1;
+    // 제품 총 합계
     $(".total-price span").text(addComma(price2));
 
     // 현재 갯수 itemCnt에 담기
-    // setItemCnt(cnt);
+    setItemCnt(cnt);
 
     // console.log('물건갯수 cnt,itemCnt',cnt,itemCnt)
   }; //////////// chgNum함수 ////////////
 
-
-
+  
   return (
     <>
       <section id="itemdetail">
@@ -235,13 +215,17 @@ let price1;
               <div className="itemdetail__sell__box">
                 <span className="itemdetail__sell__title">{state.name}</span>
                 <div className="sell__button__box">
-                  <button className="count__button sb_down" onClick={chgNum}>－</button>
+                  <button className="count__button sb_down" onClick={chgNum}>
+                    －
+                  </button>
                   {/* <input type="text" id="sum" defaultValue="1" />
                     <b className="chg_num sb_total"></b> */}
                   <div id="sum" className="chg_num sb_total ">
                     1
                   </div>
-                  <button className="count__button sb_up" onClick={chgNum}>＋</button>
+                  <button className="count__button sb_up" onClick={chgNum}>
+                    ＋
+                  </button>
                 </div>
                 <div className="itemdetail__sell__price total-price">
                   <span></span>원

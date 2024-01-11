@@ -86,16 +86,7 @@ const makeList = () => {
       // console.log(v,i)
       totalList.map((v,i)=>
       <Fragment key={i}>
-        <tr>
-              <th></th>
-              <th></th>
-              <th>상품정보</th>
-              <th>수량</th>
-              <th>배송비</th>
-              <th>가격</th>
-              <th>삭제</th>
-            </tr>
-
+      
             <tr>
               <td>
               <input type="checkbox" id="itemcheck" />
@@ -109,8 +100,8 @@ const makeList = () => {
 
               <td className="go_item" onClick={()=>goItemDetail(v.addList.name)}>{v.addList.name}</td>
               <td>{v.itemCnt}</td>
-              <td><span>{addComma(dPrice)}</span>원</td>
-              <td><span>{addComma(Number(v.addList.price)*Number(v.itemCnt)+Number(dPrice))}</span>원</td>
+              <td><span>{addComma(Number(v.addList.price))}</span>원</td>
+              <td><span>{addComma(Number(v.addList.price)*Number(v.itemCnt))}</span>원</td>
               <td>
                 <button className="cfn" >
                   ×
@@ -155,17 +146,34 @@ const makeList = () => {
           </div>
           <table>
           <tbody>
+          <tr>
+              <th></th>
+              <th></th>
+              <th>상품정보</th>
+              <th>수량</th>
+              <th>가격</th>
+              <th>합계</th>
+              <th>삭제</th>
+            </tr>
 
        
             {makeList()}
 
 
             <tr>
-              <td className="cart_list_total" colSpan="6">
+              <td className="cart_list_total" colSpan="3">
+                배송비 (5만원 이상 배송비 0원) : 
+              </td>
+              <td>
+                <span>{addComma(dPrice)}</span>원
+              </td>
+           
+              <td className="cart_list_total" colSpan="3">
                 총합계 :
               </td>
-              <td><span>{addComma(totalPrice)}</span>원</td>
-              <td></td>
+              <td>
+                <span>{addComma(totalPrice)}</span>원
+              </td>
             </tr>
        
           </tbody>
