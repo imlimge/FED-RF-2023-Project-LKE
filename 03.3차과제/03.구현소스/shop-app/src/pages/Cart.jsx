@@ -79,9 +79,6 @@ const makeList = () => {
   console.log('장바구니 shopCart 있음')
 
 
-  // console.log(cartData[0].addList)
-  // itemtotalprice = Number(cartData.price) * Number(itemCntState);
-
     return(
       // console.log(v,i)
       totalList.map((v,i)=>
@@ -168,7 +165,7 @@ const makeList = () => {
                 <span>{addComma(dPrice)}</span>원
               </td>
            
-              <td className="cart_list_total" colSpan="3">
+              <td className="cart_list_total" colSpan="2">
                 총합계 :
               </td>
               <td>
