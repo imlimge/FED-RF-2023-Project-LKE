@@ -10,10 +10,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import $ from "jquery";
 import { shopGnbData } from "../data/shop_gnb";
 import { useEffect, useState } from "react";
-import { shopData } from "../data/shop";
+
+
+
+import $ from "jquery";
+import { sCon } from "../modules/shopContext";
 window.jQuery = $;
 require("jquery-ui-dist/jquery-ui");
 require("jquery-ui-touch-punch/jquery.ui.touch-punch");
@@ -32,9 +35,9 @@ export function TopArea(props) {
   // 로컬스에서 데이터 가져오기
   let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
   // 배열 생성
-  let shopCartList = [];
+  let totalList = [];
   // 배열에 데이터 추가
-  shopCartList.push(shopCart);
+  totalList.push(shopCart);
 
 
 
@@ -44,16 +47,17 @@ export function TopArea(props) {
 
 
   // 장바구니 아이콘 숫자 state
-  const [cartListNum, setCartListNum] = useState(null);
+  const [cartListNumT, setCartListNumT] = useState(null);
 
 
   // 장바구니 아이콘에 배열 있는만큼 숫자 useState셋팅
   useEffect(() => {
     if (shopCart !== undefined && shopCart !== null) {
       // setForce(Math.random());
-      setCartListNum(shopCart.length);
+      // props.cntNum(shopCart.length);
+      setCartListNumT(shopCart.length)
 
-      console.log("topArea shop-cart 로컬스", shopCart, shopCart.length);
+      console.log("topArea shop-cart 로컬스,갯수", shopCart, shopCart.length);
     }
   },[]);
 
@@ -64,7 +68,7 @@ export function TopArea(props) {
     if (shopCart !== undefined && shopCart !== null) {
       return (
         <div className="cart_state">
-          <span id="cart_state_num">{cartListNum}</span>
+          <span id="cart_state_num">{cartListNumT}</span>
         </div>
       );
     } ///if ///

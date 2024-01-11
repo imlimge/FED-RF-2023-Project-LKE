@@ -30,7 +30,8 @@ export function Layout() {
 
 
 
-
+  // 장바구니 아이콘 숫자 state
+  const [cartListNum, setCartListNum] = useState(null);
 
 
   
@@ -48,8 +49,8 @@ export function Layout() {
 
   return (
     <>
-    <sCon.Provider value={{pgName, currentPage, setCurrentPage}}>
-      <TopArea chgPgName3={chgPgName}/>
+    <sCon.Provider value={{pgName, currentPage, setCurrentPage ,setCartListNum }}>
+      <TopArea chgPgName3={chgPgName} cntNum={setCartListNum}/>
       <MainArea />
       <FooterArea />
     </sCon.Provider>
