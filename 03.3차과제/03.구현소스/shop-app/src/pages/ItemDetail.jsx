@@ -26,9 +26,9 @@ export function ItemDetail() {
   // 로컬스에서 데이터 가져오기
   let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
 
-  //   const [aShopCart, setAShopCart] = useState(shopCart);
 
-  console.log("샵카트 최초 aShopCart", shopCart);
+  // console.log("샵카트 최초 aShopCart", shopCart);
+
 
   // 로컬스 데이터가 있다면 totalList에 넣기
   if (shopCart) {
@@ -48,6 +48,7 @@ export function ItemDetail() {
     // 장바구니담기 클릭 시 totalList 배열에 해당 addList 넣기
     // 같은 값이 있다면 메시지와 함께 넣지 않기.
     // 같은 값은 addList에 idx , cat 두가지 확인 &&
+    
 
     // 배열에 현재 아이템 상태값 넣기
     totalList.push({ addList, itemCnt });
@@ -73,13 +74,13 @@ export function ItemDetail() {
     // 아이템 카운트 초기화 _ 작동 안 함
     setItemCnt(1);
 
+
     let price2 = itemCnt * price1;
+    // .total-price 출력 2군데 클래스 있음
     $(".total-price span").text(addComma(price2));
 
-    // setTimeout(() => {
-    //     $("#sum").text(itemCnt);
-    // }, 10);
-  };
+    };
+
 
   //   console.log(
   //     "addList후 최종",
@@ -88,6 +89,8 @@ export function ItemDetail() {
   //     "\naShopCart",
   //     aShopCart
   //   );
+
+
 
   // 카트로 가기위한 navigate
   const navigate = useNavigate();
@@ -98,14 +101,21 @@ export function ItemDetail() {
 
     navigate("/cart", { state: { state: state, itemCnt: itemCnt } });
 
-    totalList.push(state);
+    // totalList.push(state);
     console.log("ItemDetail의 바로구매", state, itemCnt, totalList);
     // localStorage.setItem('shop_cart',JSON.stringify(state))
+
+    addList(state)
+  
+
+
+
   };
 
   // console.log('item-detail페이지 state',state)
   // console.log('item-detail페이지 state',state.idx)
   // console.log('item-detail페이지 state',state.name)
+
 
   //정규식함수(숫자 세자리마다 콤마해주는 기능)
   function addComma(x) {
@@ -118,9 +128,8 @@ export function ItemDetail() {
 
   // 상품 수량 기본 셋팅 및 증감에 따른 셋팅
   const [itemCnt, setItemCnt] = useState(1);
-  console.log("물건갯수 itemCnt", itemCnt);
+  // console.log("물건갯수 itemCnt", itemCnt);
   
-
 
   
   // 최초 가격 불러오기
@@ -221,7 +230,7 @@ export function ItemDetail() {
                   {/* <input type="text" id="sum" defaultValue="1" />
                     <b className="chg_num sb_total"></b> */}
                   <div id="sum" className="chg_num sb_total ">
-                    1
+                    {itemCnt}
                   </div>
                   <button className="count__button sb_up" onClick={chgNum}>
                     ＋

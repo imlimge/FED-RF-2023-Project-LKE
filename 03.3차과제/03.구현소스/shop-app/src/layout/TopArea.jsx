@@ -45,7 +45,7 @@ export function TopArea(props) {
   const [force, setForce] = useState(null);
   // setForce(Math.random());
 
-  console.log('이거뭐야2',props.cartListNumL)
+  // console.log('이거뭐야2',props.cartListNumL)
   // 장바구니 아이콘 숫자 state
   // const [cartListNumT, setCartListNumT] = useState(props.cartListNumL);
   // console.log('이거뭐야3',cartListNumT)
@@ -95,6 +95,8 @@ export function TopArea(props) {
     // console.log(txt);
     // goSearch(txt);
   };
+
+  
 
   // 아이템 결과 이동함수
   const navigate = useNavigate(props);

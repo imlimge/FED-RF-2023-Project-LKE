@@ -112,6 +112,7 @@ color: #b9b9b9;
   border-radius: 5px;
   padding: 5px 15px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .cart__bottom__button{
@@ -121,6 +122,7 @@ text-align: center;
 
 .cart__bottom__button button{
 margin: 0 1vw;
+
 }
 
 #cart .cart__bottom__button button:nth-child(1){
