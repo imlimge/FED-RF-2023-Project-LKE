@@ -18,6 +18,7 @@ export function Cart() {
   // 아이템 디테일 이동함수 //////////////
   const navigate = useNavigate();
     const goItemDetail = (e) => {
+      
     navigate("/itemdetail", {state: e});
     console.log( 'shop의 goItemDetail',e)
   };
@@ -78,6 +79,7 @@ const makeList = () => {
  
   console.log('장바구니 shopCart 있음')
 
+  
 
     return(
       // console.log(v,i)
@@ -95,7 +97,7 @@ const makeList = () => {
                 />
               </td>
 
-              <td className="go_item" onClick={()=>goItemDetail(v.addList.name)}>{v.addList.name}</td>
+              <td className="go_item" onClick={()=>goItemDetail(e)}>{v.addList.name}</td>
               <td>{v.itemCnt}</td>
               <td><span>{addComma(Number(v.addList.price))}</span>원</td>
               <td><span>{addComma(Number(v.addList.price)*Number(v.itemCnt))}</span>원</td>
