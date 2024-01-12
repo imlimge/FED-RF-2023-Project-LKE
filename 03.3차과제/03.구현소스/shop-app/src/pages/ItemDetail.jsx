@@ -4,6 +4,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { sCon } from "../modules/shopContext";
 
 import $ from "jquery";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 window.jQuery = $;
 
 export function ItemDetail() {
@@ -25,33 +26,82 @@ export function ItemDetail() {
 
   // 로컬스에서 데이터 가져오기
   let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
-
-
   // console.log("샵카트 최초 aShopCart", shopCart);
 
+  // addList 함수 리랜더링을 위한 상태변수
+  // const [aShopCart, setAShopCart] = useState(shopCart);
 
   // 로컬스 데이터가 있다면 totalList에 넣기
   if (shopCart) {
     totalList = [...shopCart];
     // console.log(' 로컬스 데이터가 있다면 totalList에 shopCart넣기 totalList',totalList)
-  } else {
-    // 로컬스 데이터 없으면 자동 업데이트 되게 하려고 했는데 안 됨
-    // 한번만 새로고침 하는 기능..없나..
-    // myCon.setCartListNumL(null)
   }
+
+
+
+  // 상품 배열 false/true 위한 flag
+  // const flag = useRef(false)
+  let flag = false;
+  const [flag2, setFlag2] = useState(flag);
+
 
   // 상품만 추가 화면 유지 //////////////////
   const addList = (e) => {
     //   console.log("addList 함수 호출됨");
+    // 현재 상품 정보 e = addList, itemCnt
     let addList = e;
+    // 비교를 위해 배열로 만들어 줌
+    let addArr = [];
+    addArr.push({ addList, itemCnt });
+
+    console.log("addArr", addArr);
 
     // 장바구니담기 클릭 시 totalList 배열에 해당 addList 넣기
     // 같은 값이 있다면 메시지와 함께 넣지 않기.
     // 같은 값은 addList에 idx , cat 두가지 확인 &&
-    
+    console.log('addArr',addArr[0].addList.idx ,addArr[0].addList.category);
 
-    // 배열에 현재 아이템 상태값 넣기
-    totalList.push({ addList, itemCnt });
+
+
+    // 배열 비교
+    const result = totalList.filter((v) => {
+      // totalList 배열안에 같은 상품이 있으면 true / 없으면 false
+      if (addArr[0].addList.idx === v.addList.idx &&
+        addArr[0].addList.category === v.addList.category) {
+        flag = true;
+        // flag.current = true;
+        // setFlag(true);
+        console.log('result true',flag)
+      } else {
+        flag  = false;
+        // flag.current = false;
+        // setFlag(false);
+        console.log('result false',flag)
+      }
+
+      return flag;
+    });
+
+
+    console.log("result/flag",result, flag);
+
+    // 같은 상품 있으면 알람 후 카운트만 변경
+    if (flag) {
+      setFlag2(flag)
+      console.log("상품있어", flag2);
+      alert('장바구니에 상품이 있습니다 \n(추후 수량만 업데이트 기능 구현 예정)')
+
+
+    }
+
+    //상품 없으면 상태값 넣기
+    else{
+      setFlag2(flag)
+      console.log("상품 없어서 추가", flag2);
+      // 배열에 현재 상품 없으면 상태값 넣기
+      totalList.push({ addList, itemCnt });
+
+    }
 
     console.log(
       "ItemDetail의 장바구니담기 addList = e",
@@ -74,12 +124,16 @@ export function ItemDetail() {
     // 아이템 카운트 초기화 _ 작동 안 함
     setItemCnt(1);
 
-
     let price2 = itemCnt * price1;
     // .total-price 출력 2군데 클래스 있음
     $(".total-price span").text(addComma(price2));
+  };
 
-    };
+
+
+
+
+
 
 
   //   console.log(
@@ -89,8 +143,6 @@ export function ItemDetail() {
   //     "\naShopCart",
   //     aShopCart
   //   );
-
-
 
   // 카트로 가기위한 navigate
   const navigate = useNavigate();
@@ -105,58 +157,42 @@ export function ItemDetail() {
     console.log("ItemDetail의 바로구매", state, itemCnt, totalList);
     // localStorage.setItem('shop_cart',JSON.stringify(state))
 
-    addList(state)
-  
-
-
-
+    addList(state);
   };
 
   // console.log('item-detail페이지 state',state)
   // console.log('item-detail페이지 state',state.idx)
   // console.log('item-detail페이지 state',state.name)
 
-
   //정규식함수(숫자 세자리마다 콤마해주는 기능)
   function addComma(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-
-
-
-
   // 상품 수량 기본 셋팅 및 증감에 따른 셋팅
   const [itemCnt, setItemCnt] = useState(1);
   // console.log("물건갯수 itemCnt", itemCnt);
-  
 
-  
   // 최초 가격 불러오기
   let price1 = state.price;
 
   useEffect(() => {
-     // 제품 총 합계
+    // 제품 총 합계
     $(".itemdetail__price").text(addComma(price1));
     // 총 합계
     $(".total-price span").text(addComma(price1));
   }, []);
 
-
-
   // useEffect(()=>{
   //   setItemCnt(1);
   // });
 
-
-  
   // 상품 수량 증감 버튼 셋팅 //////////
-
 
   const chgNum = (e) => {
     //금액 출력
-    price1 = state.price
-    console.log('price1',price1)
+    price1 = state.price;
+    // console.log("price1", price1);
 
     const sumVal = $("#sum").text();
     let cnt = Number(sumVal);
@@ -190,7 +226,6 @@ export function ItemDetail() {
     // console.log('물건갯수 cnt,itemCnt',cnt,itemCnt)
   }; //////////// chgNum함수 ////////////
 
-  
   return (
     <>
       <section id="itemdetail">

@@ -3,9 +3,9 @@
 import { Outlet } from "react-router-dom";
 
 import { Main } from "../pages/Main";
+import { useEffect } from "react";
 
 export function MainArea() {
-
 
 
 

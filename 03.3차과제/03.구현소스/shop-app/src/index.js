@@ -27,8 +27,8 @@ export default function App() {
 
 
   return (
-
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+<HashRouter>
+    {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
@@ -45,7 +45,8 @@ export default function App() {
           <Route path="searchlist" element={<SearchList />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+      {/* </BrowserRouter> */}
+  </HashRouter>
   );
 } ///////////// App 컴포넌트 ///////////////////
 

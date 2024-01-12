@@ -1,18 +1,41 @@
+
+
 1. 상품 상세페이지
 -> 배열 비교해서 로컬스에 있으면 카운트만 변경 (알람창)
 
 
+
+
 2. 장바구니
+
 -> 전체선택/해제 => 체크된것만 합계
--> 기본으로 전체 선택하게 되어있기
 
 -> 선택삭제 기능
--> 
+
+-> 실시간 수량조절
 
 
 
+   const result = totalList.filter(()=>{
+      let flag = true;
+      addArr.forEach(v =>{
+        if(v.addList.idx === totalList.addList.idx && v.addList.cat === totalList.addList.cat){
+          flag = false;
+        }
+      })
+      return flag;
+
+    })
 
 
 
+     // totalList.forEach(v =>{
+      //   if(v.addList.idx === totalList.addList.idx && v.addList.cat === totalList.addList.cat){
+      //     flag = false;
+      //   }
+      // })
 
+      // if(addArr.addList.idx === totalList.addList.idx && addArr.addList.cat === totalList.addList.cat){
+      //     flag = false;
+      // }
 ---
