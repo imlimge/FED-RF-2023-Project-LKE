@@ -9,10 +9,19 @@ window.jQuery = $;
 export function Cart() {
   const myCon = useContext(sCon);
 
+
+  // 리랜더링 강제적용 상태변수
+  const [force, setForce] = useState(null);
+  // setForce(Math.random());
+
+
+
   //정규식함수(숫자 세자리마다 콤마해주는 기능) //////////////
   function addComma(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
+
+
 
   // 아이템 디테일 이동함수 //////////////
   const navigate = useNavigate();
@@ -21,7 +30,10 @@ export function Cart() {
     navigate("/itemdetail", { state: e });
   };
 
-  // 총 배열
+
+
+
+  // 아이템 총 배열
   let totalList = [];
 
   // 로컬스에서 데이터 가져오기
@@ -36,10 +48,16 @@ export function Cart() {
     // console.log(' 로컬스 데이터가 있다면 totalList에 shopCart넣기 totalList',totalList)
   }
 
+
+
   // 배송비 초기셋팅
   const [dPrice, setDPrice] = useState(3000);
   const [tPrice, setTPrice] = useState();
 
+
+
+
+  // 상품 총 합계 계산 
   useEffect(() => {
     // .cart_item_total_Price 클래스를 가진 요소들의 텍스트 값을 가져와서 합계 계산 ***
     let itemtotalprice = 0;
@@ -61,10 +79,11 @@ export function Cart() {
     setTPrice(totalPrice);
   });
 
-  // 리랜더링 강제적용 상태변수
-  const [force, setForce] = useState(null);
-  // setForce(Math.random());
 
+
+
+
+  // 장바구니 비우기
   const clearCart = () => {
     myCon.setForce(Math.random());
     console.log("장바구니 비우기");
@@ -86,9 +105,26 @@ export function Cart() {
     const checkbox = document.getElementById("itemcheck");
     const is_checked = checkbox.checked;
     setIsChecked(is_checked);
-  };
 
+
+      // Update the btnArr state when a checkbox is clicked
+      setBtnArr((prevArr) => {
+        const newArr = [...prevArr];
+  
+        if (!newArr.includes(i)) {
+          newArr.push(i);
+        }
+  
+        console.log('btnArr', newArr); // 상태 업데이트 후 로그 출력
+        return newArr;
+      });
+
+
+
+  };
   // console.log('checkItem 개별 아이템 체크 여부',isChecked)
+
+
 
 
 
@@ -121,53 +157,84 @@ export function Cart() {
   };
 
 
+  
 
-  // 아이템 모두 선택 되어있는지 상태 변수 (초기에 모두 선택)
-  // 필요없나?
-  const [wholeSel, setWholeSEl] = useState(true);
+// 체크된 박스 
+const [btnSList, setBtnSList] = useState([])
+const [btnArr, setBtnArr] = useState([]); // btnArr를 상태로 변경
 
 
-  // 모든 상품 체크 해제되면 전체선택/해제 체크 변화
-  useEffect(() => {
-    const checkbox = $(".itemcheck");
-    console.log("checkbox", checkbox);
+// 체크된 버튼 배열 선언
+// let btnArr = [];
 
-    const wholecheck = $("#wholecheck");
+// 개별 아이템 전체 선택 여부에 따라 전체선택 체크박스 체크/해체
+useEffect(()=>{
 
-    // 모두 체크 선택 상태 true 체크선택 / false 체크 해제
-    let aa;   
-    checkbox.each(function () {
-      if ($(this).prop("checked")) {
-        // setWholeSEl(true);
-        return aa = true;
-      }
-      else{
-        // setWholeSEl(false);
-        return aa =  false;
-      }
-    });
-
-    wholecheck.prop("checked", wholeSel);
-
-    if (aa) {
-      wholecheck.prop("checked", true);
-    } else {
-      wholecheck.prop("checked", false);
+  // 체크된 체크박스 갯수
+  let btnL = $("input:checkbox[id=itemcheck]:checked").length
+  // 체크된 체크박스 
+  let btnS = $("input:checkbox[id=itemcheck]:checked")
+  
+  btnS.each(function() {
+    // 중복 검사 후 추가
+    let val = $(this).val();
+    if (!btnArr.includes(val)) {
+      btnArr.push(val);
     }
-  },[isChecked]);
-  // [isChecked] => 아이템 개별 선택 상태변수
-  // 체크할 때마다 리랜더링 됨
+  });
+  // btnArr = [...btnS]
+  
+ console.log('btnArr',btnArr)
 
-  // 순서를 바꿔서 체크하면 왜 안돼
-
-  // 전체 배열갯수 + 체크된 개수 해서 진행
-  // https://hajoung56.tistory.com/104
+  // 전체선택 체크박스
+ const wholecheck = $("#wholecheck");
 
 
-  // 아이템 선택 삭제
-  const deleteItem = (i, v) => {
-    console.log("아이템 선택 삭제", i, v);
-  };
+ // 현재 배열 갯수
+ const ttListL = aShopCart.length
+//  console.log('btnL',btnL,'ttListL',ttListL)
+
+// 전체 배열갯수보다 체크된 체크박스 개수가 적으면 전체버튼 선택 해체
+ if(btnL<ttListL){
+  wholecheck.prop("checked", false);
+ }
+ else{
+  wholecheck.prop("checked", true);
+ }
+
+
+
+
+ ////// 아이템 선택 할 때마다 리스트 셋업 ///
+setBtnSList(btnArr)
+
+// 개별 아이템 체크 할 때마다 렌더링
+},[isChecked])
+
+
+console.log('btnSList',btnSList)
+
+
+
+
+
+
+// 아이템 다중 선택 삭제
+const deleteItems = () => {
+
+   // 체크된 체크박스 갯수
+  console.log("아이템 다중 선택 삭제", btnSList);
+  
+};  
+
+
+
+
+// 아이템 개별 삭제
+const deleteAItem = (v, i) => {
+
+  console.log("아이템 개별 삭제",v, i);
+};
 
 
 
@@ -213,7 +280,7 @@ export function Cart() {
                 원
               </td>
               <td>
-                <button className="cfn" onClick={() => deleteItem(i, v)}>
+                <button className="cfn" onClick={() => deleteAItem(v, i)}>
                   ×
                 </button>
               </td>
@@ -250,7 +317,7 @@ export function Cart() {
             }}
           />
           <label htmlFor="wholecheck">전체선택/해제</label>
-          <button>선택삭제</button>
+          <button onClick={()=>deleteItems()}>선택삭제</button>
         </div>
         <table>
           <tbody>
