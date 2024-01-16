@@ -41,6 +41,8 @@ export function Layout() {
   // 배열에 데이터 추가
   totalList.push(shopCart);
 
+  const [layOutShopCart, setlayOutAShopCart] = useState(shopCart);
+
 
   // 장바구니 아이콘 숫자 state
   const [cartListNumL, setCartListNumL] = useState(null);
@@ -53,8 +55,8 @@ export function Layout() {
       // 현재페이지에서 상태변수 변경 중
       setCartListNumL(shopCart.length)
 
-      // console.log("Layout shop-cart 로컬스,갯수", shopCart, shopCart.length);
-    }
+      console.log("Layout shop-cart 로컬스,갯수", shopCart, shopCart.length);
+  }
   },[]);
 
   
@@ -72,7 +74,7 @@ export function Layout() {
 
   return (
     <>
-    <sCon.Provider value={{pgName, currentPage, setCurrentPage ,setCartListNumL,cartListNumL,setForce }}>
+    <sCon.Provider value={{pgName, currentPage, setCurrentPage ,setCartListNumL,cartListNumL,setForce, }}>
       <TopArea chgPgName3={chgPgName} cartListNumL={cartListNumL}/>
       <MainArea />
       <FooterArea />

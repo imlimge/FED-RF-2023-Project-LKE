@@ -36,29 +36,41 @@ export function Cart() {
   // 아이템 총 배열
   let totalList = [];
 
+  // 배열개수 초기셋팅
+  const [ttListL,setTtListL] = useState();
+
+
   // 로컬스에서 데이터 가져오기
   let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
   const [aShopCart, setAShopCart] = useState(shopCart);
 
   // console.log('샵카트 최초 aShopCart',aShopCart)
 
-  // 로컬스 데이터가 있다면 totalList에 넣기
-  if (shopCart) {
-    totalList = [...shopCart];
-    // console.log(' 로컬스 데이터가 있다면 totalList에 shopCart넣기 totalList',totalList)
-  }
-
-
-
-  // 배송비 초기셋팅
+    // 배송비 초기셋팅
   const [dPrice, setDPrice] = useState(3000);
   const [tPrice, setTPrice] = useState();
 
 
-
-
-  // 상품 총 합계 계산 
+  // 렌더 후 실행
   useEffect(() => {
+
+
+  // 로컬스 데이터가 있다면 totalList에 넣기 
+  if (shopCart) {
+    totalList = [...shopCart];
+    // console.log(' 로컬스 데이터가 있다면 totalList에 shopCart넣기 totalList',totalList)
+    
+    // 현재 배열 갯수
+    const totalListL = aShopCart.length
+    //  console.log('btnL',btnL,'ttListL',ttListL)
+    setTtListL(totalListL)
+  } // if ///
+
+
+
+
+    // 상품 총 합계 계산 
+
     // .cart_item_total_Price 클래스를 가진 요소들의 텍스트 값을 가져와서 합계 계산 ***
     let itemtotalprice = 0;
     $(".cart_item_total_Price").each(function () {
@@ -77,6 +89,13 @@ export function Cart() {
     let totalPrice = Number(dPrice) + Number(itemtotalprice);
 
     setTPrice(totalPrice);
+
+
+
+    
+    // console.log('btnSList',btnSList)
+    myCon.setCartListNumL(aShopCart.length)
+
   });
 
 
@@ -87,7 +106,6 @@ export function Cart() {
   const clearCart = () => {
     myCon.setForce(Math.random());
     console.log("장바구니 비우기");
-
     localStorage.removeItem("shop_cart");
   };
 
@@ -98,8 +116,14 @@ export function Cart() {
   // 개별 아이템 체크상태 상태변수 -> 상태변수로 해야 false/true 변화 보이고 전체 선택/해제를 업데이트 하기 위해 셋팅
   const [isChecked, setIsChecked] = useState(true);
 
-  const checkItem = (i, v) => {
-    console.log("아이템 체크", i, v);
+  // 체크 리스트 배열 상태변수 (출력 전 체크 된 배열 담아놓는)
+  const [checkedList, setCheckedList] = useState(shopCart);
+
+  console.log('checkedList',checkedList,'aShopCart',aShopCart)
+
+
+  const checkItem = (v, i) => {
+    console.log("아이템 체크", v, v.addList.idx, v.addList.category);
 
     // 해당 체크박스 flase true 확인
     const checkbox = document.getElementById("itemcheck");
@@ -107,18 +131,22 @@ export function Cart() {
     setIsChecked(is_checked);
 
 
-      // Update the btnArr state when a checkbox is clicked
-      setBtnArr((prevArr) => {
-        const newArr = [...prevArr];
-  
-        if (!newArr.includes(i)) {
-          newArr.push(i);
-        }
-  
-        console.log('btnArr', newArr); // 상태 업데이트 후 로그 출력
-        return newArr;
-      });
+    let selCheckItemArr = v.addList
+    console.log('selCheckItem',selCheckItemArr)
 
+//  setCheckedList(selCheckItemArr)
+//  let checkedList = totalList;
+
+ let result = checkedList.filter((v)=>{
+  return(
+    v.addList.idx !==  selCheckItemArr.idx &&      
+    v.addList.category !== selCheckItemArr.category
+  )
+
+ });
+ setCheckedList(result)
+
+ console.log(result)
 
 
   };
@@ -161,38 +189,32 @@ export function Cart() {
 
 // 체크된 박스 
 const [btnSList, setBtnSList] = useState([])
-const [btnArr, setBtnArr] = useState([]); // btnArr를 상태로 변경
 
-
-// 체크된 버튼 배열 선언
-// let btnArr = [];
 
 // 개별 아이템 전체 선택 여부에 따라 전체선택 체크박스 체크/해체
 useEffect(()=>{
 
   // 체크된 체크박스 갯수
   let btnL = $("input:checkbox[id=itemcheck]:checked").length
-  // 체크된 체크박스 
-  let btnS = $("input:checkbox[id=itemcheck]:checked")
+
+//   // 체크된 체크박스 
+//   let btnS = $("input:checkbox[id=itemcheck]:checked")
   
-  btnS.each(function() {
-    // 중복 검사 후 추가
-    let val = $(this).val();
-    if (!btnArr.includes(val)) {
-      btnArr.push(val);
-    }
-  });
-  // btnArr = [...btnS]
+//   // 체크된 체크박스 배열에 넣기
+//   btnS.each(function() {
+//     // 중복 검사 후 추가
+//     let val = $(this).val();
+//     if (!btnSList.includes(val)) {
+//       btnSList.push(val);
+//     }
+//   });
   
- console.log('btnArr',btnArr)
+//  console.log('btnSList',btnSList)
+
+
 
   // 전체선택 체크박스
  const wholecheck = $("#wholecheck");
-
-
- // 현재 배열 갯수
- const ttListL = aShopCart.length
-//  console.log('btnL',btnL,'ttListL',ttListL)
 
 // 전체 배열갯수보다 체크된 체크박스 개수가 적으면 전체버튼 선택 해체
  if(btnL<ttListL){
@@ -205,14 +227,15 @@ useEffect(()=>{
 
 
 
- ////// 아이템 선택 할 때마다 리스트 셋업 ///
-setBtnSList(btnArr)
+
+////// 아이템 선택 할 때마다 리스트 셋업 ///
+setBtnSList(btnSList)
+
+
 
 // 개별 아이템 체크 할 때마다 렌더링
 },[isChecked])
 
-
-console.log('btnSList',btnSList)
 
 
 
@@ -223,9 +246,25 @@ console.log('btnSList',btnSList)
 const deleteItems = () => {
 
    // 체크된 체크박스 갯수
-  console.log("아이템 다중 선택 삭제", btnSList);
+  // console.log("아이템 다중 선택 삭제", btnSList);
   
+  let result = aShopCart.filter((v) => {     
+    return(
+      v.addList.idx !==  checkedList.idx ||      
+      v.addList.category !== checkedList.category
+    )
+  })
+  
+  // 로컬스토리지에 셋팅
+  localStorage.setItem("shop_cart", JSON.stringify(result));
+
+  setAShopCart(result)
+  
+
+
 };  
+
+
 
 
 
@@ -233,7 +272,31 @@ const deleteItems = () => {
 // 아이템 개별 삭제
 const deleteAItem = (v, i) => {
 
+  let selAItem = v.addList
+  let selAItemArr = [];
+  selAItemArr = [selAItem];
+
   console.log("아이템 개별 삭제",v, i);
+  console.log('result',v.addList.idx,v.addList.category,selAItemArr)
+  console.log('totalList',totalList)
+
+ 
+
+  let result = aShopCart.filter((v) => {     
+    return(
+      v.addList.idx !==  selAItem.idx ||      
+      v.addList.category !== selAItem.category
+    )
+  })
+   
+  console.log('result2',result)
+
+  // 로컬스토리지에 셋팅
+  localStorage.setItem("shop_cart", JSON.stringify(result));
+
+  setAShopCart(result)
+  
+
 };
 
 
@@ -247,7 +310,7 @@ const deleteAItem = (v, i) => {
 
       return (
         // console.log(v,i)
-        totalList.map((v, i) => (
+        aShopCart.map((v, i) => (
           <Fragment key={i}>
             <tr>
               <td>
@@ -255,8 +318,8 @@ const deleteAItem = (v, i) => {
                   type="checkbox"
                   id="itemcheck"
                   className="itemcheck"
-                  value={i}
-                  onClick={() => checkItem(i, v)}
+                  value={[v.addList.category, v.addList.idx]}
+                  onClick={() => checkItem(v, i)}
                   defaultChecked="on"
                 />
               </td>
@@ -319,6 +382,7 @@ const deleteAItem = (v, i) => {
           <label htmlFor="wholecheck">전체선택/해제</label>
           <button onClick={()=>deleteItems()}>선택삭제</button>
         </div>
+        <div className="cart__table">
         <table>
           <tbody>
             <tr>
@@ -358,8 +422,9 @@ const deleteAItem = (v, i) => {
             </tr>
           </tbody>
         </table>
+        </div>
         <div className="cart__bottom__button">
-          <button>주문하기</button>
+          <button>선택 주문하기</button>
           <button onClick={() => clearCart()}>장바구니 비우기</button>
         </div>
       </section>
