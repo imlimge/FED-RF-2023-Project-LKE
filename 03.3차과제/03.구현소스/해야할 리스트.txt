@@ -46,3 +46,20 @@
       //     flag = false;
       // }
 ---
+
+
+
+
+    //   // 체크된 체크박스
+    //   let btnS = $("input:checkbox[id=itemcheck]:checked")
+
+    //   // 체크된 체크박스 배열에 넣기
+    //   btnS.each(function() {
+    //     // 중복 검사 후 추가
+    //     let val = $(this).val();
+    //     if (!btnSList.includes(val)) {
+    //       btnSList.push(val);
+    //     }
+    //   });
+
+    //  console.log('btnSList',btnSList)

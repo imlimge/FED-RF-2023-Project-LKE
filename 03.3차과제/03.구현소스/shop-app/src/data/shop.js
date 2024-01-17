@@ -1019,7 +1019,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids1.jpg",
       name: "캐릭터 양말1",
       cont: "2세트",
-      price: "12000",
+      price: "10000",
       category: "양말",
       review:"12"
     },
@@ -1028,7 +1028,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids2.jpg",
       name: "발목양말 6종",
       cont: "",
-      price: "7000",
+      price: "10000",
       category: "양말",
       review:"120"
     },
@@ -1037,7 +1037,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids3.jpg",
       name: "발목양말 4종",
       cont: "",
-      price: "7000",
+      price: "10000",
       category: "양말",
       review:"34"
     },
@@ -1046,7 +1046,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids4.jpg",
       name: "발목양말 4종 - 미끄럼방지",
       cont: "미끄럼방지 기능",
-      price: "8000",
+      price: "10000",
       category: "양말",
       review:"55"
     },
@@ -1055,7 +1055,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids5.jpg",
       name: "캐릭터 컵 2종세트",
       cont: "택 1",
-      price: "5000",
+      price: "10000",
       category: "유아식기",
       review:"66"
     },
@@ -1064,7 +1064,7 @@ export const shopData = {
       isrc: "./images/shop/kids/thum/kids6.jpg",
       name: "캐릭터 양말 10종",
       cont: "10종 택 1",
-      price: "3000",
+      price: "10000",
       category: "양말",
       review:"73"
     },

@@ -55,7 +55,7 @@ export function Layout() {
       // 현재페이지에서 상태변수 변경 중
       setCartListNumL(shopCart.length)
 
-      console.log("Layout shop-cart 로컬스,갯수", shopCart, shopCart.length);
+      // console.log("Layout shop-cart 로컬스,갯수", shopCart, shopCart.length);
   }
   },[]);
 

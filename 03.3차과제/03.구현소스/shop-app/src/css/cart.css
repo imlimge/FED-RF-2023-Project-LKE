@@ -3,8 +3,8 @@
 
 #cart {
 
-  width: 90%;
-  margin: 0 auto 10%  auto;
+ 
+  margin-bottom: 10%;
 }
 
 
@@ -71,6 +71,7 @@ color: #b9b9b9;
 
 #cart td.cart_list_total{
   text-align: right;
+  border-top: 1px solid black;
 }
 
 #cart td img {
@@ -147,3 +148,11 @@ margin: 0 1vw;
  font-weight: bold;
 }
 
+.total_Cnt{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.total_Cnt span{
+ font-weight: bold;
+}
