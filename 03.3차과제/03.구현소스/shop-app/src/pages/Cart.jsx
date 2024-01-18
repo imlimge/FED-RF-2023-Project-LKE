@@ -28,7 +28,7 @@ export function Cart() {
   /////////////////// [ 상태변수 셋팅 ] ///////////////////
   
   // 리랜더링 강제적용 상태변수
-  // const [force, setForce] = useState(null);
+  const [force, setForce] = useState(null);
   // setForce(Math.random());
 
   // 아이템 총 배열
@@ -153,6 +153,46 @@ useLayoutEffect(()=>{
 
 
 
+  // 아이템 계산 함수 ------------------------------------------------
+  
+  const calcList = () => {
+
+   
+
+    // 로컬스에 자료가 있어야 계산
+    if (shopCart) {
+
+    // 선택된 값 구하기 (reduce 사용)
+    let calList = checkedList.reduce((a, b) => a + Number(b.addList.price), 0);
+    setSelPrice(calList);
+    console.log("calList", calList);
+
+    //----------------------------------------------------
+    // 선택된 값 구하기 (forEach 사용 --  위와 같은 결과)
+    // let calList = 0;
+    // checkedList.forEach((v)=>{
+    //   calList += Number(v.addList.price)
+    // })
+    // console.log('calList',calList)
+    // setSelPrice(calList);
+    //----------------------------------------------------
+
+
+    // 장바구니 리랜더링(레이아웃:setCartListNumL)  
+    myCon.setCartListNumL(aShopCart.length);
+    
+    }
+        
+  }
+
+
+
+  
+  console.log("selPrice", selPrice);
+  console.log("dPrice", dPrice);
+
+
+
   // 장바구니 비우기 함수 ------------------------------------
   const clearCart = () => {
     myCon.setForce(Math.random());
@@ -170,7 +210,6 @@ useLayoutEffect(()=>{
 
   // 아이템 체크 시 함수 ----------------------------------------------
   const checkItem = (v, i) => {
-
 
 
     console.log("아이템 체크", v, v.addList.idx, v.addList.category);
@@ -200,6 +239,7 @@ useLayoutEffect(()=>{
           v.addList.category !== vAddList.category
         );
       });
+      calcList()
     }
     // 체크가 안 되어있으면 (누르는 즉시 true됨) 배열 비교하여 추가
     else {
@@ -211,7 +251,7 @@ useLayoutEffect(()=>{
       result = [...checkedList, aitem];   
 
       console.log('ㅜㅜ')
-      
+      calcList()
     }
 
     setIsChecked(is_checked);
@@ -219,8 +259,8 @@ useLayoutEffect(()=>{
     setCheckedList(result);
     console.log("result", result);
 
-    
-    calcList()
+
+
     
       
   };
@@ -251,56 +291,25 @@ useLayoutEffect(()=>{
       checkbox.each(function () {
         $(this).prop("checked", false);
       });
+      setCheckedList([])
+
     }
     // 전체선택 선택 시 모든 체크 선택
     else {
       checkbox.each(function () {
         $(this).prop("checked", true);
       });
+      setCheckedList(aShopCart)
+      
     }
+
   };
 
-
-
-
-  // 아이템 계산 함수 ------------------------------------------------
   
-  const calcList = () => {
 
-   
-
-    // 로컬스에 자료가 있어야 계산
-    if (shopCart) {
-
-    // 선택된 값 구하기 (reduce 사용)
-    // const calList = checkedList.reduce((a, b) => a + Number(b.addList.price), 0);
-    // console.log("calList", calList);
-
-    //----------------------------------------------------
-    // 선택된 값 구하기 (forEach 사용 --  위와 같은 결과)
-    let calList = 0;
-    checkedList.forEach((v)=>{
-      calList += Number(v.addList.price)
-    })
-    console.log('calList',calList)
-    //----------------------------------------------------
-
-
-
-    setSelPrice(calList);
-
-    // 장바구니 리랜더링(레이아웃:setCartListNumL)  
-    myCon.setCartListNumL(aShopCart.length);
-    }
-        
-  }
-
-
-
-  
-  console.log("selPrice", selPrice);
-  console.log("dPrice", dPrice);
-
+  useEffect(() => {
+    calcList();
+  }, [checkedList]);
 
 
 
@@ -350,7 +359,21 @@ console.log('checkedList222',checkedList,aShopCart)
     localStorage.setItem("shop_cart", JSON.stringify(result));
 
     setAShopCart(result);
+    setCheckedList(result)
+  
+   
     calcList()
+
+
+  
+    const checkbox = $(".itemcheck, .wholecheck");
+    console.log('checkbox',checkbox)
+    checkbox.each(function () {
+      $(this).prop("checked", true);
+    });
+    
+
+
   };
 
 
@@ -426,6 +449,7 @@ console.log('checkedList222',checkedList,aShopCart)
           <input
             type="checkbox"
             id="wholecheck"
+            className="wholecheck"
             defaultChecked="on"
             onClick={() => {
               wholeCheck();
