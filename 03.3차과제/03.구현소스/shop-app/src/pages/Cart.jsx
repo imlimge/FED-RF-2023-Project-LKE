@@ -194,32 +194,34 @@ useEffect(() => {
 
 
 
-
   // 아이템 체크 시 함수 ----------------------------------------------
-  const checkItem = (v, i) => {
+  const checkItem = (e, v, i) => {
 
 
     console.log("아이템 체크", v, v.addList.idx, v.addList.category);
     let aitem = v;
     // console.log("aitem", aitem);
 
+  
+    // ++++++++++++++++++++++++++++++++++++++
     // 해당 체크박스 flase true 확인
-    const checkbox = document.querySelectorAll(".is_itemcheck");
-    // const is_checked = checkbox[i].checked;
-    const is_checked = isChecked;
 
-    console.log('is_checked',is_checked)
+    const isChecked = e.target.checked;
+    console.log('isChecked', isChecked);
+  
+
+
 
     // 비교할 현재 addList 기준 만들기
     let vAddList = v.addList;
 
     let result;
 
- 
-    // 체크가 되어있으면 (누르는 즉시 false됨) 배열 비교하여 제거
-    if (is_checked) {
 
-      console.log('체크 되어있는거 클릭함',is_checked)
+    // 체크가 되어있으면 (누르는 즉시 false됨) 배열 비교하여 제거
+    if (!isChecked) {
+
+      console.log('체크 되어있는거 클릭함',isChecked)
       result = checkedList.filter((v) => {
         // console.log("???", v.addList.idx,vAddList.idx,v.addList.category,vAddList.category);
         // 둘 중 하나라도 다르면 return (둘 다 맞는것. 체크한 항목 제외)
@@ -232,7 +234,7 @@ useEffect(() => {
     }
     // 체크가 안 되어있으면 (누르는 즉시 true됨) 배열 비교하여 추가
     else {
-      console.log('체크 안되어 있는거 클릭함ㅜㅜ',is_checked)
+      console.log('체크 안되어 있는거 클릭함ㅜㅜ',isChecked)
       // result.inset(aitem)
       // result.push(aitem)
       // result = [...result, aitem];
@@ -244,7 +246,7 @@ useEffect(() => {
    
     }
 
-    setIsChecked(is_checked);
+    setIsChecked(isChecked);
 
     setCheckedList(result);
     console.log("result", result);
@@ -268,13 +270,13 @@ useEffect(() => {
 
     // 해당 체크박스 true/false 확인
     // 전체체크
-    const wholecheck = document.getElementById("wholecheck");
+    const wholecheck = $(".wholecheck");
     // 개별 아이템 체크 클래스로 수집
     const checkbox = $(".itemcheck");
     // console.log(checkbox)
     // 전체 선택 true/false 확인
-    const is_checked = wholecheck.checked;
-    // console.log(is_checked)
+    const is_checked = wholecheck.prop("checked")
+    console.log('is_checked',is_checked)
 
     // 전체선택 해제 시 모든 체크 해제
     if (!is_checked) {
@@ -377,10 +379,10 @@ useEffect(() => {
               <td>
                 <input
                   type="checkbox"
-                  id="itemcheck"
+                  // id="itemcheck"
                   className="itemcheck is_itemcheck"
                   value={[v.addList.category, v.addList.idx]}
-                  onClick={() => checkItem(v, i)}
+                  onClick={(e) => checkItem(e, v, i)}
                   defaultChecked="on"
                 />
               </td>

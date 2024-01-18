@@ -40,8 +40,8 @@ export function ItemDetail() {
 
 
   // 상품 배열 false/true 위한 flag
-  // const flag = useRef(false)
-  let flag = false;
+  const flag = useRef(false)
+  // let flag = false;
   const [flag2, setFlag2] = useState(flag);
 
 
@@ -68,25 +68,27 @@ export function ItemDetail() {
       // totalList 배열안에 같은 상품이 있으면 true / 없으면 false
       if (addArr[0].addList.idx === v.addList.idx &&
         addArr[0].addList.category === v.addList.category) {
-        flag = true;
-        // flag.current = true;
+        // flag = true;
+        flag.current = true;
         // setFlag(true);
-        console.log('result true',flag)
+        console.log('result true',flag.current)
       } else {
-        flag  = false;
-        // flag.current = false;
+        // flag  = false;
+        flag.current = false;
         // setFlag(false);
-        console.log('result false',flag)
+        console.log('result false',flag.current)
       }
 
-      return flag;
+      return flag.current;
     });
 
 
-    console.log("result/flag",result, flag);
+
+    
+    console.log("result/flag",result, flag.current);
 
     // 같은 상품 있으면 알람 후 카운트만 변경
-    if (flag) {
+    if (flag.current) {
       setFlag2(flag)
       console.log("상품있어", flag2);
       alert('장바구니에 상품이 있습니다 \n(추후 수량만 업데이트 기능 구현 예정)')
@@ -96,12 +98,13 @@ export function ItemDetail() {
 
     //상품 없으면 상태값 넣기
     else{
-      setFlag2(flag)
+      // setFlag2(flag.current)
       console.log("상품 없어서 추가", flag2);
       // 배열에 현재 상품 없으면 상태값 넣기
       totalList.push({ addList, itemCnt });
-
+      
     }
+    setFlag2(flag.current)
 
     console.log(
       "ItemDetail의 장바구니담기 addList = e",
