@@ -51,7 +51,7 @@ export function Cart() {
 
   // 배송비
   const [dPrice, setDPrice] = useState(3000);
-  console.log(dPrice)
+  // console.log(dPrice)
   
 
   // 개별 아이템 체크상태 상태변수 -> 상태변수로 해야 false/true 변화 보이고 전체 선택/해제를 업데이트 하기 위해 셋팅
@@ -60,7 +60,7 @@ export function Cart() {
 
   // 체크 리스트 배열 상태변수 (출력 전 체크 된 배열 담아놓는)
   const [checkedList, setCheckedList] = useState(shopCart);
-  console.log("checkedList", checkedList, "aShopCart", aShopCart);
+  // console.log("checkedList", checkedList, "aShopCart", aShopCart);
 
 
   // 체크된 박스
@@ -70,6 +70,7 @@ export function Cart() {
 
  /////////////////////////////////////////////////////////
 
+// 출력전에 배송비 먼저 셋팅
 useLayoutEffect(()=>{
 
    if(Number(selPrice) >= 50000){setDPrice(0);}
@@ -77,9 +78,16 @@ useLayoutEffect(()=>{
 
 })
 
- 
 
-  // 렌더 후 한번 실행 
+// 체크리스트가 변경될때마다 선택 아이템 계산 함수 실행
+useEffect(() => {
+  calcList();
+}, [checkedList]);
+
+
+
+  // 렌더 후 한번 실행
+  // 로컬스 데이터 있으면 셋팅  
   useEffect(() => {
     // 로컬스 데이터가 있다면 totalList에 넣기
     if (shopCart) {
@@ -94,23 +102,12 @@ useLayoutEffect(()=>{
 
     } // if ///
 
-    // 상품 총 합계 계산
-
-    // .cart_item_total_Price 클래스를 가진 요소들의 텍스트 값을 가져와서 합계 계산 ***
-    let itemtotalprice = 0;
-    $(".cart_item_total_Price").each(function () {
-      const itemPriceText = $(this).text().replace(",", ""); // 콤마 제거
-      const itemPrice = parseInt(itemPriceText);
-
-      itemtotalprice += itemPrice;
-    });
-    // console.log('총합계:', itemtotalprice);
-    // ***
 
 
-
-    setSelPrice(itemtotalprice)
-
+  
+    console.log("선택총액 selPrice", selPrice);
+    console.log("배송비 dPrice", dPrice);
+    console.log('checkedList222',checkedList,'\naShopCart',aShopCart)
 
 
   }, []);
@@ -139,12 +136,9 @@ useLayoutEffect(()=>{
     ////// 아이템 선택 할 때마다 리스트 셋업 ///
     setBtnSList(btnSList);
 
-    calcList()
-    
 
     // 장바구니 리랜더링(레이아웃:setCartListNumL)
     if(shopCart) myCon.setCartListNumL(aShopCart.length);
-
 
 
     // 개별 아이템 체크 할 때마다 렌더링
@@ -158,14 +152,13 @@ useLayoutEffect(()=>{
   const calcList = () => {
 
    
-
     // 로컬스에 자료가 있어야 계산
     if (shopCart) {
 
     // 선택된 값 구하기 (reduce 사용)
     let calList = checkedList.reduce((a, b) => a + Number(b.addList.price), 0);
     setSelPrice(calList);
-    console.log("calList", calList);
+    console.log("선택된 값 calList함수 내부", calList);
 
     //----------------------------------------------------
     // 선택된 값 구하기 (forEach 사용 --  위와 같은 결과)
@@ -180,16 +173,11 @@ useLayoutEffect(()=>{
 
     // 장바구니 리랜더링(레이아웃:setCartListNumL)  
     myCon.setCartListNumL(aShopCart.length);
-    
+
     }
         
   }
 
-
-
-  
-  console.log("selPrice", selPrice);
-  console.log("dPrice", dPrice);
 
 
 
@@ -198,9 +186,8 @@ useLayoutEffect(()=>{
     myCon.setForce(Math.random());
     console.log("장바구니 비우기");
     localStorage.removeItem("shop_cart");
-
+   
     setSelPrice(0)
-
     
   };
 
@@ -217,8 +204,9 @@ useLayoutEffect(()=>{
     // console.log("aitem", aitem);
 
     // 해당 체크박스 flase true 확인
-    const checkbox = document.getElementById("itemcheck");
-    const is_checked = checkbox.checked;
+    const checkbox = document.querySelectorAll(".is_itemcheck");
+    // const is_checked = checkbox[i].checked;
+    const is_checked = isChecked;
 
     console.log('is_checked',is_checked)
 
@@ -229,8 +217,9 @@ useLayoutEffect(()=>{
 
  
     // 체크가 되어있으면 (누르는 즉시 false됨) 배열 비교하여 제거
-    if (!is_checked) {
+    if (is_checked) {
 
+      console.log('체크 되어있는거 클릭함',is_checked)
       result = checkedList.filter((v) => {
         // console.log("???", v.addList.idx,vAddList.idx,v.addList.category,vAddList.category);
         // 둘 중 하나라도 다르면 return (둘 다 맞는것. 체크한 항목 제외)
@@ -239,10 +228,11 @@ useLayoutEffect(()=>{
           v.addList.category !== vAddList.category
         );
       });
-      calcList()
+
     }
     // 체크가 안 되어있으면 (누르는 즉시 true됨) 배열 비교하여 추가
     else {
+      console.log('체크 안되어 있는거 클릭함ㅜㅜ',is_checked)
       // result.inset(aitem)
       // result.push(aitem)
       // result = [...result, aitem];
@@ -250,8 +240,8 @@ useLayoutEffect(()=>{
    
       result = [...checkedList, aitem];   
 
-      console.log('ㅜㅜ')
-      calcList()
+  
+   
     }
 
     setIsChecked(is_checked);
@@ -307,10 +297,6 @@ useLayoutEffect(()=>{
 
   
 
-  useEffect(() => {
-    calcList();
-  }, [checkedList]);
-
 
 
   // 아이템 다중 선택 삭제 함수  ------------------------------------------------
@@ -334,7 +320,7 @@ useLayoutEffect(()=>{
   };
 
 
-console.log('checkedList222',checkedList,aShopCart)
+
 
   // 아이템 개별 삭제 함수  ------------------------------------------------
   const deleteAItem = (v, i) => {
@@ -342,9 +328,9 @@ console.log('checkedList222',checkedList,aShopCart)
     let selAItemArr = [];
     selAItemArr = [selAItem];
 
-    console.log("아이템 개별 삭제", v, i);
-    console.log("result", v.addList.idx, v.addList.category, selAItemArr);
-    console.log("totalList", totalList);
+    // console.log("아이템 개별 삭제", v, i);
+    // console.log("result", v.addList.idx, v.addList.category, selAItemArr);
+    // console.log("totalList", totalList);
 
     let result = aShopCart.filter((v) => {
       return (
@@ -392,7 +378,7 @@ console.log('checkedList222',checkedList,aShopCart)
                 <input
                   type="checkbox"
                   id="itemcheck"
-                  className="itemcheck"
+                  className="itemcheck is_itemcheck"
                   value={[v.addList.category, v.addList.idx]}
                   onClick={() => checkItem(v, i)}
                   defaultChecked="on"
@@ -449,7 +435,7 @@ console.log('checkedList222',checkedList,aShopCart)
           <input
             type="checkbox"
             id="wholecheck"
-            className="wholecheck"
+            className="wholecheck is_itemcheck"
             defaultChecked="on"
             onClick={() => {
               wholeCheck();
