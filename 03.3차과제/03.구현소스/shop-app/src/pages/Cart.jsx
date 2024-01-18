@@ -196,7 +196,6 @@ useLayoutEffect(()=>{
         // console.log("???", v.addList.idx,vAddList.idx,v.addList.category,vAddList.category);
         // 둘 중 하나라도 다르면 return (둘 다 맞는것. 체크한 항목 제외)
         return (
-          v.addList.name !== vAddList.name ||
           v.addList.idx !== vAddList.idx ||
           v.addList.category !== vAddList.category
         );
@@ -207,6 +206,8 @@ useLayoutEffect(()=>{
       // result.inset(aitem)
       // result.push(aitem)
       // result = [...result, aitem];
+
+   
       result = [...checkedList, aitem];   
 
       console.log('ㅜㅜ')
@@ -217,12 +218,14 @@ useLayoutEffect(()=>{
 
     setCheckedList(result);
     console.log("result", result);
+
+    
     calcList()
     
-    
-
-  
+      
   };
+
+
 
   // console.log('checkItem 개별 아이템 체크 여부',isChecked)
 
@@ -308,8 +311,8 @@ useLayoutEffect(()=>{
 
     let result = aShopCart.filter((v) => {
       return (
-        v.addList.idx !== checkedList.idx ||
-        v.addList.category !== checkedList.category
+        v.addList.idx !== checkedList.addList.idx ||
+        v.addList.category !== checkedList.addList.category
       );
     });
 
@@ -317,19 +320,12 @@ useLayoutEffect(()=>{
     localStorage.setItem("shop_cart", JSON.stringify(result));
 
     setAShopCart(result);
-    
-    // 현재 배열 갯수
-    const totalListL = aShopCart.length;
-    setTtListL(totalListL);
-
-    if(totalListL === 0){ 
-      localStorage.removeItem("shop_cart")
-
-    };
-
-
+    console.log('result2222',result)
+   
   };
 
+
+console.log('checkedList222',checkedList,aShopCart)
 
   // 아이템 개별 삭제 함수  ------------------------------------------------
   const deleteAItem = (v, i) => {
