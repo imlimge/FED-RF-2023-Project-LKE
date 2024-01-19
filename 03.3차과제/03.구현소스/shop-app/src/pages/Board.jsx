@@ -5,7 +5,7 @@ export function Board() {
     <>
       <div className="board_title">
         <h2>고객센터</h2>
-        <p>기분 좋은 쇼핑, 데일리라이크가 도와드릴게요</p>
+        <p>구현하기 전 상태입니다.</p>
       </div>
       
       <div className="board__box">
