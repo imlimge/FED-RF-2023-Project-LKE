@@ -60,7 +60,7 @@ export function Cart() {
 
   // 체크 리스트 배열 상태변수 (출력 전 체크 된 배열 담아놓는)
   const [checkedList, setCheckedList] = useState(shopCart);
-  // console.log("checkedList", checkedList, "aShopCart", aShopCart);
+  console.log("checkedList", checkedList, "\naShopCart", aShopCart);
 
 
   // 체크된 박스
@@ -134,7 +134,7 @@ useEffect(() => {
     }
 
     ////// 아이템 선택 할 때마다 리스트 셋업 ///
-    setBtnSList(btnSList);
+    // setBtnSList(btnSList);
 
 
     // 장바구니 리랜더링(레이아웃:setCartListNumL)
@@ -224,6 +224,7 @@ useEffect(() => {
       console.log('체크 되어있는거 클릭함',isChecked)
       result = checkedList.filter((v) => {
         // console.log("???", v.addList.idx,vAddList.idx,v.addList.category,vAddList.category);
+
         // 둘 중 하나라도 다르면 return (둘 다 맞는것. 체크한 항목 제외)
         return (
           v.addList.idx !== vAddList.idx ||
@@ -297,27 +298,41 @@ useEffect(() => {
 
   };
 
+
+
   
-
-
-
   // 아이템 다중 선택 삭제 함수  ------------------------------------------------
   const deleteItems = () => {
     // 체크된 체크박스 갯수
     // console.log("아이템 다중 선택 삭제", btnSList);
+    
 
-    let result = aShopCart.filter((v) => {
-      return (
-        v.addList.idx !== checkedList.addList.idx ||
-        v.addList.category !== checkedList.addList.category
+
+    let result;
+    result = aShopCart.filter((v,i) => {
+      // 선택된 항목이 있는 것만 비교 (aShopCart보다 checkedList의 배열 개수가 적어서 없는 경우 undefined로 비교가 안되어 오류나기 때문)
+      if(checkedList[i]){
+        console.log('뭐지',v.addList.idx, checkedList[i].addList.idx,v.addList.category,checkedList[i].addList.category)
+        return (
+        v.addList.idx !== checkedList[i].addList.idx ||
+        v.addList.category !== checkedList[i].addList.category
       );
+    }
+
     });
+
+ 
+
 
     // 로컬스토리지에 셋팅
     localStorage.setItem("shop_cart", JSON.stringify(result));
-
     setAShopCart(result);
+    setCheckedList(result);
+
     console.log('result2222',result)
+
+
+
    
   };
 

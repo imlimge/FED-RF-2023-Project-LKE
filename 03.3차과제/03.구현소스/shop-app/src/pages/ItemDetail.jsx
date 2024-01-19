@@ -260,7 +260,7 @@ export function ItemDetail() {
                 </div>
               </div>
               <div className="itemdetail__sell__box">
-                <span className="itemdetail__sell__title">{state.name}</span>
+                <span className="itemdetail__sell__title">수량</span>
                 <div className="sell__button__box">
                   <button className="count__button sb_down" onClick={chgNum}>
                     －
