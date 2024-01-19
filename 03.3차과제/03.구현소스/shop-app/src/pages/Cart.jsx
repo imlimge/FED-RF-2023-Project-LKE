@@ -150,7 +150,6 @@ useEffect(() => {
   // 아이템 계산 함수 ------------------------------------------------
   
   const calcList = () => {
-
    
     // 로컬스에 자료가 있어야 계산
     if (shopCart) {
@@ -181,7 +180,7 @@ useEffect(() => {
 
 
 
-  // 장바구니 비우기 함수 ------------------------------------
+  // 장바구니 비우기 함수 ---------------------------------------
   const clearCart = () => {
     myCon.setForce(Math.random());
     console.log("장바구니 비우기");
@@ -308,19 +307,32 @@ useEffect(() => {
     
 
 
-    let result;
-    result = aShopCart.filter((v,i) => {
-      // 선택된 항목이 있는 것만 비교 (aShopCart보다 checkedList의 배열 개수가 적어서 없는 경우 undefined로 비교가 안되어 오류나기 때문)
-      if(checkedList[i]){
-        console.log('뭐지',v.addList.idx, checkedList[i].addList.idx,v.addList.category,checkedList[i].addList.category)
+    // let result;
+    // result = aShopCart.filter((v,i) => {
+    //   // 선택된 항목이 있는 것만 비교 (aShopCart보다 checkedList의 배열 개수가 적어서 없는 경우 undefined로 비교가 안되어 오류나기 때문)
+    //   if(checkedList[i]){
+    //     console.log('뭐지',v.addList.idx, checkedList[i].addList.idx,v.addList.category,checkedList[i].addList.category)
+
+    //     return (
+    //     v.addList.idx !== checkedList[i].addList.idx ||
+    //     v.addList.category !== checkedList[i].addList.category
+    //   );
+    // }
+
+    // });
+
+
+    // 이부분 생각해봐야 함
+    const result = aShopCart.filter((cartItem) => {
+      // checkedList 배열에 해당 항목이 존재하지 않으면 true를 반환하여 필터링
+      return !checkedList.some((checkedItem) => {
         return (
-        v.addList.idx !== checkedList[i].addList.idx ||
-        v.addList.category !== checkedList[i].addList.category
-      );
-    }
-
+          cartItem.addList.idx === checkedItem.addList.idx &&
+          cartItem.addList.category === checkedItem.addList.category
+        );
+      });
     });
-
+    
  
 
 
@@ -332,8 +344,9 @@ useEffect(() => {
     console.log('result2222',result)
 
 
+    $(".is_itemcheck").prop("checked", true);
+   console.log( $(".is_itemcheck"))
 
-   
   };
 
 
