@@ -27,7 +27,11 @@ export function Cart() {
 
   /////////////////// [ 상태변수 셋팅 ] ///////////////////
 
-  
+
+  // 아이템 총 배열
+  let totalList = [];
+
+
   // 배열개수 초기셋팅
   const [ttListL, setTtListL] = useState();
 
