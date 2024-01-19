@@ -14,6 +14,12 @@ export const shopGnbData = [
  'link':'/kids'
 
 },
+// {
+//  'cat':"게시판",
+//  'link':'/board'
+
+// },
+
 
 
 ]
