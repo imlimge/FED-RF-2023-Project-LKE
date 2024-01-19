@@ -26,15 +26,8 @@ export function Cart() {
 
 
   /////////////////// [ 상태변수 셋팅 ] ///////////////////
+
   
-  // 리랜더링 강제적용 상태변수
-  const [force, setForce] = useState(null);
-  // setForce(Math.random());
-
-  // 아이템 총 배열
-  let totalList = [];
-
-
   // 배열개수 초기셋팅
   const [ttListL, setTtListL] = useState();
 
@@ -62,9 +55,6 @@ export function Cart() {
   const [checkedList, setCheckedList] = useState(shopCart);
   console.log("checkedList", checkedList, "\naShopCart", aShopCart);
 
-
-  // 체크된 박스
-  const [btnSList, setBtnSList] = useState([]);
 
 
 
@@ -133,9 +123,6 @@ useEffect(() => {
       wholecheck.prop("checked", true);
     }
 
-    ////// 아이템 선택 할 때마다 리스트 셋업 ///
-    // setBtnSList(btnSList);
-
 
     // 장바구니 리랜더링(레이아웃:setCartListNumL)
     if(shopCart) myCon.setCartListNumL(aShopCart.length);
@@ -157,7 +144,7 @@ useEffect(() => {
     // 선택된 값 구하기 (reduce 사용)
     let calList = checkedList.reduce((a, b) => a + Number(b.addList.price), 0);
     setSelPrice(calList);
-    console.log("선택된 값 calList함수 내부", calList);
+    // console.log("선택된 값 calList함수 내부", calList);
 
     //----------------------------------------------------
     // 선택된 값 구하기 (forEach 사용 --  위와 같은 결과)
@@ -302,9 +289,7 @@ useEffect(() => {
   
   // 아이템 다중 선택 삭제 함수  ------------------------------------------------
   const deleteItems = () => {
-    // 체크된 체크박스 갯수
-    // console.log("아이템 다중 선택 삭제", btnSList);
-    
+
 
 
     // let result;
@@ -322,7 +307,8 @@ useEffect(() => {
     // });
 
 
-    // 이부분 생각해봐야 함
+
+    // 이부분 위와 함께 생각해봐야 함 
     const result = aShopCart.filter((cartItem) => {
 
       console.log('filter',cartItem.addList.idx,cartItem.addList.category)
