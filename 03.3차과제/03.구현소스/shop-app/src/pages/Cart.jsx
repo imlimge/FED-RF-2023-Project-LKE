@@ -324,8 +324,12 @@ useEffect(() => {
 
     // 이부분 생각해봐야 함
     const result = aShopCart.filter((cartItem) => {
+
+      console.log('filter',cartItem.addList.idx,cartItem.addList.category)
+
       // checkedList 배열에 해당 항목이 존재하지 않으면 true를 반환하여 필터링
       return !checkedList.some((checkedItem) => {
+        console.log('some',cartItem.addList.idx, checkedItem.addList.idx,cartItem.addList.category, checkedItem.addList.category)
         return (
           cartItem.addList.idx === checkedItem.addList.idx &&
           cartItem.addList.category === checkedItem.addList.category
