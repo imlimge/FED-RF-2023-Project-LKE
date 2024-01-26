@@ -198,6 +198,11 @@ export function MainCont({ sts }) {
 
     return (
         <>
+            {/* 3차 링크 */}
+            <div className="to-pj3">
+               <a href="https://imlimge.github.io/LKE-shop/"> 링크 시 3차 목표 프로젝트 보기(리액트 쇼핑몰)</a>
+            </div>
+
             {/* <!-- 학원소개 --> */}
             <section id="intro" className="intro mp">
                 <div className="intro_op show-txt">

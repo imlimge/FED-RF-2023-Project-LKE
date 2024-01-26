@@ -27,6 +27,7 @@ padding: 4vh 4vw 4vh 0;
 
 .shop__item__right{
   flex: 1;
+
 }
 
 .shop input[type="checkbox"]{
@@ -145,12 +146,31 @@ padding: 4vh 4vw 4vh 0;
     .shop__list__left {
       padding: 4vh 4vw;
     }
-  }
-
-  @media screen and (max-width:361px){
+    .shop__item__right{
+      padding: 4vh 4vw;
+    }    
+    
     .shop__item__order {
       justify-content: flex-end;
       flex-direction: column;
   }
+  .shop__item__top {
+    text-align: left;
+  }
+  .orderlist {
+    margin-left: 0px;
+    margin-right: 9px;
+  }
+  .orderlist.on {
+    margin-left: 0px;
+    margin-right: 9px;
+  }
+  .shop__item__orderlist {
+    margin: 1vh 0 0;
+  }
+  }
+
+  @media screen and (max-width:361px){
+
   
   }

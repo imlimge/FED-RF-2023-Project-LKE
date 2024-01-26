@@ -1,5 +1,15 @@
 /* 카이로스 수학학원 사이트 - 메인 css */
 
+.to-pj3{
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;
+ z-index: 999999;
+ cursor: pointer;
+}
+.to-pj3:hover{
+background-color: var(--point-color);
+}
 
 ::selection {
   background-color: #8bc9ff;
@@ -1168,4 +1178,7 @@ transform: translateY(-10px);
   font-size: 1.2rem;
   letter-spacing: .3rem;
 }
+
+
+
 
