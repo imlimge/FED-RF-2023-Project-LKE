@@ -78,3 +78,27 @@
     color: #999999;
   }
   
+
+  @media screen and (max-width:1023px){
+    .shop__item__list{
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .shop__box{
+      flex-direction: column;
+    }
+
+  }
+  
+  @media screen and (max-width:767px){
+    .shop__item__list{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+  }
+  @media screen and (max-width:361px){
+    .shop__item__list{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+  }

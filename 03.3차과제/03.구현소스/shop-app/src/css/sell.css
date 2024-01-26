@@ -137,3 +137,20 @@ padding: 4vh 4vw 4vh 0;
   .shop .pagination span.active{
  font-weight: bold;
   }
+
+
+
+  @media screen and (max-width:1023px){
+  
+    .shop__list__left {
+      padding: 4vh 4vw;
+    }
+  }
+
+  @media screen and (max-width:361px){
+    .shop__item__order {
+      justify-content: flex-end;
+      flex-direction: column;
+  }
+  
+  }

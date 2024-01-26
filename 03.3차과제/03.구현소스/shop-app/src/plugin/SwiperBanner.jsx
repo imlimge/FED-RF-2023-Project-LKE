@@ -39,7 +39,7 @@ export function SwiperBanner() {
         // initialSlide={0}
 
         spaceBetween={30}
-        slidesPerView={2.5}
+        slidesPerView={1}
         centeredSlides={true}
 
         loop={true}
@@ -47,12 +47,24 @@ export function SwiperBanner() {
         navigation={true}
         pagination={true}
         keyboard={true}
+        breakpoints= {{
+
+          850:{
+            slidesPerView: 2.5,
+            spaceBetween: 30
+          },
+          450: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+          }
+        }}
 
         // autoplay={{
         //   delay: 4000,
         //   disableOnInteraction: false,
         // }}
 
+     
         modules={[Pagination, Autoplay, Keyboard, Navigation]}
         className="swiper-container"
       >

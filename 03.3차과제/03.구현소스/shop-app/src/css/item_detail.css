@@ -3,7 +3,7 @@
 }
 
 .itemdetail {
-    height: 100vh;
+    height: auto;
     position: relative;
     padding-top: 55px;
 }
@@ -246,3 +246,14 @@ width: 100%;
 
 }
 
+
+@media screen and (max-width:525px){
+    .itemdetail-top-area {
+        display: flex;
+        flex-direction: column
+    }
+
+    .itemdetail__info {
+        margin: 20px;
+    }
+  }

@@ -11,14 +11,14 @@ body{
 
 .inbox {
   max-width: 1200px;
-  margin: 0 5%;
+  margin: 0 auto;
 }
 
 
 #top-area{
   height: 90px;
   width: 100%;
-  box-shadow: 0 3px 7px 1px rgba(0,0,0,0.05);;
+  box-shadow: 0 3px 7px 1px rgba(0,0,0,0.05);
   background-color: #fff;
   z-index: 9999;
   position: fixed;
@@ -27,6 +27,8 @@ body{
   right: 0;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
 }
 
@@ -296,4 +298,23 @@ height: 60vh;
 .footer__info__cont p{
   font-size: 1.1rem;
   padding: 6vh 0 0 0;
+}
+
+
+@media screen and (max-width:767px){
+ body{
+  padding-top: 130px; 
+ }
+  #top-area{
+    height: 120px;
+    padding: 2vh 0;
+  }
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gnb li {
+  margin: 0.5vh 3vw 1vh ;
+}
 }
