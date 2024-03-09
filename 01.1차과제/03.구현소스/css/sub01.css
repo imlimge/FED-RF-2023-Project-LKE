@@ -49,7 +49,7 @@ cursor: pointer;
 
 
 .menu-list{
-
+  transition: left 0.5s ease-out;
  display: flex;
  position:relative;
  right: 0;
@@ -69,10 +69,7 @@ cursor: pointer;
 
 
 
-.menu-list-item:first-child{
-  opacity: 1;
-  
-}
+
 
 .menu-list-item.on{
   opacity: 1;

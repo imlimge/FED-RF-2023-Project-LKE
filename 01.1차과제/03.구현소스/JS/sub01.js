@@ -31,6 +31,17 @@ const menuIntro = {
 
 
 
+// sub-menu-open-list를 클릭했을 때 처리할 부분
+$('.sub-menu-open-list').on('click', function() {
+  // 클릭된 요소의 텍스트를 가져옵니다.
+  let text = $(this).text().toLowerCase();
+  // 가져온 텍스트를 사용하여 sub01.html로 이동합니다.
+  window.location.href = './sub01.html?menu=' + text;
+  console.log(document.querySelector(this).text())
+});
+
+
+
 
 //// 메뉴 클릭 설정만들기 ///////////
 const mListItem = dFn.qsa('.menu-list-item');
@@ -53,8 +64,6 @@ mListItem.forEach(ele=>{
 
   }
 })
-
-
 
 
 
@@ -284,21 +293,16 @@ function bMove(){
 // 제이쿼리로 메뉴 클릭하여 슬라이드하기 + 모바일 터치설정
 
 $(()=>{ ////////////JQB /////////////
-  const TRS_TIME_DT = '.5s ease-out';
-  const TRS_TIME_MOB = '.3s ease-out';
-
 
   const target = $('.menu-list');
-
-
 
 
   target.draggable({
     axis:'x' 
   })
-  .css({
-    transition: TRS_TIME_DT
-  });
+;
+
+  
 
   // 한계값 설정하기 /////////////
   // 화면크기 업데이트
@@ -335,10 +339,12 @@ console.log('마지막 한계값',lastPoint)
 
 
 
+
+
 target.on('mousedown mouseup mousemove',()=>{
  // 움직이는 대상 left 위치값
  let tgPos = target.offset().left;
-console.log('현재 left값',tgPos);
+// console.log('현재 left값',tgPos);
 
 
  if(tgPos > firstPoint){
@@ -358,5 +364,45 @@ console.log('현재 left값',tgPos);
 })
 
 
-}); ////////////JQB /////////////
 
+$('.ab2').on('click', function() {
+  // 현재 left 위치를 가져옵니다.
+  let currentLeft = parseInt($('.menu-list').css('left')) || 0;
+  let newLeft = currentLeft - 200; // 필요에 따라 값을 조정합니다.
+
+  // mList가 화면 왼쪽 끝으로 너무 많이 이동하지 않도록 제한합니다.
+  if (newLeft < -500) { // 예시로 -500 픽셀로 제한합니다.
+      newLeft = -500;
+  }
+
+  // 새로운 left 위치를 적용합니다.
+  $('.menu-list').css('left', newLeft + 'px');
+});
+
+// btn2를 클릭하면 mList를 오른쪽으로 이동합니다.
+$('.ab1').on('click', function() {
+  // 현재 left 위치를 가져옵니다.
+  let currentLeft = parseInt($('.menu-list').css('left')) || 0;
+  let newLeft = currentLeft + 200; // 필요에 따라 값을 조정합니다.
+
+  // mList가 화면 오른쪽 끝으로 너무 많이 이동하지 않도록 제한합니다.
+  if (newLeft > 0) { // 예시로 0 픽셀로 제한합니다.
+      newLeft = 0;
+  }
+
+  // 새로운 left 위치를 적용합니다.
+  $('.menu-list').css('left', newLeft + 'px');
+});
+
+
+
+
+$('.menu-list-item').on('click', function() {
+  $(this).addClass('on'); 
+  $(this).siblings().removeClass('on'); 
+
+});
+
+
+
+}); ////////////JQB /////////////

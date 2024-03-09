@@ -82,7 +82,15 @@ function makeCode(obj) {
 
 // ul>li>(a[href='#']>span.sub-menu-title)+div.sub-menu-open-btn+div.sub-menu-open>ol>li>a[href='#']
 
-  
+  // sub-menu-open-list를 클릭했을 때 처리할 부분
+$('.sub-menu-open-list').on('click', function() {
+  // 클릭된 요소의 텍스트를 가져옵니다.
+  let text = $(this).text().toLowerCase();
+  // 가져온 텍스트를 사용하여 sub01.html로 이동합니다.
+  window.location.href = './sub01.html?menu=' + text;
+  console.log($(this).text())
+});
+
 
 //메뉴 생성하기
 snbList.innerHTML = hcode;
@@ -202,17 +210,6 @@ function showSub() {
         ele.classList.remove("on");
       }
 
-<<<<<<< Updated upstream
-=======
-
-        if (!result) {
-          // false일때만 들어옴
-
-         
-          target.style.height = "0px";
-
-       /*    isBtn.classList.remove("on");
->>>>>>> Stashed changes
      
 
     }); /////forEach///////////

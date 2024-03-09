@@ -1347,8 +1347,10 @@ color: #fff;
   border-radius: 20px;
   text-align: center;
   line-height:25px;
-  font-size: .9rem;
+  font-size: .8rem;
   width: 100px;
+  color: #111;
+  font-weight: bold;
 }
 
 

@@ -86,8 +86,8 @@ if (keyValue.indexOf("?") !== -1) {
   // 움직일 대상: .mover
   const mover = qs(".mover");
 
-  // 이벤트 대상: .banner
-  const banner = qs(".banner");
+  // 이벤트 대상: .banner-back
+  const banner = qs(".banner-back");
 
   let gap = mover.clientWidth / 2;
 
