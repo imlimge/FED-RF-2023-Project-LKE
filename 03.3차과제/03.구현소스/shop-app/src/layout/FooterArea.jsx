@@ -41,11 +41,11 @@ export function FooterArea() {
 
 
 <div className="footer__info__cont">
-				사업자명 : ㈜이투컬렉션<span>I</span>대표 : 이용철, 이창만<span>I</span>사업자 등록번호: 514-81-83305 <span>I</span>FAX : 053-651-2309<br />
-				주소 : 대구시 남구 대명남로 192<span>I</span>통신판매업 신고번호: 제 2012-대구남구-0241호 <span>I</span>개인정보 보호책임자 : 이창만<br />제안/제휴문의 :  e2co@dailylike.co.kr<span>I</span> Overseas business : dailylike@e2collection.com<span>I</span>대표전화: 1644-2309<br />
+				사업자명 : ㈜회사<span>I</span>대표 : 대표자<span>I</span>사업자 등록번호: 111-11-1111 <span>I</span>FAX : 111-111-1111<br />
+				주소 : 주소시 주소구 주소동 11-1<span>I</span>통신판매업 신고번호: 제 1111-통신판매-1111호 <span>I</span>개인정보 보호책임자 : 책임자<br />제안/제휴문의 :  aaa@aaa.co.kr<span>I</span> Overseas business : aaa@aaa.co.kr<span>I</span>대표전화: 1111-1111<br />
 
-<p>모든 사진은 (주) 이투컬렉션이 소유하고 있으며 http://www.dailylike.co.kr/ 에 있는 사진입니다. 과제를 위해 임시 사용하였습니다 <br />
-
+<p>모든 사진은 (주) 이투컬렉션이 소유하고 있으며 <br />쇼핑몰 데일리라이크 http://www.dailylike.co.kr/ 에 있는 사진입니다. 과제를 위해 임시 사용하였습니다 <br />
+<br />
 Copyright 2021 Dailylike All Rights Reserved.</p>
 <p></p>
 </div>
