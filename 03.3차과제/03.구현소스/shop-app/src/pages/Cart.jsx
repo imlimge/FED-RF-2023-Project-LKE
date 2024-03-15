@@ -146,7 +146,7 @@ useEffect(() => {
     if (shopCart) {
 
     // 선택된 값 구하기 (reduce 사용)
-    let calList = checkedList.reduce((a, b) => a + Number(b.addList.price), 0);
+    let calList = checkedList.reduce((a, b) => a + Number(b.addList.price) * b.itemCnt, 0);
     setSelPrice(calList);
     // console.log("선택된 값 calList함수 내부", calList);
 
@@ -381,13 +381,58 @@ useEffect(() => {
     checkbox.each(function () {
       $(this).prop("checked", true);
     });
-    
-
-
+   
   };
 
 
 
+  //  버튼 숫자변경
+  // e:클릭대상, idx: 리스트의 순번, addCnt: - false/ + true
+  const chgNum = (e, idx, addCnt) => {
+    // console.log(e, idx, addCnt)
+
+    setAShopCart(prevCart => {
+
+      let updatedSelPrice = 0; // 새로운 선택된 상품의 가격을 저장할 변수
+
+      const newShopCart = prevCart.map((item, index) => {
+        if (index === idx) {
+          const newItemCnt = Math.max(1, item.itemCnt + (addCnt ? 1 : -1)); 
+          // addCnt 가 true면 증가, 아니면 감소
+
+          const inputElement = $(e.currentTarget).siblings('.sum'); 
+          // input 요소 선택
+
+          inputElement.val(newItemCnt); 
+          // input 요소의 값을 변경
+
+          updatedSelPrice += newItemCnt * Number(item.addList.price); 
+          // 선택된 상품의 가격 업데이트
+
+          return {
+            ...item,
+            itemCnt: newItemCnt,
+          };
+        }
+
+        updatedSelPrice += item.itemCnt * Number(item.addList.price); // 선택된 상품의 가격 업데이트
+        return item;
+      });
+
+      // 선택된 상품의 가격을 즉시 업데이트
+      setSelPrice(updatedSelPrice);
+
+      // 로컬 스토리지에 업데이트된 장바구니 정보 저장
+      localStorage.setItem('shop_cart', JSON.stringify(newShopCart));
+      return newShopCart;
+
+    });
+  };
+
+
+
+
+  
   // 상품 리스트 만들기 함수  ------------------------------------------------
   const makeList = () => {
     if (shopCart !== undefined && shopCart !== null) {
@@ -406,7 +451,7 @@ useEffect(() => {
                   value={[v.addList.category, v.addList.idx]}
                   onClick={(e) => checkItem(e, v, i)}
                   defaultChecked="on"
-                />
+                 />
               </td>
               <td>
                 <img src={v.addList.isrc} alt="item" />
@@ -415,7 +460,23 @@ useEffect(() => {
               <td className="go_item" onClick={() => goItemDetail(v.addList)}>
                 {v.addList.name}
               </td>
-              <td>{v.itemCnt}</td>
+              {/* 개별 항목 수량 */}
+              <td>
+              {/*{v.itemCnt} */}
+              <div className="cart__btn__box">
+                  <button className="cart__count__button sb_down" onClick={(e)=>chgNum(e,i,false)}>
+                    －
+                  </button>
+                
+                  <input type="text" className="sum" defaultValue={v.itemCnt} disabled/>
+            
+                  <button className="cart__count__button sb_up" onClick={(e)=>chgNum(e,i,true)}>
+                    ＋
+                  </button>
+                </div>
+                           
+              </td>
+
               {/* 개별가격 */}
               <td>
                 <span>{addComma(Number(v.addList.price))}</span>원

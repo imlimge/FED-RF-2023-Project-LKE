@@ -72,6 +72,13 @@ color: #b9b9b9;
 #cart td.cart_list_total{
   text-align: right;
   border-top: 1px solid black;
+  width: 40%;
+
+}
+
+#cart td:nth-child(5),
+#cart td:nth-child(6){
+  width: 100px;
 }
 
 #cart td img {
@@ -83,6 +90,7 @@ color: #b9b9b9;
 }
 
 
+
 .cart__table{
   margin: 0 auto;
   /* width: 900px; */
@@ -90,6 +98,9 @@ color: #b9b9b9;
   overflow-y: auto;
 
 }
+
+
+
 
 
 #cart table button{
@@ -155,4 +166,57 @@ margin: 0 1vw;
 
 .total_Cnt span{
  font-weight: bold;
+}
+
+
+
+.cart__btn__box {
+  position: relative;
+  margin: 0 20px;
+display: flex;
+justify-content: center;
+}
+
+.cart__btn__box input{
+  text-align: center;
+   width: 22px;
+  height: 22px;
+  background: #fff;
+  font-size: 1.3rem;
+   cursor: pointer;
+border: 1px solid #d0d0d0;;
+margin: 4px;
+border-radius: 5px;
+}
+
+.cart__count__button.sb_up,
+.cart__count__button.sb_down {
+/* position: absolute; */
+width: 22px;
+height: 22px;
+line-height: 0;
+padding: 0;
+}
+
+#cart table button.cart__count__button{
+ position: relative;
+  top: 6px;
+  padding: 0;
+}
+
+
+@media screen and (max-width:767px){
+#cart{
+  padding: 0 10px;
+}
+
+#cart td:nth-child(5),
+#cart td:nth-child(6){
+  padding: 0 3px;
+}
+.cart__btn__box {
+
+  margin: 0 5px;
+
+}
 }

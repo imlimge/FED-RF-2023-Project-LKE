@@ -32,7 +32,7 @@ const menuIntro = {
 
 
 // sub-menu-open-list를 클릭했을 때 처리할 부분
-$('.sub-menu-open-list').on('click', function() {
+$('.sub-menu-open-list').on('click touchstart', function() {
   // 클릭된 요소의 텍스트를 가져옵니다.
   let text = $(this).text().toLowerCase();
   // 가져온 텍스트를 사용하여 sub01.html로 이동합니다.
@@ -397,7 +397,7 @@ $('.ab1').on('click', function() {
 
 
 
-$('.menu-list-item').on('click', function() {
+$('.menu-list-item').on('click touchstart', function() {
   $(this).addClass('on'); 
   $(this).siblings().removeClass('on'); 
 

@@ -45,68 +45,103 @@ export function ItemDetail() {
   const [flag2, setFlag2] = useState(flag);
 
 
-// 상품만 추가 화면 유지 //////////////////
-const addList = (e) => {
-  // 현재 상품 정보 e = addList, itemCnt
-  let addList = e;
+  // 상품만 추가 화면 유지 //////////////////
+  const addList = (e) => {
+    //   console.log("addList 함수 호출됨");
+    // 현재 상품 정보 e = addList, itemCnt
+    let addList = e;
+    // 비교를 위해 배열로 만들어 줌
+    let addArr = [];
+    addArr.push({ addList, itemCnt });
 
-  // 비교를 위해 배열로 만들어 줌
-  let addArr = [];
-  addArr.push({ addList, itemCnt });
+    console.log("addArr", addArr);
 
-  console.log("addArr", addArr);
+    // 장바구니담기 클릭 시 totalList 배열에 해당 addList 넣기
+    // 같은 값이 있다면 메시지와 함께 넣지 않기.
+    // 같은 값은 addList에 idx , cat 두가지 확인 &&
+    console.log('addArr',addArr[0].addList.idx ,addArr[0].addList.category);
 
-  // totalList 배열에 이미 동일한 항목이 있는지 확인
-  const isSame = totalList.some((v) => {
-    return addList.idx === v.addList.idx && addList.category === v.addList.category;
-  });
 
-  if (isSame) {
-    // 이미 동일한 항목이 존재하는 경우
-    console.log('이미 상품이 있습니다.');
-    alert('장바구니에 상품이 이미 있습니다.');
 
-    // 해당 항목의 인덱스 찾기
-    const isSameCnt = totalList.findIndex((v) => {
-      return addList.idx === v.addList.idx && addList.category === v.addList.category;
+    // 배열 비교
+    const result = totalList.filter((v) => {
+      // totalList 배열안에 같은 상품이 있으면 true / 없으면 false
+      if (addArr[0].addList.idx === v.addList.idx &&
+        addArr[0].addList.category === v.addList.category) {
+        // flag = true;
+        flag.current = true;
+        // setFlag(true);
+        console.log('result true',flag.current)
+      } else {
+        // flag  = false;
+        flag.current = false;
+        // setFlag(false);
+        console.log('result false',flag.current)
+      }
+
+      return flag.current;
     });
 
-    // 동일한 itemCnt일 때만 업데이트
-    if (totalList[isSameCnt].itemCnt !== itemCnt) {
-      // itemCnt 업데이트
-      totalList[isSameCnt].itemCnt = itemCnt;
 
-      // 장바구니에 상품이 이미 있음을 알리는 메시지 표시
-      alert('수량이 달라 수량을 변경합니다.');
+
+    
+    console.log("result/flag",result, flag.current);
+
+    // 같은 상품 있으면 알람 후 카운트만 변경
+    if (flag.current) {
+      setFlag2(flag)
+      console.log("상품있어", flag2);
+      alert('장바구니에 상품이 있습니다 \n(추후 수량만 업데이트 기능 구현 예정)')
+
+
+
+
     }
-  } else {
-    // 동일한 항목이 존재하지 않는 경우
-    console.log('새로운 상품을 추가합니다.');
-    totalList.push({ addList, itemCnt });
-  }
 
-  // 바뀐 totalList 다시 로컬스에 저장
-  localStorage.setItem("shop_cart", JSON.stringify(totalList));
+    //상품 없으면 상태값 넣기
+    else{
+      // setFlag2(flag.current)
+      console.log("상품 없어서 추가", flag2);
+      // 배열에 현재 상품 없으면 상태값 넣기
+      totalList.push({ addList, itemCnt });
+      
+    }
+    
+    setFlag2(flag.current)
 
-  // 장바구니 수량 업데이트
-  myCon.setCartListNumL(totalList.length);
+    console.log(
+      "ItemDetail의 장바구니담기 addList = e",
+      addList,
+      "아이템수",
+      itemCnt,
+      "\ntotalList = {addList, itemCnt2}",
+      totalList
+    );
 
-  // 아이템 카운트 초기화
-  setItemCnt(1);
+    // 바뀐 totalList 다시 로컬스에 저장
+    localStorage.setItem("shop_cart", JSON.stringify(totalList));
+    let shopCart = JSON.parse(localStorage.getItem("shop_cart"));
+    // shopCart state에 셋팅
+    // setAShopCart(shopCart);
 
-  let price2 = itemCnt * price1;
-  // .total-price 출력 2군데 클래스 있음
-  $(".total-price span").text(addComma(price2));
+    // 레이아웃에 상태변수 있음
+    myCon.setCartListNumL(shopCart.length);
 
-  console.log(
-    "ItemDetail의 장바구니담기 addList = e",
-    addList,
-    "아이템수",
-    itemCnt,
-    "\ntotalList = {addList, itemCnt2}",
-    totalList
-  );
-};
+    // 아이템 카운트 초기화 _ 작동 안 함
+    setItemCnt(1);
+
+    let price2 = itemCnt * price1;
+    // .total-price 출력 2군데 클래스 있음
+    $(".total-price span").text(addComma(price2));
+  };
+
+
+
+
+
+
+
+
   //   console.log(
   //     "addList후 최종",
   //     "\ntotalList",
