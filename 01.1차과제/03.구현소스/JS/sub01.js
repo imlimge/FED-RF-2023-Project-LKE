@@ -47,7 +47,8 @@ $('.sub-menu-open-list').on('click touchstart', function() {
 const mListItem = dFn.qsa('.menu-list-item');
 
 mListItem.forEach(ele=>{
-  ele.onclick = ()=>{
+  ele.addEventListener('click', () => {
+  // ele.onclick = ()=>{
     // 하위 h4요소 글자 읽기
     let txt = dFn.qsEl(ele,'h4').innerText;
     changeMenu(txt);
@@ -60,12 +61,18 @@ mListItem.forEach(ele=>{
     
     //console.log('txt',txt);
     
-    
+  });
 
-  }
-})
-
-
+  // 모바일에서도 터치 이벤트 처리를 위해 추가
+  ele.addEventListener('touchstart', () => {
+    // 하위 h4 요소의 텍스트 가져오기
+    let txt = dFn.qsEl(ele, 'h4').innerText;
+    changeMenu(txt);
+    changeTopImg(txt);
+    changeTop(txt);
+    changeMTop(txt);
+  });
+});
 
 
 /**************************************  
