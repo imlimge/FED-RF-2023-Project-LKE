@@ -233,7 +233,6 @@ useEffect(() => {
    
       result = [...checkedList, aitem];   
 
-  
    
     }
 
@@ -242,10 +241,7 @@ useEffect(() => {
     setCheckedList(result);
     console.log("result", result);
 
-
-
     
-      
   };
 
 
@@ -386,48 +382,89 @@ useEffect(() => {
 
 
 
+
   //  버튼 숫자변경
   // e:클릭대상, idx: 리스트의 순번, addCnt: - false/ + true
   const chgNum = (e, idx, addCnt) => {
-    // console.log(e, idx, addCnt)
-
+    
+    // [ aShopCart 변경 ]
+    // 수량 변경하면 aShopCart의 itemCnt 변경 필요
+    // prevCart : aShopCart 이전 상태값 사용
     setAShopCart(prevCart => {
 
-      let updatedSelPrice = 0; // 새로운 선택된 상품의 가격을 저장할 변수
+        // 새로운 선택된 상품의 가격을 저장할 변수
+        let updatedSelPrice = 0; 
 
-      const newShopCart = prevCart.map((item, index) => {
-        if (index === idx) {
-          const newItemCnt = Math.max(1, item.itemCnt + (addCnt ? 1 : -1)); 
-          // addCnt 가 true면 증가, 아니면 감소
+        const newShopCart = prevCart.map((item, index) => {
+              // 장바구니에서 순번 비교하여 해당 cnt만 동작 
+               if (index === idx) {
 
-          const inputElement = $(e.currentTarget).siblings('.sum'); 
-          // input 요소 선택
+                // 수량 변수 설정
+                let newItemCnt;
 
-          inputElement.val(newItemCnt); 
-          // input 요소의 값을 변경
+                // + 선택 true 일 때
+                if (addCnt) {
+                    // 아이템 수량 증가
+                    newItemCnt = item.itemCnt + 1;
+                } else {
+                    // 아이템 수량 감소, 최소 수량이 1보다 작아지지 않도록 설정
+                    // Math.max 인자로 받은 것 중 숫자가 가장 큰 것 반환
+                    newItemCnt = Math.max(1, item.itemCnt - 1); 
+                }
 
-          updatedSelPrice += newItemCnt * Number(item.addList.price); 
-          // 선택된 상품의 가격 업데이트
+                updatedSelPrice += newItemCnt * Number(item.addList.price); // 선택된 상품의 가격 업데이트
 
-          return {
-            ...item,
-            itemCnt: newItemCnt,
-          };
+                return {
+                    ...item,
+                    itemCnt: newItemCnt,
+                };
+            }
+
+            updatedSelPrice += item.itemCnt * Number(item.addList.price); // 선택된 상품의 가격 업데이트
+            return item;
+        });
+
+        // 로컬 스토리지에 업데이트된 장바구니 정보 저장
+        localStorage.setItem('shop_cart', JSON.stringify(newShopCart));
+
+        // input.sum의 값을 업데이트
+        const inputSum = e.target.closest('tr').querySelector('.sum');
+        if (inputSum) {
+            inputSum.value = Math.max(1, parseInt(inputSum.value) + (addCnt ? 1 : -1));
         }
 
-        updatedSelPrice += item.itemCnt * Number(item.addList.price); // 선택된 상품의 가격 업데이트
-        return item;
-      });
 
-      // 선택된 상품의 가격을 즉시 업데이트
-      setSelPrice(updatedSelPrice);
+        // [ checkedList 변경 ]
+        // 선택항목 합계를 위해 checkedList 사용
+        // 체크리스트에서 지금 수량 클릭하는 아이템인지 확인
+        const itemInCheckedList = checkedList.find((item) => item.addList.idx === newShopCart[idx].addList.idx);
 
-      // 로컬 스토리지에 업데이트된 장바구니 정보 저장
-      localStorage.setItem('shop_cart', JSON.stringify(newShopCart));
-      return newShopCart;
+        if (itemInCheckedList) {
 
+              // checkedList의 itemCnt 업데이트
+              const updatedCheckedList = checkedList.map((item) => {
+              if (item.addList.idx === newShopCart[idx].addList.idx) {
+                  let newItemCnt;
+                  if (addCnt) {
+                      // 아이템 수량 증가
+                      newItemCnt = item.itemCnt + 1;
+                  } else {
+                      // 아이템 수량 감소, 최소 수량이 1보다 작아지지 않도록 설정
+                      newItemCnt = Math.max(1, item.itemCnt - 1); 
+                  }
+                return {
+                    ...item,
+                    itemCnt: newItemCnt,
+                };
+            }
+            return item;
+          });
+          setCheckedList(updatedCheckedList);
+        }
+
+        return newShopCart;
     });
-  };
+};
 
 
 
